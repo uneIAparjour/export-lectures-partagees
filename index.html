@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Export des lectures partagées - Une IA par jour</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      min-height: 100vh;
+      color: #1e293b;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+      color: white;
+      padding: 28px 24px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    header p {
+      font-size: 0.9rem;
+      opacity: 0.85;
+    }
+    main { padding: 20px; }
+    .loading {
+      text-align: center;
+      padding: 60px 20px;
+      color: #64748b;
+    }
+    .loading-spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid #e2e8f0;
+      border-top-color: #3B82F6;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 16px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .error {
+      background: #FEF2F2;
+      border: 1px solid #FECACA;
+      color: #DC2626;
+      padding: 16px;
+      border-radius: 12px;
+      text-align: center;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .stat {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .stat-value {
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+    .stat-label {
+      font-size: 0.75rem;
+      color: #64748b;
+      margin-top: 4px;
+    }
+    .search-input {
+      width: 100%;
+      padding: 14px 16px;
+      border: 2px solid #e2e8f0;
+      border-radius: 12px;
+      font-size: 1rem;
+      margin-bottom: 16px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .search-input:focus { border-color: #3B82F6; }
+    .tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+      background: #e2e8f0;
+      padding: 4px;
+      border-radius: 12px;
+    }
+    .tab-btn {
+      flex: 1;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: transparent;
+      color: #64748b;
+      font-weight: 400;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .tab-btn.active {
+      background: white;
+      color: #1e293b;
+      font-weight: 600;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .content-box {
+      background: white;
+      border-radius: 16px;
+      padding: 16px;
+      margin-bottom: 20px;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+    .cat-btn, .res-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 12px 16px;
+      margin-bottom: 8px;
+      border: 2px solid #e2e8f0;
+      border-radius: 10px;
+      background: white;
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.2s;
+    }
+    .cat-btn:last-child, .res-btn:last-child { margin-bottom: 0; }
+    .cat-btn.selected { background: var(--cat-bg); border-color: var(--cat-color); }
+    .cat-btn .check {
+      width: 20px;
+      height: 20px;
+      border-radius: 6px;
+      background: #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 12px;
+      margin-right: 12px;
+    }
+    .cat-btn.selected .check { background: var(--cat-color); }
+    .cat-btn .label { font-weight: 400; color: #374151; }
+    .cat-btn.selected .label { font-weight: 600; color: var(--cat-color); }
+    .cat-btn .count {
+      background: #e2e8f0;
+      color: #64748b;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .cat-btn.selected .count { background: var(--cat-color); color: white; }
+    .res-btn { align-items: flex-start; gap: 12px; }
+    .res-btn .check { flex-shrink: 0; margin-top: 2px; margin-right: 0; }
+    .res-btn .info { flex: 1; min-width: 0; }
+    .res-btn .title {
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: #1e293b;
+      margin-bottom: 4px;
+      line-height: 1.3;
+    }
+    .res-btn .meta { font-size: 0.75rem; color: #64748b; }
+    .res-btn .cat-tag {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 500;
+      margin-right: 8px;
+    }
+    .action-btns {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .action-btn {
+      flex: 1;
+      padding: 8px;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      background: #f8fafc;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .action-btn:hover { background: #e2e8f0; }
+    h4 {
+      margin: 0 0 12px;
+      font-size: 0.95rem;
+      color: #374151;
+    }
+    .formats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    .fmt-btn {
+      padding: 16px 12px;
+      border: 2px solid #e2e8f0;
+      border-radius: 12px;
+      background: white;
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.2s;
+    }
+    .fmt-btn:hover {
+      border-color: #3B82F6;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(59,130,246,0.15);
+    }
+    .fmt-btn .name {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #1e293b;
+      margin-bottom: 4px;
+    }
+    .fmt-btn .desc {
+      font-size: 0.75rem;
+      color: #64748b;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #64748b;
+      font-size: 0.8rem;
+    }
+    footer a { color: #3B82F6; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Exporter les lectures partagées</h1>
+      <p id="header-stats">Chargement...</p>
+    </header>
+    <main id="app">
+      <div class="loading">
+        <div class="loading-spinner"></div>
+        <p>Chargement des ressources...</p>
+      </div>
+    </main>
+  </div>
+
+<script>
+(function() {
+  // Configuration
+  const PAGE_URL = 'https://www.uneiaparjour.fr/lectures-partagees/';
+  const CORS_PROXY = 'https://api.allorigins.win/raw?url=';
+  
+  const categoriesConfig = {
+    etudes: { label: "Études et recherche", color: "#3B82F6" },
+    ethique: { label: "Éthique et société", color: "#8B5CF6" },
+    travail: { label: "IA et travail", color: "#F59E0B" },
+    securite: { label: "Sécurité et désinformation", color: "#EF4444" },
+    creation: { label: "Création, art et médias", color: "#EC4899" },
+    technique: { label: "Technique et infrastructure", color: "#10B981" },
+    philosophie: { label: "Philosophie et réflexions", color: "#6366F1" },
+    education: { label: "Éducation", color: "#14B8A6" },
+    droit: { label: "Droit", color: "#F97316" },
+    geopolitique: { label: "Géopolitique et international", color: "#06B6D4" }
+  };
+
+  let resources = [];
+  let selectedCats = new Set();
+  let selectedRes = new Set();
+  let searchTerm = '';
+  let activeTab = 'categories';
+
+  // Parser le HTML
+  function parseHTML(html) {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, 'text/html');
+    const results = [];
+    let currentCategory = null;
+    let resourceId = 0;
+    
+    const allElements = doc.querySelectorAll('h2[id], p');
+    
+    for (let i = 0; i < allElements.length; i++) {
+      const el = allElements[i];
+      
+      if (el.tagName === 'H2' && el.id && categoriesConfig[el.id]) {
+        currentCategory = el.id;
+        continue;
+      }
+      
+      if (el.tagName === 'P' && currentCategory) {
+        const strong = el.querySelector('strong');
+        if (strong && !el.querySelector('em') && !el.textContent.includes('Retour')) {
+          const title = strong.textContent.trim();
+          
+          const descEl = allElements[i + 1];
+          let description = '';
+          if (descEl && descEl.tagName === 'P' && !descEl.querySelector('strong') && !descEl.querySelector('em')) {
+            description = descEl.textContent.trim();
+          }
+          
+          const metaEl = allElements[i + 2];
+          let date = '', letter = 0, url = '#', source = '';
+          
+          if (metaEl && metaEl.tagName === 'P' && metaEl.querySelector('em')) {
+            const emText = metaEl.querySelector('em')?.textContent || '';
+            const letterMatch = emText.match(/lettre #(\d+)/);
+            if (letterMatch) letter = parseInt(letterMatch[1]);
+            const dateMatch = emText.match(/du (\d{2})\/(\d{2})\/(\d{4})/);
+            if (dateMatch) date = `${dateMatch[3]}-${dateMatch[2]}-${dateMatch[1]}`;
+            
+            const links = metaEl.querySelectorAll('a');
+            if (links.length >= 2) {
+              url = links[1].href;
+              source = links[1].textContent.trim();
+            } else if (links.length === 1) {
+              const text = metaEl.textContent;
+              if (text.includes('Lien direct :')) {
+                const parts = text.split('Lien direct :');
+                if (parts[1]) source = parts[1].trim();
+              }
+            }
+          }
+          
+          if (title && date) {
+            resourceId++;
+            results.push({
+              id: resourceId,
+              title,
+              description,
+              url,
+              date,
+              letter,
+              category: currentCategory,
+              source: source || 'Source'
+            });
+          }
+        }
+      }
+    }
+    
+    return results;
+  }
+
+  // Fonctions de filtrage
+  function getFiltered() {
+    let r = resources;
+    if (selectedCats.size > 0) r = r.filter(x => selectedCats.has(x.category));
+    if (searchTerm) {
+      const t = searchTerm.toLowerCase();
+      r = r.filter(x => x.title.toLowerCase().includes(t) || x.description.toLowerCase().includes(t));
+    }
+    return r.sort((a, b) => new Date(b.date) - new Date(a.date));
+  }
+
+  function getExport() {
+    return selectedRes.size > 0 ? resources.filter(r => selectedRes.has(r.id)) : getFiltered();
+  }
+
+  function formatDate(d) {
+    return new Date(d).toLocaleDateString('fr-FR');
+  }
+
+  // Générateurs de formats
+  function generateOPML(res) {
+    const grouped = {};
+    res.forEach(r => { if (!grouped[r.category]) grouped[r.category] = []; grouped[r.category].push(r); });
+    let o = `<?xml version="1.0" encoding="UTF-8"?>\n<opml version="2.0">\n<head>\n  <title>Lectures partagées - Une IA par jour</title>\n  <dateCreated>${new Date().toISOString()}</dateCreated>\n  <ownerName>Bertrand Formet</ownerName>\n</head>\n<body>`;
+    Object.entries(grouped).forEach(([cat, items]) => {
+      o += `\n  <outline text="${categoriesConfig[cat]?.label}" title="${categoriesConfig[cat]?.label}">`;
+      items.forEach(r => {
+        o += `\n    <outline type="link" text="${r.title.replace(/"/g, '&quot;')}" title="${r.title.replace(/"/g, '&quot;')}" url="${r.url}" htmlUrl="${r.url}" created="${r.date}"/>`;
+      });
+      o += `\n  </outline>`;
+    });
+    return o + `\n</body>\n</opml>`;
+  }
+
+  function generateXML(res) {
+    let x = `<?xml version="1.0" encoding="UTF-8"?>\n<lecturesPartagees>\n  <metadata>\n    <title>Lectures partagées - Une IA par jour</title>\n    <website>https://www.uneiaparjour.fr/</website>\n    <dateExport>${new Date().toISOString()}</dateExport>\n    <totalResources>${res.length}</totalResources>\n  </metadata>\n  <resources>`;
+    res.forEach(r => {
+      x += `\n    <resource id="${r.id}">\n      <title><![CDATA[${r.title}]]></title>\n      <description><![CDATA[${r.description}]]></description>\n      <url>${r.url}</url>\n      <date>${r.date}</date>\n      <letter>${r.letter}</letter>\n      <category>${r.category}</category>\n      <categoryLabel>${categoriesConfig[r.category]?.label}</categoryLabel>\n      <source><![CDATA[${r.source}]]></source>\n    </resource>`;
+    });
+    return x + `\n  </resources>\n</lecturesPartagees>`;
+  }
+
+  function generateMarkdown(res) {
+    const grouped = {};
+    res.forEach(r => { if (!grouped[r.category]) grouped[r.category] = []; grouped[r.category].push(r); });
+    let m = `# Lectures partagées - Une IA par jour\n\n> Compilation des ressources partagées dans la newsletter [Une IA par jour](https://www.uneiaparjour.fr/)\n>\n> Export du ${formatDate(new Date())} — ${res.length} ressources\n\n---\n\n`;
+    Object.entries(grouped).forEach(([cat, items]) => {
+      m += `## ${categoriesConfig[cat]?.label}\n\n`;
+      items.sort((a, b) => new Date(b.date) - new Date(a.date)).forEach(r => {
+        m += `### ${r.title}\n\n${r.description}\n\n`;
+        m += `- **Date** : ${formatDate(r.date)}\n`;
+        m += `- **Lettre** : #${r.letter}\n`;
+        m += `- **Source** : ${r.source}\n`;
+        m += `- **Lien** : [${r.url}](${r.url})\n\n---\n\n`;
+      });
+    });
+    return m;
+  }
+
+  function generateBookmarks(res) {
+    const grouped = {};
+    res.forEach(r => { if (!grouped[r.category]) grouped[r.category] = []; grouped[r.category].push(r); });
+    let h = `<!DOCTYPE NETSCAPE-Bookmark-file-1>\n<!-- This is an automatically generated file. -->\n<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">\n<TITLE>Lectures partagées - Une IA par jour</TITLE>\n<H1>Lectures partagées</H1>\n<DL><p>`;
+    Object.entries(grouped).forEach(([cat, items]) => {
+      h += `\n    <DT><H3>${categoriesConfig[cat]?.label}</H3>\n    <DL><p>`;
+      items.forEach(r => {
+        const ts = Math.floor(new Date(r.date).getTime() / 1000);
+        h += `\n        <DT><A HREF="${r.url}" ADD_DATE="${ts}" TAGS="${r.category}">${r.title}</A>\n        <DD>${r.description}`;
+      });
+      h += `\n    </DL><p>`;
+    });
+    return h + `\n</DL><p>`;
+  }
+
+  function generateBibTeX(res) {
+    let b = `% Lectures partagées - Une IA par jour\n% Export du ${formatDate(new Date())}\n% ${res.length} ressources\n\n`;
+    res.forEach(r => {
+      const key = r.title.toLowerCase().replace(/[^a-z0-9]/g, '').substring(0, 15) + r.id;
+      b += `@online{${key},\n  author = {${r.source.replace(/[{}]/g, '')}},\n  title = {${r.title.replace(/[{}]/g, '')}},\n  year = {${r.date.substring(0, 4)}},\n  month = {${r.date.substring(5, 7)}},\n  url = {${r.url}},\n  note = {${r.description.replace(/[{}]/g, '').substring(0, 150)}},\n  keywords = {${r.category}, ia, newsletter}\n}\n\n`;
+    });
+    return b;
+  }
+
+  function generateJSON(res) {
+    return JSON.stringify({
+      metadata: {
+        title: "Lectures partagées - Une IA par jour",
+        description: "Compilation des ressources partagées dans la newsletter Une IA par jour",
+        website: "https://www.uneiaparjour.fr/",
+        exportDate: new Date().toISOString(),
+        totalResources: res.length,
+        categories: Object.entries(categoriesConfig).map(([k, v]) => ({
+          id: k, label: v.label, count: res.filter(r => r.category === k).length
+        }))
+      },
+      resources: res.map(r => ({
+        id: r.id,
+        title: r.title,
+        description: r.description,
+        url: r.url,
+        date: r.date,
+        letter: r.letter,
+        category: { id: r.category, label: categoriesConfig[r.category]?.label },
+        source: r.source
+      }))
+    }, null, 2);
+  }
+
+  function generateCSV(res) {
+    const esc = s => `"${String(s).replace(/"/g, '""')}"`;
+    let c = 'ID;Titre;Description;URL;Date;Lettre;Catégorie;Source\n';
+    res.forEach(r => {
+      c += `${r.id};${esc(r.title)};${esc(r.description)};${esc(r.url)};${r.date};${r.letter};${esc(categoriesConfig[r.category]?.label)};${esc(r.source)}\n`;
+    });
+    return c;
+  }
+
+  function download(content, filename, mime) {
+    const blob = new Blob([content], { type: mime + ';charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
+
+  function doExport(fmt) {
+    const exp = getExport();
+    const map = {
+      opml: [generateOPML(exp), 'lectures-partagees.opml', 'application/xml'],
+      xml: [generateXML(exp), 'lectures-partagees.xml', 'application/xml'],
+      markdown: [generateMarkdown(exp), 'lectures-partagees.md', 'text/markdown'],
+      bookmarks: [generateBookmarks(exp), 'lectures-partagees-bookmarks.html', 'text/html'],
+      bibtex: [generateBibTeX(exp), 'lectures-partagees.bib', 'application/x-bibtex'],
+      json: [generateJSON(exp), 'lectures-partagees.json', 'application/json'],
+      csv: [generateCSV(exp), 'lectures-partagees.csv', 'text/csv']
+    };
+    if (map[fmt]) download(...map[fmt]);
+  }
+
+  // Rendu
+  function render() {
+    const app = document.getElementById('app');
+    const filtered = getFiltered();
+    const toExp = getExport();
+
+    document.getElementById('header-stats').textContent = 
+      `${resources.length} ressources · 10 catégories · 7 formats`;
+
+    app.innerHTML = `
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-value" style="color:#3B82F6;">${filtered.length}</div>
+          <div class="stat-label">Filtrées</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value" style="color:#10B981;">${toExp.length}</div>
+          <div class="stat-label">À exporter</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value" style="color:#8B5CF6;">${selectedCats.size || 10}</div>
+          <div class="stat-label">Catégories</div>
+        </div>
+      </div>
+
+      <input type="text" class="search-input" id="search" placeholder="Rechercher..." value="${searchTerm}">
+
+      <div class="tabs">
+        <button class="tab-btn ${activeTab === 'categories' ? 'active' : ''}" data-tab="categories">Par catégorie</button>
+        <button class="tab-btn ${activeTab === 'resources' ? 'active' : ''}" data-tab="resources">Par article</button>
+      </div>
+
+      <div class="content-box">
+        ${activeTab === 'categories' ? renderCategories() : renderResources(filtered)}
+      </div>
+
+      <h4>Choisir un format</h4>
+      <div class="formats">
+        <button class="fmt-btn" data-fmt="opml"><div class="name">OPML</div><div class="desc">Feedly, Inoreader...</div></button>
+        <button class="fmt-btn" data-fmt="xml"><div class="name">XML</div><div class="desc">Format structuré</div></button>
+        <button class="fmt-btn" data-fmt="markdown"><div class="name">Markdown</div><div class="desc">Documentation</div></button>
+        <button class="fmt-btn" data-fmt="bookmarks"><div class="name">Bookmarks</div><div class="desc">Navigateurs</div></button>
+        <button class="fmt-btn" data-fmt="bibtex"><div class="name">BibTeX</div><div class="desc">Zotero, Mendeley...</div></button>
+        <button class="fmt-btn" data-fmt="json"><div class="name">JSON</div><div class="desc">Développeurs</div></button>
+        <button class="fmt-btn" data-fmt="csv"><div class="name">CSV</div><div class="desc">Tableurs</div></button>
+      </div>
+
+      <footer>
+        <a href="https://www.uneiaparjour.fr/" target="_blank">Une IA par jour</a> — Bertrand Formet
+      </footer>
+    `;
+
+    // Event listeners
+    document.getElementById('search').addEventListener('input', e => {
+      searchTerm = e.target.value;
+      render();
+    });
+
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        activeTab = btn.dataset.tab;
+        render();
+      });
+    });
+
+    document.querySelectorAll('.cat-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const cat = btn.dataset.cat;
+        if (selectedCats.has(cat)) selectedCats.delete(cat);
+        else selectedCats.add(cat);
+        render();
+      });
+    });
+
+    document.querySelectorAll('.res-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = parseInt(btn.dataset.id);
+        if (selectedRes.has(id)) selectedRes.delete(id);
+        else selectedRes.add(id);
+        render();
+      });
+    });
+
+    document.getElementById('sel-all')?.addEventListener('click', () => {
+      filtered.forEach(r => selectedRes.add(r.id));
+      render();
+    });
+
+    document.getElementById('clr-all')?.addEventListener('click', () => {
+      selectedRes.clear();
+      selectedCats.clear();
+      render();
+    });
+
+    document.querySelectorAll('.fmt-btn').forEach(btn => {
+      btn.addEventListener('click', () => doExport(btn.dataset.fmt));
+    });
+  }
+
+  function renderCategories() {
+    return Object.entries(categoriesConfig).map(([key, { label, color }]) => {
+      const count = resources.filter(r => r.category === key).length;
+      const sel = selectedCats.has(key);
+      return `
+        <button class="cat-btn ${sel ? 'selected' : ''}" data-cat="${key}" style="--cat-color:${color};--cat-bg:${color}15;">
+          <div style="display:flex;align-items:center;">
+            <div class="check">${sel ? '✓' : ''}</div>
+            <span class="label">${label}</span>
+          </div>
+          <span class="count">${count}</span>
+        </button>
+      `;
+    }).join('');
+  }
+
+  function renderResources(filtered) {
+    let html = `
+      <div class="action-btns">
+        <button class="action-btn" id="sel-all">Tout sélectionner</button>
+        <button class="action-btn" id="clr-all">Effacer</button>
+      </div>
+    `;
+
+    filtered.forEach(r => {
+      const sel = selectedRes.has(r.id);
+      const col = categoriesConfig[r.category]?.color || '#6B7280';
+      html += `
+        <button class="res-btn ${sel ? 'selected' : ''}" data-id="${r.id}" style="--cat-color:${col};border-color:${sel ? col : '#e2e8f0'};background:${sel ? col + '08' : 'white'};">
+          <div class="check" style="background:${sel ? col : '#e2e8f0'};">${sel ? '✓' : ''}</div>
+          <div class="info">
+            <div class="title">${r.title}</div>
+            <div class="meta">
+              <span class="cat-tag" style="background:${col}20;color:${col};">${categoriesConfig[r.category]?.label}</span>
+              #${r.letter} · ${formatDate(r.date)}
+            </div>
+          </div>
+        </button>
+      `;
+    });
+
+    return html;
+  }
+
+  // Chargement initial
+  async function loadData() {
+    const app = document.getElementById('app');
+    
+    try {
+      const response = await fetch(CORS_PROXY + encodeURIComponent(PAGE_URL));
+      if (!response.ok) throw new Error('Erreur réseau');
+      
+      const html = await response.text();
+      resources = parseHTML(html);
+      
+      if (resources.length === 0) {
+        throw new Error('Aucune ressource trouvée');
+      }
+      
+      render();
+    } catch (error) {
+      console.error('Erreur:', error);
+      app.innerHTML = `
+        <div class="error">
+          <p><strong>Erreur de chargement</strong></p>
+          <p style="margin-top:8px;font-size:0.9rem;">Impossible de charger les ressources depuis uneiaparjour.fr</p>
+          <p style="margin-top:12px;font-size:0.85rem;opacity:0.8;">Réessayez dans quelques instants ou contactez l'administrateur.</p>
+        </div>
+      `;
+    }
+  }
+
+  loadData();
+})();
+</script>
+</body>
+</html>
