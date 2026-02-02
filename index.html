@@ -34,11 +34,16 @@
     .fmt-btn .desc{font-size:.75rem;color:#64748b}
     footer{text-align:center;padding:20px;color:#64748b;font-size:.8rem}
     footer a{color:#3B82F6;text-decoration:none}
+    .update-info{font-size:.7rem;opacity:.6;margin-top:4px}
   </style>
 </head>
 <body>
 <div class="container">
-  <header><h1>Exporter les lectures partagées</h1><p id="header-stats">Chargement...</p></header>
+  <header>
+    <h1>Exporter les lectures partagées</h1>
+    <p id="header-stats">Chargement...</p>
+    <p class="update-info">Dernière mise à jour : 02/02/2026</p>
+  </header>
   <main id="app"></main>
 </div>
 <script>
@@ -156,7 +161,7 @@ const R=[
 // GÉOPOLITIQUE ET INTERNATIONAL
 {id:99,t:"Québec encadre l'usage de l'IA",d:"Encadrement de l'IA au Québec.",u:"https://www.lapresse.ca/actualites/politique/2026-01-24/quebec-encadre-l-usage-de-l-ia-dans-la-fonction-publique.php",dt:"2026-01-31",n:22,cat:"geopolitique",s:"La Presse"},
 {id:100,t:"Europe : IA vs climat",d:"Tensions entre IA et objectifs climatiques.",u:"https://www.cnbc.com/2025/01/09/europe-ai-climate-conflict.html",dt:"2026-01-10",n:19,cat:"geopolitique",s:"CNBC"},
-{id:101,t:"À chaque culture son IA",d:"Réflexion sur les différences culturelles.",u:"https://www.francispisani.net/a-chaque-culture-son-ia/",dt:"2025-11-22",n:12,cat:"geopolitique",s:"Francis Pisani"}
+{id:101,t:"À chaque culture son IA",d:"Réflexion sur les différences culturelles.",u:"https://www.francispisani.net/a-chaque-culture-son-ia/",dt:"2025-11-22",n:12,cat:"geopolitique",s:"Francis Pisani"},
 ];
 
 let selC=new Set(),selR=new Set(),search='',tab='categories';
