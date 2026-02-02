@@ -14,12 +14,12 @@ Outil d'export multi-format pour les ressources de la page [Lectures partagées]
 
 ## Mise à jour automatique
 
-Ce repository utilise **GitHub Actions** pour se synchroniser automatiquement avec la page WordPress :
+Ce dépôt utilise **GitHub Actions** pour se synchroniser automatiquement avec la page WordPress :
 
 - **Chaque nuit à 3h** (heure de Paris) : récupération et parsing du contenu
 - **Déclenchement manuel** : possible via l'onglet "Actions" → "Run workflow"
 
-Le workflow :
+Le flux de travail :
 1. Récupère le HTML de la page WordPress
 2. Parse et extrait les ressources (titre, description, URL, date, catégorie)
 3. Met à jour le fichier `index.html`
@@ -40,7 +40,7 @@ export-lectures-partagees/
 
 ### Prérequis
 - Un compte GitHub
-- Un repository GitHub Pages activé
+- Un dépôt GitHub Pages activé
 
 ### Étapes
 
