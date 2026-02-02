@@ -1,0 +1,232 @@
+name: Mise à jour des lectures partagées
+
+on:
+  # Exécution automatique chaque nuit à 3h du matin (heure de Paris)
+  schedule:
+    - cron: '0 2 * * *'
+  
+  # Exécution manuelle possible depuis l'interface GitHub
+  workflow_dispatch:
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout du repository
+        uses: actions/checkout@v4
+      
+      - name: Installation de Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Récupération et parsing de la page WordPress
+        run: |
+          cat << 'SCRIPT' > update.js
+          const https = require('https');
+          const fs = require('fs');
+
+          const PAGE_URL = 'https://www.uneiaparjour.fr/lectures-partagees/';
+
+          const categoriesConfig = {
+            etudes: { l: "Études et recherche", c: "#3B82F6" },
+            ethique: { l: "Éthique et société", c: "#8B5CF6" },
+            travail: { l: "IA et travail", c: "#F59E0B" },
+            securite: { l: "Sécurité et désinformation", c: "#EF4444" },
+            creation: { l: "Création, art et médias", c: "#EC4899" },
+            technique: { l: "Technique et infrastructure", c: "#10B981" },
+            philosophie: { l: "Philosophie et réflexions", c: "#6366F1" },
+            education: { l: "Éducation", c: "#14B8A6" },
+            droit: { l: "Droit", c: "#F97316" },
+            geopolitique: { l: "Géopolitique et international", c: "#06B6D4" }
+          };
+
+          function fetchPage(url) {
+            return new Promise((resolve, reject) => {
+              https.get(url, (res) => {
+                // Gestion des redirections
+                if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+                  return fetchPage(res.headers.location).then(resolve).catch(reject);
+                }
+                
+                let data = '';
+                res.on('data', chunk => data += chunk);
+                res.on('end', () => resolve(data));
+                res.on('error', reject);
+              }).on('error', reject);
+            });
+          }
+
+          function parseHTML(html) {
+            const resources = [];
+            let currentCategory = null;
+            let resourceId = 0;
+
+            // Regex pour trouver les catégories (h2 avec id)
+            const categoryRegex = /<h2[^>]*id="(\w+)"[^>]*>/gi;
+            const categories = [...html.matchAll(categoryRegex)].map(m => ({
+              id: m[1],
+              index: m.index
+            })).filter(c => categoriesConfig[c.id]);
+
+            // Pour chaque catégorie, extraire les ressources
+            categories.forEach((cat, idx) => {
+              const startIndex = cat.index;
+              const endIndex = idx < categories.length - 1 ? categories[idx + 1].index : html.length;
+              const section = html.substring(startIndex, endIndex);
+              
+              currentCategory = cat.id;
+
+              // Pattern pour une ressource complète
+              const resourcePattern = /<p[^>]*>\s*<strong>([^<]+)<\/strong>\s*<\/p>\s*<p[^>]*>([^<]*(?:<[^p][^>]*>[^<]*<\/[^p][^>]*>)*[^<]*)<\/p>\s*<p[^>]*>\s*<em>([^<]*lettre #(\d+)[^<]*du (\d{2})\/(\d{2})\/(\d{4})[^<]*)<\/em>(?:<br[^>]*\/?>)?\s*(?:Lien direct\s*:\s*)?<a[^>]*href="([^"]*)"[^>]*>([^<]*)<\/a>/gi;
+
+              let match;
+              while ((match = resourcePattern.exec(section)) !== null) {
+                resourceId++;
+                const title = match[1].trim();
+                let description = match[2].replace(/<[^>]*>/g, '').trim();
+                if (description.length > 150) {
+                  description = description.substring(0, 147) + '...';
+                }
+                const letter = parseInt(match[4]);
+                const day = match[5];
+                const month = match[6];
+                const year = match[7];
+                const url = match[8];
+                const source = match[9].trim();
+
+                resources.push({
+                  id: resourceId,
+                  t: title,
+                  d: description,
+                  u: url,
+                  dt: `${year}-${month}-${day}`,
+                  n: letter,
+                  cat: currentCategory,
+                  s: source
+                });
+              }
+            });
+
+            return resources;
+          }
+
+          function generateJS(resources) {
+            const grouped = {};
+            resources.forEach(r => {
+              if (!grouped[r.cat]) grouped[r.cat] = [];
+              grouped[r.cat].push(r);
+            });
+
+            let code = '';
+            Object.entries(grouped).forEach(([cat, items]) => {
+              code += `// ${categoriesConfig[cat]?.l?.toUpperCase() || cat.toUpperCase()}\n`;
+              items.forEach(r => {
+                const title = r.t.replace(/"/g, '\\"').replace(/\n/g, ' ');
+                const desc = r.d.replace(/"/g, '\\"').replace(/\n/g, ' ');
+                const source = r.s.replace(/"/g, '\\"');
+                code += `{id:${r.id},t:"${title}",d:"${desc}",u:"${r.u}",dt:"${r.dt}",n:${r.n},cat:"${r.cat}",s:"${source}"},\n`;
+              });
+            });
+            
+            return code;
+          }
+
+          async function main() {
+            try {
+              console.log('Récupération de la page WordPress...');
+              const html = await fetchPage(PAGE_URL);
+              
+              console.log('Parsing du contenu...');
+              const resources = parseHTML(html);
+              
+              if (resources.length === 0) {
+                console.log('Aucune ressource trouvée, conservation du fichier actuel');
+                process.exit(0);
+              }
+              
+              console.log(`${resources.length} ressources trouvées`);
+              
+              // Lire le fichier index.html actuel
+              let indexHTML = fs.readFileSync('index.html', 'utf8');
+              
+              // Générer le nouveau code JS
+              const newJS = generateJS(resources);
+              
+              // Remplacer le tableau R dans le fichier
+              const startMarker = 'const R=[';
+              const endMarker = '];';
+              
+              const startIndex = indexHTML.indexOf(startMarker);
+              if (startIndex === -1) {
+                console.error('Marqueur de début non trouvé');
+                process.exit(1);
+              }
+              
+              // Trouver la fin du tableau (le ]; qui suit)
+              let depth = 0;
+              let endIndex = startIndex + startMarker.length;
+              for (let i = endIndex; i < indexHTML.length; i++) {
+                if (indexHTML[i] === '[') depth++;
+                if (indexHTML[i] === ']') {
+                  if (depth === 0) {
+                    endIndex = i + 2; // inclure ];
+                    break;
+                  }
+                  depth--;
+                }
+              }
+              
+              // Construire le nouveau contenu
+              const newContent = indexHTML.substring(0, startIndex) + 
+                                 'const R=[\n' + newJS + ']' +
+                                 indexHTML.substring(endIndex - 1);
+              
+              // Mettre à jour la date dans le header
+              const today = new Date().toLocaleDateString('fr-FR');
+              const updatedContent = newContent.replace(
+                /Dernière mise à jour : [^<]*/,
+                `Dernière mise à jour : ${today}`
+              );
+              
+              // Écrire le fichier
+              fs.writeFileSync('index.html', updatedContent);
+              
+              console.log('Fichier index.html mis à jour avec succès !');
+              console.log(`Total: ${resources.length} ressources`);
+              
+              // Écrire un fichier de stats pour le commit message
+              fs.writeFileSync('stats.txt', `${resources.length}`);
+              
+            } catch (error) {
+              console.error('Erreur:', error.message);
+              process.exit(1);
+            }
+          }
+
+          main();
+          SCRIPT
+          
+          node update.js
+      
+      - name: Vérifier les changements
+        id: check_changes
+        run: |
+          if git diff --quiet index.html; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "Aucun changement détecté"
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "Changements détectés"
+          fi
+      
+      - name: Commit et push des changements
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          STATS=$(cat stats.txt 2>/dev/null || echo "?")
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add index.html
+          git commit -m "🔄 Mise à jour automatique : ${STATS} ressources"
+          git push
