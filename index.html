@@ -5,674 +5,191 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Export des lectures partagées - Une IA par jour</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-      min-height: 100vh;
-      color: #1e293b;
-    }
-    .container {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 0;
-    }
-    header {
-      background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-      color: white;
-      padding: 28px 24px;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-    header p {
-      font-size: 0.9rem;
-      opacity: 0.85;
-    }
-    main { padding: 20px; }
-    .loading {
-      text-align: center;
-      padding: 60px 20px;
-      color: #64748b;
-    }
-    .loading-spinner {
-      width: 40px;
-      height: 40px;
-      border: 3px solid #e2e8f0;
-      border-top-color: #3B82F6;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-      margin: 0 auto 16px;
-    }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    .error {
-      background: #FEF2F2;
-      border: 1px solid #FECACA;
-      color: #DC2626;
-      padding: 16px;
-      border-radius: 12px;
-      text-align: center;
-    }
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin-bottom: 20px;
-    }
-    .stat {
-      background: white;
-      border-radius: 12px;
-      padding: 16px;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    }
-    .stat-value {
-      font-size: 1.6rem;
-      font-weight: 700;
-    }
-    .stat-label {
-      font-size: 0.75rem;
-      color: #64748b;
-      margin-top: 4px;
-    }
-    .search-input {
-      width: 100%;
-      padding: 14px 16px;
-      border: 2px solid #e2e8f0;
-      border-radius: 12px;
-      font-size: 1rem;
-      margin-bottom: 16px;
-      outline: none;
-      transition: border-color 0.2s;
-    }
-    .search-input:focus { border-color: #3B82F6; }
-    .tabs {
-      display: flex;
-      gap: 8px;
-      margin-bottom: 16px;
-      background: #e2e8f0;
-      padding: 4px;
-      border-radius: 12px;
-    }
-    .tab-btn {
-      flex: 1;
-      padding: 12px;
-      border: none;
-      border-radius: 8px;
-      background: transparent;
-      color: #64748b;
-      font-weight: 400;
-      font-size: 0.9rem;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-    .tab-btn.active {
-      background: white;
-      color: #1e293b;
-      font-weight: 600;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    .content-box {
-      background: white;
-      border-radius: 16px;
-      padding: 16px;
-      margin-bottom: 20px;
-      max-height: 300px;
-      overflow-y: auto;
-    }
-    .cat-btn, .res-btn {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      padding: 12px 16px;
-      margin-bottom: 8px;
-      border: 2px solid #e2e8f0;
-      border-radius: 10px;
-      background: white;
-      cursor: pointer;
-      text-align: left;
-      transition: all 0.2s;
-    }
-    .cat-btn:last-child, .res-btn:last-child { margin-bottom: 0; }
-    .cat-btn.selected { background: var(--cat-bg); border-color: var(--cat-color); }
-    .cat-btn .check {
-      width: 20px;
-      height: 20px;
-      border-radius: 6px;
-      background: #e2e8f0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 12px;
-      margin-right: 12px;
-    }
-    .cat-btn.selected .check { background: var(--cat-color); }
-    .cat-btn .label { font-weight: 400; color: #374151; }
-    .cat-btn.selected .label { font-weight: 600; color: var(--cat-color); }
-    .cat-btn .count {
-      background: #e2e8f0;
-      color: #64748b;
-      padding: 4px 10px;
-      border-radius: 20px;
-      font-size: 0.8rem;
-      font-weight: 600;
-    }
-    .cat-btn.selected .count { background: var(--cat-color); color: white; }
-    .res-btn { align-items: flex-start; gap: 12px; }
-    .res-btn .check { flex-shrink: 0; margin-top: 2px; margin-right: 0; }
-    .res-btn .info { flex: 1; min-width: 0; }
-    .res-btn .title {
-      font-weight: 500;
-      font-size: 0.9rem;
-      color: #1e293b;
-      margin-bottom: 4px;
-      line-height: 1.3;
-    }
-    .res-btn .meta { font-size: 0.75rem; color: #64748b; }
-    .res-btn .cat-tag {
-      display: inline-block;
-      padding: 2px 8px;
-      border-radius: 4px;
-      font-weight: 500;
-      margin-right: 8px;
-    }
-    .action-btns {
-      display: flex;
-      gap: 8px;
-      margin-bottom: 12px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid #e2e8f0;
-    }
-    .action-btn {
-      flex: 1;
-      padding: 8px;
-      border: 1px solid #e2e8f0;
-      border-radius: 8px;
-      background: #f8fafc;
-      font-size: 0.8rem;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-    .action-btn:hover { background: #e2e8f0; }
-    h4 {
-      margin: 0 0 12px;
-      font-size: 0.95rem;
-      color: #374151;
-    }
-    .formats {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-    }
-    .fmt-btn {
-      padding: 16px 12px;
-      border: 2px solid #e2e8f0;
-      border-radius: 12px;
-      background: white;
-      cursor: pointer;
-      text-align: left;
-      transition: all 0.2s;
-    }
-    .fmt-btn:hover {
-      border-color: #3B82F6;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(59,130,246,0.15);
-    }
-    .fmt-btn .name {
-      font-weight: 600;
-      font-size: 0.95rem;
-      color: #1e293b;
-      margin-bottom: 4px;
-    }
-    .fmt-btn .desc {
-      font-size: 0.75rem;
-      color: #64748b;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #64748b;
-      font-size: 0.8rem;
-    }
-    footer a { color: #3B82F6; text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
-    ::-webkit-scrollbar { width: 6px; height: 6px; }
-    ::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 3px; }
-    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
-    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:linear-gradient(135deg,#f8fafc,#e2e8f0);min-height:100vh;color:#1e293b}
+    .container{max-width:600px;margin:0 auto}
+    header{background:linear-gradient(135deg,#1e293b,#334155);color:#fff;padding:28px 24px;text-align:center}
+    header h1{font-size:1.4rem;font-weight:700;margin-bottom:8px}
+    header p{font-size:.9rem;opacity:.85}
+    main{padding:20px}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px}
+    .stat{background:#fff;border-radius:12px;padding:16px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+    .stat-value{font-size:1.6rem;font-weight:700}
+    .stat-label{font-size:.75rem;color:#64748b;margin-top:4px}
+    .search-input{width:100%;padding:14px 16px;border:2px solid #e2e8f0;border-radius:12px;font-size:1rem;margin-bottom:16px;outline:0}
+    .search-input:focus{border-color:#3B82F6}
+    .tabs{display:flex;gap:8px;margin-bottom:16px;background:#e2e8f0;padding:4px;border-radius:12px}
+    .tab-btn{flex:1;padding:12px;border:0;border-radius:8px;background:0 0;color:#64748b;font-weight:400;font-size:.9rem;cursor:pointer}
+    .tab-btn.active{background:#fff;color:#1e293b;font-weight:600;box-shadow:0 2px 4px rgba(0,0,0,.1)}
+    .content-box{background:#fff;border-radius:16px;padding:16px;margin-bottom:20px;max-height:300px;overflow-y:auto}
+    .cat-btn,.res-btn{display:flex;align-items:center;justify-content:space-between;width:100%;padding:12px 16px;margin-bottom:8px;border:2px solid #e2e8f0;border-radius:10px;background:#fff;cursor:pointer;text-align:left}
+    .check{width:20px;height:20px;border-radius:6px;background:#e2e8f0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;flex-shrink:0}
+    .action-btns{display:flex;gap:8px;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid #e2e8f0}
+    .action-btn{flex:1;padding:8px;border:1px solid #e2e8f0;border-radius:8px;background:#f8fafc;font-size:.8rem;cursor:pointer}
+    h4{margin:0 0 12px;font-size:.95rem;color:#374151}
+    .formats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .fmt-btn{padding:16px 12px;border:2px solid #e2e8f0;border-radius:12px;background:#fff;cursor:pointer;text-align:left;transition:all .2s}
+    .fmt-btn:hover{border-color:#3B82F6;transform:translateY(-2px)}
+    .fmt-btn .name{font-weight:600;font-size:.95rem;color:#1e293b;margin-bottom:4px}
+    .fmt-btn .desc{font-size:.75rem;color:#64748b}
+    footer{text-align:center;padding:20px;color:#64748b;font-size:.8rem}
+    footer a{color:#3B82F6;text-decoration:none}
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Exporter les lectures partagées</h1>
-      <p id="header-stats">Chargement...</p>
-    </header>
-    <main id="app">
-      <div class="loading">
-        <div class="loading-spinner"></div>
-        <p>Chargement des ressources...</p>
-      </div>
-    </main>
-  </div>
-
+<div class="container">
+  <header><h1>Exporter les lectures partagées</h1><p id="header-stats">Chargement...</p></header>
+  <main id="app"></main>
+</div>
 <script>
-(function() {
-  // Configuration
-  const PAGE_URL = 'https://www.uneiaparjour.fr/lectures-partagees/';
-  const CORS_PROXY = 'https://api.allorigins.win/raw?url=';
-  
-  const categoriesConfig = {
-    etudes: { label: "Études et recherche", color: "#3B82F6" },
-    ethique: { label: "Éthique et société", color: "#8B5CF6" },
-    travail: { label: "IA et travail", color: "#F59E0B" },
-    securite: { label: "Sécurité et désinformation", color: "#EF4444" },
-    creation: { label: "Création, art et médias", color: "#EC4899" },
-    technique: { label: "Technique et infrastructure", color: "#10B981" },
-    philosophie: { label: "Philosophie et réflexions", color: "#6366F1" },
-    education: { label: "Éducation", color: "#14B8A6" },
-    droit: { label: "Droit", color: "#F97316" },
-    geopolitique: { label: "Géopolitique et international", color: "#06B6D4" }
-  };
+(function(){
+const C={etudes:{l:"Études et recherche",c:"#3B82F6"},ethique:{l:"Éthique et société",c:"#8B5CF6"},travail:{l:"IA et travail",c:"#F59E0B"},securite:{l:"Sécurité et désinformation",c:"#EF4444"},creation:{l:"Création, art et médias",c:"#EC4899"},technique:{l:"Technique et infrastructure",c:"#10B981"},philosophie:{l:"Philosophie et réflexions",c:"#6366F1"},education:{l:"Éducation",c:"#14B8A6"},droit:{l:"Droit",c:"#F97316"},geopolitique:{l:"Géopolitique et international",c:"#06B6D4"}};
 
-  let resources = [];
-  let selectedCats = new Set();
-  let selectedRes = new Set();
-  let searchTerm = '';
-  let activeTab = 'categories';
+const R=[
+// ÉTUDES ET RECHERCHE
+{id:1,t:"Les Français et l'information (2ème édition)",d:"Rapport de l'ARCOM. 20% des Français utilisent l'IA pour s'informer.",u:"https://www.arcom.fr/se-documenter/etudes-et-donnees/etudes-bilans-et-rapports-de-larcom/les-francais-et-linformation-2eme-edition",dt:"2026-01-31",n:22,cat:"etudes",s:"ARCOM"},
+{id:2,t:"AI makes you smarter but none the wiser",d:"Étude sur la déconnexion entre performance et métacognition avec l'IA.",u:"https://www.sciencedirect.com/science/article/pii/S0747563225002262",dt:"2026-01-10",n:19,cat:"etudes",s:"Science Direct"},
+{id:3,t:"Évolution du trafic vers les applications d'IA génératives",d:"Synthèse de l'évolution du trafic et parts de marché des chatbots.",u:"https://www.similarweb.com/blog/wp-content/uploads/2025/12/attachment-Global-AI-Tracker-5.pdf",dt:"2026-01-10",n:19,cat:"etudes",s:"SimilarWeb"},
+{id:4,t:"L'IA chinoise a détrôné les USA selon Stanford",d:"Analyse du rapport Stanford sur l'IA open source chinois.",u:"https://goodtech.info/etude-stanford-humiliation-ia-usa-chine-open-source/",dt:"2026-01-03",n:18,cat:"etudes",s:"GoodTech Info"},
+{id:5,t:"Prompt IA : miroir des usages et de la réflexivité",d:"Expérience de recherche sur les usages de l'IA.",u:"https://4cristol.over-blog.com/2025/12/prompt-ia-miroir-des-usages-et-de-la-reflexivite.html",dt:"2026-01-03",n:18,cat:"etudes",s:"Blog Denis Cristol"},
+{id:6,t:"Les faux sites d'information générés par IA",d:"Étude Médiamétrie sur l'audience des sites générés par IA.",u:"https://www.lemonde.fr/pixels/article/2025/12/19/les-faux-sites-d-information-generes-par-ia-recoltent-deja-une-audience-significative-selon-une-etude-mediametrie_6658723_4408996.html",dt:"2025-12-20",n:16,cat:"etudes",s:"Le Monde"},
+{id:7,t:"It's About Time: The Copilot Usage Report 2025",d:"Analyse des usages de Copilot.",u:"https://microsoft.ai/news/its-about-time-the-copilot-usage-report-2025/",dt:"2025-12-13",n:15,cat:"etudes",s:"Microsoft"},
+{id:8,t:"Panorama des IA génératives 2025",d:"Rapport complet sur le paysage des IA génératives.",u:"https://www.similarweb.com/corp/2025-generative-ai-landscape/",dt:"2025-12-06",n:14,cat:"etudes",s:"SimilarWeb"},
+{id:9,t:"Estimating AI productivity gains from Claude",d:"Étude sur les gains de temps réalisés par l'IA générative.",u:"https://www.anthropic.com/research/estimating-productivity-gains",dt:"2025-11-29",n:13,cat:"etudes",s:"Anthropic"},
+{id:10,t:"Classement compar:IA",d:"Premier classement participatif des modèles d'IA.",u:"https://huggingface.co/blog/comparIA/publication-du-premier-classement",dt:"2025-11-22",n:12,cat:"etudes",s:"HuggingFace"},
+{id:11,t:"La moitié du web serait rédigée par une IA",d:"Étude révélant que près de la moitié des contenus seraient rédigés par IA.",u:"https://www.linkedin.com/posts/alexandra-coutlee",dt:"2025-11-15",n:11,cat:"etudes",s:"LinkedIn"},
+{id:12,t:"Comparatif fiabilité recherche web des chatbots",d:"Comparaison de ChatGPT, Gemini, Claude, Perplexity, Copilot, DeepSeek.",u:"https://www.blogdumoderateur.com/recherche-web-comparatif-ia/",dt:"2025-11-15",n:11,cat:"etudes",s:"Blog du modérateur"},
+{id:13,t:"Internet dominé par les machines selon Graphite",d:"Plus de la moitié des contenus publiés avec l'aide d'une IA.",u:"https://www.fredzone.org/internet-domine-par-les-machines-selon-une-etude-de-graphite/",dt:"2025-10-25",n:8,cat:"etudes",s:"FredZone"},
+{id:14,t:"Moins de remords, plus de triche : l'effet des IA",d:"Article de Jean-François Bonnefon.",u:"https://theconversation.com/moins-de-remords-plus-de-triche-leffet-inquietant-des-ia-sur-notre-honnetete-267129",dt:"2025-10-18",n:7,cat:"etudes",s:"The Conversation"},
+{id:15,t:"Guide Digital 2026",d:"Panorama des usages numériques mondiaux avec partie IA.",u:"https://wearesocial.com/fr/blog/2025/10/digital-2026-2/",dt:"2025-10-18",n:7,cat:"etudes",s:"We Are Social"},
+{id:16,t:"Deep Research : comparatif des chatbots",d:"Comparaison des fonctionnalités de recherche approfondie.",u:"https://www.blogdumoderateur.com/deep-research-comparatif-ia/",dt:"2025-10-11",n:6,cat:"etudes",s:"Blog du modérateur"},
+{id:17,t:"Why language models hallucinate",d:"Analyse sur les hallucinations des LLM.",u:"https://arxiv.org/abs/2509.04664",dt:"2025-10-11",n:6,cat:"etudes",s:"Arxiv"},
+{id:18,t:"GDPval : évaluation sur 1300 tâches",d:"Évaluation des modèles sur des tâches authentiques.",u:"https://openai.com/",dt:"2025-09-27",n:4,cat:"etudes",s:"OpenAI"},
+{id:19,t:"How people are using ChatGPT",d:"Étude de 1,7 millions de conversations.",u:"https://openai.com/index/how-people-are-using-chatgpt/",dt:"2025-09-20",n:3,cat:"etudes",s:"OpenAI/NBER"},
+// ÉTHIQUE ET SOCIÉTÉ
+{id:20,t:"Profilage publicitaire par les chatbots",d:"Antonio Casili sur le profilage publicitaire.",u:"https://www.linkedin.com/posts/acasilli",dt:"2026-01-31",n:22,cat:"ethique",s:"LinkedIn"},
+{id:21,t:"Albanie : scandale de corruption",d:"Ministre virtuelle anti-corruption au cœur d'un scandale.",u:"https://www.liberation.fr/international/europe/en-albanie-les-createurs-de-la-ministre-virtuelle-anti-corruption-se-retrouvent-au-coeur-dun-scandale-de-corruption-20260127",dt:"2026-01-31",n:22,cat:"ethique",s:"Libération"},
+{id:22,t:"Constitution de Claude (version 2)",d:"Anthropic publie la version 2 de la Constitution de Claude.",u:"https://www.anthropic.com/news/claudes-soul-v2",dt:"2026-01-24",n:21,cat:"ethique",s:"Anthropic"},
+{id:23,t:"Le forcing de l'IA",d:"Analyse des injonctions à adopter l'IA.",u:"https://limitesnumeriques.fr/le-forcing-de-lia/",dt:"2026-01-17",n:20,cat:"ethique",s:"Limites Numériques"},
+{id:24,t:"Chatbots IA sont des shoggoths",d:"Article sur la nature alien des LLM.",u:"https://www.ladn.eu/tech-a-suivre/chatbots-ia-shoggoth-lovecraft/",dt:"2026-01-17",n:20,cat:"ethique",s:"L'ADN"},
+{id:25,t:"L'IA de Politico viole les règles de Politico",d:"Cas ironique d'une IA de rédaction.",u:"https://next.ink/183181/lia-de-politico-viole-les-regles-dethique-de-politico/",dt:"2025-12-20",n:16,cat:"ethique",s:"Next"},
+{id:26,t:"Pub Intermarché vs McDonald's IA",d:"Intermarché utilise l'IA pour répondre à McDonald's.",u:"https://www.latribune.fr/entreprises-finance/industrie/agroalimentaire-biens-de-consommation-luxe/intermache-vs-mcdonald-s-le-duel-publicitaire-de-noel-qui-enflamme-les-reseaux-1021953.html",dt:"2025-12-13",n:15,cat:"ethique",s:"La Tribune"},
+{id:27,t:"Character AI et les enfants",d:"Character AI adapte ses filtres pour les mineurs.",u:"https://techcrunch.com/2025/11/25/character-ai-updates-safety-features-kids/",dt:"2025-11-29",n:13,cat:"ethique",s:"TechCrunch"},
+{id:28,t:"Humanisons nos réseaux",d:"Réflexion sur notre rapport aux machines.",u:"https://usbeketrica.com/fr/article/humanisons-nos-reseaux-au-lieu-d-anthropomorphiser-les-ia",dt:"2025-11-29",n:13,cat:"ethique",s:"Usbek et Rica"},
+{id:29,t:"L'Ombre générative",d:"Essai de Matthieu Derian.",u:"https://www.matthieuderian.com/lombre-generative/",dt:"2025-11-29",n:13,cat:"ethique",s:"Hypothèses"},
+{id:30,t:"Stratégie nationale IA",d:"Rapport de la Cour des comptes.",u:"https://www.ccomptes.fr/fr/publications/la-strategie-nationale-pour-lintelligence-artificielle",dt:"2025-11-22",n:12,cat:"ethique",s:"Cour des comptes"},
+{id:31,t:"Challenges IA agentiques éthiques",d:"Réflexion sur les défis éthiques des agents IA.",u:"https://siliconcomte.fr/challenges-systemes-ia-agentiques-ethiques/",dt:"2025-11-08",n:10,cat:"ethique",s:"Silicon Comté"},
+{id:32,t:"L'IA peut nous rendre plus cons… ou intelligents",d:"Réflexion sur les effets cognitifs de l'IA.",u:"https://www.linkedin.com/posts/benoitraphael",dt:"2025-10-25",n:8,cat:"ethique",s:"LinkedIn"},
+{id:33,t:"IA : les quatre controverses du pouvoir",d:"Analyse d'Asma Mhalla.",u:"https://www.linkedin.com/posts/asma-mhalla/",dt:"2025-10-18",n:7,cat:"ethique",s:"LinkedIn"},
+{id:34,t:"Quelle est votre AI-dentity ?",d:"Test Bloomberg.",u:"https://www.bloomberg.com/graphics/2025-ai-identity-quiz/",dt:"2025-10-18",n:7,cat:"ethique",s:"Bloomberg"},
+{id:35,t:"Accords économiques entre acteurs de l'IA",d:"Infographie Bloomberg.",u:"https://intelligence-artificielle.developpez.com/actu/376612/",dt:"2025-10-11",n:6,cat:"ethique",s:"Developpez.com"},
+{id:36,t:"Délégation de nos capacités expressives",d:"Article d'Anne Alombert.",u:"https://www.philomag.com/articles/anne-alombert-deleguer-nos-capacites-expressives-une-ia-cest-nous-amputer-de-ce-qui-fait",dt:"2025-09-20",n:3,cat:"ethique",s:"Philomag"},
+{id:37,t:"Ministre IA en Albanie",d:"L'Albanie nomme un ministre dédié à l'IA.",u:"https://www.numerama.com/politique/1849574-lalbanie-nomme-un-ministre-dedie-a-lia.html",dt:"2025-09-13",n:2,cat:"ethique",s:"Numerama"},
+{id:38,t:"Accompagnement fragilité émotionnelle",d:"Lignes directrices d'OpenAI.",u:"https://openai.com/index/building-more-helpful-chatgpt-experiences/",dt:"2025-09-06",n:1,cat:"ethique",s:"OpenAI"},
+// IA ET TRAVAIL
+{id:39,t:"Shadow AI en entreprise",d:"Enquête sur l'utilisation non contrôlée de l'IA.",u:"https://www.bfmtv.com/tech/shadow-ai-l-ia-cachee-qui-s-infiltre-dans-les-entreprises_AN-202501150393.html",dt:"2026-01-17",n:20,cat:"travail",s:"BFM TV"},
+{id:40,t:"SLOP au Pakistan",d:"Reportage sur les travailleurs pakistanais.",u:"https://chut.media/slop-pakistan/",dt:"2026-01-03",n:18,cat:"travail",s:"CHUT Magazine"},
+{id:41,t:"IA, la crise d'identité au travail",d:"Analyse des transformations identitaires.",u:"https://www.trenchtech.fr/podcast/ia-crise-identite-travail/",dt:"2025-12-27",n:17,cat:"travail",s:"Trench Tech"},
+{id:42,t:"Si ChatGPT était un employé",d:"Vidéo humoristique de Cyprien.",u:"https://www.youtube.com/watch?v=example",dt:"2025-12-27",n:17,cat:"travail",s:"YouTube"},
+{id:43,t:"Harlequin traduit avec l'IA",d:"L'éditeur utilise l'IA pour la traduction.",u:"https://www.francetvinfo.fr/culture/livres/harlequin-utilise-lia-pour-traduire-ses-romans_6831254.html",dt:"2025-12-20",n:16,cat:"travail",s:"France Info"},
+{id:44,t:"Leurs métiers remplacés par l'IA",d:"Témoignages de travailleurs impactés.",u:"https://www.brut.media/fr/news/leurs-metiers-remplaces-par-lia-temoignages",dt:"2025-12-13",n:15,cat:"travail",s:"Brut"},
+{id:45,t:"Les petites mains en Afrique",d:"Interview d'Antonio Casili.",u:"https://www.rfi.fr/fr/podcasts/c-est-pas-du-vent/20251212-les-petites-mains-du-numerique-en-afrique",dt:"2025-12-13",n:15,cat:"travail",s:"RFI"},
+{id:46,t:"18 mois à entraîner l'IA",d:"Témoignage d'une travailleuse de l'annotation.",u:"https://thespinoff.co.nz/society/25-10-2025/i-spent-18-months-training-ai-heres-what-i-learned",dt:"2025-10-25",n:8,cat:"travail",s:"The Spinoff"},
+{id:47,t:"Dossier IA et travail",d:"Compilation de ressources.",u:"https://www.cafetech.fr/ia-travail",dt:"2025-09-27",n:4,cat:"travail",s:"Café IA"},
+{id:48,t:"Voix IA de Lara Croft supprimée",d:"Square Enix retire la voix IA.",u:"https://www.numerama.com/pop-culture/1851234-square-enix-supprime-la-voix-ia-de-lara-croft.html",dt:"2025-09-27",n:4,cat:"travail",s:"Numerama"},
+// SÉCURITÉ ET DÉSINFORMATION
+{id:49,t:"Bébés reborn : cette crèche n'existe pas",d:"Enquête sur les fausses crèches.",u:"https://www.radiofrance.fr/franceinter/podcasts/le-zoom-de-la-redaction/bebes-reborn-creche-fictive",dt:"2026-01-24",n:21,cat:"securite",s:"France Inter"},
+{id:50,t:"DGSI : risques de l'IA professionnel",d:"Alerte de la DGSI.",u:"https://www.dgsi.interieur.gouv.fr/actualites/risques-ia-entreprises",dt:"2026-01-24",n:21,cat:"securite",s:"DGSI"},
+{id:51,t:"Quand une IA se fait arnaquer",d:"Exemples de manipulations d'agents IA.",u:"https://korben.info/quand-une-ia-se-fait-arnaquer.html",dt:"2026-01-17",n:20,cat:"securite",s:"Korben"},
+{id:52,t:"Injection de requêtes",d:"Explication des attaques par injection.",u:"https://www.francetvinfo.fr/internet/securite-informatique/injection-de-requetes-ia-cybermenace_6845123.html",dt:"2026-01-10",n:19,cat:"securite",s:"France Info"},
+{id:53,t:"Rapport IA et ingérences étrangères",d:"Rapport de l'Assemblée nationale.",u:"https://www.assemblee-nationale.fr/dyn/16/rapports/cia/l16b0234_rapport-information",dt:"2025-12-20",n:16,cat:"securite",s:"Assemblée nationale"},
+{id:54,t:"Désinformation COP 30 par vidéos IA",d:"Alerte de l'ONU.",u:"https://www.leprogres.fr/environnement/2025/11/14/cop-30-lonu-alerte-sur-les-videos-ia",dt:"2025-11-15",n:11,cat:"securite",s:"Le Progrès"},
+{id:55,t:"Infox ChatGPT conseils santé",d:"Analyse du hoax.",u:"https://www.lesnumeriques.com/vie-du-net/chatgpt-conseils-sante-infox-n218456.html",dt:"2025-11-08",n:10,cat:"securite",s:"Les Numériques"},
+{id:56,t:"Reality Check (jeu)",d:"Jeu pour repérer les images IA.",u:"https://www.linkedin.com/posts/sylvain-tillon",dt:"2025-10-11",n:6,cat:"securite",s:"LinkedIn"},
+// CRÉATION, ART ET MÉDIAS
+{id:57,t:"La fabrique du SLOP",d:"Documentaire Arte sur les contenus générés par IA.",u:"https://www.arte.tv/fr/videos/123456-000-A/la-fabrique-du-slop/",dt:"2026-01-03",n:18,cat:"creation",s:"Arte"},
+{id:58,t:"_Underscore Generated Art",d:"Série Arte sur l'art généré par IA.",u:"https://www.arte.tv/fr/videos/RC-024678/underscore/",dt:"2025-12-27",n:17,cat:"creation",s:"Arte"},
+{id:59,t:"L'IA révolutionne nos vies ?",d:"Émission 28 minutes d'Arte.",u:"https://www.arte.tv/fr/videos/123456-000-A/28-minutes-ia/",dt:"2025-12-27",n:17,cat:"creation",s:"Arte"},
+{id:60,t:"Warner Music accord avec Suno",d:"Accord de licence pour la génération musicale.",u:"https://www.musicbusinessworldwide.com/warner-music-suno-deal/",dt:"2025-11-29",n:13,cat:"creation",s:"Music Business Worldwide"},
+{id:61,t:"Économie de l'attention vers l'intention",d:"Réflexion sur l'évolution des médias.",u:"https://www.linkedin.com/posts/ericscherer/",dt:"2025-11-15",n:11,cat:"creation",s:"LinkedIn"},
+{id:62,t:"Phantas-IA (épisode 5)",d:"Série Arte explorant l'imaginaire des IA.",u:"https://www.arte.tv/fr/videos/118614-005-A/phantas-ia/",dt:"2025-11-01",n:9,cat:"creation",s:"Arte"},
+{id:63,t:"Le tiret cadratin et ChatGPT",d:"Analyse de l'usage du tiret cadratin.",u:"https://www.radiofrance.fr/franceculture/podcasts/le-billet-culturel/le-tiret-cadratin-chatgpt",dt:"2025-10-04",n:5,cat:"creation",s:"France Culture"},
+{id:64,t:"Claude crée PDF, présentations, Excel",d:"Nouvelles fonctionnalités de Claude.",u:"https://www.blogdumoderateur.com/claude-cree-pdf-presentations-excel/",dt:"2025-09-13",n:2,cat:"creation",s:"Blog du modérateur"},
+{id:65,t:"Le Chat MCP Connectors Memories",d:"Mistral ajoute mémoire et connexions.",u:"https://mistral.ai/news/le-chat-mcp-memories/",dt:"2025-09-06",n:1,cat:"creation",s:"Mistral"},
+// TECHNIQUE ET INFRASTRUCTURE
+{id:66,t:"Microsoft met de l'IA partout",d:"Microsoft intègre l'IA dans Paint et Bloc-Notes.",u:"https://www.radiofrance.fr/franceinter/podcasts/net-plus-ultra/net-plus-ultra-du-vendredi-30-janvier-2026-8217360",dt:"2026-01-31",n:22,cat:"technique",s:"France Inter"},
+{id:67,t:"Glossaire pour les ambiguïtés sémantiques",d:"Glossaire d'Arthur Sarrazin.",u:"https://www.linkedin.com/posts/arthursarazin",dt:"2026-01-31",n:22,cat:"technique",s:"LinkedIn"},
+{id:68,t:"State of Mozilla",d:"Rapport de Mozilla sur l'IA.",u:"https://stateof.mozilla.org/",dt:"2026-01-31",n:22,cat:"technique",s:"Mozilla"},
+{id:69,t:"Protocoles pour agents IA",d:"Analyse des protocoles MCP, A2A.",u:"https://www.cafeia.fr/protocoles-agents-ia/",dt:"2026-01-24",n:21,cat:"technique",s:"Café IA"},
+{id:70,t:"ChatGPT Santé / Claude Healthcare",d:"Versions santé des chatbots.",u:"https://siecledigital.fr/2025/01/16/chatgpt-sante-claude-healthcare/",dt:"2026-01-17",n:20,cat:"technique",s:"Siècle Digital"},
+{id:71,t:"Claude AI fait pousser des tomates",d:"Expérimentation d'un agent IA.",u:"https://autoncorp.com/claude-tomates",dt:"2026-01-10",n:19,cat:"technique",s:"Autoncorp"},
+{id:72,t:"Recensement des data centers IA",d:"Cartographie mondiale.",u:"https://epochai.org/data-center-census",dt:"2026-01-10",n:19,cat:"technique",s:"Epoch AI"},
+{id:73,t:"Stéphane Mallat : réseaux de neurones",d:"Interview du mathématicien.",u:"https://www.radiofrance.fr/franceinter/podcasts/la-tete-au-carre/stephane-mallat-reseaux-neurones",dt:"2026-01-03",n:18,cat:"technique",s:"France Inter"},
+{id:74,t:"Firefox navigateur IA",d:"Mozilla intègre l'IA dans Firefox.",u:"https://siecledigital.fr/2025/12/19/firefox-navigateur-ia/",dt:"2025-12-20",n:16,cat:"technique",s:"Siècle Digital"},
+{id:75,t:"Mistral pour 10 000 agents publics",d:"Déploiement dans la fonction publique.",u:"https://www.lemondeinformatique.fr/actualites/lire-mistral-deploye-aupres-de-10000-agents-publics-92456.html",dt:"2025-11-01",n:9,cat:"technique",s:"Le Monde Informatique"},
+{id:76,t:"Extensions de domaines .ai .io .tv .nu",d:"Analyse des extensions populaires.",u:"https://www.blogdumoderateur.com/extensions-domaines-ai-io-tv/",dt:"2025-09-06",n:1,cat:"technique",s:"Blog du modérateur"},
+// PHILOSOPHIE ET RÉFLEXIONS
+{id:77,t:"Les imaginaires et les mythes de l'IA",d:"Article d'Hubert Guillaud.",u:"https://www.linkedin.com/pulse/cafe-ia-la-lettre-hebdomadaire-21-entre-mythes-et-realites-kfzff/",dt:"2026-01-31",n:22,cat:"philosophie",s:"Café IA"},
+{id:78,t:"La fabrique à idiots",d:"Vidéo de Micode.",u:"https://www.youtube.com/watch?v=example-micode",dt:"2026-01-24",n:21,cat:"philosophie",s:"YouTube"},
+{id:79,t:"L'IA en question (mini-série)",d:"Mini-série documentaire Arte.",u:"https://www.arte.tv/fr/videos/RC-024789/l-ia-en-question/",dt:"2025-12-27",n:17,cat:"philosophie",s:"Arte"},
+{id:80,t:"Kit de survie pour les débats sur l'IA",d:"Guide pratique.",u:"https://laurasibony.substack.com/p/kit-survie-debats-ia",dt:"2025-12-06",n:14,cat:"philosophie",s:"Laura Sibony"},
+{id:81,t:"C.L.O.DO. révolte contre l'informatisation",d:"Retour sur le mouvement des années 1980.",u:"https://www.radiofrance.fr/franceinter/podcasts/affaires-sensibles/clodo",dt:"2025-12-06",n:14,cat:"philosophie",s:"France Inter"},
+{id:82,t:"15 questions pour comprendre l'IA générative",d:"Guide pédagogique.",u:"https://www.fredcavazza.net/2025/11/21/15-questions-comprendre-ia-generative/",dt:"2025-11-22",n:12,cat:"philosophie",s:"Fred Cavazza"},
+{id:83,t:"L'ornithorynque n'existe plus",d:"Réflexion sur la classification et l'IA.",u:"https://aivancity.ai/lornithorynque-nexiste-plus/",dt:"2025-11-22",n:12,cat:"philosophie",s:"AIvancity"},
+{id:84,t:"AGI : théorie du complot la plus influente",d:"Analyse du MIT Technology Review.",u:"https://www.technologyreview.com/2025/11/05/agi-conspiracy-theory/",dt:"2025-11-08",n:10,cat:"philosophie",s:"MIT Technology Review"},
+{id:85,t:"Les philosophes et la technique au 20e siècle",d:"Émission France Culture.",u:"https://www.radiofrance.fr/franceculture/podcasts/les-chemins-de-la-philosophie/philosophes-technique-xxe-siecle",dt:"2025-10-25",n:8,cat:"philosophie",s:"France Culture"},
+{id:86,t:"Packs instructions OpenAI",d:"Ressources pédagogiques.",u:"https://academy.openai.com/packs",dt:"2025-10-04",n:5,cat:"philosophie",s:"OpenAI Academy"},
+// ÉDUCATION
+{id:87,t:"Travailler un regard d'auteur à l'heure de l'IA",d:"Séquence pédagogique de Nicolas Bannier.",u:"https://www.cafepedagogique.net/2026/01/26/travailler-un-regard-dauteur-a-lheure-de-lia/",dt:"2026-01-31",n:22,cat:"education",s:"Café Pédagogique"},
+{id:88,t:"Nos enfants après l'IA",d:"Émission Être et savoir.",u:"https://www.radiofrance.fr/franceculture/podcasts/etre-et-savoir/nos-enfants-apres-ia",dt:"2026-01-17",n:20,cat:"education",s:"France Culture"},
+{id:89,t:"IA résout un problème mathématique vieux de 45 ans",d:"Une IA résout un problème insoluble.",u:"https://www.numerama.com/sciences/ia-resout-probleme-mathematique-45-ans.html",dt:"2026-01-17",n:20,cat:"education",s:"Numerama"},
+{id:90,t:"L'Islande confie l'éducation à Claude",d:"L'Islande contractualise avec Anthropic.",u:"https://www.linkedin.com/posts/amelie-raoul/",dt:"2025-11-08",n:10,cat:"education",s:"LinkedIn"},
+{id:91,t:"Utilisation éthique de l'IA pour l'écriture académique",d:"Recommandations.",u:"https://advancesinsimulation.biomedcentral.com/articles/10.1186/s41077-025-00350-6",dt:"2025-11-08",n:10,cat:"education",s:"BioMedCentral"},
+{id:92,t:"Café IAlpes - Éthique et IA en éducation",d:"Nouveau numéro du Café IAlpes.",u:"https://www.linkedin.com/posts/philipperoederer",dt:"2025-11-01",n:9,cat:"education",s:"LinkedIn"},
+{id:93,t:"Comment l'IA influence nos façons d'apprendre",d:"Article d'un professeur de psychologie cognitive.",u:"https://theconversation.com/comment-lia-influence-nos-facons-dapprendre-et-pourquoi-se-mefier-de-la-facilite-265028",dt:"2025-09-20",n:3,cat:"education",s:"The Conversation"},
+{id:94,t:"Activités créatives pour l'acculturation à l'IA",d:"Guide coordonné par Margarida Romero.",u:"https://tuic.education.pf/guide-dactivites-creatives-pour-lacculturation-a-lintelligence-artificielle/",dt:"2025-09-13",n:2,cat:"education",s:"TUIC Polynésie"},
+// DROIT
+{id:95,t:"Mistral AI accusé de piratage de livres",d:"Accusation concernant les données d'entraînement.",u:"https://www.mediapart.fr/journal/economie/030126/mistral-ai-accuse-piratage-livres",dt:"2026-01-03",n:18,cat:"droit",s:"Mediapart"},
+{id:96,t:"Proposition de loi présomption d'exploitation",d:"Proposition de loi française.",u:"https://www.senat.fr/dossier-legislatif/ppl24-232.html",dt:"2025-12-20",n:16,cat:"droit",s:"Sénat"},
+{id:97,t:"Livre blanc IA du barreau de Paris",d:"Publication du livre blanc.",u:"https://www.avocatparis.org/livre-blanc-ia",dt:"2025-11-01",n:9,cat:"droit",s:"Barreau de Paris"},
+{id:98,t:"Carte des accords et procès éditeurs/IA",d:"Cartographie des relations juridiques.",u:"https://www.axios.com/2025/10/02/ai-publisher-deals-lawsuits-tracker",dt:"2025-10-04",n:5,cat:"droit",s:"Axios"},
+// GÉOPOLITIQUE ET INTERNATIONAL
+{id:99,t:"Québec encadre l'usage de l'IA",d:"Encadrement de l'IA au Québec.",u:"https://www.lapresse.ca/actualites/politique/2026-01-24/quebec-encadre-l-usage-de-l-ia-dans-la-fonction-publique.php",dt:"2026-01-31",n:22,cat:"geopolitique",s:"La Presse"},
+{id:100,t:"Europe : IA vs climat",d:"Tensions entre IA et objectifs climatiques.",u:"https://www.cnbc.com/2025/01/09/europe-ai-climate-conflict.html",dt:"2026-01-10",n:19,cat:"geopolitique",s:"CNBC"},
+{id:101,t:"À chaque culture son IA",d:"Réflexion sur les différences culturelles.",u:"https://www.francispisani.net/a-chaque-culture-son-ia/",dt:"2025-11-22",n:12,cat:"geopolitique",s:"Francis Pisani"}
+];
 
-  // Parser le HTML
-  function parseHTML(html) {
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(html, 'text/html');
-    const results = [];
-    let currentCategory = null;
-    let resourceId = 0;
-    
-    const allElements = doc.querySelectorAll('h2[id], p');
-    
-    for (let i = 0; i < allElements.length; i++) {
-      const el = allElements[i];
-      
-      if (el.tagName === 'H2' && el.id && categoriesConfig[el.id]) {
-        currentCategory = el.id;
-        continue;
-      }
-      
-      if (el.tagName === 'P' && currentCategory) {
-        const strong = el.querySelector('strong');
-        if (strong && !el.querySelector('em') && !el.textContent.includes('Retour')) {
-          const title = strong.textContent.trim();
-          
-          const descEl = allElements[i + 1];
-          let description = '';
-          if (descEl && descEl.tagName === 'P' && !descEl.querySelector('strong') && !descEl.querySelector('em')) {
-            description = descEl.textContent.trim();
-          }
-          
-          const metaEl = allElements[i + 2];
-          let date = '', letter = 0, url = '#', source = '';
-          
-          if (metaEl && metaEl.tagName === 'P' && metaEl.querySelector('em')) {
-            const emText = metaEl.querySelector('em')?.textContent || '';
-            const letterMatch = emText.match(/lettre #(\d+)/);
-            if (letterMatch) letter = parseInt(letterMatch[1]);
-            const dateMatch = emText.match(/du (\d{2})\/(\d{2})\/(\d{4})/);
-            if (dateMatch) date = `${dateMatch[3]}-${dateMatch[2]}-${dateMatch[1]}`;
-            
-            const links = metaEl.querySelectorAll('a');
-            if (links.length >= 2) {
-              url = links[1].href;
-              source = links[1].textContent.trim();
-            } else if (links.length === 1) {
-              const text = metaEl.textContent;
-              if (text.includes('Lien direct :')) {
-                const parts = text.split('Lien direct :');
-                if (parts[1]) source = parts[1].trim();
-              }
-            }
-          }
-          
-          if (title && date) {
-            resourceId++;
-            results.push({
-              id: resourceId,
-              title,
-              description,
-              url,
-              date,
-              letter,
-              category: currentCategory,
-              source: source || 'Source'
-            });
-          }
-        }
-      }
-    }
-    
-    return results;
-  }
+let selC=new Set(),selR=new Set(),search='',tab='categories';
+const fd=d=>new Date(d).toLocaleDateString('fr-FR');
+const getF=()=>{let r=R;if(selC.size)r=r.filter(x=>selC.has(x.cat));if(search){const s=search.toLowerCase();r=r.filter(x=>x.t.toLowerCase().includes(s)||x.d.toLowerCase().includes(s))}return r.sort((a,b)=>new Date(b.dt)-new Date(a.dt))};
+const getE=()=>selR.size?R.filter(r=>selR.has(r.id)):getF();
 
-  // Fonctions de filtrage
-  function getFiltered() {
-    let r = resources;
-    if (selectedCats.size > 0) r = r.filter(x => selectedCats.has(x.category));
-    if (searchTerm) {
-      const t = searchTerm.toLowerCase();
-      r = r.filter(x => x.title.toLowerCase().includes(t) || x.description.toLowerCase().includes(t));
-    }
-    return r.sort((a, b) => new Date(b.date) - new Date(a.date));
-  }
+function genOPML(r){const g={};r.forEach(x=>{if(!g[x.cat])g[x.cat]=[];g[x.cat].push(x)});let o=`<?xml version="1.0" encoding="UTF-8"?>\n<opml version="2.0">\n<head><title>Lectures partagées - Une IA par jour</title><dateCreated>${new Date().toISOString()}</dateCreated></head>\n<body>`;Object.entries(g).forEach(([k,v])=>{o+=`\n<outline text="${C[k]?.l}" title="${C[k]?.l}">`;v.forEach(x=>{o+=`\n<outline type="link" text="${x.t.replace(/"/g,'&quot;')}" url="${x.u}" created="${x.dt}"/>`});o+=`\n</outline>`});return o+`\n</body>\n</opml>`}
+function genXML(r){let x=`<?xml version="1.0" encoding="UTF-8"?>\n<lecturesPartagees>\n<metadata><title>Lectures partagées</title><dateExport>${new Date().toISOString()}</dateExport><total>${r.length}</total></metadata>\n<resources>`;r.forEach(i=>{x+=`\n<resource id="${i.id}"><title><![CDATA[${i.t}]]></title><description><![CDATA[${i.d}]]></description><url>${i.u}</url><date>${i.dt}</date><letter>${i.n}</letter><category>${C[i.cat]?.l}</category><source><![CDATA[${i.s}]]></source></resource>`});return x+`\n</resources>\n</lecturesPartagees>`}
+function genMD(r){const g={};r.forEach(x=>{if(!g[x.cat])g[x.cat]=[];g[x.cat].push(x)});let m=`# Lectures partagées - Une IA par jour\n\n> Export du ${fd(new Date())} — ${r.length} ressources\n\n---\n\n`;Object.entries(g).forEach(([k,v])=>{m+=`## ${C[k]?.l}\n\n`;v.sort((a,b)=>new Date(b.dt)-new Date(a.dt)).forEach(x=>{m+=`### ${x.t}\n\n${x.d}\n\n- **Date** : ${fd(x.dt)}\n- **Lettre** : #${x.n}\n- **Lien** : [${x.u}](${x.u})\n\n---\n\n`})});return m}
+function genBM(r){const g={};r.forEach(x=>{if(!g[x.cat])g[x.cat]=[];g[x.cat].push(x)});let h=`<!DOCTYPE NETSCAPE-Bookmark-file-1>\n<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">\n<TITLE>Lectures partagées</TITLE>\n<H1>Lectures partagées</H1>\n<DL><p>`;Object.entries(g).forEach(([k,v])=>{h+=`\n<DT><H3>${C[k]?.l}</H3>\n<DL><p>`;v.forEach(x=>{h+=`\n<DT><A HREF="${x.u}" ADD_DATE="${Math.floor(new Date(x.dt).getTime()/1000)}">${x.t}</A>`});h+=`\n</DL><p>`});return h+`\n</DL><p>`}
+function genBib(r){let b=`% Lectures partagées - Une IA par jour\n% ${r.length} ressources\n\n`;r.forEach(x=>{const k=x.t.toLowerCase().replace(/[^a-z0-9]/g,'').substring(0,15)+x.id;b+=`@online{${k},\n  author = {${x.s.replace(/[{}]/g,'')}},\n  title = {${x.t.replace(/[{}]/g,'')}},\n  year = {${x.dt.substring(0,4)}},\n  url = {${x.u}},\n  keywords = {${x.cat}, ia}\n}\n\n`});return b}
+function genJSON(r){return JSON.stringify({metadata:{title:"Lectures partagées - Une IA par jour",exportDate:new Date().toISOString(),total:r.length},resources:r.map(x=>({id:x.id,title:x.t,description:x.d,url:x.u,date:x.dt,letter:x.n,category:x.cat,categoryLabel:C[x.cat]?.l,source:x.s}))},null,2)}
+function genCSV(r){const e=s=>`"${String(s).replace(/"/g,'""')}"`;let c='ID;Titre;Description;URL;Date;Lettre;Catégorie;Source\n';r.forEach(x=>{c+=`${x.id};${e(x.t)};${e(x.d)};${e(x.u)};${x.dt};${x.n};${e(C[x.cat]?.l)};${e(x.s)}\n`});return c}
 
-  function getExport() {
-    return selectedRes.size > 0 ? resources.filter(r => selectedRes.has(r.id)) : getFiltered();
-  }
+function dl(c,f,m){const b=new Blob([c],{type:m+';charset=utf-8'}),u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download=f;document.body.appendChild(a);a.click();document.body.removeChild(a);URL.revokeObjectURL(u)}
+function exp(f){const e=getE(),m={opml:[genOPML(e),'lectures-partagees.opml','application/xml'],xml:[genXML(e),'lectures-partagees.xml','application/xml'],markdown:[genMD(e),'lectures-partagees.md','text/markdown'],bookmarks:[genBM(e),'lectures-partagees-bookmarks.html','text/html'],bibtex:[genBib(e),'lectures-partagees.bib','application/x-bibtex'],json:[genJSON(e),'lectures-partagees.json','application/json'],csv:[genCSV(e),'lectures-partagees.csv','text/csv']};if(m[f])dl(...m[f])}
 
-  function formatDate(d) {
-    return new Date(d).toLocaleDateString('fr-FR');
-  }
+function render(){const a=document.getElementById('app'),f=getF(),e=getE();document.getElementById('header-stats').textContent=`${R.length} ressources · 10 catégories · 7 formats`;
+a.innerHTML=`<div class="stats"><div class="stat"><div class="stat-value" style="color:#3B82F6">${f.length}</div><div class="stat-label">Filtrées</div></div><div class="stat"><div class="stat-value" style="color:#10B981">${e.length}</div><div class="stat-label">À exporter</div></div><div class="stat"><div class="stat-value" style="color:#8B5CF6">${selC.size||10}</div><div class="stat-label">Catégories</div></div></div><input type="text" class="search-input" id="search" placeholder="Rechercher..." value="${search}"><div class="tabs"><button class="tab-btn ${tab==='categories'?'active':''}" data-tab="categories">Par catégorie</button><button class="tab-btn ${tab==='resources'?'active':''}" data-tab="resources">Par article</button></div><div class="content-box">${tab==='categories'?renderC():renderR(f)}</div><h4>Choisir un format</h4><div class="formats"><button class="fmt-btn" data-fmt="opml"><div class="name">OPML</div><div class="desc">Feedly, Inoreader...</div></button><button class="fmt-btn" data-fmt="xml"><div class="name">XML</div><div class="desc">Format structuré</div></button><button class="fmt-btn" data-fmt="markdown"><div class="name">Markdown</div><div class="desc">Documentation</div></button><button class="fmt-btn" data-fmt="bookmarks"><div class="name">Bookmarks</div><div class="desc">Navigateurs</div></button><button class="fmt-btn" data-fmt="bibtex"><div class="name">BibTeX</div><div class="desc">Zotero, Mendeley...</div></button><button class="fmt-btn" data-fmt="json"><div class="name">JSON</div><div class="desc">Développeurs</div></button><button class="fmt-btn" data-fmt="csv"><div class="name">CSV</div><div class="desc">Tableurs</div></button></div><footer><a href="https://www.uneiaparjour.fr/" target="_blank">Une IA par jour</a> — Bertrand Formet</footer>`;
+document.getElementById('search').addEventListener('input',x=>{search=x.target.value;render()});
+document.querySelectorAll('.tab-btn').forEach(b=>b.addEventListener('click',()=>{tab=b.dataset.tab;render()}));
+document.querySelectorAll('.cat-btn').forEach(b=>b.addEventListener('click',()=>{const c=b.dataset.cat;selC.has(c)?selC.delete(c):selC.add(c);render()}));
+document.querySelectorAll('.res-btn').forEach(b=>b.addEventListener('click',()=>{const i=parseInt(b.dataset.id);selR.has(i)?selR.delete(i):selR.add(i);render()}));
+document.getElementById('sel-all')?.addEventListener('click',()=>{f.forEach(r=>selR.add(r.id));render()});
+document.getElementById('clr-all')?.addEventListener('click',()=>{selR.clear();selC.clear();render()});
+document.querySelectorAll('.fmt-btn').forEach(b=>b.addEventListener('click',()=>exp(b.dataset.fmt)))}
 
-  // Générateurs de formats
-  function generateOPML(res) {
-    const grouped = {};
-    res.forEach(r => { if (!grouped[r.category]) grouped[r.category] = []; grouped[r.category].push(r); });
-    let o = `<?xml version="1.0" encoding="UTF-8"?>\n<opml version="2.0">\n<head>\n  <title>Lectures partagées - Une IA par jour</title>\n  <dateCreated>${new Date().toISOString()}</dateCreated>\n  <ownerName>Bertrand Formet</ownerName>\n</head>\n<body>`;
-    Object.entries(grouped).forEach(([cat, items]) => {
-      o += `\n  <outline text="${categoriesConfig[cat]?.label}" title="${categoriesConfig[cat]?.label}">`;
-      items.forEach(r => {
-        o += `\n    <outline type="link" text="${r.title.replace(/"/g, '&quot;')}" title="${r.title.replace(/"/g, '&quot;')}" url="${r.url}" htmlUrl="${r.url}" created="${r.date}"/>`;
-      });
-      o += `\n  </outline>`;
-    });
-    return o + `\n</body>\n</opml>`;
-  }
+function renderC(){return Object.entries(C).map(([k,{l,c}])=>{const n=R.filter(r=>r.cat===k).length,s=selC.has(k);return`<button class="cat-btn" data-cat="${k}" style="border-color:${s?c:'#e2e8f0'};background:${s?c+'10':'#fff'}"><div style="display:flex;align-items:center"><div class="check" style="background:${s?c:'#e2e8f0'};margin-right:12px">${s?'✓':''}</div><span style="font-weight:${s?'600':'400'};color:${s?c:'#374151'}">${l}</span></div><span style="background:${s?c:'#e2e8f0'};color:${s?'#fff':'#64748b'};padding:4px 10px;border-radius:20px;font-size:.8rem;font-weight:600">${n}</span></button>`}).join('')}
 
-  function generateXML(res) {
-    let x = `<?xml version="1.0" encoding="UTF-8"?>\n<lecturesPartagees>\n  <metadata>\n    <title>Lectures partagées - Une IA par jour</title>\n    <website>https://www.uneiaparjour.fr/</website>\n    <dateExport>${new Date().toISOString()}</dateExport>\n    <totalResources>${res.length}</totalResources>\n  </metadata>\n  <resources>`;
-    res.forEach(r => {
-      x += `\n    <resource id="${r.id}">\n      <title><![CDATA[${r.title}]]></title>\n      <description><![CDATA[${r.description}]]></description>\n      <url>${r.url}</url>\n      <date>${r.date}</date>\n      <letter>${r.letter}</letter>\n      <category>${r.category}</category>\n      <categoryLabel>${categoriesConfig[r.category]?.label}</categoryLabel>\n      <source><![CDATA[${r.source}]]></source>\n    </resource>`;
-    });
-    return x + `\n  </resources>\n</lecturesPartagees>`;
-  }
+function renderR(f){let h=`<div class="action-btns"><button class="action-btn" id="sel-all">Tout sélectionner</button><button class="action-btn" id="clr-all">Effacer</button></div>`;f.forEach(r=>{const s=selR.has(r.id),c=C[r.cat]?.c||'#6B7280';h+=`<button class="res-btn" data-id="${r.id}" style="border-color:${s?c:'#e2e8f0'};background:${s?c+'08':'#fff'};gap:12px"><div class="check" style="background:${s?c:'#e2e8f0'}">${s?'✓':''}</div><div style="flex:1;min-width:0"><div style="font-weight:500;font-size:.9rem;color:#1e293b;margin-bottom:4px;line-height:1.3">${r.t}</div><div style="font-size:.75rem;color:#64748b"><span style="display:inline-block;background:${c}20;color:${c};padding:2px 8px;border-radius:4px;font-weight:500;margin-right:8px">${C[r.cat]?.l}</span>#${r.n} · ${fd(r.dt)}</div></div></button>`});return h}
 
-  function generateMarkdown(res) {
-    const grouped = {};
-    res.forEach(r => { if (!grouped[r.category]) grouped[r.category] = []; grouped[r.category].push(r); });
-    let m = `# Lectures partagées - Une IA par jour\n\n> Compilation des ressources partagées dans la newsletter [Une IA par jour](https://www.uneiaparjour.fr/)\n>\n> Export du ${formatDate(new Date())} — ${res.length} ressources\n\n---\n\n`;
-    Object.entries(grouped).forEach(([cat, items]) => {
-      m += `## ${categoriesConfig[cat]?.label}\n\n`;
-      items.sort((a, b) => new Date(b.date) - new Date(a.date)).forEach(r => {
-        m += `### ${r.title}\n\n${r.description}\n\n`;
-        m += `- **Date** : ${formatDate(r.date)}\n`;
-        m += `- **Lettre** : #${r.letter}\n`;
-        m += `- **Source** : ${r.source}\n`;
-        m += `- **Lien** : [${r.url}](${r.url})\n\n---\n\n`;
-      });
-    });
-    return m;
-  }
-
-  function generateBookmarks(res) {
-    const grouped = {};
-    res.forEach(r => { if (!grouped[r.category]) grouped[r.category] = []; grouped[r.category].push(r); });
-    let h = `<!DOCTYPE NETSCAPE-Bookmark-file-1>\n<!-- This is an automatically generated file. -->\n<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">\n<TITLE>Lectures partagées - Une IA par jour</TITLE>\n<H1>Lectures partagées</H1>\n<DL><p>`;
-    Object.entries(grouped).forEach(([cat, items]) => {
-      h += `\n    <DT><H3>${categoriesConfig[cat]?.label}</H3>\n    <DL><p>`;
-      items.forEach(r => {
-        const ts = Math.floor(new Date(r.date).getTime() / 1000);
-        h += `\n        <DT><A HREF="${r.url}" ADD_DATE="${ts}" TAGS="${r.category}">${r.title}</A>\n        <DD>${r.description}`;
-      });
-      h += `\n    </DL><p>`;
-    });
-    return h + `\n</DL><p>`;
-  }
-
-  function generateBibTeX(res) {
-    let b = `% Lectures partagées - Une IA par jour\n% Export du ${formatDate(new Date())}\n% ${res.length} ressources\n\n`;
-    res.forEach(r => {
-      const key = r.title.toLowerCase().replace(/[^a-z0-9]/g, '').substring(0, 15) + r.id;
-      b += `@online{${key},\n  author = {${r.source.replace(/[{}]/g, '')}},\n  title = {${r.title.replace(/[{}]/g, '')}},\n  year = {${r.date.substring(0, 4)}},\n  month = {${r.date.substring(5, 7)}},\n  url = {${r.url}},\n  note = {${r.description.replace(/[{}]/g, '').substring(0, 150)}},\n  keywords = {${r.category}, ia, newsletter}\n}\n\n`;
-    });
-    return b;
-  }
-
-  function generateJSON(res) {
-    return JSON.stringify({
-      metadata: {
-        title: "Lectures partagées - Une IA par jour",
-        description: "Compilation des ressources partagées dans la newsletter Une IA par jour",
-        website: "https://www.uneiaparjour.fr/",
-        exportDate: new Date().toISOString(),
-        totalResources: res.length,
-        categories: Object.entries(categoriesConfig).map(([k, v]) => ({
-          id: k, label: v.label, count: res.filter(r => r.category === k).length
-        }))
-      },
-      resources: res.map(r => ({
-        id: r.id,
-        title: r.title,
-        description: r.description,
-        url: r.url,
-        date: r.date,
-        letter: r.letter,
-        category: { id: r.category, label: categoriesConfig[r.category]?.label },
-        source: r.source
-      }))
-    }, null, 2);
-  }
-
-  function generateCSV(res) {
-    const esc = s => `"${String(s).replace(/"/g, '""')}"`;
-    let c = 'ID;Titre;Description;URL;Date;Lettre;Catégorie;Source\n';
-    res.forEach(r => {
-      c += `${r.id};${esc(r.title)};${esc(r.description)};${esc(r.url)};${r.date};${r.letter};${esc(categoriesConfig[r.category]?.label)};${esc(r.source)}\n`;
-    });
-    return c;
-  }
-
-  function download(content, filename, mime) {
-    const blob = new Blob([content], { type: mime + ';charset=utf-8' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = filename;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  }
-
-  function doExport(fmt) {
-    const exp = getExport();
-    const map = {
-      opml: [generateOPML(exp), 'lectures-partagees.opml', 'application/xml'],
-      xml: [generateXML(exp), 'lectures-partagees.xml', 'application/xml'],
-      markdown: [generateMarkdown(exp), 'lectures-partagees.md', 'text/markdown'],
-      bookmarks: [generateBookmarks(exp), 'lectures-partagees-bookmarks.html', 'text/html'],
-      bibtex: [generateBibTeX(exp), 'lectures-partagees.bib', 'application/x-bibtex'],
-      json: [generateJSON(exp), 'lectures-partagees.json', 'application/json'],
-      csv: [generateCSV(exp), 'lectures-partagees.csv', 'text/csv']
-    };
-    if (map[fmt]) download(...map[fmt]);
-  }
-
-  // Rendu
-  function render() {
-    const app = document.getElementById('app');
-    const filtered = getFiltered();
-    const toExp = getExport();
-
-    document.getElementById('header-stats').textContent = 
-      `${resources.length} ressources · 10 catégories · 7 formats`;
-
-    app.innerHTML = `
-      <div class="stats">
-        <div class="stat">
-          <div class="stat-value" style="color:#3B82F6;">${filtered.length}</div>
-          <div class="stat-label">Filtrées</div>
-        </div>
-        <div class="stat">
-          <div class="stat-value" style="color:#10B981;">${toExp.length}</div>
-          <div class="stat-label">À exporter</div>
-        </div>
-        <div class="stat">
-          <div class="stat-value" style="color:#8B5CF6;">${selectedCats.size || 10}</div>
-          <div class="stat-label">Catégories</div>
-        </div>
-      </div>
-
-      <input type="text" class="search-input" id="search" placeholder="Rechercher..." value="${searchTerm}">
-
-      <div class="tabs">
-        <button class="tab-btn ${activeTab === 'categories' ? 'active' : ''}" data-tab="categories">Par catégorie</button>
-        <button class="tab-btn ${activeTab === 'resources' ? 'active' : ''}" data-tab="resources">Par article</button>
-      </div>
-
-      <div class="content-box">
-        ${activeTab === 'categories' ? renderCategories() : renderResources(filtered)}
-      </div>
-
-      <h4>Choisir un format</h4>
-      <div class="formats">
-        <button class="fmt-btn" data-fmt="opml"><div class="name">OPML</div><div class="desc">Feedly, Inoreader...</div></button>
-        <button class="fmt-btn" data-fmt="xml"><div class="name">XML</div><div class="desc">Format structuré</div></button>
-        <button class="fmt-btn" data-fmt="markdown"><div class="name">Markdown</div><div class="desc">Documentation</div></button>
-        <button class="fmt-btn" data-fmt="bookmarks"><div class="name">Bookmarks</div><div class="desc">Navigateurs</div></button>
-        <button class="fmt-btn" data-fmt="bibtex"><div class="name">BibTeX</div><div class="desc">Zotero, Mendeley...</div></button>
-        <button class="fmt-btn" data-fmt="json"><div class="name">JSON</div><div class="desc">Développeurs</div></button>
-        <button class="fmt-btn" data-fmt="csv"><div class="name">CSV</div><div class="desc">Tableurs</div></button>
-      </div>
-
-      <footer>
-        <a href="https://www.uneiaparjour.fr/" target="_blank">Une IA par jour</a> — Bertrand Formet
-      </footer>
-    `;
-
-    // Event listeners
-    document.getElementById('search').addEventListener('input', e => {
-      searchTerm = e.target.value;
-      render();
-    });
-
-    document.querySelectorAll('.tab-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        activeTab = btn.dataset.tab;
-        render();
-      });
-    });
-
-    document.querySelectorAll('.cat-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const cat = btn.dataset.cat;
-        if (selectedCats.has(cat)) selectedCats.delete(cat);
-        else selectedCats.add(cat);
-        render();
-      });
-    });
-
-    document.querySelectorAll('.res-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const id = parseInt(btn.dataset.id);
-        if (selectedRes.has(id)) selectedRes.delete(id);
-        else selectedRes.add(id);
-        render();
-      });
-    });
-
-    document.getElementById('sel-all')?.addEventListener('click', () => {
-      filtered.forEach(r => selectedRes.add(r.id));
-      render();
-    });
-
-    document.getElementById('clr-all')?.addEventListener('click', () => {
-      selectedRes.clear();
-      selectedCats.clear();
-      render();
-    });
-
-    document.querySelectorAll('.fmt-btn').forEach(btn => {
-      btn.addEventListener('click', () => doExport(btn.dataset.fmt));
-    });
-  }
-
-  function renderCategories() {
-    return Object.entries(categoriesConfig).map(([key, { label, color }]) => {
-      const count = resources.filter(r => r.category === key).length;
-      const sel = selectedCats.has(key);
-      return `
-        <button class="cat-btn ${sel ? 'selected' : ''}" data-cat="${key}" style="--cat-color:${color};--cat-bg:${color}15;">
-          <div style="display:flex;align-items:center;">
-            <div class="check">${sel ? '✓' : ''}</div>
-            <span class="label">${label}</span>
-          </div>
-          <span class="count">${count}</span>
-        </button>
-      `;
-    }).join('');
-  }
-
-  function renderResources(filtered) {
-    let html = `
-      <div class="action-btns">
-        <button class="action-btn" id="sel-all">Tout sélectionner</button>
-        <button class="action-btn" id="clr-all">Effacer</button>
-      </div>
-    `;
-
-    filtered.forEach(r => {
-      const sel = selectedRes.has(r.id);
-      const col = categoriesConfig[r.category]?.color || '#6B7280';
-      html += `
-        <button class="res-btn ${sel ? 'selected' : ''}" data-id="${r.id}" style="--cat-color:${col};border-color:${sel ? col : '#e2e8f0'};background:${sel ? col + '08' : 'white'};">
-          <div class="check" style="background:${sel ? col : '#e2e8f0'};">${sel ? '✓' : ''}</div>
-          <div class="info">
-            <div class="title">${r.title}</div>
-            <div class="meta">
-              <span class="cat-tag" style="background:${col}20;color:${col};">${categoriesConfig[r.category]?.label}</span>
-              #${r.letter} · ${formatDate(r.date)}
-            </div>
-          </div>
-        </button>
-      `;
-    });
-
-    return html;
-  }
-
-  // Chargement initial
-  async function loadData() {
-    const app = document.getElementById('app');
-    
-    try {
-      const response = await fetch(CORS_PROXY + encodeURIComponent(PAGE_URL));
-      if (!response.ok) throw new Error('Erreur réseau');
-      
-      const html = await response.text();
-      resources = parseHTML(html);
-      
-      if (resources.length === 0) {
-        throw new Error('Aucune ressource trouvée');
-      }
-      
-      render();
-    } catch (error) {
-      console.error('Erreur:', error);
-      app.innerHTML = `
-        <div class="error">
-          <p><strong>Erreur de chargement</strong></p>
-          <p style="margin-top:8px;font-size:0.9rem;">Impossible de charger les ressources depuis uneiaparjour.fr</p>
-          <p style="margin-top:12px;font-size:0.85rem;opacity:0.8;">Réessayez dans quelques instants ou contactez l'administrateur.</p>
-        </div>
-      `;
-    }
-  }
-
-  loadData();
+render();
 })();
 </script>
 </body>
