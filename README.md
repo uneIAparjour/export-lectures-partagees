@@ -1,6 +1,6 @@
-# 📚 Export des Lectures Partagées
+# 📚 Export des "lectures partagées" de la lettre d'infos du site uneIAparjour.fr
 
-Outil d'export multi-format pour les ressources de la page [Lectures partagées](https://www.uneiaparjour.fr/lectures-partagees/) de la newsletter **Une IA par jour**.
+Outil d'export multi-format pour les ressources de la page [Lectures partagées](https://www.uneiaparjour.fr/lectures-partagees/) de la lettre d'infos **Une IA par jour**.
 
 
 
@@ -23,7 +23,7 @@ Le workflow :
 1. Récupère le HTML de la page WordPress
 2. Parse et extrait les ressources (titre, description, URL, date, catégorie)
 3. Met à jour le fichier `index.html`
-4. Commit automatiquement les changements
+4. Publie automatiquement les changements
 
 ## 📁 Structure du projet
 
@@ -126,7 +126,7 @@ Ce projet est distribué sous licence MIT. Voir le fichier [LICENSE](LICENSE) po
 - Newsletter : [uneiaparjour.substack.com](https://uneiaparjour.substack.com/)
 - Site : [uneiaparjour.fr](https://www.uneiaparjour.fr/)
 
-## 🙏 Remerciements
+## Assistance
 
 Outil développé avec l'assistance de Claude (Anthropic).
 
