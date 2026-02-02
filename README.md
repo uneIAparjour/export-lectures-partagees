@@ -117,7 +117,7 @@ const C={
 
 ## Licence
 
-Ce projet est distribué sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
+Ce projet est partagé sous licence CC BY.
 
 ## Auteur
 
