@@ -42,20 +42,45 @@ jobs:
             geopolitique: { l: "Géopolitique et international", c: "#06B6D4" }
           };
 
-          function fetchPage(url) {
+          function fetchPage(url, timeout = 30000) {
             return new Promise((resolve, reject) => {
-              https.get(url, (res) => {
+              const req = https.get(url, { timeout }, (res) => {
                 // Gestion des redirections
                 if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
-                  return fetchPage(res.headers.location).then(resolve).catch(reject);
+                  return fetchPage(res.headers.location, timeout).then(resolve).catch(reject);
+                }
+                
+                // Vérifier le code HTTP
+                if (res.statusCode !== 200) {
+                  return reject(new Error(`HTTP ${res.statusCode} pour ${url}`));
                 }
                 
                 let data = '';
                 res.on('data', chunk => data += chunk);
                 res.on('end', () => resolve(data));
                 res.on('error', reject);
-              }).on('error', reject);
+              });
+              req.on('error', reject);
+              req.on('timeout', () => {
+                req.destroy();
+                reject(new Error(`Timeout après ${timeout/1000}s pour ${url}`));
+              });
             });
+          }
+
+          async function fetchWithRetry(url, maxRetries = 3) {
+            for (let tentative = 1; tentative <= maxRetries; tentative++) {
+              try {
+                console.log(`🔄 Tentative ${tentative}/${maxRetries}...`);
+                return await fetchPage(url);
+              } catch (err) {
+                console.error(`⚠️ Tentative ${tentative} échouée : ${err.message}`);
+                if (tentative === maxRetries) throw err;
+                const delai = tentative * 5000; // 5s, 10s, 15s
+                console.log(`   Attente ${delai/1000}s avant réessai...`);
+                await new Promise(r => setTimeout(r, delai));
+              }
+            }
           }
 
           function parseHTML(html) {
@@ -126,7 +151,7 @@ jobs:
                 const title = r.t.replace(/"/g, '\\"').replace(/\n/g, ' ');
                 const desc = r.d.replace(/"/g, '\\"').replace(/\n/g, ' ');
                 const source = r.s.replace(/"/g, '\\"');
-                code += `{id:${r.id},t:"${title}",d:"${desc}",u:"${r.u}",dt:"${r.dt}",n:${r.n},cat:"${r.cat}",s:"${source}"},\n`;
+                code += `{id:${r.id},title:"${title}",desc:"${desc}",url:"${r.u}",date:"${r.dt}",letter:${r.n},cat:"${r.cat}",source:"${source}"},\n`;
               });
             });
             
@@ -136,52 +161,124 @@ jobs:
           async function main() {
             try {
               console.log('Récupération de la page WordPress...');
-              const html = await fetchPage(PAGE_URL);
+              const html = await fetchWithRetry(PAGE_URL);
               
               console.log('Parsing du contenu...');
-              const resources = parseHTML(html);
+              const resourcesBrutes = parseHTML(html);
               
-              if (resources.length === 0) {
-                console.log('Aucune ressource trouvée, conservation du fichier actuel');
-                process.exit(0);
+              // === VALIDATION INDIVIDUELLE (Faille 5) ===
+              const invalides = [];
+              const resourcesWP = resourcesBrutes.filter(r => {
+                const erreurs = [];
+                if (!r.t || r.t.trim().length === 0) erreurs.push('titre vide');
+                if (!r.u || !r.u.startsWith('http')) erreurs.push('URL invalide');
+                if (!r.dt || !/^\d{4}-\d{2}-\d{2}$/.test(r.dt)) erreurs.push(`date invalide: ${r.dt}`);
+                if (!categoriesConfig[r.cat]) erreurs.push(`catégorie inconnue: ${r.cat}`);
+                
+                if (erreurs.length > 0) {
+                  invalides.push({ id: r.id, titre: r.t || '(sans titre)', url: r.u || '', erreurs });
+                  return false;
+                }
+                return true;
+              });
+              
+              if (invalides.length > 0) {
+                console.warn(`⚠️ ${invalides.length} ressource(s) invalide(s) ignorée(s) :`);
+                invalides.forEach(r => {
+                  console.warn(`   #${r.id} "${r.titre}" → ${r.erreurs.join(', ')}`);
+                });
               }
               
-              console.log(`${resources.length} ressources trouvées`);
-              
-              // Lire le fichier index.html actuel
-              let indexHTML = fs.readFileSync('index.html', 'utf8');
-              
-              // Générer le nouveau code JS
-              const newJS = generateJS(resources);
-              
-              // Remplacer le tableau R dans le fichier
-              const startMarker = 'const R=[';
-              const endMarker = '];';
-              
-              const startIndex = indexHTML.indexOf(startMarker);
-              if (startIndex === -1) {
-                console.error('Marqueur de début non trouvé');
+              // === GARDE-FOU : Seuil minimum sur le parsing WordPress ===
+              const SEUIL_MINIMUM = 50;
+              if (resourcesWP.length === 0) {
+                console.error('❌ ERREUR : Aucune ressource trouvée sur WordPress. Parsing probablement cassé.');
+                process.exit(1);
+              }
+              if (resourcesWP.length < SEUIL_MINIMUM) {
+                console.error(`❌ ERREUR : Seulement ${resourcesWP.length} ressources parsées depuis WordPress (minimum attendu : ${SEUIL_MINIMUM}).`);
+                console.error('Le parsing a probablement un problème. Fichier conservé tel quel.');
                 process.exit(1);
               }
               
-              // Trouver la fin du tableau (le ]; qui suit)
+              console.log(`✅ ${resourcesWP.length} ressources valides parsées depuis WordPress`);
+              
+              // === Lire le fichier index.html actuel ===
+              let indexHTML = fs.readFileSync('index.html', 'utf8');
+              
+              // === EXTRAIRE LES RESSOURCES EXISTANTES ===
+              // On extrait les URLs déjà présentes dans le tableau R pour dédupliquer
+              const urlsExistantes = new Set();
+              const regexExistantes = /\{id:\d+,[^}]*url:"([^"]*)"[^}]*\}/g;
+              let matchExist;
+              while ((matchExist = regexExistantes.exec(indexHTML)) !== null) {
+                urlsExistantes.add(matchExist[1]);
+              }
+              const ancienNombre = urlsExistantes.size;
+              console.log(`📦 ${ancienNombre} ressources déjà présentes dans index.html`);
+              
+              // === MODE AJOUT : identifier les nouvelles ressources ===
+              const nouvelles = resourcesWP.filter(r => !urlsExistantes.has(r.u));
+              
+              if (nouvelles.length === 0 && invalides.length === 0) {
+                console.log('✅ Aucune nouvelle ressource à ajouter. Fichier inchangé.');
+                fs.writeFileSync('stats.txt', `${ancienNombre}`);
+                process.exit(0);
+              }
+              
+              if (nouvelles.length > 0) {
+                console.log(`🆕 ${nouvelles.length} nouvelle(s) ressource(s) à ajouter :`);
+                nouvelles.forEach(r => {
+                  console.log(`   + "${r.t}" (${categoriesConfig[r.cat]?.l}, lettre #${r.n})`);
+                });
+              }
+              
+              // === RENUMÉROTER les nouvelles ressources ===
+              // Le prochain ID = max ID existant + 1
+              const regexMaxId = /\{id:(\d+),/g;
+              let maxId = 0;
+              let matchId;
+              while ((matchId = regexMaxId.exec(indexHTML)) !== null) {
+                maxId = Math.max(maxId, parseInt(matchId[1]));
+              }
+              nouvelles.forEach((r, i) => {
+                r.id = maxId + 1 + i;
+              });
+              
+              // === GÉNÉRER le JS uniquement pour les nouvelles ressources ===
+              const newJS = generateJS(nouvelles);
+              
+              // === INSÉRER avant la fermeture du tableau ]; ===
+              const startMarker = 'const RESOURCES=[';
+              const startIndex = indexHTML.indexOf(startMarker);
+              if (startIndex === -1) {
+                console.error('Marqueur de début "const RESOURCES=[" non trouvé dans index.html');
+                process.exit(1);
+              }
+              
+              // Trouver la fin du tableau (le ]; correspondant)
               let depth = 0;
-              let endIndex = startIndex + startMarker.length;
-              for (let i = endIndex; i < indexHTML.length; i++) {
+              let closingBracketIndex = -1;
+              for (let i = startIndex + startMarker.length; i < indexHTML.length; i++) {
                 if (indexHTML[i] === '[') depth++;
                 if (indexHTML[i] === ']') {
                   if (depth === 0) {
-                    endIndex = i + 2; // inclure ];
+                    closingBracketIndex = i;
                     break;
                   }
                   depth--;
                 }
               }
               
-              // Construire le nouveau contenu
-              const newContent = indexHTML.substring(0, startIndex) + 
-                                 'const R=[\n' + newJS + ']' +
-                                 indexHTML.substring(endIndex - 1);
+              if (closingBracketIndex === -1) {
+                console.error('Fin du tableau R non trouvée dans index.html');
+                process.exit(1);
+              }
+              
+              // Insérer les nouvelles ressources juste avant le ]
+              const newContent = indexHTML.substring(0, closingBracketIndex) +
+                                 newJS +
+                                 indexHTML.substring(closingBracketIndex);
               
               // Mettre à jour la date dans le header
               const today = new Date().toLocaleDateString('fr-FR');
@@ -193,11 +290,49 @@ jobs:
               // Écrire le fichier
               fs.writeFileSync('index.html', updatedContent);
               
-              console.log('Fichier index.html mis à jour avec succès !');
-              console.log(`Total: ${resources.length} ressources`);
+              // === RAPPORT DÉTAILLÉ ===
+              const totalFinal = ancienNombre + nouvelles.length;
+              const parCategorie = {};
+              resourcesWP.forEach(r => {
+                const label = categoriesConfig[r.cat]?.l || r.cat;
+                parCategorie[label] = (parCategorie[label] || 0) + 1;
+              });
               
-              // Écrire un fichier de stats pour le commit message
-              fs.writeFileSync('stats.txt', `${resources.length}`);
+              console.log('\n📋 RAPPORT DE SYNCHRONISATION');
+              console.log('═'.repeat(50));
+              console.log(`📅 Date : ${today}`);
+              console.log(`📦 Existantes conservées : ${ancienNombre}`);
+              console.log(`🆕 Nouvelles ajoutées : ${nouvelles.length}`);
+              console.log(`📊 Total final : ${totalFinal}`);
+              if (invalides.length > 0) {
+                console.log(`⚠️  Invalides exclues : ${invalides.length}`);
+              }
+              console.log('─'.repeat(50));
+              console.log('Répartition WordPress :');
+              Object.entries(parCategorie)
+                .sort((a, b) => b[1] - a[1])
+                .forEach(([cat, n]) => {
+                  console.log(`   ${cat} : ${n}`);
+                });
+              console.log('═'.repeat(50));
+              
+              // Vérifier les catégories vides
+              const catsVides = Object.keys(categoriesConfig).filter(k => 
+                !resourcesWP.some(r => r.cat === k)
+              );
+              if (catsVides.length > 0) {
+                console.warn(`⚠️ Catégories sans ressources sur WordPress : ${catsVides.join(', ')}`);
+              }
+              
+              // === STATS pour le commit message ===
+              const statsMsg = nouvelles.length > 0 
+                ? `${totalFinal} (+${nouvelles.length} nouvelle${nouvelles.length > 1 ? 's' : ''})` 
+                : `${totalFinal}`;
+              // Ajouter les invalides dans stats pour l'alerte
+              const invalidesMsg = invalides.length > 0
+                ? `\nINVALIDES:${invalides.map(r => `${r.titre}|${r.erreurs.join(',')}`).join(';')}`
+                : '';
+              fs.writeFileSync('stats.txt', statsMsg + invalidesMsg);
               
             } catch (error) {
               console.error('Erreur:', error.message);
@@ -224,9 +359,140 @@ jobs:
       - name: Commit et push des changements
         if: steps.check_changes.outputs.has_changes == 'true'
         run: |
-          STATS=$(cat stats.txt 2>/dev/null || echo "?")
+          # Extraire uniquement la première ligne de stats (sans les invalides)
+          STATS=$(head -1 stats.txt 2>/dev/null || echo "?")
+          rm -f update.js
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add index.html
           git commit -m "🔄 Mise à jour automatique : ${STATS} ressources"
           git push
+
+      # === ALERTE RESSOURCES INVALIDES (Faille 5) ===
+      - name: Alerter si des ressources sont invalides
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            let statsContent = '';
+            try { statsContent = fs.readFileSync('stats.txt', 'utf8'); } catch(e) { return; }
+            
+            // Vérifier s'il y a des invalides dans stats.txt
+            if (!statsContent.includes('INVALIDES:')) {
+              console.log('✅ Aucune ressource invalide détectée');
+              // Nettoyer stats.txt
+              try { fs.unlinkSync('stats.txt'); } catch(e) {}
+              return;
+            }
+            
+            // Parser les invalides
+            const invalidesLine = statsContent.split('\n').find(l => l.startsWith('INVALIDES:'));
+            const invalidesData = invalidesLine.replace('INVALIDES:', '').split(';').map(entry => {
+              const [titre, erreurs] = entry.split('|');
+              return { titre, erreurs };
+            });
+            
+            // Construire le corps de l'issue
+            const tableRows = invalidesData.map(r => 
+              `| ${r.titre} | ${r.erreurs} |`
+            ).join('\n');
+            
+            const title = `🔍 ${invalidesData.length} ressource(s) à corriger sur WordPress`;
+            const body = [
+              `La synchronisation du **${new Date().toLocaleDateString('fr-FR')}** a détecté des ressources invalides sur la page WordPress.`,
+              ``,
+              `Ces ressources ont été **exclues** de l'export et nécessitent une correction sur WordPress.`,
+              ``,
+              `| Ressource | Problème |`,
+              `|-----------|----------|`,
+              tableRows,
+              ``,
+              `### Comment corriger`,
+              `1. Aller sur la page [Lectures partagées](https://www.uneiaparjour.fr/lectures-partagees/) dans WordPress`,
+              `2. Corriger les ressources listées ci-dessus`,
+              `3. Le prochain workflow intégrera automatiquement les corrections`,
+              ``,
+              `[Voir le run](${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId})`,
+              ``,
+              `---`,
+              `*Issue créée automatiquement par GitHub Actions*`
+            ].join('\n');
+            
+            // Chercher une issue ouverte existante pour les invalides
+            const issues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'données-invalides'
+            });
+            
+            if (issues.data.length === 0) {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body,
+                labels: ['données-invalides']
+              });
+              console.log('📬 Issue "données-invalides" créée');
+            } else {
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issues.data[0].number,
+                title,
+                body
+              });
+              console.log('📬 Issue "données-invalides" mise à jour');
+            }
+            
+            // Nettoyer stats.txt
+            try { fs.unlinkSync('stats.txt'); } catch(e) {}
+
+      # === NOTIFICATION EN CAS D'ÉCHEC ===
+      - name: Créer une issue en cas d'échec
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = `⚠️ Échec de la synchronisation du ${new Date().toLocaleDateString('fr-FR')}`;
+            const body = [
+              `Le workflow de mise à jour automatique a échoué.`,
+              ``,
+              `**Date** : ${new Date().toISOString()}`,
+              `**Run** : ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+              ``,
+              `Vérifiez les logs du workflow pour plus de détails.`,
+              ``,
+              `---`,
+              `*Issue créée automatiquement par GitHub Actions*`
+            ].join('\n');
+            
+            // Vérifier qu'une issue similaire n'existe pas déjà (éviter le spam)
+            const issues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'sync-error'
+            });
+            
+            if (issues.data.length === 0) {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body,
+                labels: ['sync-error']
+              });
+              console.log('📬 Issue de notification créée');
+            } else {
+              // Ajouter un commentaire à l'issue existante
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issues.data[0].number,
+                body: `🔁 Nouvel échec le ${new Date().toLocaleDateString('fr-FR')}.\n\n[Voir le run](${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId})`
+              });
+              console.log('📬 Commentaire ajouté à l\'issue existante');
+            }
