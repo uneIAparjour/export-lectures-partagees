@@ -85,41 +85,48 @@ jobs:
 
           function parseHTML(html) {
             const resources = [];
-            let currentCategory = null;
             let resourceId = 0;
 
-            // Regex pour trouver les catégories (h2 avec id)
-            const categoryRegex = /<h2[^>]*id="(\w+)"[^>]*>/gi;
-            const categories = [...html.matchAll(categoryRegex)].map(m => ({
-              id: m[1],
-              index: m.index
-            })).filter(c => categoriesConfig[c.id]);
+            // Étape 1 : Trouver les catégories via <h2 id="xxx">
+            const categoryRegex = /<h2\s+id="(\w+)"[^>]*>/gi;
+            const categories = [...html.matchAll(categoryRegex)]
+              .map(m => ({ id: m[1], index: m.index }))
+              .filter(c => categoriesConfig[c.id]);
 
-            // Pour chaque catégorie, extraire les ressources
+            console.log(`📂 ${categories.length} catégories trouvées : ${categories.map(c => c.id).join(', ')}`);
+
+            // Étape 2 : Pour chaque section de catégorie, extraire les ressources
             categories.forEach((cat, idx) => {
               const startIndex = cat.index;
               const endIndex = idx < categories.length - 1 ? categories[idx + 1].index : html.length;
               const section = html.substring(startIndex, endIndex);
-              
-              currentCategory = cat.id;
 
-              // Pattern pour une ressource complète
-              const resourcePattern = /<p[^>]*>\s*<strong>([^<]+)<\/strong>\s*<\/p>\s*<p[^>]*>([^<]*(?:<[^p][^>]*>[^<]*<\/[^p][^>]*>)*[^<]*)<\/p>\s*<p[^>]*>\s*<em>([^<]*lettre #(\d+)[^<]*du (\d{2})\/(\d{2})\/(\d{4})[^<]*)<\/em>(?:<br[^>]*\/?>)?\s*(?:Lien direct\s*:\s*)?<a[^>]*href="([^"]*)"[^>]*>([^<]*)<\/a>/gi;
+              // Pattern adapté au HTML WordPress réel :
+              // <p><strong>TITRE</strong></p>
+              // <p>DESCRIPTION</p>
+              // <p><em>À retrouver dans la <a href="...">lettre #XX</a> du JJ/MM/AAAA</em><br />
+              // Lien direct : <a href="URL">SOURCE</a></p>
+              //   OU
+              // Lien direct : SOURCE (sans lien)</p>
+              const resourcePattern = /<p><strong>([^<]+)<\/strong><\/p>\s*<p>([^<]+(?:<[^/][^>]*>[^<]*<\/[^>]+>)*[^<]*)<\/p>\s*<p><em>[^<]*<a[^>]*>lettre #(\d+)<\/a>\s*du\s*(\d{2})\/(\d{2})\/(\d{4})<\/em>\s*<br\s*\/?>\s*Lien direct\s*:\s*(?:<a[^>]*href="([^"]*)"[^>]*>([^<]*)<\/a>|([^<]+))<\/p>/gi;
 
               let match;
+              let sectionCount = 0;
               while ((match = resourcePattern.exec(section)) !== null) {
                 resourceId++;
+                sectionCount++;
                 const title = match[1].trim();
                 let description = match[2].replace(/<[^>]*>/g, '').trim();
-                if (description.length > 150) {
-                  description = description.substring(0, 147) + '...';
+                if (description.length > 200) {
+                  description = description.substring(0, 197) + '...';
                 }
-                const letter = parseInt(match[4]);
-                const day = match[5];
-                const month = match[6];
-                const year = match[7];
-                const url = match[8];
-                const source = match[9].trim();
+                const letter = parseInt(match[3]);
+                const day = match[4];
+                const month = match[5];
+                const year = match[6];
+                // Si lien hypertexte existe (match[7]/[8]), sinon texte brut (match[9])
+                const url = match[7] || '';
+                const source = (match[8] || match[9] || '').trim();
 
                 resources.push({
                   id: resourceId,
@@ -128,10 +135,11 @@ jobs:
                   u: url,
                   dt: `${year}-${month}-${day}`,
                   n: letter,
-                  cat: currentCategory,
+                  cat: cat.id,
                   s: source
                 });
               }
+              console.log(`   ${cat.id} : ${sectionCount} ressources`);
             });
 
             return resources;
