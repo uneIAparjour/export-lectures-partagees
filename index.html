@@ -55,163 +55,449 @@
   <main id="app"></main>
 </div>
 <script>
-(function(){
-const C={etudes:{l:"Études et recherche",c:"#3B82F6"},ethique:{l:"Éthique et société",c:"#A855F7"},travail:{l:"IA et travail",c:"#F59E0B"},securite:{l:"Sécurité et désinformation",c:"#EF4444"},creation:{l:"Création, art et médias",c:"#EC4899"},technique:{l:"Technique et infrastructure",c:"#10B981"},philosophie:{l:"Philosophie et réflexions",c:"#6366F1"},education:{l:"Éducation",c:"#14B8A6"},droit:{l:"Droit",c:"#F97316"},geopolitique:{l:"Géopolitique et international",c:"#06B6D4"}};
 
-const R=[
+<script>
+(function(){
+
+/* ============================================================
+   CONFIGURATION DES CATÉGORIES
+   Chaque clé correspond à l'id du <h2> sur la page WordPress.
+   - label : nom affiché dans l'interface
+   - color : couleur du badge et de la sélection
+   ============================================================ */
+const CATEGORIES = {
+  etudes:       { label: "Études et recherche",          color: "#3B82F6" },
+  ethique:      { label: "Éthique et société",           color: "#A855F7" },
+  travail:      { label: "IA et travail",                color: "#F59E0B" },
+  securite:     { label: "Sécurité et désinformation",   color: "#EF4444" },
+  creation:     { label: "Création, art et médias",      color: "#EC4899" },
+  technique:    { label: "Technique et infrastructure",  color: "#10B981" },
+  philosophie:  { label: "Philosophie et réflexions",    color: "#6366F1" },
+  education:    { label: "Éducation",                    color: "#14B8A6" },
+  droit:        { label: "Droit",                        color: "#F97316" },
+  geopolitique: { label: "Géopolitique et international", color: "#06B6D4" }
+};
+
+/* ============================================================
+   DONNÉES DES RESSOURCES
+   Mises à jour automatiquement par le workflow GitHub Actions.
+   Chaque ressource :
+   - id     : identifiant unique
+   - title  : titre de l'article
+   - desc   : description courte
+   - url    : lien vers la ressource
+   - date   : date de publication (YYYY-MM-DD)
+   - letter : numéro de la lettre d'infos
+   - cat    : clé de catégorie (correspond à CATEGORIES)
+   - source : nom de la source
+   ============================================================ */
+const RESOURCES=[
 // ÉTUDES ET RECHERCHE (19)
-{id:1,t:"Les Français et l'information (2ème édition)",d:"Rapport de l'ARCOM. 20% des Français utilisent l'IA pour s'informer (38% des moins de 25 ans).",u:"https://www.arcom.fr/se-documenter/etudes-et-donnees/etudes-bilans-et-rapports-de-larcom/les-francais-et-linformation-2eme-edition",dt:"2026-01-31",n:22,cat:"etudes",s:"ARCOM"},
-{id:2,t:"AI makes you smarter but none the wiser",d:"Étude sur la déconnexion entre performance et métacognition avec l'IA.",u:"https://www.sciencedirect.com/science/article/pii/S0747563225002262",dt:"2026-01-10",n:19,cat:"etudes",s:"Science Direct"},
-{id:3,t:"Évolution du trafic vers les applications d'IA génératives",d:"Synthèse de l'évolution du trafic et parts de marché des chatbots.",u:"https://www.similarweb.com/blog/wp-content/uploads/2025/12/attachment-Global-AI-Tracker-5.pdf",dt:"2026-01-10",n:19,cat:"etudes",s:"SimilarWeb"},
-{id:4,t:"L'IA chinoise a détrôné les USA selon Stanford",d:"Analyse du rapport Stanford sur l'IA open source chinois.",u:"https://goodtech.info/etude-stanford-humiliation-ia-usa-chine-open-source/",dt:"2026-01-03",n:18,cat:"etudes",s:"GoodTech Info"},
-{id:5,t:"Prompt IA : miroir des usages et de la réflexivité",d:"Expérience de recherche sur les usages de l'IA via une instruction à déposer dans nos chatbots.",u:"https://4cristol.over-blog.com/2025/12/prompt-ia-miroir-des-usages-et-de-la-reflexivite.html",dt:"2026-01-03",n:18,cat:"etudes",s:"Blog Denis Cristol"},
-{id:6,t:"Les faux sites d'information générés par IA récoltent une audience significative",d:"Étude Médiamétrie sur l'audience des sites d'information générés par IA.",u:"https://www.lemonde.fr/pixels/article/2025/12/19/les-faux-sites-d-information-generes-par-ia-recoltent-deja-une-audience-significative-selon-une-etude-mediametrie_6658723_4408996.html",dt:"2025-12-20",n:16,cat:"etudes",s:"Le Monde"},
-{id:7,t:"It's About Time: The Copilot Usage Report 2025",d:"Analyse des usages de Copilot, des conseils médicaux à l'utilisation nocturne.",u:"https://microsoft.ai/news/its-about-time-the-copilot-usage-report-2025/",dt:"2025-12-13",n:15,cat:"etudes",s:"Microsoft"},
-{id:8,t:"Panorama des IA génératives 2025",d:"Rapport complet sur le paysage des IA génératives.",u:"https://www.similarweb.com/corp/2025-generative-ai-landscape/",dt:"2025-12-06",n:14,cat:"etudes",s:"SimilarWeb"},
-{id:9,t:"Estimating AI productivity gains from Claude conversations",d:"Étude sur les gains de temps réalisés par l'IA générative, basée sur 100 000 conversations.",u:"https://www.anthropic.com/research/estimating-productivity-gains",dt:"2025-11-29",n:13,cat:"etudes",s:"Anthropic"},
-{id:10,t:"Classement compar:IA – classement participatif des modèles",d:"Premier classement participatif des modèles d'IA basé sur les votes des utilisateurs.",u:"https://huggingface.co/blog/comparIA/publication-du-premier-classement",dt:"2025-11-22",n:12,cat:"etudes",s:"HuggingFace"},
-{id:11,t:"La moitié du web serait rédigée par une IA",d:"Étude révélant que près de la moitié des contenus publiés seraient rédigés par IA.",u:"https://www.linkedin.com/posts/alexandra-coutl%C3%A9e_la-moiti%C3%A9-du-web-serait-d%C3%A9sormais-r%C3%A9dig%C3%A9e-activity-7394409541733376001-ZeKm/",dt:"2025-11-15",n:11,cat:"etudes",s:"LinkedIn (Alexandra Coutlée)"},
-{id:12,t:"Comparatif fiabilité recherche web des 7 principaux chatbots",d:"Comparaison de ChatGPT, Gemini, Claude, Perplexity, Copilot, DeepSeek et Le Chat.",u:"https://www.blogdumoderateur.com/recherche-web-comparatif-ia/",dt:"2025-11-15",n:11,cat:"etudes",s:"Blog du modérateur"},
-{id:13,t:"Internet dominé par les machines selon Graphite",d:"Plus de la moitié des contenus publiés avec l'aide d'une IA générative.",u:"https://www.fredzone.org/internet-domine-par-les-machines-selon-une-etude-de-graphite/",dt:"2025-10-25",n:8,cat:"etudes",s:"FredZone"},
-{id:14,t:"Moins de remords, plus de triche : l'effet inquiétant des IA",d:"Article de Jean-François Bonnefon, chercheur à l'École d'économie de Toulouse.",u:"https://theconversation.com/moins-de-remords-plus-de-triche-leffet-inquietant-des-ia-sur-notre-honnetete-267129",dt:"2025-10-18",n:7,cat:"etudes",s:"The Conversation"},
-{id:15,t:"Guide Digital 2026",d:"Panorama des usages numériques mondiaux avec partie dédiée à l'IA (pages 126-143).",u:"https://wearesocial.com/fr/blog/2025/10/digital-2026-2/",dt:"2025-10-18",n:7,cat:"etudes",s:"We Are Social"},
-{id:16,t:"Deep Research : comparatif des chatbots",d:"Comparaison des fonctionnalités de recherche approfondie des principaux chatbots.",u:"https://www.blogdumoderateur.com/deep-research-comparatif-ia/",dt:"2025-10-11",n:6,cat:"etudes",s:"Blog du modérateur"},
-{id:17,t:"Why language models hallucinate (analyse)",d:"Analyse sur les hallucinations des LLM – l'explication du côté de la difficulté d'affirmer 'Je ne sais pas'.",u:"https://arxiv.org/abs/2509.04664",dt:"2025-10-11",n:6,cat:"etudes",s:"Arxiv"},
-{id:18,t:"GDPval : évaluation sur 1300 tâches authentiques",d:"Évaluation des modèles de langage sur des tâches réalisables par des humains.",u:"https://openai.com/",dt:"2025-09-27",n:4,cat:"etudes",s:"OpenAI"},
-{id:19,t:"How people are using ChatGPT",d:"Étude de 1,7 millions de conversations anonymisées menée par le NBER.",u:"https://openai.com/index/how-people-are-using-chatgpt/",dt:"2025-09-20",n:3,cat:"etudes",s:"OpenAI / NBER"},
+{id:1,title:"Les Français et l'information (2ème édition)",desc:"Rapport de l'ARCOM. 20% des Français utilisent l'IA pour s'informer (38% des moins de 25 ans).",url:"https://www.arcom.fr/se-documenter/etudes-et-donnees/etudes-bilans-et-rapports-de-larcom/les-francais-et-linformation-2eme-edition",date:"2026-01-31",letter:22,cat:"etudes",source:"ARCOM"},
+{id:2,title:"AI makes you smarter but none the wiser",desc:"Étude sur la déconnexion entre performance et métacognition avec l'IA.",url:"https://www.sciencedirect.com/science/article/pii/S0747563225002262",date:"2026-01-10",letter:19,cat:"etudes",source:"Science Direct"},
+{id:3,title:"Évolution du trafic vers les applications d'IA génératives",desc:"Synthèse de l'évolution du trafic et parts de marché des chatbots.",url:"https://www.similarweb.com/blog/wp-content/uploads/2025/12/attachment-Global-AI-Tracker-5.pdf",date:"2026-01-10",letter:19,cat:"etudes",source:"SimilarWeb"},
+{id:4,title:"L'IA chinoise a détrôné les USA selon Stanford",desc:"Analyse du rapport Stanford sur l'IA open source chinois.",url:"https://goodtech.info/etude-stanford-humiliation-ia-usa-chine-open-source/",date:"2026-01-03",letter:18,cat:"etudes",source:"GoodTech Info"},
+{id:5,title:"Prompt IA : miroir des usages et de la réflexivité",desc:"Expérience de recherche sur les usages de l'IA via une instruction à déposer dans nos chatbots.",url:"https://4cristol.over-blog.com/2025/12/prompt-ia-miroir-des-usages-et-de-la-reflexivite.html",date:"2026-01-03",letter:18,cat:"etudes",source:"Blog Denis Cristol"},
+{id:6,title:"Les faux sites d'information générés par IA récoltent une audience significative",desc:"Étude Médiamétrie sur l'audience des sites d'information générés par IA.",url:"https://www.lemonde.fr/pixels/article/2025/12/19/les-faux-sites-d-information-generes-par-ia-recoltent-deja-une-audience-significative-selon-une-etude-mediametrie_6658723_4408996.html",date:"2025-12-20",letter:16,cat:"etudes",source:"Le Monde"},
+{id:7,title:"It's About Time: The Copilot Usage Report 2025",desc:"Analyse des usages de Copilot, des conseils médicaux à l'utilisation nocturne.",url:"https://microsoft.ai/news/its-about-time-the-copilot-usage-report-2025/",date:"2025-12-13",letter:15,cat:"etudes",source:"Microsoft"},
+{id:8,title:"Panorama des IA génératives 2025",desc:"Rapport complet sur le paysage des IA génératives.",url:"https://www.similarweb.com/corp/2025-generative-ai-landscape/",date:"2025-12-06",letter:14,cat:"etudes",source:"SimilarWeb"},
+{id:9,title:"Estimating AI productivity gains from Claude conversations",desc:"Étude sur les gains de temps réalisés par l'IA générative, basée sur 100 000 conversations.",url:"https://www.anthropic.com/research/estimating-productivity-gains",date:"2025-11-29",letter:13,cat:"etudes",source:"Anthropic"},
+{id:10,title:"Classement compar:IA – classement participatif des modèles",desc:"Premier classement participatif des modèles d'IA basé sur les votes des utilisateurs.",url:"https://huggingface.co/blog/comparIA/publication-du-premier-classement",date:"2025-11-22",letter:12,cat:"etudes",source:"HuggingFace"},
+{id:11,title:"La moitié du web serait rédigée par une IA",desc:"Étude révélant que près de la moitié des contenus publiés seraient rédigés par IA.",url:"https://www.linkedin.com/posts/alexandra-coutl%C3%A9e_la-moiti%C3%A9-du-web-serait-d%C3%A9sormais-r%C3%A9dig%C3%A9e-activity-7394409541733376001-ZeKm/",date:"2025-11-15",letter:11,cat:"etudes",source:"LinkedIn (Alexandra Coutlée)"},
+{id:12,title:"Comparatif fiabilité recherche web des 7 principaux chatbots",desc:"Comparaison de ChatGPT, Gemini, Claude, Perplexity, Copilot, DeepSeek et Le Chat.",url:"https://www.blogdumoderateur.com/recherche-web-comparatif-ia/",date:"2025-11-15",letter:11,cat:"etudes",source:"Blog du modérateur"},
+{id:13,title:"Internet dominé par les machines selon Graphite",desc:"Plus de la moitié des contenus publiés avec l'aide d'une IA générative.",url:"https://www.fredzone.org/internet-domine-par-les-machines-selon-une-etude-de-graphite/",date:"2025-10-25",letter:8,cat:"etudes",source:"FredZone"},
+{id:14,title:"Moins de remords, plus de triche : l'effet inquiétant des IA",desc:"Article de Jean-François Bonnefon, chercheur à l'École d'économie de Toulouse.",url:"https://theconversation.com/moins-de-remords-plus-de-triche-leffet-inquietant-des-ia-sur-notre-honnetete-267129",date:"2025-10-18",letter:7,cat:"etudes",source:"The Conversation"},
+{id:15,title:"Guide Digital 2026",desc:"Panorama des usages numériques mondiaux avec partie dédiée à l'IA (pages 126-143).",url:"https://wearesocial.com/fr/blog/2025/10/digital-2026-2/",date:"2025-10-18",letter:7,cat:"etudes",source:"We Are Social"},
+{id:16,title:"Deep Research : comparatif des chatbots",desc:"Comparaison des fonctionnalités de recherche approfondie des principaux chatbots.",url:"https://www.blogdumoderateur.com/deep-research-comparatif-ia/",date:"2025-10-11",letter:6,cat:"etudes",source:"Blog du modérateur"},
+{id:17,title:"Why language models hallucinate (analyse)",desc:"Analyse sur les hallucinations des LLM – l'explication du côté de la difficulté d'affirmer 'Je ne sais pas'.",url:"https://arxiv.org/abs/2509.04664",date:"2025-10-11",letter:6,cat:"etudes",source:"Arxiv"},
+{id:18,title:"GDPval : évaluation sur 1300 tâches authentiques",desc:"Évaluation des modèles de langage sur des tâches réalisables par des humains.",url:"https://openai.com/",date:"2025-09-27",letter:4,cat:"etudes",source:"OpenAI"},
+{id:19,title:"How people are using ChatGPT",desc:"Étude de 1,7 millions de conversations anonymisées menée par le NBER.",url:"https://openai.com/index/how-people-are-using-chatgpt/",date:"2025-09-20",letter:3,cat:"etudes",source:"OpenAI / NBER"},
 // ÉTHIQUE ET SOCIÉTÉ (23)
-{id:20,t:"Profilage publicitaire par les chatbots",d:"Antonio Casili met en avant le travail artistique d'Albertine Meunier sur le profilage publicitaire.",u:"https://www.linkedin.com/posts/acasilli_la-publicit%C3%A9-sannonce-dans-les-chats-conversationnels-activity-7421159117173637120-XKju/",dt:"2026-01-31",n:22,cat:"ethique",s:"LinkedIn (Antonio Casili)"},
-{id:21,t:"Albanie : scandale de corruption autour de la ministre virtuelle",d:"Les créateurs de la ministre virtuelle anti-corruption au cœur d'un scandale.",u:"https://www.liberation.fr/international/europe/en-albanie-les-createurs-de-la-ministre-virtuelle-anti-corruption-se-retrouvent-au-coeur-dun-scandale-de-corruption-20260127_ORRSCH4FRBBLRPR7WW6YXWQ5CE/",dt:"2026-01-31",n:22,cat:"ethique",s:"Libération"},
-{id:22,t:"Constitution de Claude (version 2)",d:"Anthropic publie la version 2 de la Constitution de Claude.",u:"https://www.anthropic.com/news/claudes-soul-v2",dt:"2026-01-24",n:21,cat:"ethique",s:"Anthropic"},
-{id:23,t:"Le forcing de l'IA",d:"Analyse des injonctions à adopter l'IA et des mécanismes de tech-pushing.",u:"https://limitesnumeriques.fr/le-forcing-de-lia/",dt:"2026-01-17",n:20,cat:"ethique",s:"Limites Numériques"},
-{id:24,t:"Chatbots IA sont des shoggoths",d:"Article sur la nature alien des LLM et leurs comportements imprévisibles.",u:"https://www.ladn.eu/tech-a-suivre/chatbots-ia-shoggoth-lovecraft/",dt:"2026-01-17",n:20,cat:"ethique",s:"L'ADN"},
-{id:25,t:"On ne reconnaît pas un texte écrit par une IA",d:"Réflexion sur notre incapacité à distinguer les textes générés par IA.",u:"https://www.linkedin.com/",dt:"2026-01-17",n:20,cat:"ethique",s:"LinkedIn"},
-{id:26,t:"L'IA de Politico viole les règles d'éthique de Politico",d:"Le cas ironique d'une IA qui ne respecte pas les règles éditoriales du média.",u:"https://next.ink/183181/lia-de-politico-viole-les-regles-dethique-de-politico/",dt:"2025-12-20",n:16,cat:"ethique",s:"Next"},
-{id:27,t:"Pub Intermarché vs McDonald's IA",d:"Intermarché utilise l'IA pour répondre à la publicité de McDonald's.",u:"https://www.latribune.fr/entreprises-finance/industrie/agroalimentaire-biens-de-consommation-luxe/intermache-vs-mcdonald-s-le-duel-publicitaire-de-noel-qui-enflamme-les-reseaux-1021953.html",dt:"2025-12-13",n:15,cat:"ethique",s:"La Tribune"},
-{id:28,t:"Approche de la déclaration d'utilisation de l'IA",d:"Réflexion sur la transparence dans l'utilisation de l'IA.",u:"https://www.linkedin.com/posts/redouan-kherbouche/",dt:"2025-12-13",n:15,cat:"ethique",s:"LinkedIn (Redouan Kherbouche)"},
-{id:29,t:"Ces jouets IA problématiques",d:"Analyse des enjeux éthiques des jouets intégrant de l'IA.",u:"https://www.linkedin.com/",dt:"2025-12-06",n:14,cat:"ethique",s:"LinkedIn"},
-{id:30,t:"Character AI modifie son approche pour les enfants",d:"Suite aux polémiques, Character AI adapte ses filtres pour les mineurs.",u:"https://techcrunch.com/2025/11/25/character-ai-updates-safety-features-kids/",dt:"2025-11-29",n:13,cat:"ethique",s:"TechCrunch"},
-{id:31,t:"Humanisons nos réseaux au lieu d'anthropomorphiser les IA",d:"Réflexion sur notre rapport aux machines et aux humains.",u:"https://usbeketrica.com/fr/article/humanisons-nos-reseaux-au-lieu-d-anthropomorphiser-les-ia",dt:"2025-11-29",n:13,cat:"ethique",s:"Usbek et Rica"},
-{id:32,t:"L'Ombre générative",d:"Essai de Matthieu Derian sur les zones d'ombre de l'IA générative.",u:"https://www.matthieuderian.com/lombre-generative/",dt:"2025-11-29",n:13,cat:"ethique",s:"Hypothèses"},
-{id:33,t:"Stratégie nationale IA (Cour des comptes)",d:"Rapport de la Cour des comptes sur la stratégie nationale française.",u:"https://www.ccomptes.fr/fr/publications/la-strategie-nationale-pour-lintelligence-artificielle",dt:"2025-11-22",n:12,cat:"ethique",s:"Cour des comptes"},
-{id:34,t:"Challenges pour des systèmes IA agentiques éthiques",d:"Réflexion sur les défis éthiques des agents IA autonomes.",u:"https://siliconcomte.fr/challenges-systemes-ia-agentiques-ethiques/",dt:"2025-11-08",n:10,cat:"ethique",s:"Silicon Comté"},
-{id:35,t:"L'IA peut nous rendre plus cons… ou plus intelligents",d:"Réflexion sur les effets cognitifs de l'usage de l'IA.",u:"https://www.linkedin.com/posts/benoitraphael_lia-peut-nous-rendre-plus-cons-ou-plus-intelligents-activity-7382422243873771520-Ei2v/",dt:"2025-10-25",n:8,cat:"ethique",s:"LinkedIn (Benoit Raphaël)"},
-{id:36,t:"IA : les quatre controverses du pouvoir",d:"Analyse d'Asma Mhalla sur les enjeux de pouvoir autour de l'IA.",u:"https://www.linkedin.com/posts/asma-mhalla/",dt:"2025-10-18",n:7,cat:"ethique",s:"LinkedIn (Asma Mhalla)"},
-{id:37,t:"Quelle est votre AI-dentity ?",d:"Test Bloomberg pour définir son rapport à l'IA.",u:"https://www.bloomberg.com/graphics/2025-ai-identity-quiz/",dt:"2025-10-18",n:7,cat:"ethique",s:"Bloomberg"},
-{id:38,t:"Accords économiques circulaires entre acteurs de l'IA",d:"Infographie Bloomberg sur les flux économiques entre infrastructures et services d'IA.",u:"https://intelligence-artificielle.developpez.com/actu/376612/",dt:"2025-10-11",n:6,cat:"ethique",s:"Developpez.com"},
-{id:39,t:"Délégation de nos capacités expressives à l'IA",d:"Article d'Anne Alombert (Paris 8) sur les conséquences de la délégation de notre expression.",u:"https://www.philomag.com/articles/anne-alombert-deleguer-nos-capacites-expressives-une-ia-cest-nous-amputer-de-ce-qui-fait",dt:"2025-09-20",n:3,cat:"ethique",s:"Philomag"},
-{id:40,t:"Ministre IA en Albanie",d:"L'Albanie nomme un ministre dédié à l'intelligence artificielle.",u:"https://www.numerama.com/politique/1849574-lalbanie-nomme-un-ministre-dedie-a-lia.html",dt:"2025-09-13",n:2,cat:"ethique",s:"Numerama"},
-{id:41,t:"Accompagnement des utilisateurs en fragilité émotionnelle",d:"OpenAI publie ses lignes directrices sur l'accompagnement des utilisateurs vulnérables.",u:"https://openai.com/index/building-more-helpful-chatgpt-experiences/",dt:"2025-09-06",n:1,cat:"ethique",s:"OpenAI"},
+{id:20,title:"Profilage publicitaire par les chatbots",desc:"Antonio Casili met en avant le travail artistique d'Albertine Meunier sur le profilage publicitaire.",url:"https://www.linkedin.com/posts/acasilli_la-publicit%C3%A9-sannonce-dans-les-chats-conversationnels-activity-7421159117173637120-XKju/",date:"2026-01-31",letter:22,cat:"ethique",source:"LinkedIn (Antonio Casili)"},
+{id:21,title:"Albanie : scandale de corruption autour de la ministre virtuelle",desc:"Les créateurs de la ministre virtuelle anti-corruption au cœur d'un scandale.",url:"https://www.liberation.fr/international/europe/en-albanie-les-createurs-de-la-ministre-virtuelle-anti-corruption-se-retrouvent-au-coeur-dun-scandale-de-corruption-20260127_ORRSCH4FRBBLRPR7WW6YXWQ5CE/",date:"2026-01-31",letter:22,cat:"ethique",source:"Libération"},
+{id:22,title:"Constitution de Claude (version 2)",desc:"Anthropic publie la version 2 de la Constitution de Claude.",url:"https://www.anthropic.com/news/claudes-soul-v2",date:"2026-01-24",letter:21,cat:"ethique",source:"Anthropic"},
+{id:23,title:"Le forcing de l'IA",desc:"Analyse des injonctions à adopter l'IA et des mécanismes de tech-pushing.",url:"https://limitesnumeriques.fr/le-forcing-de-lia/",date:"2026-01-17",letter:20,cat:"ethique",source:"Limites Numériques"},
+{id:24,title:"Chatbots IA sont des shoggoths",desc:"Article sur la nature alien des LLM et leurs comportements imprévisibles.",url:"https://www.ladn.eu/tech-a-suivre/chatbots-ia-shoggoth-lovecraft/",date:"2026-01-17",letter:20,cat:"ethique",source:"L'ADN"},
+{id:25,title:"On ne reconnaît pas un texte écrit par une IA",desc:"Réflexion sur notre incapacité à distinguer les textes générés par IA.",url:"https://www.linkedin.com/",date:"2026-01-17",letter:20,cat:"ethique",source:"LinkedIn"},
+{id:26,title:"L'IA de Politico viole les règles d'éthique de Politico",desc:"Le cas ironique d'une IA qui ne respecte pas les règles éditoriales du média.",url:"https://next.ink/183181/lia-de-politico-viole-les-regles-dethique-de-politico/",date:"2025-12-20",letter:16,cat:"ethique",source:"Next"},
+{id:27,title:"Pub Intermarché vs McDonald's IA",desc:"Intermarché utilise l'IA pour répondre à la publicité de McDonald's.",url:"https://www.latribune.fr/entreprises-finance/industrie/agroalimentaire-biens-de-consommation-luxe/intermache-vs-mcdonald-s-le-duel-publicitaire-de-noel-qui-enflamme-les-reseaux-1021953.html",date:"2025-12-13",letter:15,cat:"ethique",source:"La Tribune"},
+{id:28,title:"Approche de la déclaration d'utilisation de l'IA",desc:"Réflexion sur la transparence dans l'utilisation de l'IA.",url:"https://www.linkedin.com/posts/redouan-kherbouche/",date:"2025-12-13",letter:15,cat:"ethique",source:"LinkedIn (Redouan Kherbouche)"},
+{id:29,title:"Ces jouets IA problématiques",desc:"Analyse des enjeux éthiques des jouets intégrant de l'IA.",url:"https://www.linkedin.com/",date:"2025-12-06",letter:14,cat:"ethique",source:"LinkedIn"},
+{id:30,title:"Character AI modifie son approche pour les enfants",desc:"Suite aux polémiques, Character AI adapte ses filtres pour les mineurs.",url:"https://techcrunch.com/2025/11/25/character-ai-updates-safety-features-kids/",date:"2025-11-29",letter:13,cat:"ethique",source:"TechCrunch"},
+{id:31,title:"Humanisons nos réseaux au lieu d'anthropomorphiser les IA",desc:"Réflexion sur notre rapport aux machines et aux humains.",url:"https://usbeketrica.com/fr/article/humanisons-nos-reseaux-au-lieu-d-anthropomorphiser-les-ia",date:"2025-11-29",letter:13,cat:"ethique",source:"Usbek et Rica"},
+{id:32,title:"L'Ombre générative",desc:"Essai de Matthieu Derian sur les zones d'ombre de l'IA générative.",url:"https://www.matthieuderian.com/lombre-generative/",date:"2025-11-29",letter:13,cat:"ethique",source:"Hypothèses"},
+{id:33,title:"Stratégie nationale IA (Cour des comptes)",desc:"Rapport de la Cour des comptes sur la stratégie nationale française.",url:"https://www.ccomptes.fr/fr/publications/la-strategie-nationale-pour-lintelligence-artificielle",date:"2025-11-22",letter:12,cat:"ethique",source:"Cour des comptes"},
+{id:34,title:"Challenges pour des systèmes IA agentiques éthiques",desc:"Réflexion sur les défis éthiques des agents IA autonomes.",url:"https://siliconcomte.fr/challenges-systemes-ia-agentiques-ethiques/",date:"2025-11-08",letter:10,cat:"ethique",source:"Silicon Comté"},
+{id:35,title:"L'IA peut nous rendre plus cons… ou plus intelligents",desc:"Réflexion sur les effets cognitifs de l'usage de l'IA.",url:"https://www.linkedin.com/posts/benoitraphael_lia-peut-nous-rendre-plus-cons-ou-plus-intelligents-activity-7382422243873771520-Ei2v/",date:"2025-10-25",letter:8,cat:"ethique",source:"LinkedIn (Benoit Raphaël)"},
+{id:36,title:"IA : les quatre controverses du pouvoir",desc:"Analyse d'Asma Mhalla sur les enjeux de pouvoir autour de l'IA.",url:"https://www.linkedin.com/posts/asma-mhalla/",date:"2025-10-18",letter:7,cat:"ethique",source:"LinkedIn (Asma Mhalla)"},
+{id:37,title:"Quelle est votre AI-dentity ?",desc:"Test Bloomberg pour définir son rapport à l'IA.",url:"https://www.bloomberg.com/graphics/2025-ai-identity-quiz/",date:"2025-10-18",letter:7,cat:"ethique",source:"Bloomberg"},
+{id:38,title:"Accords économiques circulaires entre acteurs de l'IA",desc:"Infographie Bloomberg sur les flux économiques entre infrastructures et services d'IA.",url:"https://intelligence-artificielle.developpez.com/actu/376612/",date:"2025-10-11",letter:6,cat:"ethique",source:"Developpez.com"},
+{id:39,title:"Délégation de nos capacités expressives à l'IA",desc:"Article d'Anne Alombert (Paris 8) sur les conséquences de la délégation de notre expression.",url:"https://www.philomag.com/articles/anne-alombert-deleguer-nos-capacites-expressives-une-ia-cest-nous-amputer-de-ce-qui-fait",date:"2025-09-20",letter:3,cat:"ethique",source:"Philomag"},
+{id:40,title:"Ministre IA en Albanie",desc:"L'Albanie nomme un ministre dédié à l'intelligence artificielle.",url:"https://www.numerama.com/politique/1849574-lalbanie-nomme-un-ministre-dedie-a-lia.html",date:"2025-09-13",letter:2,cat:"ethique",source:"Numerama"},
+{id:41,title:"Accompagnement des utilisateurs en fragilité émotionnelle",desc:"OpenAI publie ses lignes directrices sur l'accompagnement des utilisateurs vulnérables.",url:"https://openai.com/index/building-more-helpful-chatgpt-experiences/",date:"2025-09-06",letter:1,cat:"ethique",source:"OpenAI"},
 // IA ET TRAVAIL (10)
-{id:42,t:"Shadow AI en entreprise",d:"Enquête sur l'utilisation non contrôlée de l'IA dans les entreprises.",u:"https://www.bfmtv.com/tech/shadow-ai-l-ia-cachee-qui-s-infiltre-dans-les-entreprises_AN-202501150393.html",dt:"2026-01-17",n:20,cat:"travail",s:"BFM TV"},
-{id:43,t:"SLOP au Pakistan",d:"Reportage sur les travailleurs pakistanais qui alimentent les modèles d'IA.",u:"https://chut.media/slop-pakistan/",dt:"2026-01-03",n:18,cat:"travail",s:"CHUT Magazine"},
-{id:44,t:"IA, la crise d'identité au travail",d:"Analyse des transformations identitaires liées à l'IA au travail.",u:"https://www.trenchtech.fr/podcast/ia-crise-identite-travail/",dt:"2025-12-27",n:17,cat:"travail",s:"Trench Tech"},
-{id:45,t:"Si ChatGPT était un employé",d:"Vidéo humoristique de Cyprien sur l'IA au travail.",u:"https://www.youtube.com/watch?v=example",dt:"2025-12-27",n:17,cat:"travail",s:"YouTube (Cyprien)"},
-{id:46,t:"Harlequin traduit des livres avec l'IA",d:"L'éditeur Harlequin utilise l'IA pour la traduction de ses romans.",u:"https://www.francetvinfo.fr/culture/livres/harlequin-utilise-lia-pour-traduire-ses-romans_6831254.html",dt:"2025-12-20",n:16,cat:"travail",s:"France Info"},
-{id:47,t:"Leurs métiers remplacés par l'IA",d:"Témoignages de travailleurs dont les métiers sont impactés par l'IA.",u:"https://www.brut.media/fr/news/leurs-metiers-remplaces-par-lia-temoignages",dt:"2025-12-13",n:15,cat:"travail",s:"Brut (Aude Arquié)"},
-{id:48,t:"Les petites mains du numérique en Afrique",d:"Interview d'Antonio Casili sur les travailleurs du clic africains.",u:"https://www.rfi.fr/fr/podcasts/c-est-pas-du-vent/20251212-les-petites-mains-du-numerique-en-afrique",dt:"2025-12-13",n:15,cat:"travail",s:"RFI"},
-{id:49,t:"18 mois à entraîner l'IA générative",d:"Témoignage d'une travailleuse de l'annotation de données.",u:"https://thespinoff.co.nz/society/25-10-2025/i-spent-18-months-training-ai-heres-what-i-learned",dt:"2025-10-25",n:8,cat:"travail",s:"The Spinoff"},
-{id:50,t:"Dossier IA et travail",d:"Compilation de ressources sur l'IA et le monde du travail.",u:"https://www.cafetech.fr/ia-travail",dt:"2025-09-27",n:4,cat:"travail",s:"Café IA / FranceNum / LaborIA"},
-{id:51,t:"Voix IA de Lara Croft supprimée",d:"Square Enix retire la voix générée par IA suite aux protestations.",u:"https://www.numerama.com/pop-culture/1851234-square-enix-supprime-la-voix-ia-de-lara-croft.html",dt:"2025-09-27",n:4,cat:"travail",s:"Numerama"},
+{id:42,title:"Shadow AI en entreprise",desc:"Enquête sur l'utilisation non contrôlée de l'IA dans les entreprises.",url:"https://www.bfmtv.com/tech/shadow-ai-l-ia-cachee-qui-s-infiltre-dans-les-entreprises_AN-202501150393.html",date:"2026-01-17",letter:20,cat:"travail",source:"BFM TV"},
+{id:43,title:"SLOP au Pakistan",desc:"Reportage sur les travailleurs pakistanais qui alimentent les modèles d'IA.",url:"https://chut.media/slop-pakistan/",date:"2026-01-03",letter:18,cat:"travail",source:"CHUT Magazine"},
+{id:44,title:"IA, la crise d'identité au travail",desc:"Analyse des transformations identitaires liées à l'IA au travail.",url:"https://www.trenchtech.fr/podcast/ia-crise-identite-travail/",date:"2025-12-27",letter:17,cat:"travail",source:"Trench Tech"},
+{id:45,title:"Si ChatGPT était un employé",desc:"Vidéo humoristique de Cyprien sur l'IA au travail.",url:"https://www.youtube.com/watch?v=example",date:"2025-12-27",letter:17,cat:"travail",source:"YouTube (Cyprien)"},
+{id:46,title:"Harlequin traduit des livres avec l'IA",desc:"L'éditeur Harlequin utilise l'IA pour la traduction de ses romans.",url:"https://www.francetvinfo.fr/culture/livres/harlequin-utilise-lia-pour-traduire-ses-romans_6831254.html",date:"2025-12-20",letter:16,cat:"travail",source:"France Info"},
+{id:47,title:"Leurs métiers remplacés par l'IA",desc:"Témoignages de travailleurs dont les métiers sont impactés par l'IA.",url:"https://www.brut.media/fr/news/leurs-metiers-remplaces-par-lia-temoignages",date:"2025-12-13",letter:15,cat:"travail",source:"Brut (Aude Arquié)"},
+{id:48,title:"Les petites mains du numérique en Afrique",desc:"Interview d'Antonio Casili sur les travailleurs du clic africains.",url:"https://www.rfi.fr/fr/podcasts/c-est-pas-du-vent/20251212-les-petites-mains-du-numerique-en-afrique",date:"2025-12-13",letter:15,cat:"travail",source:"RFI"},
+{id:49,title:"18 mois à entraîner l'IA générative",desc:"Témoignage d'une travailleuse de l'annotation de données.",url:"https://thespinoff.co.nz/society/25-10-2025/i-spent-18-months-training-ai-heres-what-i-learned",date:"2025-10-25",letter:8,cat:"travail",source:"The Spinoff"},
+{id:50,title:"Dossier IA et travail",desc:"Compilation de ressources sur l'IA et le monde du travail.",url:"https://www.cafetech.fr/ia-travail",date:"2025-09-27",letter:4,cat:"travail",source:"Café IA / FranceNum / LaborIA"},
+{id:51,title:"Voix IA de Lara Croft supprimée",desc:"Square Enix retire la voix générée par IA suite aux protestations.",url:"https://www.numerama.com/pop-culture/1851234-square-enix-supprime-la-voix-ia-de-lara-croft.html",date:"2025-09-27",letter:4,cat:"travail",source:"Numerama"},
 // SÉCURITÉ ET DÉSINFORMATION (8)
-{id:52,t:"Bébés reborn : cette crèche n'existe pas",d:"Enquête sur les fausses crèches de poupons reborn et l'usage de l'IA.",u:"https://www.radiofrance.fr/franceinter/podcasts/le-zoom-de-la-redaction/bebes-reborn-creche-fictive",dt:"2026-01-24",n:21,cat:"securite",s:"France Inter"},
-{id:53,t:"DGSI : les risques de l'IA dans le monde professionnel",d:"Alerte de la DGSI sur les risques liés à l'IA en entreprise.",u:"https://www.dgsi.interieur.gouv.fr/actualites/risques-ia-entreprises",dt:"2026-01-24",n:21,cat:"securite",s:"DGSI"},
-{id:54,t:"Quand une IA se fait arnaquer",d:"Exemples de manipulations d'agents IA par des utilisateurs malveillants.",u:"https://korben.info/quand-une-ia-se-fait-arnaquer.html",dt:"2026-01-17",n:20,cat:"securite",s:"Korben"},
-{id:55,t:"Injection de requêtes : la cybermenace émergente",d:"Explication des attaques par injection de prompts.",u:"https://www.francetvinfo.fr/internet/securite-informatique/injection-de-requetes-ia-cybermenace_6845123.html",dt:"2026-01-10",n:19,cat:"securite",s:"France Info"},
-{id:56,t:"Rapport IA et ingérences étrangères",d:"Rapport de l'Assemblée nationale sur l'utilisation de l'IA dans les opérations d'influence.",u:"https://www.assemblee-nationale.fr/dyn/16/rapports/cia/l16b0234_rapport-information",dt:"2025-12-20",n:16,cat:"securite",s:"Assemblée nationale"},
-{id:57,t:"Désinformation COP 30 par vidéos IA",d:"Alerte de l'ONU sur les vidéos générées par IA pour la désinformation climatique.",u:"https://www.leprogres.fr/environnement/2025/11/14/cop-30-lonu-alerte-sur-les-videos-ia",dt:"2025-11-15",n:11,cat:"securite",s:"Le Progrès"},
-{id:58,t:"Retour sur l'infox ChatGPT conseils santé",d:"Analyse du hoax sur les conseils médicaux de ChatGPT.",u:"https://www.lesnumeriques.com/vie-du-net/chatgpt-conseils-sante-infox-n218456.html",dt:"2025-11-08",n:10,cat:"securite",s:"Les Numériques"},
-{id:59,t:"Reality Check (jeu de détection images IA)",d:"Jeu hebdomadaire pour repérer les images générées par IA.",u:"https://www.linkedin.com/posts/sylvain-tillon-formation-ia-digital-learning_saurez-vous-faire-la-diff%C3%A9rence-entre-activity-7377605431743119360-lJBh/",dt:"2025-10-11",n:6,cat:"securite",s:"LinkedIn (Sylvain Tillion)"},
+{id:52,title:"Bébés reborn : cette crèche n'existe pas",desc:"Enquête sur les fausses crèches de poupons reborn et l'usage de l'IA.",url:"https://www.radiofrance.fr/franceinter/podcasts/le-zoom-de-la-redaction/bebes-reborn-creche-fictive",date:"2026-01-24",letter:21,cat:"securite",source:"France Inter"},
+{id:53,title:"DGSI : les risques de l'IA dans le monde professionnel",desc:"Alerte de la DGSI sur les risques liés à l'IA en entreprise.",url:"https://www.dgsi.interieur.gouv.fr/actualites/risques-ia-entreprises",date:"2026-01-24",letter:21,cat:"securite",source:"DGSI"},
+{id:54,title:"Quand une IA se fait arnaquer",desc:"Exemples de manipulations d'agents IA par des utilisateurs malveillants.",url:"https://korben.info/quand-une-ia-se-fait-arnaquer.html",date:"2026-01-17",letter:20,cat:"securite",source:"Korben"},
+{id:55,title:"Injection de requêtes : la cybermenace émergente",desc:"Explication des attaques par injection de prompts.",url:"https://www.francetvinfo.fr/internet/securite-informatique/injection-de-requetes-ia-cybermenace_6845123.html",date:"2026-01-10",letter:19,cat:"securite",source:"France Info"},
+{id:56,title:"Rapport IA et ingérences étrangères",desc:"Rapport de l'Assemblée nationale sur l'utilisation de l'IA dans les opérations d'influence.",url:"https://www.assemblee-nationale.fr/dyn/16/rapports/cia/l16b0234_rapport-information",date:"2025-12-20",letter:16,cat:"securite",source:"Assemblée nationale"},
+{id:57,title:"Désinformation COP 30 par vidéos IA",desc:"Alerte de l'ONU sur les vidéos générées par IA pour la désinformation climatique.",url:"https://www.leprogres.fr/environnement/2025/11/14/cop-30-lonu-alerte-sur-les-videos-ia",date:"2025-11-15",letter:11,cat:"securite",source:"Le Progrès"},
+{id:58,title:"Retour sur l'infox ChatGPT conseils santé",desc:"Analyse du hoax sur les conseils médicaux de ChatGPT.",url:"https://www.lesnumeriques.com/vie-du-net/chatgpt-conseils-sante-infox-n218456.html",date:"2025-11-08",letter:10,cat:"securite",source:"Les Numériques"},
+{id:59,title:"Reality Check (jeu de détection images IA)",desc:"Jeu hebdomadaire pour repérer les images générées par IA.",url:"https://www.linkedin.com/posts/sylvain-tillon-formation-ia-digital-learning_saurez-vous-faire-la-diff%C3%A9rence-entre-activity-7377605431743119360-lJBh/",date:"2025-10-11",letter:6,cat:"securite",source:"LinkedIn (Sylvain Tillion)"},
 // CRÉATION, ART ET MÉDIAS (11)
-{id:60,t:"La fabrique du SLOP",d:"Documentaire Arte sur les contenus générés massivement par IA.",u:"https://www.arte.tv/fr/videos/123456-000-A/la-fabrique-du-slop/",dt:"2026-01-03",n:18,cat:"creation",s:"Arte"},
-{id:61,t:"_Underscore Generated Art",d:"Série Arte sur l'art généré par IA.",u:"https://www.arte.tv/fr/videos/RC-024678/underscore/",dt:"2025-12-27",n:17,cat:"creation",s:"Arte"},
-{id:62,t:"L'IA révolutionne nos vies ?",d:"Émission 28 minutes d'Arte sur l'impact de l'IA.",u:"https://www.arte.tv/fr/videos/123456-000-A/28-minutes-ia/",dt:"2025-12-27",n:17,cat:"creation",s:"Arte"},
-{id:63,t:"Warner Music Group accord avec Suno",d:"Warner Music signe un accord de licence avec Suno pour la génération musicale.",u:"https://www.musicbusinessworldwide.com/warner-music-suno-deal/",dt:"2025-11-29",n:13,cat:"creation",s:"Music Business Worldwide"},
-{id:64,t:"Économie de l'attention vers l'économie de l'intention",d:"Réflexion sur l'évolution des modèles économiques des médias avec l'IA.",u:"https://www.linkedin.com/posts/ericscherer/",dt:"2025-11-15",n:11,cat:"creation",s:"LinkedIn (Éric Scherer)"},
-{id:65,t:"Phantas-IA (épisode 5)",d:"Suite de la série Arte explorant l'imaginaire des IA.",u:"https://www.arte.tv/fr/videos/118614-005-A/phantas-ia/",dt:"2025-11-01",n:9,cat:"creation",s:"Arte"},
-{id:66,t:"Le tiret cadratin mal aimé et ChatGPT",d:"Analyse de l'usage du tiret cadratin dans les textes générés par IA.",u:"https://www.radiofrance.fr/franceculture/podcasts/le-billet-culturel/le-tiret-cadratin-chatgpt",dt:"2025-10-04",n:5,cat:"creation",s:"France Culture"},
-{id:67,t:"Phantasia sur Arte (épisode 4)",d:"Série documentaire sur l'imaginaire des IA.",u:"https://www.arte.tv/fr/videos/118614-004-A/phantasia/",dt:"2025-10-04",n:5,cat:"creation",s:"Arte"},
-{id:68,t:"Masque de Fer documentaire avec IA",d:"Documentaire utilisant l'IA pour reconstituer l'identité du Masque de fer.",u:"https://www.linkedin.com/",dt:"2025-09-13",n:2,cat:"creation",s:"LinkedIn"},
-{id:69,t:"Claude crée PDF, présentations, Excel",d:"Nouvelles fonctionnalités de création de documents dans Claude.",u:"https://www.blogdumoderateur.com/claude-cree-pdf-presentations-excel/",dt:"2025-09-13",n:2,cat:"creation",s:"Blog du modérateur"},
-{id:70,t:"Le Chat MCP Connectors Memories",d:"Mistral ajoute mémoire et connexions à Le Chat.",u:"https://mistral.ai/news/le-chat-mcp-memories/",dt:"2025-09-06",n:1,cat:"creation",s:"Mistral"},
+{id:60,title:"La fabrique du SLOP",desc:"Documentaire Arte sur les contenus générés massivement par IA.",url:"https://www.arte.tv/fr/videos/123456-000-A/la-fabrique-du-slop/",date:"2026-01-03",letter:18,cat:"creation",source:"Arte"},
+{id:61,title:"_Underscore Generated Art",desc:"Série Arte sur l'art généré par IA.",url:"https://www.arte.tv/fr/videos/RC-024678/underscore/",date:"2025-12-27",letter:17,cat:"creation",source:"Arte"},
+{id:62,title:"L'IA révolutionne nos vies ?",desc:"Émission 28 minutes d'Arte sur l'impact de l'IA.",url:"https://www.arte.tv/fr/videos/123456-000-A/28-minutes-ia/",date:"2025-12-27",letter:17,cat:"creation",source:"Arte"},
+{id:63,title:"Warner Music Group accord avec Suno",desc:"Warner Music signe un accord de licence avec Suno pour la génération musicale.",url:"https://www.musicbusinessworldwide.com/warner-music-suno-deal/",date:"2025-11-29",letter:13,cat:"creation",source:"Music Business Worldwide"},
+{id:64,title:"Économie de l'attention vers l'économie de l'intention",desc:"Réflexion sur l'évolution des modèles économiques des médias avec l'IA.",url:"https://www.linkedin.com/posts/ericscherer/",date:"2025-11-15",letter:11,cat:"creation",source:"LinkedIn (Éric Scherer)"},
+{id:65,title:"Phantas-IA (épisode 5)",desc:"Suite de la série Arte explorant l'imaginaire des IA.",url:"https://www.arte.tv/fr/videos/118614-005-A/phantas-ia/",date:"2025-11-01",letter:9,cat:"creation",source:"Arte"},
+{id:66,title:"Le tiret cadratin mal aimé et ChatGPT",desc:"Analyse de l'usage du tiret cadratin dans les textes générés par IA.",url:"https://www.radiofrance.fr/franceculture/podcasts/le-billet-culturel/le-tiret-cadratin-chatgpt",date:"2025-10-04",letter:5,cat:"creation",source:"France Culture"},
+{id:67,title:"Phantasia sur Arte (épisode 4)",desc:"Série documentaire sur l'imaginaire des IA.",url:"https://www.arte.tv/fr/videos/118614-004-A/phantasia/",date:"2025-10-04",letter:5,cat:"creation",source:"Arte"},
+{id:68,title:"Masque de Fer documentaire avec IA",desc:"Documentaire utilisant l'IA pour reconstituer l'identité du Masque de fer.",url:"https://www.linkedin.com/",date:"2025-09-13",letter:2,cat:"creation",source:"LinkedIn"},
+{id:69,title:"Claude crée PDF, présentations, Excel",desc:"Nouvelles fonctionnalités de création de documents dans Claude.",url:"https://www.blogdumoderateur.com/claude-cree-pdf-presentations-excel/",date:"2025-09-13",letter:2,cat:"creation",source:"Blog du modérateur"},
+{id:70,title:"Le Chat MCP Connectors Memories",desc:"Mistral ajoute mémoire et connexions à Le Chat.",url:"https://mistral.ai/news/le-chat-mcp-memories/",date:"2025-09-06",letter:1,cat:"creation",source:"Mistral"},
 // TECHNIQUE ET INFRASTRUCTURE (14)
-{id:71,t:"Microsoft met de l'IA partout",d:"Microsoft intègre l'IA dans Paint et le Bloc-Notes. Chronique Net Plus Ultra.",u:"https://www.radiofrance.fr/franceinter/podcasts/net-plus-ultra/net-plus-ultra-du-vendredi-30-janvier-2026-8217360",dt:"2026-01-31",n:22,cat:"technique",s:"France Inter"},
-{id:72,t:"Glossaire pour les ambiguïtés sémantiques",d:"Arthur Sarrazin propose un glossaire pour faire comprendre aux machines les ambiguïtés.",u:"https://www.linkedin.com/posts/arthursarazin_llm-activity-7421583768530014208-MrI8/",dt:"2026-01-31",n:22,cat:"technique",s:"LinkedIn (Arthur Sarrazin)"},
-{id:73,t:"State of Mozilla",d:"Rapport de Mozilla sur l'IA : positionnement, manifeste, outils et feuille de route 2026.",u:"https://stateof.mozilla.org/",dt:"2026-01-31",n:22,cat:"technique",s:"Mozilla"},
-{id:74,t:"Protocoles pour agents IA",d:"Analyse des protocoles émergents (MCP, A2A) pour la communication entre agents IA.",u:"https://www.cafeia.fr/protocoles-agents-ia/",dt:"2026-01-24",n:21,cat:"technique",s:"Café IA (Hubert Guillaud)"},
-{id:75,t:"ChatGPT Santé / Claude Healthcare",d:"Annonces des versions santé de ChatGPT et Claude.",u:"https://siecledigital.fr/2025/01/16/chatgpt-sante-claude-healthcare/",dt:"2026-01-17",n:20,cat:"technique",s:"Siècle Digital / TechCrunch"},
-{id:76,t:"Claude AI fait pousser des tomates",d:"Expérimentation d'un agent IA pour la culture autonome de tomates.",u:"https://autoncorp.com/claude-tomates",dt:"2026-01-10",n:19,cat:"technique",s:"Autoncorp"},
-{id:77,t:"Recensement des data centers IA",d:"Cartographie mondiale des infrastructures dédiées à l'IA.",u:"https://epochai.org/data-center-census",dt:"2026-01-10",n:19,cat:"technique",s:"Epoch AI"},
-{id:78,t:"Stéphane Mallat : réseaux de neurones",d:"Interview du mathématicien Stéphane Mallat sur les fondements des réseaux de neurones.",u:"https://www.radiofrance.fr/franceinter/podcasts/la-tete-au-carre/stephane-mallat-reseaux-neurones",dt:"2026-01-03",n:18,cat:"technique",s:"France Inter"},
-{id:79,t:"Comment l'IA est entrée dans nos vies",d:"Émission France Inter sur l'adoption de l'IA au quotidien.",u:"https://www.radiofrance.fr/franceinter/podcasts/le-telephone-sonne/comment-ia-entree-nos-vies",dt:"2026-01-03",n:18,cat:"technique",s:"France Inter"},
-{id:80,t:"Le graphe de Borges",d:"Réflexion sur les graphes de connaissances et l'IA.",u:"https://www.linkedin.com/posts/arthur-sarazin/",dt:"2025-12-27",n:17,cat:"technique",s:"LinkedIn (Arthur Sarazin)"},
-{id:81,t:"Projet CNIL traçabilité des modèles",d:"Travaux de la CNIL sur la traçabilité des modèles d'IA.",u:"https://linc.cnil.fr/tracabilite-modeles-ia",dt:"2025-12-27",n:17,cat:"technique",s:"LINC (CNIL)"},
-{id:82,t:"Firefox navigateur IA",d:"Mozilla intègre des fonctionnalités IA dans Firefox.",u:"https://siecledigital.fr/2025/12/19/firefox-navigateur-ia/",dt:"2025-12-20",n:16,cat:"technique",s:"Siècle Digital"},
-{id:83,t:"Mistral pour 10 000 agents publics",d:"Déploiement de Mistral auprès des agents de la fonction publique française.",u:"https://www.lemondeinformatique.fr/actualites/lire-mistral-deploye-aupres-de-10000-agents-publics-92456.html",dt:"2025-11-01",n:9,cat:"technique",s:"Le Monde Informatique"},
-{id:84,t:"Extensions de domaines .ai .io .tv .nu",d:"Analyse des extensions de domaines populaires dans l'écosystème IA.",u:"https://www.blogdumoderateur.com/extensions-domaines-ai-io-tv/",dt:"2025-09-06",n:1,cat:"technique",s:"Blog du modérateur"},
+{id:71,title:"Microsoft met de l'IA partout",desc:"Microsoft intègre l'IA dans Paint et le Bloc-Notes. Chronique Net Plus Ultra.",url:"https://www.radiofrance.fr/franceinter/podcasts/net-plus-ultra/net-plus-ultra-du-vendredi-30-janvier-2026-8217360",date:"2026-01-31",letter:22,cat:"technique",source:"France Inter"},
+{id:72,title:"Glossaire pour les ambiguïtés sémantiques",desc:"Arthur Sarrazin propose un glossaire pour faire comprendre aux machines les ambiguïtés.",url:"https://www.linkedin.com/posts/arthursarazin_llm-activity-7421583768530014208-MrI8/",date:"2026-01-31",letter:22,cat:"technique",source:"LinkedIn (Arthur Sarrazin)"},
+{id:73,title:"State of Mozilla",desc:"Rapport de Mozilla sur l'IA : positionnement, manifeste, outils et feuille de route 2026.",url:"https://stateof.mozilla.org/",date:"2026-01-31",letter:22,cat:"technique",source:"Mozilla"},
+{id:74,title:"Protocoles pour agents IA",desc:"Analyse des protocoles émergents (MCP, A2A) pour la communication entre agents IA.",url:"https://www.cafeia.fr/protocoles-agents-ia/",date:"2026-01-24",letter:21,cat:"technique",source:"Café IA (Hubert Guillaud)"},
+{id:75,title:"ChatGPT Santé / Claude Healthcare",desc:"Annonces des versions santé de ChatGPT et Claude.",url:"https://siecledigital.fr/2025/01/16/chatgpt-sante-claude-healthcare/",date:"2026-01-17",letter:20,cat:"technique",source:"Siècle Digital / TechCrunch"},
+{id:76,title:"Claude AI fait pousser des tomates",desc:"Expérimentation d'un agent IA pour la culture autonome de tomates.",url:"https://autoncorp.com/claude-tomates",date:"2026-01-10",letter:19,cat:"technique",source:"Autoncorp"},
+{id:77,title:"Recensement des data centers IA",desc:"Cartographie mondiale des infrastructures dédiées à l'IA.",url:"https://epochai.org/data-center-census",date:"2026-01-10",letter:19,cat:"technique",source:"Epoch AI"},
+{id:78,title:"Stéphane Mallat : réseaux de neurones",desc:"Interview du mathématicien Stéphane Mallat sur les fondements des réseaux de neurones.",url:"https://www.radiofrance.fr/franceinter/podcasts/la-tete-au-carre/stephane-mallat-reseaux-neurones",date:"2026-01-03",letter:18,cat:"technique",source:"France Inter"},
+{id:79,title:"Comment l'IA est entrée dans nos vies",desc:"Émission France Inter sur l'adoption de l'IA au quotidien.",url:"https://www.radiofrance.fr/franceinter/podcasts/le-telephone-sonne/comment-ia-entree-nos-vies",date:"2026-01-03",letter:18,cat:"technique",source:"France Inter"},
+{id:80,title:"Le graphe de Borges",desc:"Réflexion sur les graphes de connaissances et l'IA.",url:"https://www.linkedin.com/posts/arthur-sarazin/",date:"2025-12-27",letter:17,cat:"technique",source:"LinkedIn (Arthur Sarazin)"},
+{id:81,title:"Projet CNIL traçabilité des modèles",desc:"Travaux de la CNIL sur la traçabilité des modèles d'IA.",url:"https://linc.cnil.fr/tracabilite-modeles-ia",date:"2025-12-27",letter:17,cat:"technique",source:"LINC (CNIL)"},
+{id:82,title:"Firefox navigateur IA",desc:"Mozilla intègre des fonctionnalités IA dans Firefox.",url:"https://siecledigital.fr/2025/12/19/firefox-navigateur-ia/",date:"2025-12-20",letter:16,cat:"technique",source:"Siècle Digital"},
+{id:83,title:"Mistral pour 10 000 agents publics",desc:"Déploiement de Mistral auprès des agents de la fonction publique française.",url:"https://www.lemondeinformatique.fr/actualites/lire-mistral-deploye-aupres-de-10000-agents-publics-92456.html",date:"2025-11-01",letter:9,cat:"technique",source:"Le Monde Informatique"},
+{id:84,title:"Extensions de domaines .ai .io .tv .nu",desc:"Analyse des extensions de domaines populaires dans l'écosystème IA.",url:"https://www.blogdumoderateur.com/extensions-domaines-ai-io-tv/",date:"2025-09-06",letter:1,cat:"technique",source:"Blog du modérateur"},
 // PHILOSOPHIE ET RÉFLEXIONS (10)
-{id:85,t:"Les imaginaires et les mythes de l'IA",d:"Article d'Hubert Guillaud sur les imaginaires et mythes qui entourent l'IA.",u:"https://www.linkedin.com/pulse/caf%C3%A9-ia-la-lettre-hebdomadaire-21-entre-mythes-et-r%C3%A9alit%C3%A9s-kfzff/",dt:"2026-01-31",n:22,cat:"philosophie",s:"Café IA (Hubert Guillaud)"},
-{id:86,t:"La fabrique à idiots",d:"Vidéo de Micode sur les effets de l'IA sur nos capacités cognitives.",u:"https://www.youtube.com/watch?v=example-micode",dt:"2026-01-24",n:21,cat:"philosophie",s:"YouTube (Micode)"},
-{id:87,t:"L'IA en question (mini-série)",d:"Mini-série documentaire Arte questionnant notre rapport à l'IA.",u:"https://www.arte.tv/fr/videos/RC-024789/l-ia-en-question/",dt:"2025-12-27",n:17,cat:"philosophie",s:"Arte"},
-{id:88,t:"Kit de survie pour les débats sur l'IA",d:"Guide pratique pour argumenter sur l'IA.",u:"https://laurasibony.substack.com/p/kit-survie-debats-ia",dt:"2025-12-06",n:14,cat:"philosophie",s:"Laura Sibony"},
-{id:89,t:"C.L.O.DO. révolte contre l'informatisation",d:"Retour sur le mouvement C.L.O.DO. des années 1980.",u:"https://www.radiofrance.fr/franceinter/podcasts/affaires-sensibles/clodo",dt:"2025-12-06",n:14,cat:"philosophie",s:"France Inter"},
-{id:90,t:"15 questions pour comprendre l'IA générative",d:"Guide pédagogique sur l'IA générative.",u:"https://www.fredcavazza.net/2025/11/21/15-questions-comprendre-ia-generative/",dt:"2025-11-22",n:12,cat:"philosophie",s:"Fred Cavazza"},
-{id:91,t:"L'ornithorynque n'existe plus",d:"Réflexion sur la classification et l'IA.",u:"https://aivancity.ai/lornithorynque-nexiste-plus/",dt:"2025-11-22",n:12,cat:"philosophie",s:"AIvancity"},
-{id:92,t:"AGI : théorie du complot la plus influente",d:"Analyse du MIT Technology Review sur le concept d'AGI.",u:"https://www.technologyreview.com/2025/11/05/agi-conspiracy-theory/",dt:"2025-11-08",n:10,cat:"philosophie",s:"MIT Technology Review"},
-{id:93,t:"Les philosophes et la technique au 20e siècle",d:"Émission France Culture sur la pensée philosophique de la technique.",u:"https://www.radiofrance.fr/franceculture/podcasts/les-chemins-de-la-philosophie/philosophes-technique-xxe-siecle",dt:"2025-10-25",n:8,cat:"philosophie",s:"France Culture"},
-{id:94,t:"Packs instructions OpenAI",d:"Ressources pédagogiques d'OpenAI Academy.",u:"https://academy.openai.com/packs",dt:"2025-10-04",n:5,cat:"philosophie",s:"OpenAI Academy"},
+{id:85,title:"Les imaginaires et les mythes de l'IA",desc:"Article d'Hubert Guillaud sur les imaginaires et mythes qui entourent l'IA.",url:"https://www.linkedin.com/pulse/caf%C3%A9-ia-la-lettre-hebdomadaire-21-entre-mythes-et-r%C3%A9alit%C3%A9s-kfzff/",date:"2026-01-31",letter:22,cat:"philosophie",source:"Café IA (Hubert Guillaud)"},
+{id:86,title:"La fabrique à idiots",desc:"Vidéo de Micode sur les effets de l'IA sur nos capacités cognitives.",url:"https://www.youtube.com/watch?v=example-micode",date:"2026-01-24",letter:21,cat:"philosophie",source:"YouTube (Micode)"},
+{id:87,title:"L'IA en question (mini-série)",desc:"Mini-série documentaire Arte questionnant notre rapport à l'IA.",url:"https://www.arte.tv/fr/videos/RC-024789/l-ia-en-question/",date:"2025-12-27",letter:17,cat:"philosophie",source:"Arte"},
+{id:88,title:"Kit de survie pour les débats sur l'IA",desc:"Guide pratique pour argumenter sur l'IA.",url:"https://laurasibony.substack.com/p/kit-survie-debats-ia",date:"2025-12-06",letter:14,cat:"philosophie",source:"Laura Sibony"},
+{id:89,title:"C.L.O.DO. révolte contre l'informatisation",desc:"Retour sur le mouvement C.L.O.DO. des années 1980.",url:"https://www.radiofrance.fr/franceinter/podcasts/affaires-sensibles/clodo",date:"2025-12-06",letter:14,cat:"philosophie",source:"France Inter"},
+{id:90,title:"15 questions pour comprendre l'IA générative",desc:"Guide pédagogique sur l'IA générative.",url:"https://www.fredcavazza.net/2025/11/21/15-questions-comprendre-ia-generative/",date:"2025-11-22",letter:12,cat:"philosophie",source:"Fred Cavazza"},
+{id:91,title:"L'ornithorynque n'existe plus",desc:"Réflexion sur la classification et l'IA.",url:"https://aivancity.ai/lornithorynque-nexiste-plus/",date:"2025-11-22",letter:12,cat:"philosophie",source:"AIvancity"},
+{id:92,title:"AGI : théorie du complot la plus influente",desc:"Analyse du MIT Technology Review sur le concept d'AGI.",url:"https://www.technologyreview.com/2025/11/05/agi-conspiracy-theory/",date:"2025-11-08",letter:10,cat:"philosophie",source:"MIT Technology Review"},
+{id:93,title:"Les philosophes et la technique au 20e siècle",desc:"Émission France Culture sur la pensée philosophique de la technique.",url:"https://www.radiofrance.fr/franceculture/podcasts/les-chemins-de-la-philosophie/philosophes-technique-xxe-siecle",date:"2025-10-25",letter:8,cat:"philosophie",source:"France Culture"},
+{id:94,title:"Packs instructions OpenAI",desc:"Ressources pédagogiques d'OpenAI Academy.",url:"https://academy.openai.com/packs",date:"2025-10-04",letter:5,cat:"philosophie",source:"OpenAI Academy"},
 // ÉDUCATION (8)
-{id:95,t:"Travailler un regard d'auteur à l'heure de l'IA",d:"Séquence pédagogique de Nicolas Bannier pour accompagner la construction d'un regard d'auteur.",u:"https://www.cafepedagogique.net/2026/01/26/travailler-un-regard-dauteur-a-lheure-de-lia/",dt:"2026-01-31",n:22,cat:"education",s:"Café Pédagogique"},
-{id:96,t:"Nos enfants après l'IA",d:"Émission Être et savoir sur l'impact de l'IA sur l'éducation des enfants.",u:"https://www.radiofrance.fr/franceculture/podcasts/etre-et-savoir/nos-enfants-apres-ia",dt:"2026-01-17",n:20,cat:"education",s:"France Culture"},
-{id:97,t:"IA résout un problème mathématique vieux de 45 ans",d:"Une IA résout un problème mathématique longtemps considéré comme insoluble.",u:"https://www.numerama.com/sciences/ia-resout-probleme-mathematique-45-ans.html",dt:"2026-01-17",n:20,cat:"education",s:"Numerama"},
-{id:98,t:"L'Islande confie l'éducation à Claude",d:"L'Islande contractualise avec Anthropic pour la mise à disposition gratuite de Claude.",u:"https://www.linkedin.com/posts/am%C3%A9lie-raoul/",dt:"2025-11-08",n:10,cat:"education",s:"LinkedIn (Amélie Raoul)"},
-{id:99,t:"Utilisation éthique de l'IA générative pour l'écriture académique",d:"Recommandations pour l'utilisation éthique de l'IA générative en écriture.",u:"https://advancesinsimulation.biomedcentral.com/articles/10.1186/s41077-025-00350-6",dt:"2025-11-08",n:10,cat:"education",s:"BioMedCentral"},
-{id:100,t:"Café IAlpes - Éthique et IA en éducation",d:"Nouveau numéro du Café IAlpes dédié à l'éthique et l'IA en éducation.",u:"https://www.linkedin.com/posts/philipperoederer_ethique-et-ia-en-%C3%A9ducation-activity-7385213670508752896-3a0I/",dt:"2025-11-01",n:9,cat:"education",s:"LinkedIn (Philippe Roederer)"},
-{id:101,t:"Comment l'IA influence nos façons d'apprendre",d:"Article par un professeur de psychologie cognitive à l'université de Boise.",u:"https://theconversation.com/comment-lia-influence-nos-facons-dapprendre-et-pourquoi-se-mefier-de-la-facilite-265028",dt:"2025-09-20",n:3,cat:"education",s:"The Conversation"},
-{id:102,t:"Activités créatives pour l'acculturation à l'IA",d:"Guide coordonné par Margarida Romero avec des enseignants polynésiens.",u:"https://tuic.education.pf/guide-dactivites-creatives-pour-lacculturation-a-lintelligence-artificielle/",dt:"2025-09-13",n:2,cat:"education",s:"TUIC Polynésie"},
+{id:95,title:"Travailler un regard d'auteur à l'heure de l'IA",desc:"Séquence pédagogique de Nicolas Bannier pour accompagner la construction d'un regard d'auteur.",url:"https://www.cafepedagogique.net/2026/01/26/travailler-un-regard-dauteur-a-lheure-de-lia/",date:"2026-01-31",letter:22,cat:"education",source:"Café Pédagogique"},
+{id:96,title:"Nos enfants après l'IA",desc:"Émission Être et savoir sur l'impact de l'IA sur l'éducation des enfants.",url:"https://www.radiofrance.fr/franceculture/podcasts/etre-et-savoir/nos-enfants-apres-ia",date:"2026-01-17",letter:20,cat:"education",source:"France Culture"},
+{id:97,title:"IA résout un problème mathématique vieux de 45 ans",desc:"Une IA résout un problème mathématique longtemps considéré comme insoluble.",url:"https://www.numerama.com/sciences/ia-resout-probleme-mathematique-45-ans.html",date:"2026-01-17",letter:20,cat:"education",source:"Numerama"},
+{id:98,title:"L'Islande confie l'éducation à Claude",desc:"L'Islande contractualise avec Anthropic pour la mise à disposition gratuite de Claude.",url:"https://www.linkedin.com/posts/am%C3%A9lie-raoul/",date:"2025-11-08",letter:10,cat:"education",source:"LinkedIn (Amélie Raoul)"},
+{id:99,title:"Utilisation éthique de l'IA générative pour l'écriture académique",desc:"Recommandations pour l'utilisation éthique de l'IA générative en écriture.",url:"https://advancesinsimulation.biomedcentral.com/articles/10.1186/s41077-025-00350-6",date:"2025-11-08",letter:10,cat:"education",source:"BioMedCentral"},
+{id:100,title:"Café IAlpes - Éthique et IA en éducation",desc:"Nouveau numéro du Café IAlpes dédié à l'éthique et l'IA en éducation.",url:"https://www.linkedin.com/posts/philipperoederer_ethique-et-ia-en-%C3%A9ducation-activity-7385213670508752896-3a0I/",date:"2025-11-01",letter:9,cat:"education",source:"LinkedIn (Philippe Roederer)"},
+{id:101,title:"Comment l'IA influence nos façons d'apprendre",desc:"Article par un professeur de psychologie cognitive à l'université de Boise.",url:"https://theconversation.com/comment-lia-influence-nos-facons-dapprendre-et-pourquoi-se-mefier-de-la-facilite-265028",date:"2025-09-20",letter:3,cat:"education",source:"The Conversation"},
+{id:102,title:"Activités créatives pour l'acculturation à l'IA",desc:"Guide coordonné par Margarida Romero avec des enseignants polynésiens.",url:"https://tuic.education.pf/guide-dactivites-creatives-pour-lacculturation-a-lintelligence-artificielle/",date:"2025-09-13",letter:2,cat:"education",source:"TUIC Polynésie"},
 // DROIT (4)
-{id:103,t:"Mistral AI accusé de piratage de livres via Meta",d:"Accusation de Mistral AI concernant l'utilisation de données d'entraînement.",u:"https://www.mediapart.fr/journal/economie/030126/mistral-ai-accuse-piratage-livres",dt:"2026-01-03",n:18,cat:"droit",s:"Mediapart / Les Numériques"},
-{id:104,t:"Proposition de loi sur la présomption d'exploitation des contenus",d:"Proposition de loi française sur les droits d'auteur et l'IA.",u:"https://www.senat.fr/dossier-legislatif/ppl24-232.html",dt:"2025-12-20",n:16,cat:"droit",s:"Sénat"},
-{id:105,t:"Livre blanc IA du barreau de Paris",d:"Publication du livre blanc sur l'IA par le barreau de Paris.",u:"https://www.avocatparis.org/livre-blanc-ia",dt:"2025-11-01",n:9,cat:"droit",s:"Barreau de Paris"},
-{id:106,t:"Carte des accords et procès éditeurs/IA",d:"Cartographie des relations juridiques entre éditeurs et entreprises d'IA.",u:"https://www.axios.com/2025/10/02/ai-publisher-deals-lawsuits-tracker",dt:"2025-10-04",n:5,cat:"droit",s:"Axios"},
+{id:103,title:"Mistral AI accusé de piratage de livres via Meta",desc:"Accusation de Mistral AI concernant l'utilisation de données d'entraînement.",url:"https://www.mediapart.fr/journal/economie/030126/mistral-ai-accuse-piratage-livres",date:"2026-01-03",letter:18,cat:"droit",source:"Mediapart / Les Numériques"},
+{id:104,title:"Proposition de loi sur la présomption d'exploitation des contenus",desc:"Proposition de loi française sur les droits d'auteur et l'IA.",url:"https://www.senat.fr/dossier-legislatif/ppl24-232.html",date:"2025-12-20",letter:16,cat:"droit",source:"Sénat"},
+{id:105,title:"Livre blanc IA du barreau de Paris",desc:"Publication du livre blanc sur l'IA par le barreau de Paris.",url:"https://www.avocatparis.org/livre-blanc-ia",date:"2025-11-01",letter:9,cat:"droit",source:"Barreau de Paris"},
+{id:106,title:"Carte des accords et procès éditeurs/IA",desc:"Cartographie des relations juridiques entre éditeurs et entreprises d'IA.",url:"https://www.axios.com/2025/10/02/ai-publisher-deals-lawsuits-tracker",date:"2025-10-04",letter:5,cat:"droit",source:"Axios"},
 // GÉOPOLITIQUE ET INTERNATIONAL (3)
-{id:107,t:"Québec encadre l'usage de l'IA dans la fonction publique",d:"Le Québec met en place un encadrement de l'utilisation de l'IA.",u:"https://www.lapresse.ca/actualites/politique/2026-01-24/quebec-encadre-l-usage-de-l-ia-dans-la-fonction-publique.php",dt:"2026-01-31",n:22,cat:"geopolitique",s:"La Presse"},
-{id:108,t:"Europe : IA vs climat",d:"Analyse des tensions entre développement de l'IA et objectifs climatiques en Europe.",u:"https://www.cnbc.com/2025/01/09/europe-ai-climate-conflict.html",dt:"2026-01-10",n:19,cat:"geopolitique",s:"CNBC"},
-{id:109,t:"À chaque culture son IA",d:"Réflexion sur les différences culturelles dans le développement de l'IA.",u:"https://www.francispisani.net/a-chaque-culture-son-ia/",dt:"2025-11-22",n:12,cat:"geopolitique",s:"Francis Pisani"},
+{id:107,title:"Québec encadre l'usage de l'IA dans la fonction publique",desc:"Le Québec met en place un encadrement de l'utilisation de l'IA.",url:"https://www.lapresse.ca/actualites/politique/2026-01-24/quebec-encadre-l-usage-de-l-ia-dans-la-fonction-publique.php",date:"2026-01-31",letter:22,cat:"geopolitique",source:"La Presse"},
+{id:108,title:"Europe : IA vs climat",desc:"Analyse des tensions entre développement de l'IA et objectifs climatiques en Europe.",url:"https://www.cnbc.com/2025/01/09/europe-ai-climate-conflict.html",date:"2026-01-10",letter:19,cat:"geopolitique",source:"CNBC"},
+{id:109,title:"À chaque culture son IA",desc:"Réflexion sur les différences culturelles dans le développement de l'IA.",url:"https://www.francispisani.net/a-chaque-culture-son-ia/",date:"2025-11-22",letter:12,cat:"geopolitique",source:"Francis Pisani"},
 ];
 
-let selC=new Set(),selR=new Set(),search='',tab='categories';
-const fd=d=>new Date(d).toLocaleDateString('fr-FR');
-const getF=()=>{let r=R;if(selC.size)r=r.filter(x=>selC.has(x.cat));if(search){const s=search.toLowerCase();r=r.filter(x=>x.t.toLowerCase().includes(s)||x.d.toLowerCase().includes(s))}return r.sort((a,b)=>new Date(b.dt)-new Date(a.dt))};
-const getE=()=>selR.size?R.filter(r=>selR.has(r.id)):getF();
 
-function genOPML(r){const g={};r.forEach(x=>{if(!g[x.cat])g[x.cat]=[];g[x.cat].push(x)});let o=`<?xml version="1.0" encoding="UTF-8"?>\n<opml version="2.0">\n<head><title>Lectures partagées - Une IA par jour</title><dateCreated>${new Date().toISOString()}</dateCreated></head>\n<body>`;Object.entries(g).forEach(([k,v])=>{o+=`\n<outline text="${C[k]?.l}" title="${C[k]?.l}">`;v.forEach(x=>{o+=`\n<outline type="link" text="${x.t.replace(/"/g,'&quot;')}" url="${x.u}" created="${x.dt}"/>`});o+=`\n</outline>`});return o+`\n</body>\n</opml>`}
-function genXML(r){let x=`<?xml version="1.0" encoding="UTF-8"?>\n<lecturesPartagees>\n<metadata><title>Lectures partagées</title><dateExport>${new Date().toISOString()}</dateExport><total>${r.length}</total></metadata>\n<resources>`;r.forEach(i=>{x+=`\n<resource id="${i.id}"><title><![CDATA[${i.t}]]></title><description><![CDATA[${i.d}]]></description><url>${i.u}</url><date>${i.dt}</date><letter>${i.n}</letter><category>${C[i.cat]?.l}</category><source><![CDATA[${i.s}]]></source></resource>`});return x+`\n</resources>\n</lecturesPartagees>`}
-function genMD(r){const g={};r.forEach(x=>{if(!g[x.cat])g[x.cat]=[];g[x.cat].push(x)});let m=`# Lectures partagées - Une IA par jour\n\n> Export du ${fd(new Date())} — ${r.length} ressources\n\n---\n\n`;Object.entries(g).forEach(([k,v])=>{m+=`## ${C[k]?.l}\n\n`;v.sort((a,b)=>new Date(b.dt)-new Date(a.dt)).forEach(x=>{m+=`### ${x.t}\n\n${x.d}\n\n- **Date** : ${fd(x.dt)}\n- **Lettre** : #${x.n}\n- **Lien** : [${x.u}](${x.u})\n\n---\n\n`})});return m}
-function genBM(r){const g={};r.forEach(x=>{if(!g[x.cat])g[x.cat]=[];g[x.cat].push(x)});let h=`<!DOCTYPE NETSCAPE-Bookmark-file-1>\n<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">\n<TITLE>Lectures partagées</TITLE>\n<H1>Lectures partagées</H1>\n<DL><p>`;Object.entries(g).forEach(([k,v])=>{h+=`\n<DT><H3>${C[k]?.l}</H3>\n<DL><p>`;v.forEach(x=>{h+=`\n<DT><A HREF="${x.u}" ADD_DATE="${Math.floor(new Date(x.dt).getTime()/1000)}">${x.t}</A>`});h+=`\n</DL><p>`});return h+`\n</DL><p>`}
-function genBib(r){let b=`% Lectures partagées - Une IA par jour\n% ${r.length} ressources\n\n`;r.forEach(x=>{const k=x.t.toLowerCase().replace(/[^a-z0-9]/g,'').substring(0,15)+x.id;b+=`@online{${k},\n  author = {${x.s.replace(/[{}]/g,'')}},\n  title = {${x.t.replace(/[{}]/g,'')}},\n  year = {${x.dt.substring(0,4)}},\n  url = {${x.u}},\n  keywords = {${x.cat}, ia}\n}\n\n`});return b}
-function genJSON(r){return JSON.stringify({metadata:{title:"Lectures partagées - Une IA par jour",exportDate:new Date().toISOString(),total:r.length},resources:r.map(x=>({id:x.id,title:x.t,description:x.d,url:x.u,date:x.dt,letter:x.n,category:x.cat,categoryLabel:C[x.cat]?.l,source:x.s}))},null,2)}
-function genCSV(r){const e=s=>`"${String(s).replace(/"/g,'""')}"`;let c='ID;Titre;Description;URL;Date;Lettre;Catégorie;Source\n';r.forEach(x=>{c+=`${x.id};${e(x.t)};${e(x.d)};${e(x.u)};${x.dt};${x.n};${e(C[x.cat]?.l)};${e(x.s)}\n`});return c}
+/* ============================================================
+   ÉTAT DE L'APPLICATION
+   ============================================================ */
+let selectedCats = new Set();   // catégories cochées
+let selectedRes = new Set();    // ressources cochées individuellement
+let search = '';                // texte de recherche
+let tab = 'categories';        // onglet actif : 'categories' ou 'resources'
 
-function dl(c,f,m){const b=new Blob([c],{type:m+';charset=utf-8'}),u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download=f;document.body.appendChild(a);a.click();document.body.removeChild(a);URL.revokeObjectURL(u)}
-function exp(f){const e=getE(),m={opml:[genOPML(e),'lectures-partagees.opml','application/xml'],xml:[genXML(e),'lectures-partagees.xml','application/xml'],markdown:[genMD(e),'lectures-partagees.md','text/markdown'],bookmarks:[genBM(e),'lectures-partagees-bookmarks.html','text/html'],bibtex:[genBib(e),'lectures-partagees.bib','application/x-bibtex'],json:[genJSON(e),'lectures-partagees.json','application/json'],csv:[genCSV(e),'lectures-partagees.csv','text/csv']};if(m[f])dl(...m[f])}
+/* ============================================================
+   FONCTIONS UTILITAIRES
+   ============================================================ */
 
-function render(){const a=document.getElementById('app'),f=getF(),e=getE();document.getElementById('header-stats').textContent=`${R.length} ressources · 10 catégories · 7 formats`;
-a.innerHTML=`<div class="stats"><div class="stat"><div class="stat-value" style="color:#E67E22">${f.length}</div><div class="stat-label">Filtrées</div></div><div class="stat"><div class="stat-value" style="color:#27AE60">${e.length}</div><div class="stat-label">À exporter</div></div><div class="stat"><div class="stat-value" style="color:#9B59B6">${selC.size||10}</div><div class="stat-label">Catégories</div></div></div><input type="text" class="search-input" id="search" placeholder="Rechercher..." value="${search}"><div class="tabs"><button class="tab-btn ${tab==='categories'?'active':''}" data-tab="categories">Par catégorie</button><button class="tab-btn ${tab==='resources'?'active':''}" data-tab="resources">Par article</button></div><div class="content-box">${tab==='categories'?renderC():renderR(f)}</div><h4>Choisir un format</h4><div class="formats"><button class="fmt-btn" data-fmt="opml"><div class="name">OPML</div><div class="desc">Feedly, Inoreader...</div></button><button class="fmt-btn" data-fmt="xml"><div class="name">XML</div><div class="desc">Format structuré</div></button><button class="fmt-btn" data-fmt="markdown"><div class="name">Markdown</div><div class="desc">Documentation</div></button><button class="fmt-btn" data-fmt="bookmarks"><div class="name">Bookmarks</div><div class="desc">Navigateurs</div></button><button class="fmt-btn" data-fmt="bibtex"><div class="name">BibTeX</div><div class="desc">Zotero, Mendeley...</div></button><button class="fmt-btn" data-fmt="json"><div class="name">JSON</div><div class="desc">Développeurs</div></button><button class="fmt-btn" data-fmt="csv"><div class="name">CSV</div><div class="desc">Tableurs</div></button></div><footer><a href="https://www.uneiaparjour.fr/" target="_blank">Une IA par jour</a> 
-<p><a href="https://github.com/uneIAparjour/export-lectures-partagees" target="_blank">Dépôt Github</a></footer>`;
-document.getElementById('search').addEventListener('input',x=>{search=x.target.value;render();document.getElementById('search').focus()});
-document.querySelectorAll('.tab-btn').forEach(b=>b.addEventListener('click',()=>{tab=b.dataset.tab;render()}));
-document.querySelectorAll('.cat-btn').forEach(b=>b.addEventListener('click',()=>{const c=b.dataset.cat;selC.has(c)?selC.delete(c):selC.add(c);render()}));
-document.querySelectorAll('.res-btn').forEach(b=>b.addEventListener('click',()=>{const i=parseInt(b.dataset.id);selR.has(i)?selR.delete(i):selR.add(i);render()}));
-document.getElementById('sel-all')?.addEventListener('click',()=>{f.forEach(r=>selR.add(r.id));render()});
-document.getElementById('clr-all')?.addEventListener('click',()=>{selR.clear();selC.clear();render()});
-document.querySelectorAll('.fmt-btn').forEach(b=>b.addEventListener('click',()=>exp(b.dataset.fmt)))}
+/** Formate une date ISO en format français (JJ/MM/AAAA) */
+const formatDate = (d) => new Date(d).toLocaleDateString('fr-FR');
 
-function renderC(){return Object.entries(C).map(([k,{l,c}])=>{const n=R.filter(r=>r.cat===k).length,s=selC.has(k);return`<button class="cat-btn" data-cat="${k}" style="border-color:${s?c:'#4D4D4D'};background:${s?c+'20':'#2D2D2D'}"><div style="display:flex;align-items:center"><div class="check" style="background:${s?c:'#4D4D4D'};margin-right:12px">${s?'✓':''}</div><span style="font-weight:${s?'600':'400'};color:${s?c:'#E8E8E8'}">${l}</span></div><span style="background:${s?c:'#4D4D4D'};color:#fff;padding:4px 10px;border-radius:20px;font-size:.8rem;font-weight:600">${n}</span></button>`}).join('')}
+/** Retourne les ressources filtrées par catégories et recherche */
+const getFiltered = () => {
+  let result = RESOURCES;
+  if (selectedCats.size) result = result.filter(r => selectedCats.has(r.cat));
+  if (search) {
+    const query = search.toLowerCase();
+    result = result.filter(r =>
+      r.title.toLowerCase().includes(query) ||
+      r.desc.toLowerCase().includes(query)
+    );
+  }
+  return result.sort((a, b) => new Date(b.date) - new Date(a.date));
+};
 
-function renderR(f){let h=`<div class="action-btns"><button class="action-btn" id="sel-all">Tout sélectionner</button><button class="action-btn" id="clr-all">Effacer</button></div>`;f.forEach(r=>{const s=selR.has(r.id),c=C[r.cat]?.c||'#6B7280';h+=`<button class="res-btn" data-id="${r.id}" style="border-color:${s?c:'#4D4D4D'};background:${s?c+'15':'#2D2D2D'};gap:12px"><div class="check" style="background:${s?c:'#4D4D4D'}">${s?'✓':''}</div><div style="flex:1;min-width:0"><div style="font-weight:500;font-size:.9rem;color:#E8E8E8;margin-bottom:4px;line-height:1.3">${r.t}</div><div style="font-size:.75rem;color:#A0A0A0"><span style="display:inline-block;background:${c}30;color:${c};padding:2px 8px;border-radius:4px;font-weight:500;margin-right:8px">${C[r.cat]?.l}</span>#${r.n} · ${fd(r.dt)}</div></div></button>`});return h}
+/** Retourne les ressources à exporter (sélection individuelle ou filtrées) */
+const getExportable = () =>
+  selectedRes.size ? RESOURCES.filter(r => selectedRes.has(r.id)) : getFiltered();
 
+/** Regroupe un tableau de ressources par catégorie */
+const groupByCategory = (resources) => {
+  const grouped = {};
+  resources.forEach(r => {
+    if (!grouped[r.cat]) grouped[r.cat] = [];
+    grouped[r.cat].push(r);
+  });
+  return grouped;
+};
+
+/* ============================================================
+   GÉNÉRATEURS D'EXPORT (7 formats)
+   ============================================================ */
+
+function genOPML(resources) {
+  const grouped = groupByCategory(resources);
+  let output = `<?xml version="1.0" encoding="UTF-8"?>\n<opml version="2.0">\n<head><title>Lectures partagées - Une IA par jour</title><dateCreated>${new Date().toISOString()}</dateCreated></head>\n<body>`;
+  Object.entries(grouped).forEach(([catKey, items]) => {
+    output += `\n<outline text="${CATEGORIES[catKey]?.label}" title="${CATEGORIES[catKey]?.label}">`;
+    items.forEach(r => {
+      output += `\n<outline type="link" text="${r.title.replace(/"/g,'&quot;')}" url="${r.url}" created="${r.date}"/>`;
+    });
+    output += `\n</outline>`;
+  });
+  return output + `\n</body>\n</opml>`;
+}
+
+function genXML(resources) {
+  let output = `<?xml version="1.0" encoding="UTF-8"?>\n<lecturesPartagees>\n<metadata><title>Lectures partagées</title><dateExport>${new Date().toISOString()}</dateExport><total>${resources.length}</total></metadata>\n<resources>`;
+  resources.forEach(r => {
+    output += `\n<resource id="${r.id}"><title><![CDATA[${r.title}]]></title><description><![CDATA[${r.desc}]]></description><url>${r.url}</url><date>${r.date}</date><letter>${r.letter}</letter><category>${CATEGORIES[r.cat]?.label}</category><source><![CDATA[${r.source}]]></source></resource>`;
+  });
+  return output + `\n</resources>\n</lecturesPartagees>`;
+}
+
+function genMarkdown(resources) {
+  const grouped = groupByCategory(resources);
+  let output = `# Lectures partagées - Une IA par jour\n\n> Export du ${formatDate(new Date())} — ${resources.length} ressources\n\n---\n\n`;
+  Object.entries(grouped).forEach(([catKey, items]) => {
+    output += `## ${CATEGORIES[catKey]?.label}\n\n`;
+    items.sort((a, b) => new Date(b.date) - new Date(a.date)).forEach(r => {
+      output += `### ${r.title}\n\n${r.desc}\n\n- **Date** : ${formatDate(r.date)}\n- **Lettre** : #${r.letter}\n- **Lien** : [${r.url}](${r.url})\n\n---\n\n`;
+    });
+  });
+  return output;
+}
+
+function genBookmarks(resources) {
+  const grouped = groupByCategory(resources);
+  let output = `<!DOCTYPE NETSCAPE-Bookmark-file-1>\n<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">\n<TITLE>Lectures partagées</TITLE>\n<H1>Lectures partagées</H1>\n<DL><p>`;
+  Object.entries(grouped).forEach(([catKey, items]) => {
+    output += `\n<DT><H3>${CATEGORIES[catKey]?.label}</H3>\n<DL><p>`;
+    items.forEach(r => {
+      output += `\n<DT><A HREF="${r.url}" ADD_DATE="${Math.floor(new Date(r.date).getTime()/1000)}">${r.title}</A>`;
+    });
+    output += `\n</DL><p>`;
+  });
+  return output + `\n</DL><p>`;
+}
+
+function genBibTeX(resources) {
+  let output = `% Lectures partagées - Une IA par jour\n% ${resources.length} ressources\n\n`;
+  resources.forEach(r => {
+    const key = r.title.toLowerCase().replace(/[^a-z0-9]/g, '').substring(0, 15) + r.id;
+    output += `@online{${key},\n  author = {${r.source.replace(/[{}]/g, '')}},\n  title = {${r.title.replace(/[{}]/g, '')}},\n  year = {${r.date.substring(0, 4)}},\n  url = {${r.url}},\n  keywords = {${r.cat}, ia}\n}\n\n`;
+  });
+  return output;
+}
+
+function genJSON(resources) {
+  return JSON.stringify({
+    metadata: {
+      title: "Lectures partagées - Une IA par jour",
+      exportDate: new Date().toISOString(),
+      total: resources.length
+    },
+    resources: resources.map(r => ({
+      id: r.id,
+      title: r.title,
+      description: r.desc,
+      url: r.url,
+      date: r.date,
+      letter: r.letter,
+      category: r.cat,
+      categoryLabel: CATEGORIES[r.cat]?.label,
+      source: r.source
+    }))
+  }, null, 2);
+}
+
+function genCSV(resources) {
+  const escape = (s) => `"${String(s).replace(/"/g, '""')}"`;
+  let output = 'ID;Titre;Description;URL;Date;Lettre;Catégorie;Source\n';
+  resources.forEach(r => {
+    output += `${r.id};${escape(r.title)};${escape(r.desc)};${escape(r.url)};${r.date};${r.letter};${escape(CATEGORIES[r.cat]?.label)};${escape(r.source)}\n`;
+  });
+  return output;
+}
+
+/* ============================================================
+   TÉLÉCHARGEMENT ET EXPORT
+   ============================================================ */
+
+/** Déclenche le téléchargement d'un fichier généré */
+function download(content, filename, mimeType) {
+  const blob = new Blob([content], { type: mimeType + ';charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  URL.revokeObjectURL(url);
+}
+
+/** Lance l'export dans le format demandé */
+function exportFormat(format) {
+  const data = getExportable();
+  const formats = {
+    opml:      [genOPML(data),      'lectures-partagees.opml',                'application/xml'],
+    xml:       [genXML(data),       'lectures-partagees.xml',                 'application/xml'],
+    markdown:  [genMarkdown(data),  'lectures-partagees.md',                  'text/markdown'],
+    bookmarks: [genBookmarks(data), 'lectures-partagees-bookmarks.html',      'text/html'],
+    bibtex:    [genBibTeX(data),    'lectures-partagees.bib',                 'application/x-bibtex'],
+    json:      [genJSON(data),      'lectures-partagees.json',                'application/json'],
+    csv:       [genCSV(data),       'lectures-partagees.csv',                 'text/csv']
+  };
+  if (formats[format]) download(...formats[format]);
+}
+
+/* ============================================================
+   RENDU DE L'INTERFACE
+   ============================================================ */
+
+/** Génère le HTML de la liste des catégories */
+function renderCategories() {
+  return Object.entries(CATEGORIES).map(([key, { label, color }]) => {
+    const count = RESOURCES.filter(r => r.cat === key).length;
+    const selected = selectedCats.has(key);
+    return `<button class="cat-btn" data-cat="${key}" style="border-color:${selected ? color : '#4D4D4D'};background:${selected ? color + '20' : '#2D2D2D'}">
+      <div style="display:flex;align-items:center">
+        <div class="check" style="background:${selected ? color : '#4D4D4D'};margin-right:12px">${selected ? '✓' : ''}</div>
+        <span style="font-weight:${selected ? '600' : '400'};color:${selected ? color : '#E8E8E8'}">${label}</span>
+      </div>
+      <span style="background:${selected ? color : '#4D4D4D'};color:#fff;padding:4px 10px;border-radius:20px;font-size:.8rem;font-weight:600">${count}</span>
+    </button>`;
+  }).join('');
+}
+
+/** Génère le HTML de la liste des ressources filtrées */
+function renderResources(filtered) {
+  let html = `<div class="action-btns"><button class="action-btn" id="sel-all">Tout sélectionner</button><button class="action-btn" id="clr-all">Effacer</button></div>`;
+  filtered.forEach(r => {
+    const selected = selectedRes.has(r.id);
+    const color = CATEGORIES[r.cat]?.color || '#6B7280';
+    html += `<button class="res-btn" data-id="${r.id}" style="border-color:${selected ? color : '#4D4D4D'};background:${selected ? color + '15' : '#2D2D2D'};gap:12px">
+      <div class="check" style="background:${selected ? color : '#4D4D4D'}">${selected ? '✓' : ''}</div>
+      <div style="flex:1;min-width:0">
+        <div style="font-weight:500;font-size:.9rem;color:#E8E8E8;margin-bottom:4px;line-height:1.3">${r.title}</div>
+        <div style="font-size:.75rem;color:#A0A0A0">
+          <span style="display:inline-block;background:${color}30;color:${color};padding:2px 8px;border-radius:4px;font-weight:500;margin-right:8px">${CATEGORIES[r.cat]?.label}</span>#${r.letter} · ${formatDate(r.date)}
+        </div>
+      </div>
+    </button>`;
+  });
+  return html;
+}
+
+/** Rendu principal : reconstruit toute l'interface */
+function render() {
+  const app = document.getElementById('app');
+  const filtered = getFiltered();
+  const exportable = getExportable();
+
+  document.getElementById('header-stats').textContent =
+    `${RESOURCES.length} ressources · 10 catégories · 7 formats`;
+
+  app.innerHTML = `
+    <div class="stats">
+      <div class="stat"><div class="stat-value" style="color:#E67E22">${filtered.length}</div><div class="stat-label">Filtrées</div></div>
+      <div class="stat"><div class="stat-value" style="color:#27AE60">${exportable.length}</div><div class="stat-label">À exporter</div></div>
+      <div class="stat"><div class="stat-value" style="color:#9B59B6">${selectedCats.size || 10}</div><div class="stat-label">Catégories</div></div>
+    </div>
+    <input type="text" class="search-input" id="search" placeholder="Rechercher..." value="${search}">
+    <div class="tabs">
+      <button class="tab-btn ${tab === 'categories' ? 'active' : ''}" data-tab="categories">Par catégorie</button>
+      <button class="tab-btn ${tab === 'resources' ? 'active' : ''}" data-tab="resources">Par article</button>
+    </div>
+    <div class="content-box">${tab === 'categories' ? renderCategories() : renderResources(filtered)}</div>
+    <h4>Choisir un format</h4>
+    <div class="formats">
+      <button class="fmt-btn" data-fmt="opml"><div class="name">OPML</div><div class="desc">Feedly, Inoreader...</div></button>
+      <button class="fmt-btn" data-fmt="xml"><div class="name">XML</div><div class="desc">Format structuré</div></button>
+      <button class="fmt-btn" data-fmt="markdown"><div class="name">Markdown</div><div class="desc">Documentation</div></button>
+      <button class="fmt-btn" data-fmt="bookmarks"><div class="name">Bookmarks</div><div class="desc">Navigateurs</div></button>
+      <button class="fmt-btn" data-fmt="bibtex"><div class="name">BibTeX</div><div class="desc">Zotero, Mendeley...</div></button>
+      <button class="fmt-btn" data-fmt="json"><div class="name">JSON</div><div class="desc">Développeurs</div></button>
+      <button class="fmt-btn" data-fmt="csv"><div class="name">CSV</div><div class="desc">Tableurs</div></button>
+    </div>
+    <footer>
+      <a href="https://www.uneiaparjour.fr/" target="_blank">Une IA par jour</a>
+      <p><a href="https://github.com/uneIAparjour/export-lectures-partagees" target="_blank">Dépôt Github</a></p>
+    </footer>`;
+
+  /* --- Événements --- */
+  document.getElementById('search').addEventListener('input', (e) => {
+    search = e.target.value;
+    render();
+    document.getElementById('search').focus();
+  });
+
+  document.querySelectorAll('.tab-btn').forEach(btn =>
+    btn.addEventListener('click', () => { tab = btn.dataset.tab; render(); })
+  );
+
+  document.querySelectorAll('.cat-btn').forEach(btn =>
+    btn.addEventListener('click', () => {
+      const cat = btn.dataset.cat;
+      selectedCats.has(cat) ? selectedCats.delete(cat) : selectedCats.add(cat);
+      render();
+    })
+  );
+
+  document.querySelectorAll('.res-btn').forEach(btn =>
+    btn.addEventListener('click', () => {
+      const id = parseInt(btn.dataset.id);
+      selectedRes.has(id) ? selectedRes.delete(id) : selectedRes.add(id);
+      render();
+    })
+  );
+
+  document.getElementById('sel-all')?.addEventListener('click', () => {
+    filtered.forEach(r => selectedRes.add(r.id));
+    render();
+  });
+
+  document.getElementById('clr-all')?.addEventListener('click', () => {
+    selectedRes.clear();
+    selectedCats.clear();
+    render();
+  });
+
+  document.querySelectorAll('.fmt-btn').forEach(btn =>
+    btn.addEventListener('click', () => exportFormat(btn.dataset.fmt))
+  );
+}
+
+/* Lancement initial */
 render();
+
 })();
 </script>
 </body>
