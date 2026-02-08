@@ -1097,7 +1097,7 @@
     "date": "2026-02-07",
     "letter": 23,
     "cat": "securite",
-    "source": "L'Usine Digitale",
+    "source": "L'Usine Digitale"
   },
   {
     "id": 111,
@@ -1107,7 +1107,7 @@
     "date": "2026-02-07",
     "letter": 23,
     "cat": "philosophie",
-    "source": "Medium (Sébastien Reinders)",
+    "source": "Medium (Sébastien Reinders)"
   },
   {
     "id": 112,
@@ -1117,7 +1117,7 @@
     "date": "2026-02-07",
     "letter": 23,
     "cat": "droit",
-    "source": "01net",
+    "source": "01net"
   },
   {
     "id": 113,
@@ -1127,7 +1127,7 @@
     "date": "2026-02-07",
     "letter": 23,
     "cat": "droit",
-    "source": "Parlement européen",
+    "source": "Parlement européen"
   },
   {
     "id": 114,
@@ -1137,7 +1137,7 @@
     "date": "2026-02-07",
     "letter": 23,
     "cat": "education",
-    "source": "LinkedIn (Amélie Raoul)",
+    "source": "LinkedIn (Amélie Raoul)"
   },
   {
     "id": 115,
@@ -1147,17 +1147,17 @@
     "date": "2026-02-07",
     "letter": 23,
     "cat": "education",
-    "source": "LinkedIn (Mickaël Bertrand)",
+    "source": "LinkedIn (Mickaël Bertrand)"
   },
   {
-    "id": 116
+    "id": 116,
     "title": "Du chatbot du pape au canard de Vaucanson, les croyances derrière l'IA",
     "desc": "Les croyances derrière l'intelligence artificielle ne datent pas d'hier : du canard automate de Vaucanson aux chatbots modernes.",
     "url": "https://theconversation.com/du-chatbot-du-pape-au-canard-de-vaucanson-les-croyances-derriere-lintelligence-artificielle-ne-datent-pas-dhier-272357",
     "date": "2026-02-07",
     "letter": 23,
     "cat": "philosophie",
-    "source": "The Conversation",
+    "source": "The Conversation"
   },
   {
     "id": 117,
@@ -1167,7 +1167,7 @@
     "date": "2026-02-07",
     "letter": 23,
     "cat": "technique",
-    "source": "Sciences et Avenir",
+    "source": "Sciences et Avenir"
   },
   {
     "id": 118,
@@ -1177,9 +1177,9 @@
     "date": "2026-02-07",
     "letter": 23,
     "cat": "philosophie",
-    "source": "France Culture / Le Monde",
+    "source": "France Culture / Le Monde"
   },
- {
+  {
     "id": 119,
     "title": "Claude Healthcare",
     "desc": "Annonces de la version santé de Claude.",
@@ -1189,7 +1189,7 @@
     "cat": "technique",
     "source": "TechCrunch"
   },
-{
+  {
     "id": 120,
     "title": "Le graphe de Borges, partie 2",
     "desc": "Réflexion sur les graphes de connaissances et l'IA.",
@@ -1199,7 +1199,7 @@
     "cat": "technique",
     "source": "LinkedIn (Arthur Sarazin)"
   },
- {
+  {
     "id": 121,
     "title": "Mistral AI accusé de piratage de livres via Meta (2)",
     "desc": "Accusation de Mistral AI concernant l'utilisation de données d'entraînement.",
@@ -1209,7 +1209,7 @@
     "cat": "droit",
     "source": "Les Numériques"
   },
-   {
+  {
     "id": 104,
     "title": "Proposition de loi sur la présomption d'exploitation des contenus (2)",
     "desc": "Proposition de loi française sur les droits d'auteur et l'IA.",
