@@ -10,10 +10,11 @@ Cet outil permet de consulter, filtrer et exporter les ressources partagées cha
 
 ### Consultation
 
-- Navigation par catégorie avec accès rapide (barre sticky)
+- Navigation par catégorie avec accès rapide
 - Titre cliquable vers la source originale
 - Lien vers la lettre d'origine sur Substack
 - Description, source et date pour chaque ressource
+- Retour au menu en fin de chaque catégorie
 
 ### Export (7 formats)
 
@@ -39,7 +40,7 @@ Cet outil permet de consulter, filtrer et exporter les ressources partagées cha
 
 ## Mise à jour des données
 
-Les ressources sont mises à jour manuellement chaque semaine après la publication de la newsletter :
+Les ressources sont mises à jour chaque semaine après la publication de la newsletter :
 
 1. Les nouvelles ressources de la rubrique « Lectures partagées » sont identifiées et classées
 2. Elles sont ajoutées à `data.json` avec un nouvel ID incrémental
@@ -66,17 +67,36 @@ Les ressources sont mises à jour manuellement chaque semaine après la publicat
 
 ## Intégration WordPress
 
-L'outil est intégré dans la page WordPress via une iframe :
+L'outil est intégré dans la page WordPress via une iframe avec redimensionnement automatique et navigation synchronisée.
+
+### Code à insérer dans la page WordPress
 
 ```html
-<iframe 
+<iframe id="lectures-iframe"
   src="https://uneiaparjour.github.io/export-lectures-partagees/" 
   width="100%" 
-  height="3000" 
   frameborder="0" 
-  style="border:none; border-radius:16px; box-shadow:0 4px 20px rgba(0,0,0,0.1);">
+  style="border:none; border-radius:16px; box-shadow:0 4px 20px rgba(0,0,0,0.1); min-height:800px;">
 </iframe>
+<script>
+window.addEventListener('message', function(e) {
+  var iframe = document.getElementById('lectures-iframe');
+  if (!iframe) return;
+  if (e.data.type === 'iframeResize') {
+    iframe.style.height = e.data.height + 'px';
+  }
+  if (e.data.type === 'iframeScrollTo') {
+    var iframeTop = iframe.getBoundingClientRect().top + window.scrollY;
+    window.scrollTo({top: iframeTop + e.data.offset - 20, behavior: 'smooth'});
+  }
+});
+</script>
 ```
+
+Le script gère deux événements envoyés par l'iframe via `postMessage` :
+
+- **`iframeResize`** : ajuste automatiquement la hauteur de l'iframe au contenu (plus besoin de hauteur fixe)
+- **`iframeScrollTo`** : scrolle la page WordPress quand l'utilisateur clique sur un menu ou sur « ↑ Retour au menu »
 
 ## Développement local
 
