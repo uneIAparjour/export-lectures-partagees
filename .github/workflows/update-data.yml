@@ -145,27 +145,6 @@ jobs:
             return resources;
           }
 
-          function generateJS(resources) {
-            const grouped = {};
-            resources.forEach(r => {
-              if (!grouped[r.cat]) grouped[r.cat] = [];
-              grouped[r.cat].push(r);
-            });
-
-            let code = '';
-            Object.entries(grouped).forEach(([cat, items]) => {
-              code += `// ${categoriesConfig[cat]?.l?.toUpperCase() || cat.toUpperCase()}\n`;
-              items.forEach(r => {
-                const title = r.t.replace(/"/g, '\\"').replace(/\n/g, ' ');
-                const desc = r.d.replace(/"/g, '\\"').replace(/\n/g, ' ');
-                const source = r.s.replace(/"/g, '\\"');
-                code += `{id:${r.id},title:"${title}",desc:"${desc}",url:"${r.u}",date:"${r.dt}",letter:${r.n},cat:"${r.cat}",source:"${source}"},\n`;
-              });
-            });
-            
-            return code;
-          }
-
           async function main() {
             try {
               console.log('Récupération de la page WordPress...');
@@ -211,19 +190,18 @@ jobs:
               
               console.log(`✅ ${resourcesWP.length} ressources valides parsées depuis WordPress`);
               
-              // === Lire le fichier index.html actuel ===
-              let indexHTML = fs.readFileSync('index.html', 'utf8');
-              
-              // === EXTRAIRE LES RESSOURCES EXISTANTES ===
-              // On extrait les URLs déjà présentes dans le tableau R pour dédupliquer
-              const urlsExistantes = new Set();
-              const regexExistantes = /\{id:\d+,[^}]*url:"([^"]*)"[^}]*\}/g;
-              let matchExist;
-              while ((matchExist = regexExistantes.exec(indexHTML)) !== null) {
-                urlsExistantes.add(matchExist[1]);
+              // === Lire le fichier data.json actuel ===
+              let existingData = [];
+              try {
+                existingData = JSON.parse(fs.readFileSync('data.json', 'utf8'));
+              } catch (e) {
+                console.log('⚠️ data.json absent ou invalide, création depuis zéro');
               }
-              const ancienNombre = urlsExistantes.size;
-              console.log(`📦 ${ancienNombre} ressources déjà présentes dans index.html`);
+              
+              // === EXTRAIRE LES URLS EXISTANTES pour dédupliquer ===
+              const urlsExistantes = new Set(existingData.map(r => r.url));
+              const ancienNombre = existingData.length;
+              console.log(`📦 ${ancienNombre} ressources déjà présentes dans data.json`);
               
               // === MODE AJOUT : identifier les nouvelles ressources ===
               const nouvelles = resourcesWP.filter(r => !urlsExistantes.has(r.u));
@@ -242,66 +220,28 @@ jobs:
               }
               
               // === RENUMÉROTER les nouvelles ressources ===
-              // Le prochain ID = max ID existant + 1
-              const regexMaxId = /\{id:(\d+),/g;
-              let maxId = 0;
-              let matchId;
-              while ((matchId = regexMaxId.exec(indexHTML)) !== null) {
-                maxId = Math.max(maxId, parseInt(matchId[1]));
-              }
-              nouvelles.forEach((r, i) => {
-                r.id = maxId + 1 + i;
-              });
+              const maxId = existingData.reduce((max, r) => Math.max(max, r.id), 0);
+              const nouvellesFormatees = nouvelles.map((r, i) => ({
+                id: maxId + 1 + i,
+                title: r.t,
+                desc: r.d,
+                url: r.u,
+                date: r.dt,
+                letter: r.n,
+                cat: r.cat,
+                source: r.s
+              }));
               
-              // === GÉNÉRER le JS uniquement pour les nouvelles ressources ===
-              const newJS = generateJS(nouvelles);
+              // === FUSIONNER et écrire data.json ===
+              const finalData = [...existingData, ...nouvellesFormatees];
+              fs.writeFileSync('data.json', JSON.stringify(finalData, null, 2), 'utf8');
               
-              // === INSÉRER avant la fermeture du tableau ]; ===
-              const startMarker = 'const RESOURCES=[';
-              const startIndex = indexHTML.indexOf(startMarker);
-              if (startIndex === -1) {
-                console.error('Marqueur de début "const RESOURCES=[" non trouvé dans index.html');
-                process.exit(1);
-              }
-              
-              // Trouver la fin du tableau (le ]; correspondant)
-              let depth = 0;
-              let closingBracketIndex = -1;
-              for (let i = startIndex + startMarker.length; i < indexHTML.length; i++) {
-                if (indexHTML[i] === '[') depth++;
-                if (indexHTML[i] === ']') {
-                  if (depth === 0) {
-                    closingBracketIndex = i;
-                    break;
-                  }
-                  depth--;
-                }
-              }
-              
-              if (closingBracketIndex === -1) {
-                console.error('Fin du tableau R non trouvée dans index.html');
-                process.exit(1);
-              }
-              
-              // Insérer les nouvelles ressources juste avant le ]
-              const newContent = indexHTML.substring(0, closingBracketIndex) +
-                                 newJS +
-                                 indexHTML.substring(closingBracketIndex);
-              
-              // Mettre à jour la date dans le header
               const today = new Date().toLocaleDateString('fr-FR');
-              const updatedContent = newContent.replace(
-                /Dernière mise à jour : [^<]*/,
-                `Dernière mise à jour : ${today}`
-              );
-              
-              // Écrire le fichier
-              fs.writeFileSync('index.html', updatedContent);
               
               // === RAPPORT DÉTAILLÉ ===
-              const totalFinal = ancienNombre + nouvelles.length;
+              const totalFinal = finalData.length;
               const parCategorie = {};
-              resourcesWP.forEach(r => {
+              finalData.forEach(r => {
                 const label = categoriesConfig[r.cat]?.l || r.cat;
                 parCategorie[label] = (parCategorie[label] || 0) + 1;
               });
@@ -316,7 +256,7 @@ jobs:
                 console.log(`⚠️  Invalides exclues : ${invalides.length}`);
               }
               console.log('─'.repeat(50));
-              console.log('Répartition WordPress :');
+              console.log('Répartition data.json :');
               Object.entries(parCategorie)
                 .sort((a, b) => b[1] - a[1])
                 .forEach(([cat, n]) => {
@@ -326,17 +266,16 @@ jobs:
               
               // Vérifier les catégories vides
               const catsVides = Object.keys(categoriesConfig).filter(k => 
-                !resourcesWP.some(r => r.cat === k)
+                !finalData.some(r => r.cat === k)
               );
               if (catsVides.length > 0) {
-                console.warn(`⚠️ Catégories sans ressources sur WordPress : ${catsVides.join(', ')}`);
+                console.warn(`⚠️ Catégories sans ressources : ${catsVides.join(', ')}`);
               }
               
               // === STATS pour le commit message ===
               const statsMsg = nouvelles.length > 0 
                 ? `${totalFinal} (+${nouvelles.length} nouvelle${nouvelles.length > 1 ? 's' : ''})` 
                 : `${totalFinal}`;
-              // Ajouter les invalides dans stats pour l'alerte
               const invalidesMsg = invalides.length > 0
                 ? `\nINVALIDES:${invalides.map(r => `${r.titre}|${r.erreurs.join(',')}`).join(';')}`
                 : '';
@@ -356,7 +295,7 @@ jobs:
       - name: Vérifier les changements
         id: check_changes
         run: |
-          if git diff --quiet index.html; then
+          if git diff --quiet data.json 2>/dev/null; then
             echo "has_changes=false" >> $GITHUB_OUTPUT
             echo "Aucun changement détecté"
           else
@@ -372,7 +311,7 @@ jobs:
           rm -f update.js
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add index.html
+          git add data.json
           git commit -m "🔄 Mise à jour automatique : ${STATS} ressources"
           git push
 
