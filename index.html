@@ -88,10 +88,6 @@ let RESOURCES = [];
 /* ============================================================
    ÉTAT DE L'APPLICATION
    ============================================================ */
-
-/* ============================================================
-   ÉTAT DE L'APPLICATION
-   ============================================================ */
 let selectedCats = new Set();   // catégories cochées
 let selectedRes = new Set();    // ressources cochées individuellement
 let search = '';                // texte de recherche
@@ -136,6 +132,11 @@ const groupByCategory = (resources) => {
    GÉNÉRATEURS D'EXPORT (7 formats)
    ============================================================ */
 
+/**
+ * Génère un fichier OPML (Outline Processor Markup Language).
+ * Format utilisé par les lecteurs RSS (Feedly, Inoreader, etc.)
+ * pour importer des collections de liens organisés par catégorie.
+ */
 function genOPML(resources) {
   const grouped = groupByCategory(resources);
   let output = `<?xml version="1.0" encoding="UTF-8"?>\n<opml version="2.0">\n<head><title>Lectures partagées - Une IA par jour</title><dateCreated>${new Date().toISOString()}</dateCreated></head>\n<body>`;
@@ -149,6 +150,10 @@ function genOPML(resources) {
   return output + `\n</body>\n</opml>`;
 }
 
+/**
+ * Génère un fichier XML structuré avec métadonnées.
+ * Format générique pour l'interopérabilité et le traitement automatisé.
+ */
 function genXML(resources) {
   let output = `<?xml version="1.0" encoding="UTF-8"?>\n<lecturesPartagees>\n<metadata><title>Lectures partagées</title><dateExport>${new Date().toISOString()}</dateExport><total>${resources.length}</total></metadata>\n<resources>`;
   resources.forEach(r => {
@@ -157,6 +162,10 @@ function genXML(resources) {
   return output + `\n</resources>\n</lecturesPartagees>`;
 }
 
+/**
+ * Génère un fichier Markdown organisé par catégorie.
+ * Chaque ressource est formatée avec titre, description, date et lien.
+ */
 function genMarkdown(resources) {
   const grouped = groupByCategory(resources);
   let output = `# Lectures partagées - Une IA par jour\n\n> Export du ${formatDate(new Date())} — ${resources.length} ressources\n\n---\n\n`;
@@ -169,6 +178,10 @@ function genMarkdown(resources) {
   return output;
 }
 
+/**
+ * Génère un fichier de favoris au format Netscape Bookmark.
+ * Importable dans tous les navigateurs (Chrome, Firefox, Edge, Safari).
+ */
 function genBookmarks(resources) {
   const grouped = groupByCategory(resources);
   let output = `<!DOCTYPE NETSCAPE-Bookmark-file-1>\n<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">\n<TITLE>Lectures partagées</TITLE>\n<H1>Lectures partagées</H1>\n<DL><p>`;
@@ -182,6 +195,10 @@ function genBookmarks(resources) {
   return output + `\n</DL><p>`;
 }
 
+/**
+ * Génère un fichier BibTeX pour les gestionnaires bibliographiques.
+ * Compatible Zotero, Mendeley, JabRef. Chaque ressource = une entrée @online.
+ */
 function genBibTeX(resources) {
   let output = `% Lectures partagées - Une IA par jour\n% ${resources.length} ressources\n\n`;
   resources.forEach(r => {
@@ -191,6 +208,10 @@ function genBibTeX(resources) {
   return output;
 }
 
+/**
+ * Génère un fichier JSON enrichi avec métadonnées et labels de catégorie.
+ * Destiné aux développeurs ou à l'intégration dans d'autres systèmes.
+ */
 function genJSON(resources) {
   return JSON.stringify({
     metadata: {
@@ -212,6 +233,10 @@ function genJSON(resources) {
   }, null, 2);
 }
 
+/**
+ * Génère un fichier CSV séparé par point-virgule (;).
+ * Compatible Excel, Google Sheets, LibreOffice Calc.
+ */
 function genCSV(resources) {
   const escape = (s) => `"${String(s).replace(/"/g, '""')}"`;
   let output = 'ID;Titre;Description;URL;Date;Lettre;Catégorie;Source\n';
@@ -291,7 +316,11 @@ function renderResources(filtered) {
   return html;
 }
 
-/** Rendu principal : reconstruit toute l'interface */
+/**
+ * Rendu principal de l'application.
+ * Reconstruit intégralement le DOM à chaque changement d'état
+ * (sélection, recherche, changement d'onglet) puis rattache les événements.
+ */
 function render() {
   const app = document.getElementById('app');
   const filtered = getFiltered();
@@ -327,7 +356,15 @@ function render() {
       <p><a href="https://github.com/uneIAparjour/export-lectures-partagees" target="_blank">Dépôt Github</a></p>
     </footer>`;
 
-  /* --- Événements --- */
+  /* --- Événements ---
+     Rattachés après chaque render() car le DOM est reconstruit.
+     - Recherche : filtrage en temps réel avec conservation du focus
+     - Onglets : bascule catégories / articles
+     - Catégories : sélection multiple (toggle)
+     - Ressources : sélection individuelle (toggle)
+     - Tout sélectionner / Effacer : actions groupées
+     - Formats : déclenche l'export au clic
+  */
   document.getElementById('search').addEventListener('input', (e) => {
     search = e.target.value;
     render();
@@ -370,7 +407,12 @@ function render() {
   );
 }
 
-/* Chargement des données et lancement */
+/* ============================================================
+   CHARGEMENT INITIAL
+   Récupère data.json (hébergé sur GitHub Pages à côté de index.html)
+   puis lance le premier rendu. Affiche une erreur si le fichier
+   est inaccessible.
+   ============================================================ */
 fetch('data.json')
   .then(response => {
     if (!response.ok) throw new Error(`Erreur HTTP ${response.status}`);
