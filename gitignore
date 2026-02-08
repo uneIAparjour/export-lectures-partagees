@@ -1,0 +1,14 @@
+# Fichiers temporaires du workflow
+update.js
+stats.txt
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Éditeurs
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
