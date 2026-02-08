@@ -293,7 +293,16 @@ function renderExport(){
     </div>`;
 
   /* Événements */
-  app.querySelector('#search').addEventListener('input',(e)=>{search=e.target.value;renderExport();app.querySelector('#search').focus()});
+  app.querySelector('#search').addEventListener('input', (e) => {
+    search = e.target.value;
+    renderExport();
+    
+    // Correction du curseur
+    const input = app.querySelector('#search');
+    const len = input.value.length;
+    input.focus();
+    input.setSelectionRange(len, len);
+  });
   app.querySelectorAll('.export-tab').forEach(b=>b.addEventListener('click',()=>{exportTab=b.dataset.tab;renderExport()}));
   app.querySelectorAll('.sel-btn[data-cat]').forEach(b=>b.addEventListener('click',()=>{const c=b.dataset.cat;selectedCats.has(c)?selectedCats.delete(c):selectedCats.add(c);renderExport()}));
   app.querySelectorAll('.sel-btn[data-id]').forEach(b=>b.addEventListener('click',()=>{const id=parseInt(b.dataset.id);selectedRes.has(id)?selectedRes.delete(id):selectedRes.add(id);renderExport()}));
