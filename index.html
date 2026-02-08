@@ -3,435 +3,318 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Export des lectures partagées - Une IA par jour</title>
+  <title>Lectures partagées — Une IA par jour</title>
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#2D2D2D;min-height:100vh;color:#E8E8E8}
-    .container{max-width:600px;margin:0 auto}
+    .container{max-width:640px;margin:0 auto;padding:0 20px}
+
+    /* === SKIP LINK === */
+    .skip-link{position:absolute;top:-100%;left:50%;transform:translateX(-50%);background:#E67E22;color:#fff;padding:8px 20px;border-radius:0 0 8px 8px;z-index:100;font-weight:600;text-decoration:none}
+    .skip-link:focus{top:0}
+
+    /* === HEADER === */
     header{background:linear-gradient(135deg,#1a1a1a,#2D2D2D);color:#fff;padding:28px 24px;text-align:center;border-bottom:3px solid #E67E22}
     header h1{font-size:1.4rem;font-weight:700;margin-bottom:8px;color:#E67E22}
-    header p{font-size:.9rem;opacity:.85;color:#D0D0D0}
-    main{padding:20px}
-    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px}
-    .stat{background:#3D3D3D;border-radius:12px;padding:16px;text-align:center;border:1px solid #4D4D4D}
-    .stat-value{font-size:1.6rem;font-weight:700}
-    .stat-label{font-size:.75rem;color:#C0C0C0;margin-top:4px}
-    .search-input{width:100%;padding:14px 16px;border:2px solid #4D4D4D;border-radius:12px;font-size:1rem;margin-bottom:16px;outline:0;background:#3D3D3D;color:#E8E8E8}
+    header p{font-size:.9rem;color:#D0D0D0}
+    header a{color:#E67E22;text-decoration:none}
+    .header-stats{display:inline-flex;gap:16px;margin-top:12px;font-size:.82rem;color:#A0A0A0}
+    .header-stats strong{color:#E67E22}
+
+    /* === NAV CATÉGORIES === */
+    #nav-categories{background:#1a1a1a;border-bottom:1px solid #4D4D4D;padding:14px 0;position:sticky;top:0;z-index:50}
+    .nav-inner{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;max-width:640px;margin:0 auto;padding:0 16px}
+    .nav-cat{display:inline-flex;align-items:center;gap:5px;padding:5px 12px;border:1px solid #4D4D4D;border-radius:50px;background:#2D2D2D;font-size:.75rem;font-weight:500;color:#A0A0A0;cursor:pointer;transition:all .2s;text-decoration:none}
+    .nav-cat:hover{border-color:#E67E22;color:#E67E22;background:#3D3D3D}
+    .nav-cat .count{background:#3D3D3D;padding:1px 6px;border-radius:50px;font-size:.65rem;font-weight:600;color:#808080}
+    .nav-cat:hover .count{background:#E67E22;color:#fff}
+
+    /* === SECTION LECTURE === */
+    main{padding:24px 0}
+    .category-section{margin-bottom:40px}
+    .category-header{display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid #3D3D3D}
+    .category-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+    .category-header h2{font-size:1.15rem;font-weight:700;color:#E8E8E8}
+    .category-count{margin-left:auto;font-size:.75rem;color:#808080;font-weight:500}
+
+    /* === CARTE RESSOURCE === */
+    .resource-card{background:#3D3D3D;border:1px solid #4D4D4D;border-radius:10px;padding:16px 20px;margin-bottom:10px;transition:all .2s}
+    .resource-card:hover{border-color:#5D5D5D}
+    .resource-title{font-size:.95rem;font-weight:600;color:#E8E8E8;margin-bottom:5px;line-height:1.4}
+    .resource-title a{color:#E8E8E8;text-decoration:none;transition:color .2s}
+    .resource-title a:hover{color:#E67E22}
+    .resource-desc{font-size:.85rem;color:#B0B0B0;line-height:1.5;margin-bottom:8px}
+    .resource-meta{display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:.73rem;color:#808080}
+    .resource-meta a{color:#E67E22;text-decoration:none;font-weight:500}
+    .resource-meta a:hover{text-decoration:underline}
+    .meta-sep{color:#4D4D4D}
+    .source-badge{padding:2px 8px;background:#4D4D4D;border-radius:50px;font-weight:500;color:#C0C0C0}
+
+    /* === RETOUR MENU === */
+    .back-to-top{display:block;text-align:right;font-size:.78rem;color:#808080;text-decoration:none;margin-top:6px;padding:4px 0;transition:color .2s}
+    .back-to-top:hover{color:#E67E22}
+
+    /* === SÉPARATEUR === */
+    .section-divider{text-align:center;padding:32px 0;position:relative}
+    .section-divider::before{content:'';position:absolute;top:50%;left:0;right:0;height:1px;background:#4D4D4D}
+    .section-divider span{position:relative;background:#2D2D2D;padding:0 20px;font-size:1rem;font-weight:600;color:#E67E22}
+
+    /* === SECTION EXPORT === */
+    .export-section{background:#3D3D3D;border:1px solid #4D4D4D;border-radius:16px;padding:28px;margin-bottom:40px}
+    .export-section h3{font-size:1.1rem;font-weight:700;color:#E67E22;margin-bottom:6px}
+    .export-intro{font-size:.85rem;color:#A0A0A0;margin-bottom:20px}
+
+    /* --- Stats export --- */
+    .export-stats{display:flex;gap:12px;margin-bottom:16px}
+    .export-stat{background:#2D2D2D;border-radius:10px;padding:12px;text-align:center;flex:1;border:1px solid #4D4D4D}
+    .export-stat-value{font-size:1.4rem;font-weight:700;color:#E67E22}
+    .export-stat-label{font-size:.7rem;color:#C0C0C0;margin-top:2px}
+
+    /* --- Recherche --- */
+    .search-input{width:100%;padding:12px 16px;border:2px solid #4D4D4D;border-radius:12px;font-size:.95rem;margin-bottom:14px;outline:0;background:#2D2D2D;color:#E8E8E8}
     .search-input::placeholder{color:#808080}
     .search-input:focus{border-color:#E67E22}
-    .tabs{display:flex;gap:8px;margin-bottom:16px;background:#3D3D3D;padding:4px;border-radius:12px}
-    .tab-btn{flex:1;padding:12px;border:0;border-radius:8px;background:0 0;color:#A0A0A0;font-weight:400;font-size:.9rem;cursor:pointer;transition:all .2s}
-    .tab-btn.active{background:#E67E22;color:#fff;font-weight:600}
-    .content-box{background:#3D3D3D;border-radius:16px;padding:16px;margin-bottom:20px;max-height:300px;overflow-y:auto;border:1px solid #4D4D4D}
-    .cat-btn,.res-btn{display:flex;align-items:center;justify-content:space-between;width:100%;padding:12px 16px;margin-bottom:8px;border:2px solid #4D4D4D;border-radius:10px;background:#2D2D2D;cursor:pointer;text-align:left;transition:all .2s;color:#E8E8E8}
-    .cat-btn:hover,.res-btn:hover{border-color:#5D5D5D}
-    .check{width:20px;height:20px;border-radius:6px;background:#4D4D4D;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;flex-shrink:0}
-    .action-btns{display:flex;gap:8px;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid #4D4D4D}
-    .action-btn{flex:1;padding:8px;border:1px solid #4D4D4D;border-radius:8px;background:#2D2D2D;font-size:.8rem;cursor:pointer;color:#A0A0A0;transition:all .2s}
+
+    /* --- Onglets --- */
+    .export-tabs{display:flex;gap:4px;margin-bottom:14px;background:#2D2D2D;padding:4px;border-radius:10px}
+    .export-tab{flex:1;padding:10px;border:0;border-radius:7px;background:0 0;color:#A0A0A0;font-weight:500;font-size:.85rem;cursor:pointer;transition:all .2s}
+    .export-tab.active{background:#E67E22;color:#fff;font-weight:600}
+
+    /* --- Sélection --- */
+    .select-box{background:#2D2D2D;border-radius:12px;padding:12px;margin-bottom:18px;max-height:260px;overflow-y:auto;border:1px solid #4D4D4D}
+    .sel-btn{display:flex;align-items:center;gap:12px;width:100%;padding:10px 14px;margin-bottom:6px;border:2px solid #4D4D4D;border-radius:8px;background:#3D3D3D;cursor:pointer;text-align:left;transition:all .15s;color:#E8E8E8;font-size:.85rem}
+    .sel-btn:hover{border-color:#5D5D5D}
+    .sel-check{width:18px;height:18px;border-radius:5px;background:#4D4D4D;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;flex-shrink:0}
+    .sel-label{font-weight:500}
+    .sel-count{margin-left:auto;font-size:.72rem;background:#4D4D4D;padding:2px 8px;border-radius:50px;color:#A0A0A0;font-weight:600}
+    .action-row{display:flex;gap:8px;margin-bottom:10px}
+    .action-btn{flex:1;padding:8px;border:1px solid #4D4D4D;border-radius:8px;background:#3D3D3D;font-size:.78rem;cursor:pointer;color:#A0A0A0;transition:all .15s}
     .action-btn:hover{background:#4D4D4D;color:#E8E8E8}
-    h4{margin:0 0 12px;font-size:.95rem;color:#E67E22}
-    .formats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-    .fmt-btn{padding:16px 12px;border:2px solid #4D4D4D;border-radius:12px;background:#3D3D3D;cursor:pointer;text-align:left;transition:all .2s}
-    .fmt-btn:hover{border-color:#E67E22;transform:translateY(-2px);background:#4D4D4D}
-    .fmt-btn .name{font-weight:600;font-size:.95rem;color:#E8E8E8;margin-bottom:4px}
-    .fmt-btn .desc{font-size:.75rem;color:#A0A0A0}
-    footer{text-align:center;padding:20px;color:#808080;font-size:.8rem}
+
+    /* --- Formats --- */
+    h4.fmt-title{margin:0 0 10px;font-size:.9rem;color:#E67E22}
+    .formats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .fmt-btn{padding:14px 12px;border:2px solid #4D4D4D;border-radius:12px;background:#2D2D2D;cursor:pointer;text-align:left;transition:all .2s}
+    .fmt-btn:hover{border-color:#E67E22;transform:translateY(-2px);background:#3D3D3D}
+    .fmt-name{font-weight:600;font-size:.9rem;color:#E8E8E8;margin-bottom:2px}
+    .fmt-desc{font-size:.72rem;color:#A0A0A0}
+
+    /* === FOOTER === */
+    footer{text-align:center;padding:24px;color:#808080;font-size:.78rem}
     footer a{color:#E67E22;text-decoration:none}
     footer a:hover{text-decoration:underline}
-    .update-info{font-size:.7rem;color:#606060;margin-top:4px}
+
+    /* === ACCESSIBILITÉ === */
+    *:focus-visible{outline:2px solid #E67E22;outline-offset:2px;border-radius:4px}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+
+    /* === SCROLLBAR === */
     ::-webkit-scrollbar{width:8px}
     ::-webkit-scrollbar-track{background:#2D2D2D;border-radius:4px}
     ::-webkit-scrollbar-thumb{background:#4D4D4D;border-radius:4px}
     ::-webkit-scrollbar-thumb:hover{background:#5D5D5D}
-    /* Accessibilité : focus clavier visible */
-    *:focus-visible{outline:2px solid #E67E22;outline-offset:2px;border-radius:4px}
-    /* Masquer visuellement mais garder accessible aux lecteurs d'écran */
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
-    /* Lien d'accès rapide */
-    .skip-link{position:absolute;top:-100%;left:50%;transform:translateX(-50%);background:#E67E22;color:#fff;padding:8px 16px;border-radius:0 0 8px 8px;z-index:100;font-weight:600;text-decoration:none}
-    .skip-link:focus{top:0}
+
+    /* === LOADING === */
+    .loading{text-align:center;padding:60px 20px;color:#808080}
+    .loading-spinner{width:28px;height:28px;border:3px solid #4D4D4D;border-top-color:#E67E22;border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 10px}
+    @keyframes spin{to{transform:rotate(360deg)}}
+
+    /* === RESPONSIVE === */
+    @media(max-width:520px){
+      header h1{font-size:1.2rem}
+      .header-stats{flex-direction:column;gap:4px}
+      .formats-grid{grid-template-columns:1fr}
+      .export-section{padding:18px;border-radius:12px}
+      .nav-cat{padding:4px 8px;font-size:.7rem}
+      .resource-card{padding:14px 16px}
+    }
   </style>
 </head>
 <body>
-<a href="#app" class="skip-link">Aller au contenu</a>
-<div class="container" role="application" aria-label="Outil d'export des lectures partagées">
-  <header role="banner">
-    <h1>Exporter les lectures partagées</h1>
-    <p id="header-stats" aria-live="polite">Chargement...</p>
-    <p class="update-info">Dernière mise à jour : 02/02/2026</p>
-  </header>
-  <main id="app" aria-live="polite"></main>
+<a href="#lecture" class="skip-link">Aller au contenu</a>
+<header role="banner">
+  <div class="container">
+    <h1>Lectures partagées</h1>
+    <p>Ressources de la newsletter <a href="https://uneiaparjour.substack.com/" target="_blank">Une IA par jour</a></p>
+    <div class="header-stats" id="header-stats" aria-live="polite">
+      <span><strong id="stat-total">—</strong> ressources</span>
+      <span><strong>10</strong> catégories</span>
+      <span><strong>7</strong> formats d'export</span>
+    </div>
+  </div>
+</header>
+<nav id="nav-categories" aria-label="Catégories"></nav>
+<div class="container">
+  <main id="lecture" aria-live="polite">
+    <div class="loading"><div class="loading-spinner"></div>Chargement des ressources…</div>
+  </main>
+  <div class="section-divider"><span>Exporter les ressources</span></div>
+  <section class="export-section" id="export" aria-label="Export des ressources">
+    <h3>Exporter une sélection</h3>
+    <p class="export-intro">Filtrez par catégorie ou sélectionnez des articles, puis choisissez un format.</p>
+    <div id="export-app"></div>
+  </section>
+  <footer>
+    <a href="https://www.uneiaparjour.fr/" target="_blank">Une IA par jour</a> · 
+    <a href="https://github.com/uneIAparjour/export-lectures-partagees" target="_blank">GitHub</a>
+    <p style="margin-top:6px">Mis à jour automatiquement chaque semaine</p>
+  </footer>
 </div>
 <script>
 (function(){
 
-/* ============================================================
-   CONFIGURATION DES CATÉGORIES
-   Chaque clé correspond à l'id du <h2> sur la page WordPress.
-   - label : nom affiché dans l'interface
-   - color : couleur du badge et de la sélection
-   ============================================================ */
-const CATEGORIES = {
-  etudes:       { label: "Études et recherche",          color: "#3B82F6" },
-  ethique:      { label: "Éthique et société",           color: "#A855F7" },
-  travail:      { label: "IA et travail",                color: "#F59E0B" },
-  securite:     { label: "Sécurité et désinformation",   color: "#EF4444" },
-  creation:     { label: "Création, art et médias",      color: "#EC4899" },
-  technique:    { label: "Technique et infrastructure",  color: "#10B981" },
-  philosophie:  { label: "Philosophie et réflexions",    color: "#6366F1" },
-  education:    { label: "Éducation",                    color: "#14B8A6" },
-  droit:        { label: "Droit",                        color: "#F97316" },
-  geopolitique: { label: "Géopolitique et international", color: "#06B6D4" }
+/* === CONFIGURATION === */
+const CATEGORIES={
+  etudes:{label:"Études et recherche",color:"#3B82F6"},
+  ethique:{label:"Éthique et société",color:"#A855F7"},
+  travail:{label:"IA et travail",color:"#F59E0B"},
+  securite:{label:"Sécurité et désinformation",color:"#EF4444"},
+  creation:{label:"Création, art et médias",color:"#EC4899"},
+  technique:{label:"Technique et infrastructure",color:"#10B981"},
+  philosophie:{label:"Philosophie et réflexions",color:"#6366F1"},
+  education:{label:"Éducation",color:"#14B8A6"},
+  droit:{label:"Droit",color:"#F97316"},
+  geopolitique:{label:"Géopolitique et international",color:"#06B6D4"}
 };
 
-/* ============================================================
-   DONNÉES DES RESSOURCES
-   Chargées depuis data.json (mis à jour par GitHub Actions).
-   ============================================================ */
-let RESOURCES = [];
+let RESOURCES=[];
+let selectedCats=new Set(),selectedRes=new Set(),search='',exportTab='categories';
 
+/* === UTILITAIRES === */
+const formatDate=(d)=>new Date(d).toLocaleDateString('fr-FR');
+const getFiltered=()=>{let r=RESOURCES;if(selectedCats.size)r=r.filter(x=>selectedCats.has(x.cat));if(search){const q=search.toLowerCase();r=r.filter(x=>x.title.toLowerCase().includes(q)||x.desc.toLowerCase().includes(q))}return r.sort((a,b)=>new Date(b.date)-new Date(a.date))};
+const getExportable=()=>selectedRes.size?RESOURCES.filter(r=>selectedRes.has(r.id)):getFiltered();
+const groupByCategory=(res)=>{const g={};res.forEach(r=>{if(!g[r.cat])g[r.cat]=[];g[r.cat].push(r)});return g};
 
-/* ============================================================
-   ÉTAT DE L'APPLICATION
-   ============================================================ */
-let selectedCats = new Set();   // catégories cochées
-let selectedRes = new Set();    // ressources cochées individuellement
-let search = '';                // texte de recherche
-let tab = 'categories';        // onglet actif : 'categories' ou 'resources'
-
-/* ============================================================
-   FONCTIONS UTILITAIRES
-   ============================================================ */
-
-/** Formate une date ISO en format français (JJ/MM/AAAA) */
-const formatDate = (d) => new Date(d).toLocaleDateString('fr-FR');
-
-/** Retourne les ressources filtrées par catégories et recherche */
-const getFiltered = () => {
-  let result = RESOURCES;
-  if (selectedCats.size) result = result.filter(r => selectedCats.has(r.cat));
-  if (search) {
-    const query = search.toLowerCase();
-    result = result.filter(r =>
-      r.title.toLowerCase().includes(query) ||
-      r.desc.toLowerCase().includes(query)
-    );
-  }
-  return result.sort((a, b) => new Date(b.date) - new Date(a.date));
-};
-
-/** Retourne les ressources à exporter (sélection individuelle ou filtrées) */
-const getExportable = () =>
-  selectedRes.size ? RESOURCES.filter(r => selectedRes.has(r.id)) : getFiltered();
-
-/** Regroupe un tableau de ressources par catégorie */
-const groupByCategory = (resources) => {
-  const grouped = {};
-  resources.forEach(r => {
-    if (!grouped[r.cat]) grouped[r.cat] = [];
-    grouped[r.cat].push(r);
-  });
-  return grouped;
-};
-
-/* ============================================================
-   GÉNÉRATEURS D'EXPORT (7 formats)
-   ============================================================ */
-
-/**
- * Génère un fichier OPML (Outline Processor Markup Language).
- * Format utilisé par les lecteurs RSS (Feedly, Inoreader, etc.)
- * pour importer des collections de liens organisés par catégorie.
- */
-function genOPML(resources) {
-  const grouped = groupByCategory(resources);
-  let output = `<?xml version="1.0" encoding="UTF-8"?>\n<opml version="2.0">\n<head><title>Lectures partagées - Une IA par jour</title><dateCreated>${new Date().toISOString()}</dateCreated></head>\n<body>`;
-  Object.entries(grouped).forEach(([catKey, items]) => {
-    output += `\n<outline text="${CATEGORIES[catKey]?.label}" title="${CATEGORIES[catKey]?.label}">`;
-    items.forEach(r => {
-      output += `\n<outline type="link" text="${r.title.replace(/"/g,'&quot;')}" url="${r.url}" created="${r.date}"/>`;
-    });
-    output += `\n</outline>`;
-  });
-  return output + `\n</body>\n</opml>`;
-}
-
-/**
- * Génère un fichier XML structuré avec métadonnées.
- * Format générique pour l'interopérabilité et le traitement automatisé.
- */
-function genXML(resources) {
-  let output = `<?xml version="1.0" encoding="UTF-8"?>\n<lecturesPartagees>\n<metadata><title>Lectures partagées</title><dateExport>${new Date().toISOString()}</dateExport><total>${resources.length}</total></metadata>\n<resources>`;
-  resources.forEach(r => {
-    output += `\n<resource id="${r.id}"><title><![CDATA[${r.title}]]></title><description><![CDATA[${r.desc}]]></description><url>${r.url}</url><date>${r.date}</date><letter>${r.letter}</letter><category>${CATEGORIES[r.cat]?.label}</category><source><![CDATA[${r.source}]]></source></resource>`;
-  });
-  return output + `\n</resources>\n</lecturesPartagees>`;
-}
-
-/**
- * Génère un fichier Markdown organisé par catégorie.
- * Chaque ressource est formatée avec titre, description, date et lien.
- */
-function genMarkdown(resources) {
-  const grouped = groupByCategory(resources);
-  let output = `# Lectures partagées - Une IA par jour\n\n> Export du ${formatDate(new Date())} — ${resources.length} ressources\n\n---\n\n`;
-  Object.entries(grouped).forEach(([catKey, items]) => {
-    output += `## ${CATEGORIES[catKey]?.label}\n\n`;
-    items.sort((a, b) => new Date(b.date) - new Date(a.date)).forEach(r => {
-      output += `### ${r.title}\n\n${r.desc}\n\n- **Date** : ${formatDate(r.date)}\n- **Lettre** : #${r.letter}\n- **Lien** : [${r.url}](${r.url})\n\n---\n\n`;
-    });
-  });
-  return output;
-}
-
-/**
- * Génère un fichier de favoris au format Netscape Bookmark.
- * Importable dans tous les navigateurs (Chrome, Firefox, Edge, Safari).
- */
-function genBookmarks(resources) {
-  const grouped = groupByCategory(resources);
-  let output = `<!DOCTYPE NETSCAPE-Bookmark-file-1>\n<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">\n<TITLE>Lectures partagées</TITLE>\n<H1>Lectures partagées</H1>\n<DL><p>`;
-  Object.entries(grouped).forEach(([catKey, items]) => {
-    output += `\n<DT><H3>${CATEGORIES[catKey]?.label}</H3>\n<DL><p>`;
-    items.forEach(r => {
-      output += `\n<DT><A HREF="${r.url}" ADD_DATE="${Math.floor(new Date(r.date).getTime()/1000)}">${r.title}</A>`;
-    });
-    output += `\n</DL><p>`;
-  });
-  return output + `\n</DL><p>`;
-}
-
-/**
- * Génère un fichier BibTeX pour les gestionnaires bibliographiques.
- * Compatible Zotero, Mendeley, JabRef. Chaque ressource = une entrée @online.
- */
-function genBibTeX(resources) {
-  let output = `% Lectures partagées - Une IA par jour\n% ${resources.length} ressources\n\n`;
-  resources.forEach(r => {
-    const key = r.title.toLowerCase().replace(/[^a-z0-9]/g, '').substring(0, 15) + r.id;
-    output += `@online{${key},\n  author = {${r.source.replace(/[{}]/g, '')}},\n  title = {${r.title.replace(/[{}]/g, '')}},\n  year = {${r.date.substring(0, 4)}},\n  url = {${r.url}},\n  keywords = {${r.cat}, ia}\n}\n\n`;
-  });
-  return output;
-}
-
-/**
- * Génère un fichier JSON enrichi avec métadonnées et labels de catégorie.
- * Destiné aux développeurs ou à l'intégration dans d'autres systèmes.
- */
-function genJSON(resources) {
-  return JSON.stringify({
-    metadata: {
-      title: "Lectures partagées - Une IA par jour",
-      exportDate: new Date().toISOString(),
-      total: resources.length
-    },
-    resources: resources.map(r => ({
-      id: r.id,
-      title: r.title,
-      description: r.desc,
-      url: r.url,
-      date: r.date,
-      letter: r.letter,
-      category: r.cat,
-      categoryLabel: CATEGORIES[r.cat]?.label,
-      source: r.source
-    }))
-  }, null, 2);
-}
-
-/**
- * Génère un fichier CSV séparé par point-virgule (;).
- * Compatible Excel, Google Sheets, LibreOffice Calc.
- */
-function genCSV(resources) {
-  const escape = (s) => `"${String(s).replace(/"/g, '""')}"`;
-  let output = 'ID;Titre;Description;URL;Date;Lettre;Catégorie;Source\n';
-  resources.forEach(r => {
-    output += `${r.id};${escape(r.title)};${escape(r.desc)};${escape(r.url)};${r.date};${r.letter};${escape(CATEGORIES[r.cat]?.label)};${escape(r.source)}\n`;
-  });
-  return output;
-}
-
-/* ============================================================
-   TÉLÉCHARGEMENT ET EXPORT
-   ============================================================ */
-
-/** Déclenche le téléchargement d'un fichier généré */
-function download(content, filename, mimeType) {
-  const blob = new Blob([content], { type: mimeType + ';charset=utf-8' });
-  const url = URL.createObjectURL(blob);
-  const link = document.createElement('a');
-  link.href = url;
-  link.download = filename;
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-  URL.revokeObjectURL(url);
-}
-
-/** Lance l'export dans le format demandé */
-function exportFormat(format) {
-  const data = getExportable();
-  const formats = {
-    opml:      [genOPML(data),      'lectures-partagees.opml',                'application/xml'],
-    xml:       [genXML(data),       'lectures-partagees.xml',                 'application/xml'],
-    markdown:  [genMarkdown(data),  'lectures-partagees.md',                  'text/markdown'],
-    bookmarks: [genBookmarks(data), 'lectures-partagees-bookmarks.html',      'text/html'],
-    bibtex:    [genBibTeX(data),    'lectures-partagees.bib',                 'application/x-bibtex'],
-    json:      [genJSON(data),      'lectures-partagees.json',                'application/json'],
-    csv:       [genCSV(data),       'lectures-partagees.csv',                 'text/csv']
-  };
-  if (formats[format]) download(...formats[format]);
-}
-
-/* ============================================================
-   RENDU DE L'INTERFACE
-   ============================================================ */
-
-/** Génère le HTML de la liste des catégories */
-function renderCategories() {
-  return Object.entries(CATEGORIES).map(([key, { label, color }]) => {
-    const count = RESOURCES.filter(r => r.cat === key).length;
-    const selected = selectedCats.has(key);
-    return `<button class="cat-btn" data-cat="${key}" aria-pressed="${selected}" aria-label="${label} – ${count} ressources" style="border-color:${selected ? color : '#4D4D4D'};background:${selected ? color + '20' : '#2D2D2D'}">
-      <div style="display:flex;align-items:center">
-        <div class="check" style="background:${selected ? color : '#4D4D4D'};margin-right:12px">${selected ? '✓' : ''}</div>
-        <span style="font-weight:${selected ? '600' : '400'};color:${selected ? color : '#E8E8E8'}">${label}</span>
-      </div>
-      <span style="background:${selected ? color : '#4D4D4D'};color:#fff;padding:4px 10px;border-radius:20px;font-size:.8rem;font-weight:600">${count}</span>
-    </button>`;
-  }).join('');
-}
-
-/** Génère le HTML de la liste des ressources filtrées */
-function renderResources(filtered) {
-  let html = `<div class="action-btns"><button class="action-btn" id="sel-all">Tout sélectionner</button><button class="action-btn" id="clr-all">Effacer</button></div>`;
-  filtered.forEach(r => {
-    const selected = selectedRes.has(r.id);
-    const color = CATEGORIES[r.cat]?.color || '#6B7280';
-    html += `<button class="res-btn" data-id="${r.id}" aria-pressed="${selected}" aria-label="${r.title}" style="border-color:${selected ? color : '#4D4D4D'};background:${selected ? color + '15' : '#2D2D2D'};gap:12px">
-      <div class="check" style="background:${selected ? color : '#4D4D4D'}">${selected ? '✓' : ''}</div>
-      <div style="flex:1;min-width:0">
-        <div style="font-weight:500;font-size:.9rem;color:#E8E8E8;margin-bottom:4px;line-height:1.3">${r.title}</div>
-        <div style="font-size:.75rem;color:#A0A0A0">
-          <span style="display:inline-block;background:${color}30;color:${color};padding:2px 8px;border-radius:4px;font-weight:500;margin-right:8px">${CATEGORIES[r.cat]?.label}</span>#${r.letter} · ${formatDate(r.date)}
+/* === SECTION LECTURE === */
+function renderLecture(){
+  const main=document.getElementById('lecture');
+  const grouped=groupByCategory(RESOURCES);
+  let html='';
+  Object.entries(CATEGORIES).forEach(([key,{label,color}])=>{
+    const items=grouped[key];
+    if(!items||!items.length)return;
+    const sorted=items.sort((a,b)=>new Date(b.date)-new Date(a.date));
+    html+=`<section class="category-section" id="cat-${key}">
+      <div class="category-header">
+        <div class="category-dot" style="background:${color}"></div>
+        <h2>${label}</h2>
+        <span class="category-count">${items.length} ressource${items.length>1?'s':''}</span>
+      </div>`;
+    sorted.forEach(r=>{
+      const link=r.url?`<a href="${r.url}" target="_blank" rel="noopener">${r.title}</a>`:r.title;
+      const letterUrl=`https://uneiaparjour.substack.com/p/une-ia-par-jour-lettre-${r.letter}`;
+      html+=`<article class="resource-card">
+        <h3 class="resource-title">${link}</h3>
+        <p class="resource-desc">${r.desc}</p>
+        <div class="resource-meta">
+          <span class="source-badge">${r.source}</span>
+          <span class="meta-sep">·</span>
+          <a href="${letterUrl}" target="_blank" rel="noopener">Lettre #${r.letter}</a>
+          <span class="meta-sep">·</span>
+          <span>${formatDate(r.date)}</span>
         </div>
-      </div>
-    </button>`;
+      </article>`;
+    });
+    html+=`<a href="#nav-categories" class="back-to-top">↑ Retour au menu</a></section>`;
   });
-  return html;
+  main.innerHTML=html;
 }
 
-/**
- * Rendu principal de l'application.
- * Reconstruit intégralement le DOM à chaque changement d'état
- * (sélection, recherche, changement d'onglet) puis rattache les événements.
- */
-function render() {
-  const app = document.getElementById('app');
-  const filtered = getFiltered();
-  const exportable = getExportable();
-
-  document.getElementById('header-stats').textContent =
-    `${RESOURCES.length} ressources · 10 catégories · 7 formats`;
-
-  app.innerHTML = `
-    <div class="stats">
-      <div class="stat"><div class="stat-value" style="color:#E67E22">${filtered.length}</div><div class="stat-label">Filtrées</div></div>
-      <div class="stat"><div class="stat-value" style="color:#27AE60">${exportable.length}</div><div class="stat-label">À exporter</div></div>
-      <div class="stat"><div class="stat-value" style="color:#9B59B6">${selectedCats.size || 10}</div><div class="stat-label">Catégories</div></div>
-    </div>
-    <input type="text" class="search-input" id="search" placeholder="Rechercher..." value="${search}" aria-label="Rechercher dans les ressources">
-    <div class="tabs" role="tablist" aria-label="Mode de sélection">
-      <button class="tab-btn ${tab === 'categories' ? 'active' : ''}" data-tab="categories" role="tab" aria-selected="${tab === 'categories'}" aria-controls="app">Par catégorie</button>
-      <button class="tab-btn ${tab === 'resources' ? 'active' : ''}" data-tab="resources" role="tab" aria-selected="${tab === 'resources'}" aria-controls="app">Par article</button>
-    </div>
-    <div class="content-box">${tab === 'categories' ? renderCategories() : renderResources(filtered)}</div>
-    <h4 id="formats-heading">Choisir un format</h4>
-    <div class="formats" role="group" aria-labelledby="formats-heading">
-      <button class="fmt-btn" data-fmt="opml" aria-label="Exporter en OPML – Feedly, Inoreader"><div class="name">OPML</div><div class="desc">Feedly, Inoreader...</div></button>
-      <button class="fmt-btn" data-fmt="xml" aria-label="Exporter en XML – Format structuré"><div class="name">XML</div><div class="desc">Format structuré</div></button>
-      <button class="fmt-btn" data-fmt="markdown" aria-label="Exporter en Markdown – Documentation"><div class="name">Markdown</div><div class="desc">Documentation</div></button>
-      <button class="fmt-btn" data-fmt="bookmarks" aria-label="Exporter en favoris – Navigateurs"><div class="name">Bookmarks</div><div class="desc">Navigateurs</div></button>
-      <button class="fmt-btn" data-fmt="bibtex" aria-label="Exporter en BibTeX – Zotero, Mendeley"><div class="name">BibTeX</div><div class="desc">Zotero, Mendeley...</div></button>
-      <button class="fmt-btn" data-fmt="json" aria-label="Exporter en JSON – Développeurs"><div class="name">JSON</div><div class="desc">Développeurs</div></button>
-      <button class="fmt-btn" data-fmt="csv" aria-label="Exporter en CSV – Tableurs"><div class="name">CSV</div><div class="desc">Tableurs</div></button>
-    </div>
-    <footer>
-      <a href="https://www.uneiaparjour.fr/" target="_blank">Une IA par jour</a>
-      <p><a href="https://github.com/uneIAparjour/export-lectures-partagees" target="_blank">Dépôt Github</a></p>
-    </footer>`;
-
-  /* --- Événements ---
-     Rattachés après chaque render() car le DOM est reconstruit.
-     - Recherche : filtrage en temps réel avec conservation du focus
-     - Onglets : bascule catégories / articles
-     - Catégories : sélection multiple (toggle)
-     - Ressources : sélection individuelle (toggle)
-     - Tout sélectionner / Effacer : actions groupées
-     - Formats : déclenche l'export au clic
-  */
-  document.getElementById('search').addEventListener('input', (e) => {
-    search = e.target.value;
-    render();
-    document.getElementById('search').focus();
+/* === NAVIGATION === */
+function renderNav(){
+  const nav=document.getElementById('nav-categories');
+  const grouped=groupByCategory(RESOURCES);
+  let html='<div class="nav-inner">';
+  Object.entries(CATEGORIES).forEach(([key,{label}])=>{
+    const count=grouped[key]?.length||0;
+    html+=`<a href="#cat-${key}" class="nav-cat">${label}<span class="count">${count}</span></a>`;
   });
-
-  document.querySelectorAll('.tab-btn').forEach(btn =>
-    btn.addEventListener('click', () => { tab = btn.dataset.tab; render(); })
-  );
-
-  document.querySelectorAll('.cat-btn').forEach(btn =>
-    btn.addEventListener('click', () => {
-      const cat = btn.dataset.cat;
-      selectedCats.has(cat) ? selectedCats.delete(cat) : selectedCats.add(cat);
-      render();
-    })
-  );
-
-  document.querySelectorAll('.res-btn').forEach(btn =>
-    btn.addEventListener('click', () => {
-      const id = parseInt(btn.dataset.id);
-      selectedRes.has(id) ? selectedRes.delete(id) : selectedRes.add(id);
-      render();
-    })
-  );
-
-  document.getElementById('sel-all')?.addEventListener('click', () => {
-    filtered.forEach(r => selectedRes.add(r.id));
-    render();
-  });
-
-  document.getElementById('clr-all')?.addEventListener('click', () => {
-    selectedRes.clear();
-    selectedCats.clear();
-    render();
-  });
-
-  document.querySelectorAll('.fmt-btn').forEach(btn =>
-    btn.addEventListener('click', () => exportFormat(btn.dataset.fmt))
-  );
+  html+='<a href="#export" class="nav-cat" style="border-color:#E67E22;color:#E67E22;font-weight:600">⬇ Exporter</a></div>';
+  nav.innerHTML=html;
 }
 
-/* ============================================================
-   CHARGEMENT INITIAL
-   Récupère data.json (hébergé sur GitHub Pages à côté de index.html)
-   puis lance le premier rendu. Affiche une erreur si le fichier
-   est inaccessible.
-   ============================================================ */
+/* === GÉNÉRATEURS D'EXPORT === */
+function genOPML(res){const g=groupByCategory(res);let o=`<?xml version="1.0" encoding="UTF-8"?>\n<opml version="2.0">\n<head><title>Lectures partagées</title><dateCreated>${new Date().toISOString()}</dateCreated></head>\n<body>`;Object.entries(g).forEach(([k,items])=>{o+=`\n<outline text="${CATEGORIES[k]?.label}" title="${CATEGORIES[k]?.label}">`;items.forEach(r=>{o+=`\n<outline type="link" text="${r.title.replace(/"/g,'&quot;')}" url="${r.url}" created="${r.date}"/>`});o+=`\n</outline>`});return o+`\n</body>\n</opml>`}
+function genXML(res){let o=`<?xml version="1.0" encoding="UTF-8"?>\n<lecturesPartagees>\n<metadata><title>Lectures partagées</title><dateExport>${new Date().toISOString()}</dateExport><total>${res.length}</total></metadata>\n<resources>`;res.forEach(r=>{o+=`\n<resource id="${r.id}"><title><![CDATA[${r.title}]]></title><description><![CDATA[${r.desc}]]></description><url>${r.url}</url><date>${r.date}</date><letter>${r.letter}</letter><category>${CATEGORIES[r.cat]?.label}</category><source><![CDATA[${r.source}]]></source></resource>`});return o+`\n</resources>\n</lecturesPartagees>`}
+function genMarkdown(res){const g=groupByCategory(res);let o=`# Lectures partagées\n\n> Export du ${formatDate(new Date())} — ${res.length} ressources\n\n---\n\n`;Object.entries(g).forEach(([k,items])=>{o+=`## ${CATEGORIES[k]?.label}\n\n`;items.sort((a,b)=>new Date(b.date)-new Date(a.date)).forEach(r=>{o+=`### ${r.title}\n\n${r.desc}\n\n- **Date** : ${formatDate(r.date)}\n- **Lettre** : #${r.letter}\n- **Lien** : [${r.url}](${r.url})\n\n---\n\n`})});return o}
+function genBookmarks(res){const g=groupByCategory(res);let o=`<!DOCTYPE NETSCAPE-Bookmark-file-1>\n<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">\n<TITLE>Lectures partagées</TITLE>\n<H1>Lectures partagées</H1>\n<DL><p>`;Object.entries(g).forEach(([k,items])=>{o+=`\n<DT><H3>${CATEGORIES[k]?.label}</H3>\n<DL><p>`;items.forEach(r=>{o+=`\n<DT><A HREF="${r.url}" ADD_DATE="${Math.floor(new Date(r.date).getTime()/1000)}">${r.title}</A>`});o+=`\n</DL><p>`});return o+`\n</DL><p>`}
+function genBibTeX(res){let o=`% Lectures partagées\n% ${res.length} ressources\n\n`;res.forEach(r=>{const k=r.title.toLowerCase().replace(/[^a-z0-9]/g,'').substring(0,15)+r.id;o+=`@online{${k},\n  author = {${r.source.replace(/[{}]/g,'')}},\n  title = {${r.title.replace(/[{}]/g,'')}},\n  year = {${r.date.substring(0,4)}},\n  url = {${r.url}},\n  keywords = {${r.cat}, ia}\n}\n\n`});return o}
+function genJSON(res){return JSON.stringify({metadata:{title:"Lectures partagées",exportDate:new Date().toISOString(),total:res.length},resources:res.map(r=>({id:r.id,title:r.title,description:r.desc,url:r.url,date:r.date,letter:r.letter,category:r.cat,categoryLabel:CATEGORIES[r.cat]?.label,source:r.source}))},null,2)}
+function genCSV(res){const esc=(s)=>`"${String(s).replace(/"/g,'""')}"`;let o='ID;Titre;Description;URL;Date;Lettre;Catégorie;Source\n';res.forEach(r=>{o+=`${r.id};${esc(r.title)};${esc(r.desc)};${esc(r.url)};${r.date};${r.letter};${esc(CATEGORIES[r.cat]?.label)};${esc(r.source)}\n`});return o}
+
+function download(c,f,m){const b=new Blob([c],{type:m+';charset=utf-8'});const u=URL.createObjectURL(b);const a=document.createElement('a');a.href=u;a.download=f;document.body.appendChild(a);a.click();document.body.removeChild(a);URL.revokeObjectURL(u)}
+function exportFormat(fmt){const d=getExportable();const f={opml:[genOPML(d),'lectures-partagees.opml','application/xml'],xml:[genXML(d),'lectures-partagees.xml','application/xml'],markdown:[genMarkdown(d),'lectures-partagees.md','text/markdown'],bookmarks:[genBookmarks(d),'lectures-partagees-bookmarks.html','text/html'],bibtex:[genBibTeX(d),'lectures-partagees.bib','application/x-bibtex'],json:[genJSON(d),'lectures-partagees.json','application/json'],csv:[genCSV(d),'lectures-partagees.csv','text/csv']};if(f[fmt])download(...f[fmt])}
+
+/* === SECTION EXPORT === */
+function renderExport(){
+  const app=document.getElementById('export-app');
+  const filtered=getFiltered(),exportable=getExportable();
+  let sel='';
+  if(exportTab==='categories'){
+    Object.entries(CATEGORIES).forEach(([key,{label,color}])=>{
+      const count=RESOURCES.filter(r=>r.cat===key).length;
+      const s=selectedCats.has(key);
+      sel+=`<button class="sel-btn" data-cat="${key}" aria-pressed="${s}" style="${s?`border-color:${color};background:${color}20`:''}">`
+        +`<div class="sel-check" style="${s?`background:${color}`:''}">${s?'✓':''}</div>`
+        +`<span class="sel-label" style="${s?`color:${color}`:''}">${label}</span>`
+        +`<span class="sel-count" style="${s?`background:${color};color:#fff`:''}">${count}</span></button>`;
+    });
+  } else {
+    sel+=`<div class="action-row"><button class="action-btn" id="sel-all">Tout sélectionner</button><button class="action-btn" id="clr-all">Effacer</button></div>`;
+    filtered.forEach(r=>{
+      const s=selectedRes.has(r.id);const color=CATEGORIES[r.cat]?.color||'#6B7280';
+      sel+=`<button class="sel-btn" data-id="${r.id}" aria-pressed="${s}" style="${s?`border-color:${color};background:${color}15`:''}">`
+        +`<div class="sel-check" style="${s?`background:${color}`:''}">${s?'✓':''}</div>`
+        +`<span class="sel-label" style="font-size:.8rem">${r.title}</span></button>`;
+    });
+  }
+  app.innerHTML=`
+    <div class="export-stats">
+      <div class="export-stat"><div class="export-stat-value">${filtered.length}</div><div class="export-stat-label">Filtrées</div></div>
+      <div class="export-stat"><div class="export-stat-value">${exportable.length}</div><div class="export-stat-label">À exporter</div></div>
+      <div class="export-stat"><div class="export-stat-value">${selectedCats.size||10}</div><div class="export-stat-label">Catégories</div></div>
+    </div>
+    <input type="text" class="search-input" id="search" placeholder="Rechercher…" value="${search}" aria-label="Rechercher dans les ressources">
+    <div class="export-tabs" role="tablist">
+      <button class="export-tab ${exportTab==='categories'?'active':''}" data-tab="categories" role="tab" aria-selected="${exportTab==='categories'}">Par catégorie</button>
+      <button class="export-tab ${exportTab==='resources'?'active':''}" data-tab="resources" role="tab" aria-selected="${exportTab==='resources'}">Par article</button>
+    </div>
+    <div class="select-box">${sel}</div>
+    <h4 class="fmt-title">Choisir un format</h4>
+    <div class="formats-grid" role="group" aria-label="Formats d'export">
+      <button class="fmt-btn" data-fmt="opml" aria-label="Exporter en OPML"><div class="fmt-name">OPML</div><div class="fmt-desc">Feedly, Inoreader…</div></button>
+      <button class="fmt-btn" data-fmt="xml" aria-label="Exporter en XML"><div class="fmt-name">XML</div><div class="fmt-desc">Format structuré</div></button>
+      <button class="fmt-btn" data-fmt="markdown" aria-label="Exporter en Markdown"><div class="fmt-name">Markdown</div><div class="fmt-desc">Documentation</div></button>
+      <button class="fmt-btn" data-fmt="bookmarks" aria-label="Exporter en favoris"><div class="fmt-name">Bookmarks</div><div class="fmt-desc">Navigateurs</div></button>
+      <button class="fmt-btn" data-fmt="bibtex" aria-label="Exporter en BibTeX"><div class="fmt-name">BibTeX</div><div class="fmt-desc">Zotero, Mendeley…</div></button>
+      <button class="fmt-btn" data-fmt="json" aria-label="Exporter en JSON"><div class="fmt-name">JSON</div><div class="fmt-desc">Développeurs</div></button>
+      <button class="fmt-btn" data-fmt="csv" aria-label="Exporter en CSV"><div class="fmt-name">CSV</div><div class="fmt-desc">Tableurs</div></button>
+    </div>`;
+
+  /* Événements */
+  app.querySelector('#search').addEventListener('input',(e)=>{search=e.target.value;renderExport();app.querySelector('#search').focus()});
+  app.querySelectorAll('.export-tab').forEach(b=>b.addEventListener('click',()=>{exportTab=b.dataset.tab;renderExport()}));
+  app.querySelectorAll('.sel-btn[data-cat]').forEach(b=>b.addEventListener('click',()=>{const c=b.dataset.cat;selectedCats.has(c)?selectedCats.delete(c):selectedCats.add(c);renderExport()}));
+  app.querySelectorAll('.sel-btn[data-id]').forEach(b=>b.addEventListener('click',()=>{const id=parseInt(b.dataset.id);selectedRes.has(id)?selectedRes.delete(id):selectedRes.add(id);renderExport()}));
+  app.querySelector('#sel-all')?.addEventListener('click',()=>{filtered.forEach(r=>selectedRes.add(r.id));renderExport()});
+  app.querySelector('#clr-all')?.addEventListener('click',()=>{selectedRes.clear();selectedCats.clear();renderExport()});
+  app.querySelectorAll('.fmt-btn').forEach(b=>b.addEventListener('click',()=>exportFormat(b.dataset.fmt)));
+}
+
+/* === CHARGEMENT === */
 fetch('data.json')
-  .then(response => {
-    if (!response.ok) throw new Error(`Erreur HTTP ${response.status}`);
-    return response.json();
+  .then(r=>{if(!r.ok)throw new Error(`HTTP ${r.status}`);return r.json()})
+  .then(data=>{
+    RESOURCES=data;
+    document.getElementById('stat-total').textContent=RESOURCES.length;
+    renderNav();
+    renderLecture();
+    renderExport();
   })
-  .then(data => {
-    RESOURCES = data;
-    render();
-  })
-  .catch(error => {
-    console.error('Erreur de chargement des données:', error);
-    document.getElementById('app').innerHTML =
-      '<p style="color:#EF4444;text-align:center;padding:40px">Erreur de chargement des données.<br>Veuillez rafraîchir la page.</p>';
+  .catch(err=>{
+    console.error(err);
+    document.getElementById('lecture').innerHTML='<p style="color:#EF4444;text-align:center;padding:40px">Erreur de chargement.<br>Veuillez rafraîchir la page.</p>';
   });
 
 })();
