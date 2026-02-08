@@ -277,7 +277,7 @@ function renderExport(){
       <button class="fmt-btn" data-fmt="csv" aria-label="Exporter en CSV"><div class="fmt-name">CSV</div><div class="fmt-desc">Tableurs</div></button>
     </div>`;
 
-  app.querySelector('#search').addEventListener('input',(e)=>{search=e.target.value;renderExport();app.querySelector('#search').focus()});
+  app.querySelector('#search').addEventListener('input',(e)=>{const pos=e.target.selectionStart;search=e.target.value;renderExport();const s=app.querySelector('#search');s.focus();s.setSelectionRange(pos,pos)});
   app.querySelectorAll('.export-tab').forEach(b=>b.addEventListener('click',()=>{exportTab=b.dataset.tab;renderExport()}));
   app.querySelectorAll('.sel-btn[data-cat]').forEach(b=>b.addEventListener('click',()=>{const c=b.dataset.cat;selectedCats.has(c)?selectedCats.delete(c):selectedCats.add(c);renderExport()}));
   app.querySelectorAll('.sel-btn[data-id]').forEach(b=>b.addEventListener('click',()=>{const id=parseInt(b.dataset.id);selectedRes.has(id)?selectedRes.delete(id):selectedRes.add(id);renderExport()}));
