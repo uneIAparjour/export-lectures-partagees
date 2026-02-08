@@ -6,7 +6,7 @@
   <title>Lectures partagées — Une IA par jour</title>
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#2D2D2D;min-height:100vh;color:#E8E8E8}
+    body{font-family:inherit;background:#2D2D2D;color:#E8E8E8;overflow:hidden}
     .container{max-width:640px;margin:0 auto;padding:0 20px}
 
     /* === SKIP LINK === */
@@ -21,8 +21,8 @@
     .header-stats{display:inline-flex;gap:16px;margin-top:12px;font-size:.82rem;color:#A0A0A0}
     .header-stats strong{color:#E67E22}
 
-    /* === NAV CATÉGORIES === */
-    #nav-categories{background:#1a1a1a;border-bottom:1px solid #4D4D4D;padding:14px 0;position:sticky;top:0;z-index:50}
+    /* === NAV CATÉGORIES (pas sticky, scroll parent via postMessage) === */
+    #nav-categories{background:#1a1a1a;border-bottom:1px solid #4D4D4D;padding:14px 0}
     .nav-inner{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;max-width:640px;margin:0 auto;padding:0 16px}
     .nav-cat{display:inline-flex;align-items:center;gap:5px;padding:5px 12px;border:1px solid #4D4D4D;border-radius:50px;background:#2D2D2D;font-size:.75rem;font-weight:500;color:#A0A0A0;cursor:pointer;transition:all .2s;text-decoration:none}
     .nav-cat:hover{border-color:#E67E22;color:#E67E22;background:#3D3D3D}
@@ -51,7 +51,7 @@
     .source-badge{padding:2px 8px;background:#4D4D4D;border-radius:50px;font-weight:500;color:#C0C0C0}
 
     /* === RETOUR MENU === */
-    .back-to-top{display:block;text-align:right;font-size:.78rem;color:#808080;text-decoration:none;margin-top:6px;padding:4px 0;transition:color .2s}
+    .back-to-top{display:block;text-align:right;font-size:.78rem;color:#808080;text-decoration:none;margin-top:6px;padding:4px 0;transition:color .2s;cursor:pointer;background:none;border:none}
     .back-to-top:hover{color:#E67E22}
 
     /* === SÉPARATEUR === */
@@ -108,11 +108,11 @@
     *:focus-visible{outline:2px solid #E67E22;outline-offset:2px;border-radius:4px}
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
 
-    /* === SCROLLBAR === */
-    ::-webkit-scrollbar{width:8px}
-    ::-webkit-scrollbar-track{background:#2D2D2D;border-radius:4px}
-    ::-webkit-scrollbar-thumb{background:#4D4D4D;border-radius:4px}
-    ::-webkit-scrollbar-thumb:hover{background:#5D5D5D}
+    /* === SCROLLBAR (pour la select-box uniquement) === */
+    .select-box::-webkit-scrollbar{width:8px}
+    .select-box::-webkit-scrollbar-track{background:#2D2D2D;border-radius:4px}
+    .select-box::-webkit-scrollbar-thumb{background:#4D4D4D;border-radius:4px}
+    .select-box::-webkit-scrollbar-thumb:hover{background:#5D5D5D}
 
     /* === LOADING === */
     .loading{text-align:center;padding:60px 20px;color:#808080}
@@ -186,6 +186,22 @@ const getFiltered=()=>{let r=RESOURCES;if(selectedCats.size)r=r.filter(x=>select
 const getExportable=()=>selectedRes.size?RESOURCES.filter(r=>selectedRes.has(r.id)):getFiltered();
 const groupByCategory=(res)=>{const g={};res.forEach(r=>{if(!g[r.cat])g[r.cat]=[];g[r.cat].push(r)});return g};
 
+/* === IFRAME AUTO-RESIZE === */
+function notifyHeight(){
+  const h=document.documentElement.scrollHeight;
+  window.parent.postMessage({type:'resize',height:h},'*');
+}
+
+/* === SCROLL DANS LA PAGE PARENTE (pas dans l'iframe) === */
+function scrollToElement(id){
+  const el=document.getElementById(id);
+  if(!el)return;
+  const rect=el.getBoundingClientRect();
+  const y=rect.top;
+  // Demander au parent de scroller
+  window.parent.postMessage({type:'scrollTo',offset:y},'*');
+}
+
 /* === SECTION LECTURE === */
 function renderLecture(){
   const main=document.getElementById('lecture');
@@ -216,9 +232,14 @@ function renderLecture(){
         </div>
       </article>`;
     });
-    html+=`<a href="#nav-categories" class="back-to-top">↑ Retour au menu</a></section>`;
+    html+=`<button class="back-to-top" data-target="nav-categories">↑ Retour au menu</button></section>`;
   });
   main.innerHTML=html;
+
+  // Attacher les événements "Retour au menu"
+  main.querySelectorAll('.back-to-top').forEach(btn=>{
+    btn.addEventListener('click',()=>scrollToElement(btn.dataset.target));
+  });
 }
 
 /* === NAVIGATION === */
@@ -228,10 +249,15 @@ function renderNav(){
   let html='<div class="nav-inner">';
   Object.entries(CATEGORIES).forEach(([key,{label}])=>{
     const count=grouped[key]?.length||0;
-    html+=`<a href="#cat-${key}" class="nav-cat">${label}<span class="count">${count}</span></a>`;
+    html+=`<button class="nav-cat" data-target="cat-${key}">${label}<span class="count">${count}</span></button>`;
   });
-  html+='<a href="#export" class="nav-cat" style="border-color:#E67E22;color:#E67E22;font-weight:600">⬇ Exporter</a></div>';
+  html+='<button class="nav-cat" data-target="export" style="border-color:#E67E22;color:#E67E22;font-weight:600">⬇ Exporter</button></div>';
   nav.innerHTML=html;
+
+  // Attacher les événements de navigation
+  nav.querySelectorAll('.nav-cat').forEach(btn=>{
+    btn.addEventListener('click',()=>scrollToElement(btn.dataset.target));
+  });
 }
 
 /* === GÉNÉRATEURS D'EXPORT === */
@@ -292,7 +318,6 @@ function renderExport(){
       <button class="fmt-btn" data-fmt="csv" aria-label="Exporter en CSV"><div class="fmt-name">CSV</div><div class="fmt-desc">Tableurs</div></button>
     </div>`;
 
-  /* Événements */
   app.querySelector('#search').addEventListener('input',(e)=>{search=e.target.value;renderExport();app.querySelector('#search').focus()});
   app.querySelectorAll('.export-tab').forEach(b=>b.addEventListener('click',()=>{exportTab=b.dataset.tab;renderExport()}));
   app.querySelectorAll('.sel-btn[data-cat]').forEach(b=>b.addEventListener('click',()=>{const c=b.dataset.cat;selectedCats.has(c)?selectedCats.delete(c):selectedCats.add(c);renderExport()}));
@@ -300,6 +325,9 @@ function renderExport(){
   app.querySelector('#sel-all')?.addEventListener('click',()=>{filtered.forEach(r=>selectedRes.add(r.id));renderExport()});
   app.querySelector('#clr-all')?.addEventListener('click',()=>{selectedRes.clear();selectedCats.clear();renderExport()});
   app.querySelectorAll('.fmt-btn').forEach(b=>b.addEventListener('click',()=>exportFormat(b.dataset.fmt)));
+
+  // Mettre à jour la hauteur après le rendu export
+  requestAnimationFrame(notifyHeight);
 }
 
 /* === CHARGEMENT === */
@@ -311,6 +339,12 @@ fetch('data.json')
     renderNav();
     renderLecture();
     renderExport();
+    // Notifier la hauteur au parent
+    requestAnimationFrame(notifyHeight);
+    // Re-notifier après les images/fonts chargées
+    window.addEventListener('load',notifyHeight);
+    // Observer les changements de taille
+    new ResizeObserver(notifyHeight).observe(document.documentElement);
   })
   .catch(err=>{
     console.error(err);
