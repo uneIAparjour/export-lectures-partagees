@@ -1088,5 +1088,95 @@
     "letter": 12,
     "cat": "geopolitique",
     "source": "Francis Pisani"
+  },
+  {
+    "title": "Moltbot : pourquoi se méfier de cet assistant qui prend le contrôle de votre vie numérique",
+    "desc": "Enquête sur Moltbot (ex-Clawdbot, désormais OpenClaw), l'assistant personnel IA qui soulève des questions de contrôle et de vie privée.",
+    "url": "https://www.usine-digitale.fr/intelligence-artificielle/ia-generative/moltbot-ex-clawdbot-pourquoi-il-faut-se-mefier-de-cet-assistant-personnel-qui-prend-le-controle-de-votre-vie-numerique.3I2RICDRU5CUHCLKCCVCTAROAE.html",
+    "date": "2026-02-07",
+    "letter": 23,
+    "cat": "securite",
+    "source": "L'Usine Digitale",
+    "id": 110
+  },
+  {
+    "title": "Moltbook, ou l'Internet des agents",
+    "desc": "Réflexion sur le jour où les humains n'écrivent plus et sur l'émergence d'un Internet peuplé d'agents IA.",
+    "url": "https://medium.com/@sebastienreinders/le-jour-o%C3%B9-les-humains-n%C3%A9crivent-plus-moltbook-ou-l-internet-des-agents-6b11dfb6bce9",
+    "date": "2026-02-07",
+    "letter": 23,
+    "cat": "philosophie",
+    "source": "Medium (Sébastien Reinders)",
+    "id": 111
+  },
+  {
+    "title": "Anthropic visé par une nouvelle plainte à 3 milliards de dollars",
+    "desc": "Anthropic fait face à une nouvelle plainte pour violation du droit d'auteur, à hauteur de 3 milliards de dollars.",
+    "url": "https://www.01net.com/actualites/anthropic-vise-par-une-nouvelle-plainte-a-3-milliards-de-dollars-pour-violation-du-droit-dauteur.html",
+    "date": "2026-02-07",
+    "letter": 23,
+    "cat": "droit",
+    "source": "01net",
+    "id": 112
+  },
+  {
+    "title": "Les députés européens souhaitent protéger les œuvres soumises au droit d'auteur face à l'IA",
+    "desc": "Le Parlement européen avance sur la protection des œuvres soumises au droit d'auteur utilisées par l'IA générative.",
+    "url": "https://www.europarl.europa.eu/news/fr/press-room/20260126IPR32636/proteger-les-oeuvres-soumises-au-droit-d-auteur-utilisees-par-l-ia-generative",
+    "date": "2026-02-07",
+    "letter": 23,
+    "cat": "droit",
+    "source": "Parlement européen",
+    "id": 113
+  },
+  {
+    "title": "L'IA ne remplace pas les compétences, elle empêche de les développer",
+    "desc": "Amélie Raoul présente l'étude « How AI Impacts Skill Formation » sur l'impact de l'IA sur le développement des compétences.",
+    "url": "https://www.linkedin.com/posts/am%C3%A9lie-raoul_lia-ne-remplace-pas-les-comp%C3%A9tences-elle-activity-7424164626214555648-bd-2/",
+    "date": "2026-02-07",
+    "letter": 23,
+    "cat": "education",
+    "source": "LinkedIn (Amélie Raoul)",
+    "id": 114
+  },
+  {
+    "title": "Six jeunes racontent leur rapport à ChatGPT",
+    "desc": "Mickaël Bertrand rebondit sur un article de Libération où six jeunes racontent leur usage de ChatGPT. À mettre en relation avec l'étude de Réseau Canopé sur la représentation de l'IA chez les collégiens.",
+    "url": "https://www.linkedin.com/posts/mickaelbertrand_chatgpt-cest-parfait-parce-qu%C3%A0-l%C3%A9cole-activity-7424135304963432448-neH8/",
+    "date": "2026-02-07",
+    "letter": 23,
+    "cat": "education",
+    "source": "LinkedIn (Mickaël Bertrand)",
+    "id": 115
+  },
+  {
+    "title": "Du chatbot du pape au canard de Vaucanson, les croyances derrière l'IA",
+    "desc": "Les croyances derrière l'intelligence artificielle ne datent pas d'hier : du canard automate de Vaucanson aux chatbots modernes.",
+    "url": "https://theconversation.com/du-chatbot-du-pape-au-canard-de-vaucanson-les-croyances-derriere-lintelligence-artificielle-ne-datent-pas-dhier-272357",
+    "date": "2026-02-07",
+    "letter": 23,
+    "cat": "philosophie",
+    "source": "The Conversation",
+    "id": 116
+  },
+  {
+    "title": "Mistral fournit un chatbot d'IA pour les chercheurs du CNRS",
+    "desc": "Mistral AI met à disposition un chatbot dédié aux chercheurs du CNRS.",
+    "url": "https://www.sciencesetavenir.fr/high-tech/intelligence-artificielle/mistral-fournit-un-chatbot-d-ia-pour-les-chercheurs-du-cnrs_190824.amp",
+    "date": "2026-02-07",
+    "letter": 23,
+    "cat": "technique",
+    "source": "Sciences et Avenir",
+    "id": 117
+  },
+  {
+    "title": "Friend.com : le collier IA qui interroge notre rapport à la technologie",
+    "desc": "Analyses du collier connecté avec IA Friend par Le Monde et France Culture, et réflexion de Romain Galissot sur l'importance du lien humain face aux compagnons numériques.",
+    "url": "https://www.radiofrance.fr/franceculture/podcasts/un-monde-connecte/friend-com-l-ami-ia-biberonne-au-buzz-publicitaire-9185004",
+    "date": "2026-02-07",
+    "letter": 23,
+    "cat": "philosophie",
+    "source": "France Culture / Le Monde",
+    "id": 118
   }
 ]
