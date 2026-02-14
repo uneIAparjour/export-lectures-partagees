@@ -1226,7 +1226,7 @@
         "url": "https://www.blogdumoderateur.com/etudiants-francais-ia-usage-massif-derives-inquietantes/",
         "date": "2026-02-14",
         "letter": 24,
-        "cat": "études",
+        "cat": "etudes",
         "source": "Blog du modérateur"
     },
     {
@@ -1236,7 +1236,7 @@
         "url": "https://www.arcep.fr/uploads/tx_gspublication/barometre-du-numerique-edition-2026_RAPPORT.pdf",
         "date": "2026-02-14",
         "letter": 24,
-        "cat": "études",
+        "cat": "etudes",
         "source": "CREDOC"
     },
     {
@@ -1246,7 +1246,7 @@
         "url": "https://www.linkedin.com/posts/conseil-ia-numerique_barom%C3%A8tre-du-num%C3%A9rique-2026-infographie-activity-7426697181958414336-vdFe/",
         "date": "2026-02-14",
         "letter": 24,
-        "cat": "études",
+        "cat": "etudes",
         "source": "LinkedIn (Conseil de l’IA et du numérique)"
     },
     {
@@ -1256,7 +1256,7 @@
         "url": "https://www.inria.fr/fr/comma-manuscrits-medievaux-retranscrits",
         "date": "2026-02-14",
         "letter": 24,
-        "cat": "études",
+        "cat": "etudes",
         "source": "INRIA"
     },
     {
@@ -1266,7 +1266,7 @@
         "url": "https://www.linkedin.com/posts/am%C3%A9lie-raoul_vous-croyez-que-lia-vous-remplace-non-activity-7427750850430836736-Y6Zw/",
         "date": "2026-02-14",
         "letter": 24,
-        "cat": "éthique",
+        "cat": "ethique",
         "source": "LinkedIn (Amélie Raoul)"
     },
     {
@@ -1276,7 +1276,7 @@
         "url": "https://www.linkedin.com/posts/daria-viktorova_openai-europe-privacy-policy-activity-7426633991782371328-snif/",
         "date": "2026-02-14",
         "letter": 24,
-        "cat": "éthique",
+        "cat": "ethique",
         "source": "LinkedIn (Daria Viktorova)"
     },
     {
@@ -1286,7 +1286,7 @@
         "url": "https://www.bbc.com/news/articles/cg4ewrw2drpo",
         "date": "2026-02-14",
         "letter": 24,
-        "cat": "éthique",
+        "cat": "ethique",
         "source": "BBC"
     },
     {
@@ -1296,7 +1296,7 @@
         "url": "https://www.franceinfo.fr/elections/municipales/municipales-quand-l-intelligence-artificielle-s-invite-dans-la-campagne_7773023.html",
         "date": "2026-02-14",
         "letter": 24,
-        "cat": "éthique",
+        "cat": "ethique",
         "source": "France Info"
     },
     {
@@ -1326,7 +1326,7 @@
         "url": "https://france3-regions.franceinfo.fr/grand-est/bas-rhin/strasbourg-0/un-professeur-vise-par-un-montage-video-degradant-genere-par-intelligence-artificielle-des-plaintes-deposees-et-un-eleve-sanctionne-3294381.html",
         "date": "2026-02-14",
         "letter": 24,
-        "cat": "sécurité",
+        "cat": "securite",
         "source": "France 3 Grand Est"
     },
     {
@@ -1336,8 +1336,8 @@
         "url": "https://www.festivalnikon.fr/video/2025/513",
         "date": "2026-02-14",
         "letter": 24,
-        "cat": "création",
-        "source": "Festival Nikon"
+        "cat": "creation",
+        "source": "Nikon film festival"
     },
     {
         "id": 135,
@@ -1346,7 +1346,7 @@
         "url": "https://www.instagram.com/sophieperron_/reel/DUOTKPNCEp4/",
         "date": "2026-02-14",
         "letter": 24,
-        "cat": "création",
+        "cat": "creation",
         "source": "Instagram (Sophie Perron)"
     },
     {
@@ -1356,7 +1356,7 @@
         "url": "https://www.instagram.com/reel/DUivya1gh6r/",
         "date": "2026-02-14",
         "letter": 24,
-        "cat": "création",
+        "cat": "creation",
         "source": "Instagram"
     },
     {
@@ -1366,7 +1366,7 @@
         "url": "https://www.youtube.com/watch?v=M7iWeYy77y0",
         "date": "2026-02-14",
         "letter": 24,
-        "cat": "création",
+        "cat": "creation",
         "source": "YouTube (Numerama)"
     },
     {
@@ -1396,7 +1396,7 @@
         "url": "https://www.ledevoir.com/actualites/education/950664/vaut-ere-intelligence-artificielle",
         "date": "2026-02-14",
         "letter": 24,
-        "cat": "éducation",
+        "cat": "education",
         "source": "Le Devoir"
     },
     {
@@ -1406,7 +1406,7 @@
         "url": "https://www.linkedin.com/posts/alexandra-coutl%C3%A9e_que-vaut-un-a-%C3%A0-l%C3%A8re-de-lintelligence-activity-7425555387774513152-s9_5/",
         "date": "2026-02-14",
         "letter": 24,
-        "cat": "éducation",
+        "cat": "education",
         "source": "LinkedIn (Alexandra Coutlée)"
     },
     {
@@ -1416,7 +1416,7 @@
         "url": "https://www.lumni.fr/programme/ma-vie-avec-l-ia",
         "date": "2026-02-14",
         "letter": 24,
-        "cat": "éducation",
+        "cat": "education",
         "source": "Lumni"
     }
 ]
