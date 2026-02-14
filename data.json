@@ -1218,5 +1218,205 @@
     "letter": 16,
     "cat": "droit",
     "source": "Linkedin (Alexandra Bensamoun)"
-  }
+  },
+    {
+        "id": 123,
+        "title": "94 % des étudiants français ont déjà utilisé l’IA : entre usage massif et dérives inquiétantes",
+        "desc": "Étude Ipsos/EPITA relayée sur le Blog du modérateur.",
+        "url": "https://www.blogdumoderateur.com/etudiants-francais-ia-usage-massif-derives-inquietantes/",
+        "date": "2026-02-14",
+        "letter": 24,
+        "cat": "études",
+        "source": "Blog du modérateur"
+    },
+    {
+        "id": 124,
+        "title": "Baromètre du numérique 2026",
+        "desc": "Baromètre annuel du CREDOC analysé par le Conseil de l’IA et du numérique.",
+        "url": "https://www.arcep.fr/uploads/tx_gspublication/barometre-du-numerique-edition-2026_RAPPORT.pdf",
+        "date": "2026-02-14",
+        "letter": 24,
+        "cat": "études",
+        "source": "CREDOC"
+    },
+    {
+        "id": 125,
+        "title": "Baromètre du numérique 2026 (infographie)",
+        "desc": "Infographie du baromètre annuel du CREDOC, partagée sur LinkedIn.",
+        "url": "https://www.linkedin.com/posts/conseil-ia-numerique_barom%C3%A8tre-du-num%C3%A9rique-2026-infographie-activity-7426697181958414336-vdFe/",
+        "date": "2026-02-14",
+        "letter": 24,
+        "cat": "études",
+        "source": "LinkedIn (Conseil de l’IA et du numérique)"
+    },
+    {
+        "id": 126,
+        "title": "CoMMA : des milliers de manuscrits médiévaux retranscrits grâce à l’IA",
+        "desc": "Projet de l’INRIA utilisant des IA génératives pour la retranscription de manuscrits.",
+        "url": "https://www.inria.fr/fr/comma-manuscrits-medievaux-retranscrits",
+        "date": "2026-02-14",
+        "letter": 24,
+        "cat": "études",
+        "source": "INRIA"
+    },
+    {
+        "id": 127,
+        "title": "Anthropic analyse le « désempowerment » humain dans 1,5 millions de conversations IA",
+        "desc": "Analyse partagée par Amélie Raoul sur LinkedIn.",
+        "url": "https://www.linkedin.com/posts/am%C3%A9lie-raoul_vous-croyez-que-lia-vous-remplace-non-activity-7427750850430836736-Y6Zw/",
+        "date": "2026-02-14",
+        "letter": 24,
+        "cat": "éthique",
+        "source": "LinkedIn (Amélie Raoul)"
+    },
+    {
+        "id": 128,
+        "title": "OpenAI : ce que révèle la nouvelle politique de confidentialité européenne (février 2026)",
+        "desc": "Analyse de Daria Viktorova sur l’évolution de la politique de confidentialité de ChatGPT.",
+        "url": "https://www.linkedin.com/posts/daria-viktorova_openai-europe-privacy-policy-activity-7426633991782371328-snif/",
+        "date": "2026-02-14",
+        "letter": 24,
+        "cat": "éthique",
+        "source": "LinkedIn (Daria Viktorova)"
+    },
+    {
+        "id": 129,
+        "title": "« Je parlais à ChatGPT 8 fois par jour » : la crise de solitude de la génération Z",
+        "desc": "Article de la BBC sur l’usage de l’IA et la solitude.",
+        "url": "https://www.bbc.com/news/articles/cg4ewrw2drpo",
+        "date": "2026-02-14",
+        "letter": 24,
+        "cat": "éthique",
+        "source": "BBC"
+    },
+    {
+        "id": 130,
+        "title": "Municipales 2026 : quand l’IA s’invite dans la campagne",
+        "desc": "Article sur l’utilisation de l’IA lors des municipales 2026.",
+        "url": "https://www.franceinfo.fr/elections/municipales/municipales-quand-l-intelligence-artificielle-s-invite-dans-la-campagne_7773023.html",
+        "date": "2026-02-14",
+        "letter": 24,
+        "cat": "éthique",
+        "source": "France Info"
+    },
+    {
+        "id": 131,
+        "title": "L’IA ne réduit pas le travail, elle l’intensifie (étude Berkeley)",
+        "desc": "Étude de Berkeley relayée par Chloé Sondervorst sur LinkedIn.",
+        "url": "https://www.linkedin.com/posts/sondervorst_lia-ne-r%C3%A9duit-pas-le-travail-elle-lintensifie-activity-7427044214099726336-n6w0",
+        "date": "2026-02-14",
+        "letter": 24,
+        "cat": "travail",
+        "source": "LinkedIn (Chloé Sondervorst)"
+    },
+    {
+        "id": 132,
+        "title": "L’IA ne réduit pas le travail, elle l’intensifie (relais Amélie Raoul)",
+        "desc": "Relais de l’étude de Berkeley par Amélie Raoul sur LinkedIn.",
+        "url": "https://www.linkedin.com/posts/am%C3%A9lie-raoul_lia-ne-r%C3%A9duit-pas-le-travail-elle-lintensifie-activity-7427026116760145922-mMQW/",
+        "date": "2026-02-14",
+        "letter": 24,
+        "cat": "travail",
+        "source": "LinkedIn (Amélie Raoul)"
+    },
+    {
+        "id": 133,
+        "title": "Strasbourg : un professeur visé par des vidéos deepfake générées par IA",
+        "desc": "Article sur un cas de deepfake visant un professeur à Strasbourg.",
+        "url": "https://france3-regions.franceinfo.fr/grand-est/bas-rhin/strasbourg-0/un-professeur-vise-par-un-montage-video-degradant-genere-par-intelligence-artificielle-des-plaintes-deposees-et-un-eleve-sanctionne-3294381.html",
+        "date": "2026-02-14",
+        "letter": 24,
+        "cat": "sécurité",
+        "source": "France 3 Grand Est"
+    },
+    {
+        "id": 134,
+        "title": "Les Ruines de Sirap — Court-métrage IA de Sophie Perron",
+        "desc": "Court-métrage en compétition au Nikon Film Festival.",
+        "url": "https://www.festivalnikon.fr/video/2025/513",
+        "date": "2026-02-14",
+        "letter": 24,
+        "cat": "création",
+        "source": "Festival Nikon"
+    },
+    {
+        "id": 135,
+        "title": "Les Ruines de Sirap — Making-of (Instagram)",
+        "desc": "Making-of du court-métrage de Sophie Perron sur Instagram.",
+        "url": "https://www.instagram.com/sophieperron_/reel/DUOTKPNCEp4/",
+        "date": "2026-02-14",
+        "letter": 24,
+        "cat": "création",
+        "source": "Instagram (Sophie Perron)"
+    },
+    {
+        "id": 136,
+        "title": "« That’s AI » (2026) — Court-métrage de Sebastian López",
+        "desc": "Court-métrage sur la confiance dans les images vues, réalisé sans IA.",
+        "url": "https://www.instagram.com/reel/DUivya1gh6r/",
+        "date": "2026-02-14",
+        "letter": 24,
+        "cat": "création",
+        "source": "Instagram"
+    },
+    {
+        "id": 137,
+        "title": "JO d’hiver 2026 : des images IA dans la cérémonie d’ouverture font polémique",
+        "desc": "Vidéo de Numerama sur l’utilisation d’images IA lors des JO d’hiver 2026.",
+        "url": "https://www.youtube.com/watch?v=M7iWeYy77y0",
+        "date": "2026-02-14",
+        "letter": 24,
+        "cat": "création",
+        "source": "YouTube (Numerama)"
+    },
+    {
+        "id": 138,
+        "title": "« Petits agents, grandes questions »",
+        "desc": "Note du Conseil de l’IA et du numérique sur les agents IA.",
+        "url": "https://www.conseil-ia-numerique.fr/nos-travaux/petits-agents-grandes-questions-que-sont-les-agents-ia",
+        "date": "2026-02-14",
+        "letter": 24,
+        "cat": "technique",
+        "source": "Conseil de l’IA et du numérique"
+    },
+    {
+        "id": 139,
+        "title": "ChatGPT ou l’illusion du dialogue : comment l’IA modifie le rapport au savoir",
+        "desc": "Article sur le concept de « résonance » d’Hartmut Rosa, par Frédéric Bernard.",
+        "url": "https://theconversation.com/chatgpt-ou-lillusion-du-dialogue-comprendre-comment-lia-modifie-le-rapport-au-savoir-avec-la-philosophie-dhartmut-rosa-274259",
+        "date": "2026-02-14",
+        "letter": 24,
+        "cat": "philosophie",
+        "source": "The Conversation"
+    },
+    {
+        "id": 140,
+        "title": "Que vaut un A+ à l’ère de l’intelligence artificielle ?",
+        "desc": "Article du Devoir relayé par Alexandra Coutlée sur LinkedIn.",
+        "url": "https://www.ledevoir.com/actualites/education/950664/vaut-ere-intelligence-artificielle",
+        "date": "2026-02-14",
+        "letter": 24,
+        "cat": "éducation",
+        "source": "Le Devoir"
+    },
+    {
+        "id": 141,
+        "title": "Que vaut un A+ à l’ère de l’intelligence artificielle ? (relais LinkedIn)",
+        "desc": "Relais de l’article du Devoir par Alexandra Coutlée sur LinkedIn.",
+        "url": "https://www.linkedin.com/posts/alexandra-coutl%C3%A9e_que-vaut-un-a-%C3%A0-l%C3%A8re-de-lintelligence-activity-7425555387774513152-s9_5/",
+        "date": "2026-02-14",
+        "letter": 24,
+        "cat": "éducation",
+        "source": "LinkedIn (Alexandra Coutlée)"
+    },
+    {
+        "id": 142,
+        "title": "« Ma vie avec l’IA » : série éducative francophone en 10 épisodes sur Lumni",
+        "desc": "Série éducative sur l’IA diffusée sur Lumni.",
+        "url": "https://www.lumni.fr/programme/ma-vie-avec-l-ia",
+        "date": "2026-02-14",
+        "letter": 24,
+        "cat": "éducation",
+        "source": "Lumni"
+    }
 ]
