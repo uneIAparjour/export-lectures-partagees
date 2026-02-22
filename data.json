@@ -1418,5 +1418,147 @@
         "letter": 24,
         "cat": "education",
         "source": "Lumni"
-    }
+    },
+  [
+  {
+    "id": 143,
+    "title": "Le co-fondateur et PDG d’Anthropic, Dario Amodei, s’engage à céder 80 % de sa fortune pour financer la régulation de l’IA",
+    "desc": "Le co-fondateur et PDG d’Anthropic, Dario Amodei, s’engage à céder 80 % de sa fortune pour financer la régulation de l’IA",
+    "url": "https://www.lesechos.fr/tech-medias/intelligence-artificielle/video-le-createur-danthropic-veut-ceder-80-de-sa-fortune-pour-reguler-lia-2212798",
+    "date": "2026-02-21",
+    "letter": 25,
+    "cat": "ethique",
+    "source": "Les échos"
+  },
+  {
+    "id": 144,
+    "title": "En mettant de la publicité dans ChatGPT, OpenAI est-il en train de répéter les erreurs de Facebook ?",
+    "desc": "La chercheuse Zoë Hitzig a démissionné d’OpenAI en dénonçant l'arrivée de la publicité dans ChatGPT.",
+    "url": "https://www.generation-nt.com/actualites/openai-demission-chatgpt-publicite-zoe-hitzig-facebook-2070707",
+    "date": "2026-02-21",
+    "letter": 25,
+    "cat": "ethique",
+    "source": "generation-nt.com"
+  },
+  {
+    "id": 145,
+    "title": "HugoDécrypte interroge le chercheur Yoshua Bengio",
+    "desc": "sur les scénarios catastrophes liés à l’IA, entre sécurité globale et la nécessité d’un cadre éthique strict.",
+    "url": "https://youtu.be/ZSvt0NoOlDY",
+    "date": "2026-02-21",
+    "letter": 25,
+    "cat": "ethique",
+    "source": "youtube.com"
+  },
+  {
+    "id": 146,
+    "title": "Jean-Luc Raymond analyse une étude conduite autour de Comet de Perplexity sur les agents IA",
+    "desc": "qui les utilise, pour quoi faire, et pourquoi cette révolution silencieuse pourrait creuser les écarts plutôt que les réduire",
+    "url": "https://jeanlucraymond.fr/2026/02/14/agents-ia-etude-qui-revele-qui-les-utilise-vraiment-et-pour-quoi-faire/",
+    "date": "2026-02-21",
+    "letter": 25,
+    "cat": "ethique",
+    "source": "jeanlucraymond.fr"
+  },
+  {
+    "id": 147,
+    "title": "Le guide complet pour détecter une vidéo générée par IA",
+    "desc": "sur Le blog du modérateur",
+    "url": "https://www.blogdumoderateur.com/guide-detecter-video-ia/",
+    "date": "2026-02-21",
+    "letter": 25,
+    "cat": "securite",
+    "source": "blogdumoderateur.com"
+  },
+  {
+    "id": 148,
+    "title": "Enquête immersive dans les coulisses de Moltbook",
+    "desc": "Sur L’Écho.be",
+    "url": "https://multimedia.lecho.be/moltbook-infiltration/",
+    "date": "2026-02-21",
+    "letter": 25,
+    "cat": "technique",
+    "source": "lecho.be"
+  },
+  {
+    "id": 149,
+    "title": "Arthur Mensch, PDG de Mistral AI, a détaillé sa vision technique du développement des modèles de langage européens",
+    "desc": "les défis de l’IA souveraine.",
+    "url": "https://youtu.be/boIiMLR37kA",
+    "date": "2026-02-21",
+    "letter": 25,
+    "cat": "technique",
+    "source": "youtube.com"
+  },
+  {
+    "id": 150,
+    "title": "Jean-Luc Raymond décrypte les world models, prochaine frontière de l'IA",
+    "desc": "ces systèmes qui ambitionnent de doter les machines d'une mémoire du réel, au-delà de la simple prédiction statistique.",
+    "url": "https://jeanlucraymond.fr/2026/02/16/world-models-prochaine-frontiere-de-l-intelligence-artificielle/",
+    "date": "2026-02-21",
+    "letter": 25,
+    "cat": "technique",
+    "source": "jeanlucraymond.fr"
+  },
+  {
+    "id": 151,
+    "title": "Un professeur universitaire parle de l’IA dans l’enseignement - les voix de l’IA",
+    "desc": "[Bruno de Lièvre] (université de Mons) est interviewé dans la Podcasterie.",
+    "url": "https://www.youtube.com/watch?v=BVB3phEKrOY",
+    "date": "2026-02-21",
+    "letter": 25,
+    "cat": "education",
+    "source": "youtube.com"
+  },
+  {
+    "id": 152,
+    "title": "Arthur Sarazin a mis à disposition sur Hugging Face 5 codes législatifs",
+    "desc": "(code civil, code de l’urbanisme, code électoral, code général des collectivités territoriales et code des communes), mis à jour chaque nuit, 22000 articles de lois sont disponibles dans un format “IA compatible”.",
+    "url": "https://www.linkedin.com/posts/arthursarazin_legaltech-ugcPost-7428380476798574592-KcnG",
+    "date": "2026-02-21",
+    "letter": 25,
+    "cat": "droit",
+    "source": "linkedin.com"
+  },
+  {
+    "id": 153,
+    "title": "Une intelligence artificielle parmi les candidats aux élections législatives",
+    "desc": "en Colombie pour l’un des sièges réservés aux communautés autochtones, à lire sur La Presse",
+    "url": "https://www.lapresse.ca/international/amerique-latine/2026-02-13/colombie/une-intelligence-artificielle-parmi-les-candidats-aux-elections-legislatives.php",
+    "date": "2026-02-21",
+    "letter": 25,
+    "cat": "geopolitique",
+    "source": "lapresse.ca"
+  },
+  {
+    "id": 154,
+    "title": "Quili.ai",
+    "desc": "pendant une journée les habitants de Quilicura au Chili, ont proposé une “intelligence analogique” en répondant directement aux instructions déposées pour sensibiliser à la consommation des ressources en eau par les data centers dans leur région.",
+    "url": "https://www.quili.ai/",
+    "date": "2026-02-21",
+    "letter": 25,
+    "cat": "geopolitique",
+    "source": "quili.ai"
+  },
+  {
+    "id": 155,
+    "title": "Sur Linkedin et dans sa newsletter “Mute”, le magazine Chut ! présente le mouvement #QuitGPT",
+    "desc": "plus de 700 000 personnes ont déjà déclaré boycotter ChatGPT après le soutien financier du président d'OpenAI à Donald Trump.",
+    "url": "https://www.linkedin.com/posts/chut-magazine-quitter-chatgpt-ugcPost-7429884512400035840-DW9H",
+    "date": "2026-02-21",
+    "letter": 25,
+    "cat": "ethique",
+    "source": "linkedin.com"
+  },
+  {
+    "id": 156,
+    "title": "Latam-GPT : l’Amérique latine se dote de son propre modèle IA pour limiter les stéréotypes",
+    "desc": "sur France Info",
+    "url": "https://www.franceinfo.fr/internet/intelligence-artificielle/latam-gpt-l-amerique-latine-se-dote-de-son-propre-modele-ia-pour-limiter-les-stereotypes_7796555.html",
+    "date": "2026-02-21",
+    "letter": 25,
+    "cat": "geopolitique",
+    "source": "franceinfo.fr"
+  }
+]
 ]
