@@ -1558,5 +1558,176 @@
     "letter": 25,
     "cat": "geopolitique",
     "source": "franceinfo.fr"
+  },
+  {
+    "id": 157,
+    "title": "Anthropic refuse de collaborer avec l’administration Trump pour la surveillance de masse",
+    "desc": "Anthropic refuse de collaborer avec l’administration Trump pour la surveillance de masse et OpenAI signe un accord avec le Pentagone pour des applications de défense.",
+    "url": "https://www.lemonde.fr/international/article/2026/02/27/anthropic-donald-trump-ordonne-a-son-administration-de-cesser-immediatement-d-utiliser-l-intelligence-artificielle-de-la-start-up_6668635_3210.html",
+    "date": "2026-02-28",
+    "letter": 26,
+    "cat": "geopolitique",
+    "source": "Le Monde"
+  },
+  {
+    "id": 158,
+    "title": "Livre blanc de l'Observatoire de l’Éthique Publique",
+    "desc": "Yvan Demumieux partage sur Linkedin le livre blanc de l’Observatoire de l’Éthique Publique et analyse les défis liés au déploiement des algorithmes.",
+    "url": "https://www.linkedin.com/posts/yvan-demumieux_rapport-complet-%C3%A9thique-ia-2026-ugcPost-7430200766604263424-aK7r/",
+    "date": "2026-02-28",
+    "letter": 26,
+    "cat": "ethique",
+    "source": "LinkedIn (Yvan Demumieux)"
+  },
+  {
+    "id": 159,
+    "title": "4 000 artistes dénoncent le pillage de leurs œuvres par l’IA",
+    "desc": "4 000 artistes dénoncent le pillage de leurs œuvres par l’IA, un discours soutenu aux Césars par le comédien Emmanuel Curtil.",
+    "url": "https://www.franceinfo.fr/culture/cinema/gerard-jugnot-franck-dubosc-lea-drucker-4-000-artistes-denoncent-le-pillage-en-regle-par-des-outils-d-ntelligence-artificielle_7824314.html",
+    "date": "2026-02-28",
+    "letter": 26,
+    "cat": "creation",
+    "source": "France Info"
+  },
+  {
+    "id": 160,
+    "title": "Allier intelligence artificielle, fact-checking et esprit critique",
+    "desc": "Julie Higounet revient sur une étude de la Lareponse.Tech pour mieux armer les étudiants et les citoyens face à la désinformation.",
+    "url": "https://www.askvera.org/blog/llms-fact-checking-fiabilite-sources",
+    "date": "2026-02-28",
+    "letter": 26,
+    "cat": "securite",
+    "source": "AskVera"
+  },
+  {
+    "id": 161,
+    "title": "Course à la puissance de calcul pour les futurs modèles d'IA",
+    "desc": "Sasha Luccioni et Yacine Jernite montrent la course à la puissance de calcul et l’importance de modèles plus petits.",
+    "url": "https://huggingface.co/blog/sasha/compute-competition",
+    "date": "2026-02-28",
+    "letter": 26,
+    "cat": "technique",
+    "source": "HuggingFace"
+  },
+  {
+    "id": 162,
+    "title": "Common Corpus : 270 milliards de tokens pour des modèles ouverts",
+    "desc": "Anastasia Stasenko annonce l’expansion de Common Corpus, un jeu de données massives favorisant le développement de modèles d’IA ouverts.",
+    "url": "https://www.linkedin.com/posts/anastasia-stasenko_common-corpus-goes-global-270-billion-new-activity-7430217957089325056-lCxG/",
+    "date": "2026-02-28",
+    "letter": 26,
+    "cat": "technique",
+    "source": "LinkedIn (Anastasia Stasenko)"
+  },
+  {
+    "id": 163,
+    "title": "Recherche Anthropic : l’importance des 'personas' sur le comportement des IA",
+    "desc": "Une recherche détaille l’importance des 'personas' sur le comportement des IA génératives.",
+    "url": "https://www.anthropic.com/research/persona-selection-model",
+    "date": "2026-02-28",
+    "letter": 26,
+    "cat": "etudes",
+    "source": "Anthropic"
+  },
+  {
+    "id": 164,
+    "title": "De Google Books à l’IA : l’histoire numérique repasse les plats",
+    "desc": "Réflexion d'Olivier Ertzscheid sur l’histoire numérique et l’IA, publiée sur le blog Affordance.",
+    "url": "https://affordance.framasoft.org/2026/02/de-google-books-a-lia-lhistoire-numerique-repasse-les-plats/",
+    "date": "2026-02-28",
+    "letter": 26,
+    "cat": "philosophie",
+    "source": "Affordance"
+  },
+  {
+    "id": 165,
+    "title": "OpenAI signe un accord avec le Pentagone pour des applications de défense",
+    "desc": "OpenAI signe un accord avec le Pentagone pour des applications de défense, selon le New York Times.",
+    "url": "https://www.nytimes.com/2026/02/27/technology/openai-agreement-pentagon-ai.html",
+    "date": "2026-02-28",
+    "letter": 26,
+    "cat": "geopolitique",
+    "source": "New York Times"
+  },
+  {
+    "id": 166,
+    "title": "La tech américaine s’unit face à Donald Trump : soutien à Anthropic",
+    "desc": "Des employés de Google et OpenAI soutiennent Anthropic, qui refuse d’aider à la surveillance de masse.",
+    "url": "https://www.bfmtv.com/economie/entreprises/la-tech-americaine-s-unit-face-a-donald-trump-des-employes-de-google-et-open-ai-au-soutien-d-anthropic-qui-refuse-d-aider-a-la-surveillance-de-masse_AD-202602270764.html",
+    "date": "2026-02-28",
+    "letter": 26,
+    "cat": "geopolitique",
+    "source": "BFMTV"
+  },
+  {
+    "id": 167,
+    "title": "Déclaration officielle d’Anthropic sur le refus de surveillance de masse",
+    "desc": "Anthropic publie une déclaration officielle refusant de collaborer avec l’administration Trump pour la surveillance de masse.",
+    "url": "https://www.anthropic.com/news/statement-department-of-war",
+    "date": "2026-02-28",
+    "letter": 26,
+    "cat": "geopolitique",
+    "source": "Anthropic"
+  },
+  {
+    "id": 168,
+    "title": "Vidéo d’actualité suspectée d’être générée par IA (Charente Libre)",
+    "desc": "La Charente Libre revient sur une vidéo d’actualité spectaculaire soupçonnée d’avoir été générée par IA.",
+    "url": "https://www.instagram.com/p/DU5NmltCJuw",
+    "date": "2026-02-28",
+    "letter": 26,
+    "cat": "securite",
+    "source": "Instagram (La Charente Libre)"
+  },
+  {
+    "id": 169,
+    "title": "Interview de Sam Altman pour India Express : minimiser l’impact énergétique de l’IA",
+    "desc": "Interview complète de Sam Altman (OpenAI) sur l’impact énergétique de l’IA, réalisée lors de l’India AI Summit.",
+    "url": "https://www.youtube.com/watch?v=0YQQuKiorLs",
+    "date": "2026-02-28",
+    "letter": 26,
+    "cat": "creation",
+    "source": "YouTube (India Express)"
+  },
+  {
+    "id": 170,
+    "title": "Intervention de Sam Altman sur l’impact énergétique de l’IA (Bloom Media)",
+    "desc": "Bloom Media partage une intervention de Sam Altman sur l’impact énergétique de l’IA.",
+    "url": "https://www.instagram.com/p/DVHARVnDHVK?img_index=2",
+    "date": "2026-02-28",
+    "letter": 26,
+    "cat": "creation",
+    "source": "Instagram (Bloom Media)"
+  },
+  {
+    "id": 171,
+    "title": "Utilisation de la technique du 'conseil de modèles' pour rédiger un livre",
+    "desc": "Arthur Sarazin partage son utilisation de la technique du 'conseil de modèles' pour rédiger un livre sur la théorie des graphes.",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7433202276900646913/",
+    "date": "2026-02-28",
+    "letter": 26,
+    "cat": "technique",
+    "source": "LinkedIn (Arthur Sarazin)"
+  },
+  {
+    "id": 172,
+    "title": "Discours d’Emmanuel Curtil aux Césars sur l’avenir des métiers du doublage face à l’IA",
+    "desc": "Discours d’Emmanuel Curtil aux Césars (vidéo Canal+) sur l’avenir des métiers du doublage face à l’IA (à 3'14).",
+    "url": "https://youtu.be/Qb-wDzYUypc",
+    "date": "2026-02-28",
+    "letter": 26,
+    "cat": "creation",
+    "source": "YouTube (Canal+)"
+  },
+  {
+    "id": 173,
+    "title": "Étude AskVera : Fiabilité des sources et fact-checking avec les LLM",
+    "desc": "Étude complète de la Lareponse.Tech sur l’alliance entre IA, fact-checking et esprit critique, publiée sur le blog d’AskVera.",
+    "url": "https://www.askvera.org/blog/llms-fact-checking-fiabilite-sources",
+    "date": "2026-02-28",
+    "letter": 26,
+    "cat": "securite",
+    "source": "AskVera"
   }
 ]
+
