@@ -1728,6 +1728,237 @@
     "letter": 26,
     "cat": "securite",
     "source": "AskVera"
+  },
+  {
+    "id": 174,
+    "title": "Trump is using AI to fight his wars – this is a dangerous turning point",
+    "desc": "Article sur l'utilisation de l'IA dans les conflits par Trump.",
+    "url": "https://www.theguardian.com/...",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "geopolitique",
+    "source": "The Guardian"
+  },
+  {
+    "id": 175,
+    "title": "Des centaines d’ingénieurs chez Google et OpenAI s’unissent pour bloquer l’utilisation militaire : une fronde historique",
+    "desc": "Mobilisation des ingénieurs contre l'usage militaire de l'IA.",
+    "url": "https://www.clubic.com/...",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "geopolitique",
+    "source": "Clubic"
+  },
+  {
+    "id": 176,
+    "title": "Scénario catastrophe : l’IA fait trembler Wall Street et les logiciels (Citrini)",
+    "desc": "Impact de l'IA sur les marchés financiers et les logiciels.",
+    "url": "https://www.france24.com/...",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "geopolitique",
+    "source": "France 24"
+  },
+  {
+    "id": 177,
+    "title": "L’IA détruit-elle déjà des emplois ? Les économistes de la BCE y répondent dans une note",
+    "desc": "Analyse de la BCE sur l'impact de l'IA sur l'emploi.",
+    "url": "https://www.leparisien.fr/...",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "travail",
+    "source": "Le Parisien"
+  },
+  {
+    "id": 178,
+    "title": "En 2025, l’IA générative s’est installée durablement dans les entreprises européennes",
+    "desc": "Étude sur l’adoption de l’IA générative en Europe.",
+    "url": "https://www.usine-digitale.fr/intelligence-artificielle/etude-en-2025-lia-generative-sest-installee-durablement-dans-les-entreprises-europeennes.PSJIRUOFCFHFFKO2X52BWFZL3A.html",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "travail",
+    "source": "Usine Digitale"
+  },
+  {
+    "id": 179,
+    "title": "L’exposition des métiers et des compétences aux grands modèles de langage",
+    "desc": "Étude de l’université de Pennsylvanie sur l’impact des LLM sur les métiers.",
+    "url": "https://www.linkedin.com/posts/une-%C3%A9tude-r%C3%A9alis%C3%A9e-par-university-of-pennsylvania-share-7434192439709433856-9p3F/",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "travail",
+    "source": "LinkedIn (UQAM)"
+  },
+  {
+    "id": 180,
+    "title": "Labor market impacts of AI: A new measure and early evidence",
+    "desc": "Étude d’Anthropic sur les impacts de l’IA sur le marché du travail.",
+    "url": "https://www.anthropic.com/research/labor-market-impacts",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "travail",
+    "source": "Anthropic"
+  },
+  {
+    "id": 181,
+    "title": "L’IA et le travail : ce qui se joue vraiment",
+    "desc": "Analyse de Ciprian Melian sur l’impact de l’IA sur le travail.",
+    "url": "https://www.linkedin.com/pulse/lia-et-le-travail-ce-qui-se-joue-vraiment-ciprian-melian-imf1e/",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "travail",
+    "source": "LinkedIn (Ciprian Melian)"
+  },
+  {
+    "id": 182,
+    "title": "Chez Prisma Media, jusqu’à 40 % des articles et 50 % des journalistes sont générés par IA",
+    "desc": "Utilisation de l'IA dans la production de contenu médiatique.",
+    "url": "https://www.nextink.fr/...",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "creation",
+    "source": "Next Ink"
+  },
+  {
+    "id": 183,
+    "title": "L’ampleur est effrayante : un podcast généré par IA produit 11 000 épisodes par jour en siphonnant des articles de presse locale",
+    "desc": "Production massive de podcasts par IA.",
+    "url": "https://www.liberation.fr/...",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "creation",
+    "source": "Libération"
+  },
+  {
+    "id": 184,
+    "title": "Mistral AI annonce la fin imminente de 50 % des logiciels d’entreprise actuels",
+    "desc": "Prédiction de Mistral AI sur l'impact de l'IA sur les logiciels.",
+    "url": "https://www.lebigdata.fr/...",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "technique",
+    "source": "Le Big Data"
+  },
+  {
+    "id": 185,
+    "title": "Article du Financial Times sur le fonctionnement des modèles de langage",
+    "desc": "Explication technique des modèles de langage.",
+    "url": "https://ig.ft.com/generative-ai/",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "technique",
+    "source": "Financial Times"
+  },
+  {
+    "id": 186,
+    "title": "Le bateau ivre des données – analogie du cycliste et des agents IA",
+    "desc": "Réflexion sur le fonctionnement des agents IA.",
+    "url": "https://www.linkedin.com/newsletters/le-bateau-ivre-des-donn%25C3%25A9es-7132955477440630784/",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "technique",
+    "source": "LinkedIn (Arthur Sarazin)"
+  },
+  {
+    "id": 187,
+    "title": "Data.gouv facilite l’accès des IA génératives aux données publiques",
+    "desc": "Initiative pour faciliter l’accès aux données publiques.",
+    "url": "https://www.banquedesterritoires.fr/datagouv-facilite-lacces-des-ia-generatives-aux-donnees-publiques",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "technique",
+    "source": "Banque des Territoires"
+  },
+  {
+    "id": 188,
+    "title": "Expérimentation autour d’un serveur MCP pour datagouv",
+    "desc": "Expérimentation technique sur data.gouv.",
+    "url": "https://www.data.gouv.fr/posts/experimentation-autour-dun-serveur-mcp-pour-datagouv",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "technique",
+    "source": "data.gouv"
+  },
+  {
+    "id": 189,
+    "title": "Sch(IA)zophrénie : cachez cette IA que je ne saurais voir…",
+    "desc": "Tribune collective sur l’IA en éducation.",
+    "url": "https://education.newstank.fr/article/view/432463/sch-ia-zophrenie-cachez-ia-saurais-voir-collectif.html",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "education",
+    "source": "News Tank Education"
+  },
+  {
+    "id": 190,
+    "title": "L’IA au service de la CUA (Conception Universelle des apprentissages)",
+    "desc": "Guide de Julie Higounet sur l’IA et la CUA.",
+    "url": "https://www.linkedin.com/pulse/lia-au-service-de-la-cua-conception-universelle-des-julie-higounet--a4voe/",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "education",
+    "source": "LinkedIn (Julie Higounet)"
+  },
+  {
+    "id": 191,
+    "title": "Artificial Intelligence: A Maturity Test. Perspectives on Learning, Teaching, and Assessment",
+    "desc": "Perspectives sur l’IA en pédagogie.",
+    "url": "https://pedagogie-digitala.ro/artificial-intelligence-perspectives-on-learning-teaching-and-assessment/",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "education",
+    "source": "Pedagogie Digitala"
+  },
+  {
+    "id": 192,
+    "title": "Chardet : quand une IA réécrit un logiciel open source en cinq jours et change sa licence",
+    "desc": "Réécriture d'un logiciel open source par une IA.",
+    "url": "https://korben.info/...",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "droit",
+    "source": "Korben"
+  },
+  {
+    "id": 193,
+    "title": "Incroyablement dangereux : ChatGPT santé rate une urgence vitale sur deux, des chercheurs sonnent l’alarme",
+    "desc": "Étude sur les limites de ChatGPT en santé.",
+    "url": "https://www.lesnumeriques.com/...",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "ethique",
+    "source": "Les Numériques"
+  },
+  {
+    "id": 194,
+    "title": "Le pape Léon XIV met en garde le clergé accro à ChatGPT",
+    "desc": "Article sur l’usage de l’IA par le clergé.",
+    "url": "https://www.franceinfo.fr/replay-radio/l-il-de-constance/le-pape-leon-xiv-met-en-garde-le-clerge-accro-a-chatgpt_7815515.html",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "ethique",
+    "source": "France Info"
+  },
+  {
+    "id": 195,
+    "title": "L’IA est conçue pour terminer le travail, pas pour le commencer",
+    "desc": "Réflexion sur les limites de l’IA.",
+    "url": "https://theconversation.com/lia-est-concue-pour-terminer-le-travail-pas-pour-le-commencer-272908",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "philosophie",
+    "source": "The Conversation"
+  },
+  {
+    "id": 196,
+    "title": "Comment les IA génératives façonnent-elles nos émotions ?",
+    "desc": "Réflexion sur l’impact émotionnel des IA génératives.",
+    "url": "https://www.radiofrance.fr/franceculture/podcasts/les-chantiers-de-la-recherche/comment-les-ia-generative-faconnent-elles-nos-emotions-6703937",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "philosophie",
+    "source": "France Culture"
   }
 ]
+
 
