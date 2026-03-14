@@ -1958,7 +1958,155 @@
     "letter": 27,
     "cat": "philosophie",
     "source": "France Culture"
+  },
+  {
+    "id": 197,
+    "title": "The Internet's New Favorite Insult: 'Did AI Write That?",
+    "desc": "Sur Time (en anglais) : l'accusation \"fait par IA\" devient une nouvelle forme d'insulte en ligne.",
+    "url": "https://time.com/7371832/looks-like-ai-writing-online-insult/",
+    "date": "2026-03-14",
+    "letter": 28,
+    "cat": "ethique",
+    "source": "Time"
+  },
+  {
+    "id": 198,
+    "title": "Pourquoi vous allez bientôt répondre « AI;DR » à tout le monde",
+    "desc": "Sur Numerama : l'émergence du « AI;DR » (AI Didn't Read), contraction signalant un contenu généré par IA.",
+    "url": "https://www.numerama.com/tech/2194795-pourquoi-vous-allez-bientot-repondre-aidr-a-tout-le-monde.html",
+    "date": "2026-03-14",
+    "letter": 28,
+    "cat": "ethique",
+    "source": "Numerama"
+  },
+  {
+    "id": 199,
+    "title": "IA en perspective : glossaire d'éducation populaire",
+    "desc": "26 vidéos par le GSARA, acteur wallon d'éducation populaire et d'éducation aux médias.",
+    "url": "https://iaep.be/",
+    "date": "2026-03-14",
+    "letter": 28,
+    "cat": "ethique",
+    "source": "GSARA (iaep.be)"
+  },
+  {
+    "id": 200,
+    "title": "Killer Apps : how mainstream AI chatbots assist users planning violent attacks",
+    "desc": "Chloé Sondervorst analyse l'étude du Center for Countering Digital Hate sur les dérives sécuritaires des chatbots IA.",
+    "url": "https://www.linkedin.com/posts/sondervorst_les-chatbots-peuvent-acc%C3%A9l%C3%A9rer-le-passage-ugcPost-7437894911481286656-Br4p/",
+    "date": "2026-03-14",
+    "letter": 28,
+    "cat": "securite",
+    "source": "LinkedIn (Chloé Sondervorst)"
+  },
+  {
+    "id": 201,
+    "title": "Le Conseil de l'intelligence artificielle et du numérique chargé de constituer une commission IA générative et vulnérabilités",
+    "desc": "Sur le site du Conseil IA et Numérique : création d'une commission dédiée aux risques de l'IA générative.",
+    "url": "https://www.conseil-ia-numerique.fr/le-conseil-de-lintelligence-artificielle-et-du-numerique-charge-de-constituer-une-commission-ia",
+    "date": "2026-03-14",
+    "letter": 28,
+    "cat": "ethique",
+    "source": "Conseil IA et Numérique"
+  },
+  {
+    "id": 202,
+    "title": "Faux sites, boules puantes et programmes aseptisés : comment l'intelligence artificielle parasite la campagne des élections municipales",
+    "desc": "Sur France Info : l'IA utilisée pour manipuler et polluer la campagne des élections municipales françaises.",
+    "url": "https://www.franceinfo.fr/elections/municipales/faux-sites-boules-puantes-programmes-aseptises-comment-l-intelligence-artificielle-parasite-la-campagne-des-elections-municipales_7849970.html",
+    "date": "2026-03-14",
+    "letter": 28,
+    "cat": "securite",
+    "source": "France Info"
+  },
+  {
+    "id": 203,
+    "title": "Mais d'où vient le nom Nano Banana ?",
+    "desc": "Sur le Blog du modérateur : l'histoire et l'origine du nom du modèle de génération vidéo Nano Banana.",
+    "url": "https://www.blogdumoderateur.com/histoire-nom-nano-banana/",
+    "date": "2026-03-14",
+    "letter": 28,
+    "cat": "technique",
+    "source": "Blog du modérateur"
+  },
+  {
+    "id": 204,
+    "title": "Arthur Mensch relance le débat : le 'replatforming' par l'IA va-t-il engloutir le logiciel d'entreprise ?",
+    "desc": "Sur Silicon : Arthur Mensch (Mistral AI) prédit une refonte complète des logiciels d'entreprise par l'IA générative.",
+    "url": "https://www.silicon.fr/business-1367/arthur-mensch-relance-le-debat-le-replatforming-par-lia-va-t-il-engloutir-le-logiciel-dentreprise-225834",
+    "date": "2026-03-14",
+    "letter": 28,
+    "cat": "travail",
+    "source": "Silicon"
+  },
+  {
+    "id": 205,
+    "title": "Dossier : les IA génératives en éducation",
+    "desc": "Premier chapitre du dossier sur Réseau Canopé, avec une contribution de Bertrand Formet.",
+    "url": "https://www.reseau-canope.fr/ia-et-education/dossier-ia-generatives-en-education",
+    "date": "2026-03-14",
+    "letter": 28,
+    "cat": "education",
+    "source": "Réseau Canopé"
+  },
+  {
+    "id": 206,
+    "title": "Ce professeur du MIT affirme que nous n'en savons pas assez sur l'IA pour l'enseigner",
+    "desc": "Sur KJZZ (en anglais) : un enseignant du MIT questionne la capacité actuelle à former à l'IA de manière rigoureuse.",
+    "url": "https://www.kjzz.org/the-show/2026-03-10/this-mit-prof-says-we-dont-know-enough-about-ai-to-teach-it",
+    "date": "2026-03-14",
+    "letter": 28,
+    "cat": "education",
+    "source": "KJZZ"
+  },
+  {
+    "id": 207,
+    "title": "Grégory Michnik : Le 'vibe coding' au service de l'enseignement des SVT",
+    "desc": "Sur Le Café Pédagogique : retour d'expérience sur l'usage du vibe coding pour enseigner les sciences de la vie et de la Terre.",
+    "url": "https://www.cafepedagogique.net/2026/03/10/gregory-michnik-le-vibe-coding-au-service-de-lenseignement-des-svt/",
+    "date": "2026-03-14",
+    "letter": 28,
+    "cat": "education",
+    "source": "Le Café Pédagogique"
+  },
+  {
+    "id": 208,
+    "title": "Intelligence artificielle : nouveaux parcours pour les apprenants dans l'enseignement scolaire",
+    "desc": "Sur Pix : présentation des nouveaux parcours de formation à l'IA destinés aux élèves du scolaire.",
+    "url": "https://pix.fr/actualites/intelligence-artificielle-parcours-apprenants-enseignement-scolaire-2026",
+    "date": "2026-03-14",
+    "letter": 28,
+    "cat": "education",
+    "source": "Pix"
+  },
+  {
+    "id": 209,
+    "title": "L'intelligence artificielle et la révolution des mathématiques : entre théorèmes machine et recherche militaire",
+    "desc": "Sur Slate : l'IA bouscule la recherche mathématique, entre preuves automatisées et enjeux militaires.",
+    "url": "https://www.slate.fr/sciences/intelligence-artificielle-revolution-mathematiques-theoreme-humain-machine-recherche-militaire-defense",
+    "date": "2026-03-14",
+    "letter": 28,
+    "cat": "etudes",
+    "source": "Slate"
+  },
+  {
+    "id": 210,
+    "title": "Va-t-on donner notre langue à l'IA ?",
+    "desc": "Sur France Culture : réflexion sur la place du langage humain dans la relation aux IA génératives.",
+    "url": "https://www.radiofrance.fr/franceculture/podcasts/le-fil-pop-culture/va-t-on-donner-notre-langue-a-l-ia-3523256",
+    "date": "2026-03-14",
+    "letter": 28,
+    "cat": "philosophie",
+    "source": "France Culture"
+  },
+  {
+    "id": 211,
+    "title": "Ethan Mollick sur le passage du chatbot à l'agent autonome",
+    "desc": "Alexandra Coutlée partage sur LinkedIn les réflexions d'Ethan Mollick sur la transition entre chatbot et agent IA autonome.",
+    "url": "https://www.linkedin.com/posts/alexandra-coutl%C3%A9e_ethan-mollick-professeur-et-auteur-sp%C3%A9cialis%C3%A9-ugcPost-7436078782500933632-kO-D",
+    "date": "2026-03-14",
+    "letter": 28,
+    "cat": "philosophie",
+    "source": "LinkedIn (Alexandra Coutlée)"
   }
 ]
-
-
