@@ -2108,5 +2108,156 @@
     "letter": 28,
     "cat": "philosophie",
     "source": "LinkedIn (Alexandra Coutlée)"
+  },
+  [
+  {
+    "id": 212,
+    "title": "French Science Commons",
+    "desc": "Pierre-Carl Langlais annonce le lancement d'une base de données massive de littérature scientifique française en libre accès",
+    "url": "https://www.linkedin.com/posts/pierre-carl-langlais-b0105b10_un-peu-plus-dun-an-apr%25C3%25A8s-son-annonce-nous-share-7440413800106823680-7j25",
+    "date": "2026-03-21",
+    "letter": 29,
+    "cat": "etudes",
+    "source": "LinkedIn (Pierre-Carl Langlais)"
+  },
+  {
+    "id": 213,
+    "title": "Using AI makes writing more bland, study finds",
+    "desc": "sur NBC News (en anglais). Explore comment l'utilisation de l'IA réduit la diversité lexicale et homogénéise la production littéraire",
+    "url": "https://www.nbcnews.com/tech/tech-news/ai-changing-style-substance-human-writing-study-finds-rcna263789",
+    "date": "2026-03-21",
+    "letter": 29,
+    "cat": "etudes",
+    "source": "NBC News"
+  },
+  {
+    "id": 214,
+    "title": "Étude sur l'impact de l'IA sur la diversité lexicale et la production littéraire humaine",
+    "desc": "L'étude citée (sur Arxiv en anglais) explore comment l'utilisation de l'IA réduit la diversité lexicale et homogénéise la production",
+    "url": "https://arxiv.org/abs/2603.18161",
+    "date": "2026-03-21",
+    "letter": 29,
+    "cat": "etudes",
+    "source": "Arxiv"
+  },
+  {
+    "id": 215,
+    "title": "IA en stratégie : ce qu'elle fait bien et ce qu'elle fausse",
+    "desc": "Jean-Luc Raymond interroge la place de l'IA dans la prise de décisions",
+    "url": "https://www.linkedin.com/posts/jeanlucraymond_ia-strataezgie-innovation-share-7439823917046947840-zpD6/?skipRedirect=true",
+    "date": "2026-03-21",
+    "letter": 29,
+    "cat": "etudes",
+    "source": "LinkedIn (Jean-Luc Raymond)"
+  },
+  {
+    "id": 216,
+    "title": "Researchers Asked LLMs for Strategic Advice. They Got 'Trendslop' in Return",
+    "desc": "en anglais, sur Harvard Business Review, article de référence utilisé par Jean-Luc Raymond sur l'IA et les conseils stratégiques",
+    "url": "https://hbr.org/2026/03/researchers-asked-llms-for-strategic-advice-they-got-trendslop-in-return",
+    "date": "2026-03-21",
+    "letter": 29,
+    "cat": "etudes",
+    "source": "Harvard Business Review"
+  },
+  {
+    "id": 217,
+    "title": "Agression sur une femme : un robot humanoïde arrêté pour la première fois",
+    "desc": "sur Le Big Data",
+    "url": "https://www.lebigdata.fr/agression-sur-une-femme-un-robot-humanoide-arrete-pour-la-premiere-fois",
+    "date": "2026-03-21",
+    "letter": 29,
+    "cat": "ethique",
+    "source": "Le Big Data"
+  },
+  {
+    "id": 218,
+    "title": "The UK government is safety testing AI toys",
+    "desc": "sur Politico (en anglais)",
+    "url": "https://www.politico.eu/article/uk-government-safety-test-artificial-intelligence-ai-toys/",
+    "date": "2026-03-21",
+    "letter": 29,
+    "cat": "ethique",
+    "source": "Politico"
+  },
+  {
+    "id": 219,
+    "title": "Les images de Pokémon Go servent désormais à guider des robots livreurs de pizza",
+    "desc": "sur Numerama",
+    "url": "https://www.numerama.com/tech/2200033-les-images-de-pokemon-go-servent-desormais-a-guider-des-robots-livreurs-de-pizza.html",
+    "date": "2026-03-21",
+    "letter": 29,
+    "cat": "ethique",
+    "source": "Numerama"
+  },
+  {
+    "id": 220,
+    "title": "IA : le grand bouleversement à venir du marché du travail",
+    "desc": "sur Les Échos, étude Coface et Observatoire des emplois menacés et émergents à paraître en avril",
+    "url": "https://www.lesechos.fr/monde/europe/ia-le-grand-bouleversement-a-venir-du-marche-du-travail-2221760",
+    "date": "2026-03-21",
+    "letter": 29,
+    "cat": "travail",
+    "source": "Les Échos"
+  },
+  {
+    "id": 221,
+    "title": "Référentiel d'éco-conception pour les services d'IA (RIA)",
+    "desc": "sur Green IT",
+    "url": "https://ria.greenit.fr/",
+    "date": "2026-03-21",
+    "letter": 29,
+    "cat": "technique",
+    "source": "Green IT"
+  },
+  {
+    "id": 222,
+    "title": "Le Windows de l'IA se construit sous vos yeux : OpenAI rachète tout et fusionne ChatGPT dans une 'super app'",
+    "desc": "sur Les Numériques",
+    "url": "https://www.lesnumeriques.com/intelligence-artificielle/le-windows-de-l-ia-se-construit-sous-vos-yeux-openai-rachete-tout-et-fusionne-chatgpt-dans-une-super-app-n253297.html",
+    "date": "2026-03-21",
+    "letter": 29,
+    "cat": "technique",
+    "source": "Les Numériques"
+  },
+  {
+    "id": 223,
+    "title": "C'est quoi cette 'Mixture d'Experts' (MoE) pour les IA génératives ?",
+    "desc": "sur Next.ink",
+    "url": "https://next.ink/229897/nextquick-moe-cest-quoi-cette-mixture-dexperts-pour-les-ia-generatives/",
+    "date": "2026-03-21",
+    "letter": 29,
+    "cat": "technique",
+    "source": "Next.ink"
+  },
+  {
+    "id": 224,
+    "title": "Perroquets stochastiques : une notion toujours valide malgré les critiques ?",
+    "desc": "sur Next.ink",
+    "url": "https://next.ink/229626/perroquets-stochastiques-une-notion-toujours-valide-malgre-les-critiques/",
+    "date": "2026-03-21",
+    "letter": 29,
+    "cat": "philosophie",
+    "source": "Next.ink"
+  },
+  {
+    "id": 225,
+    "title": "Bullshit Bench",
+    "desc": "cité par Benoît Legay, confronte les capacités de raisonnement de modèles de langage et leur propension à produire du contenu superficiel ou erroné",
+    "url": "https://petergpt.github.io/bullshit-benchmark/viewer/index.v2.html?q=sw_af_02&a=anthropic%2Fclaude-3.7-sonnet%3Athinking%40reasoning%3Ddefault&b=openai%2Fo4-mini%40reasoning%3Dhigh",
+    "date": "2026-03-21",
+    "letter": 29,
+    "cat": "philosophie",
+    "source": "PeterGPT"
+  },
+  {
+    "id": 226,
+    "title": "IA Grand Challenge 2026",
+    "desc": "Dans un post LinkedIn, l'INRIA incite à participer à l'IA Grand Challenge 2026, une enquête sur les usages de l'IA dans l'enseignement supérieur",
+    "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7437861725451812865/",
+    "date": "2026-03-21",
+    "letter": 29,
+    "cat": "education",
+    "source": "LinkedIn (INRIA)"
   }
 ]
