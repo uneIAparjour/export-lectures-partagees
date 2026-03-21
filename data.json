@@ -262,7 +262,7 @@
   {
     "id": 27,
     "title": "Pub Intermarché vs pub IA McDonald's",
-    "desc": "Malgré le déferlement de contenus générés pour la communication, la génération et les capacités des outils ne sont rien sans la créativité couplée au savoir-faire d’un studio d’animation",
+    "desc": "Malgré le déferlement de contenus générés pour la communication, la génération et les capacités des outils ne sont rien sans la créativité couplée au savoir-faire d'un studio d'animation",
     "url": "https://www.latribune.fr/article/tech/1062076083086514/avec-sa-pub-sans-ia-intermarche-fait-le-buzz-mcdo-contraint-de-retirer-son-spot-100-ia",
     "date": "2025-12-13",
     "letter": 15,
@@ -273,7 +273,7 @@
     "id": 28,
     "title": "Approche de la déclaration d'utilisation de l'IA",
     "desc": "Réflexion sur la transparence dans l'utilisation de l'IA.",
-    "url": "hhttps://www.linkedin.com/posts/rochanekherbouche_je-pensais-que-c%C3%A9tait-simple-d%C3%AAtre-%F0%9D%98%81%F0%9D%97%BF-activity-7404568624256155648-C_oj/",
+    "url": "https://www.linkedin.com/posts/rochanekherbouche_je-pensais-que-c%C3%A9tait-simple-d%C3%AAtre-%F0%9D%98%81%F0%9D%97%BF-activity-7404568624256155648-C_oj/",
     "date": "2025-12-13",
     "letter": 15,
     "cat": "ethique",
@@ -463,7 +463,7 @@
     "id": 47,
     "title": "Leurs métiers remplacés par l'IA",
     "desc": "Témoignages de travailleurs dont les métiers sont impactés par l'IA.",
-    "url": "https://www.instagram.com/p/DSMgDRpjJZR/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D&img_index=6",
+    "url": "https://www.instagram.com/p/DSMgDRpjJZR/",
     "date": "2025-12-13",
     "letter": 15,
     "cat": "travail",
@@ -503,7 +503,7 @@
     "id": 51,
     "title": "Voix IA de Lara Croft supprimée",
     "desc": "Square Enix retire la voix générée par IA suite aux protestations.",
-    "url": "https://www.numerama.com/pop-culture/2078745-la-voix-ia-de-lara-croft-supprimee-dans-tomb-raider-apres-la-plainte-de-sa-doubleuse.html?utm_term=link&utm_content=numerama&utm_source=threads&utm_medium=Social&utm_campaign=Nonli",
+    "url": "https://www.numerama.com/pop-culture/2078745-la-voix-ia-de-lara-croft-supprimee-dans-tomb-raider-apres-la-plainte-de-sa-doubleuse.html",
     "date": "2025-09-27",
     "letter": 4,
     "cat": "travail",
@@ -1219,235 +1219,235 @@
     "cat": "droit",
     "source": "Linkedin (Alexandra Bensamoun)"
   },
-    {
-        "id": 123,
-        "title": "94 % des étudiants français ont déjà utilisé l’IA : entre usage massif et dérives inquiétantes",
-        "desc": "Étude Ipsos/EPITA relayée sur le Blog du modérateur.",
-        "url": "https://www.blogdumoderateur.com/etudiants-francais-ia-usage-massif-derives-inquietantes/",
-        "date": "2026-02-14",
-        "letter": 24,
-        "cat": "etudes",
-        "source": "Blog du modérateur"
-    },
-    {
-        "id": 124,
-        "title": "Baromètre du numérique 2026",
-        "desc": "Baromètre annuel du CREDOC analysé par le Conseil de l’IA et du numérique.",
-        "url": "https://www.arcep.fr/uploads/tx_gspublication/barometre-du-numerique-edition-2026_RAPPORT.pdf",
-        "date": "2026-02-14",
-        "letter": 24,
-        "cat": "etudes",
-        "source": "CREDOC"
-    },
-    {
-        "id": 125,
-        "title": "Baromètre du numérique 2026 (infographie)",
-        "desc": "Infographie du baromètre annuel du CREDOC, partagée sur LinkedIn.",
-        "url": "https://www.linkedin.com/posts/conseil-ia-numerique_barom%C3%A8tre-du-num%C3%A9rique-2026-infographie-activity-7426697181958414336-vdFe/",
-        "date": "2026-02-14",
-        "letter": 24,
-        "cat": "etudes",
-        "source": "LinkedIn (Conseil de l’IA et du numérique)"
-    },
-    {
-        "id": 126,
-        "title": "CoMMA : des milliers de manuscrits médiévaux retranscrits grâce à l’IA",
-        "desc": "Projet de l’INRIA utilisant des IA génératives pour la retranscription de manuscrits.",
-        "url": "https://www.inria.fr/fr/comma-manuscrits-medievaux-retranscrits",
-        "date": "2026-02-14",
-        "letter": 24,
-        "cat": "etudes",
-        "source": "INRIA"
-    },
-    {
-        "id": 127,
-        "title": "Anthropic analyse le « désempowerment » humain dans 1,5 millions de conversations IA",
-        "desc": "Analyse partagée par Amélie Raoul sur LinkedIn.",
-        "url": "https://www.linkedin.com/posts/am%C3%A9lie-raoul_vous-croyez-que-lia-vous-remplace-non-activity-7427750850430836736-Y6Zw/",
-        "date": "2026-02-14",
-        "letter": 24,
-        "cat": "ethique",
-        "source": "LinkedIn (Amélie Raoul)"
-    },
-    {
-        "id": 128,
-        "title": "OpenAI : ce que révèle la nouvelle politique de confidentialité européenne (février 2026)",
-        "desc": "Analyse de Daria Viktorova sur l’évolution de la politique de confidentialité de ChatGPT.",
-        "url": "https://www.linkedin.com/posts/daria-viktorova_openai-europe-privacy-policy-activity-7426633991782371328-snif/",
-        "date": "2026-02-14",
-        "letter": 24,
-        "cat": "ethique",
-        "source": "LinkedIn (Daria Viktorova)"
-    },
-    {
-        "id": 129,
-        "title": "« Je parlais à ChatGPT 8 fois par jour » : la crise de solitude de la génération Z",
-        "desc": "Article de la BBC sur l’usage de l’IA et la solitude.",
-        "url": "https://www.bbc.com/news/articles/cg4ewrw2drpo",
-        "date": "2026-02-14",
-        "letter": 24,
-        "cat": "ethique",
-        "source": "BBC"
-    },
-    {
-        "id": 130,
-        "title": "Municipales 2026 : quand l’IA s’invite dans la campagne",
-        "desc": "Article sur l’utilisation de l’IA lors des municipales 2026.",
-        "url": "https://www.franceinfo.fr/elections/municipales/municipales-quand-l-intelligence-artificielle-s-invite-dans-la-campagne_7773023.html",
-        "date": "2026-02-14",
-        "letter": 24,
-        "cat": "ethique",
-        "source": "France Info"
-    },
-    {
-        "id": 131,
-        "title": "L’IA ne réduit pas le travail, elle l’intensifie (étude Berkeley)",
-        "desc": "Étude de Berkeley relayée par Chloé Sondervorst sur LinkedIn.",
-        "url": "https://www.linkedin.com/posts/sondervorst_lia-ne-r%C3%A9duit-pas-le-travail-elle-lintensifie-activity-7427044214099726336-n6w0",
-        "date": "2026-02-14",
-        "letter": 24,
-        "cat": "travail",
-        "source": "LinkedIn (Chloé Sondervorst)"
-    },
-    {
-        "id": 132,
-        "title": "L’IA ne réduit pas le travail, elle l’intensifie (relais Amélie Raoul)",
-        "desc": "Relais de l’étude de Berkeley par Amélie Raoul sur LinkedIn.",
-        "url": "https://www.linkedin.com/posts/am%C3%A9lie-raoul_lia-ne-r%C3%A9duit-pas-le-travail-elle-lintensifie-activity-7427026116760145922-mMQW/",
-        "date": "2026-02-14",
-        "letter": 24,
-        "cat": "travail",
-        "source": "LinkedIn (Amélie Raoul)"
-    },
-    {
-        "id": 133,
-        "title": "Strasbourg : un professeur visé par des vidéos deepfake générées par IA",
-        "desc": "Article sur un cas de deepfake visant un professeur à Strasbourg.",
-        "url": "https://france3-regions.franceinfo.fr/grand-est/bas-rhin/strasbourg-0/un-professeur-vise-par-un-montage-video-degradant-genere-par-intelligence-artificielle-des-plaintes-deposees-et-un-eleve-sanctionne-3294381.html",
-        "date": "2026-02-14",
-        "letter": 24,
-        "cat": "securite",
-        "source": "France 3 Grand Est"
-    },
-    {
-        "id": 134,
-        "title": "Les Ruines de Sirap — Court-métrage IA de Sophie Perron",
-        "desc": "Court-métrage en compétition au Nikon Film Festival.",
-        "url": "https://www.festivalnikon.fr/video/2025/513",
-        "date": "2026-02-14",
-        "letter": 24,
-        "cat": "creation",
-        "source": "Nikon film festival"
-    },
-    {
-        "id": 135,
-        "title": "Les Ruines de Sirap — Making-of (Instagram)",
-        "desc": "Making-of du court-métrage de Sophie Perron sur Instagram.",
-        "url": "https://www.instagram.com/sophieperron_/reel/DUOTKPNCEp4/",
-        "date": "2026-02-14",
-        "letter": 24,
-        "cat": "creation",
-        "source": "Instagram (Sophie Perron)"
-    },
-    {
-        "id": 136,
-        "title": "« That’s AI » (2026) — Court-métrage de Sebastian López",
-        "desc": "Court-métrage sur la confiance dans les images vues, réalisé sans IA.",
-        "url": "https://www.instagram.com/reel/DUivya1gh6r/",
-        "date": "2026-02-14",
-        "letter": 24,
-        "cat": "creation",
-        "source": "Instagram"
-    },
-    {
-        "id": 137,
-        "title": "JO d’hiver 2026 : des images IA dans la cérémonie d’ouverture font polémique",
-        "desc": "Vidéo de Numerama sur l’utilisation d’images IA lors des JO d’hiver 2026.",
-        "url": "https://www.youtube.com/watch?v=M7iWeYy77y0",
-        "date": "2026-02-14",
-        "letter": 24,
-        "cat": "creation",
-        "source": "YouTube (Numerama)"
-    },
-    {
-        "id": 138,
-        "title": "« Petits agents, grandes questions »",
-        "desc": "Note du Conseil de l’IA et du numérique sur les agents IA.",
-        "url": "https://www.conseil-ia-numerique.fr/nos-travaux/petits-agents-grandes-questions-que-sont-les-agents-ia",
-        "date": "2026-02-14",
-        "letter": 24,
-        "cat": "technique",
-        "source": "Conseil de l’IA et du numérique"
-    },
-    {
-        "id": 139,
-        "title": "ChatGPT ou l’illusion du dialogue : comment l’IA modifie le rapport au savoir",
-        "desc": "Article sur le concept de « résonance » d’Hartmut Rosa, par Frédéric Bernard.",
-        "url": "https://theconversation.com/chatgpt-ou-lillusion-du-dialogue-comprendre-comment-lia-modifie-le-rapport-au-savoir-avec-la-philosophie-dhartmut-rosa-274259",
-        "date": "2026-02-14",
-        "letter": 24,
-        "cat": "philosophie",
-        "source": "The Conversation"
-    },
-    {
-        "id": 140,
-        "title": "Que vaut un A+ à l’ère de l’intelligence artificielle ?",
-        "desc": "Article du Devoir relayé par Alexandra Coutlée sur LinkedIn.",
-        "url": "https://www.ledevoir.com/actualites/education/950664/vaut-ere-intelligence-artificielle",
-        "date": "2026-02-14",
-        "letter": 24,
-        "cat": "education",
-        "source": "Le Devoir"
-    },
-    {
-        "id": 141,
-        "title": "Que vaut un A+ à l’ère de l’intelligence artificielle ? (relais LinkedIn)",
-        "desc": "Relais de l’article du Devoir par Alexandra Coutlée sur LinkedIn.",
-        "url": "https://www.linkedin.com/posts/alexandra-coutl%C3%A9e_que-vaut-un-a-%C3%A0-l%C3%A8re-de-lintelligence-activity-7425555387774513152-s9_5/",
-        "date": "2026-02-14",
-        "letter": 24,
-        "cat": "education",
-        "source": "LinkedIn (Alexandra Coutlée)"
-    },
-    {
-        "id": 142,
-        "title": "« Ma vie avec l’IA » : série éducative francophone en 10 épisodes sur Lumni",
-        "desc": "Série éducative sur l’IA diffusée sur Lumni.",
-        "url": "https://www.lumni.fr/programme/ma-vie-avec-l-ia",
-        "date": "2026-02-14",
-        "letter": 24,
-        "cat": "education",
-        "source": "Lumni"
-    },
+  {
+    "id": 123,
+    "title": "94 % des étudiants français ont déjà utilisé l'IA : entre usage massif et dérives inquiétantes",
+    "desc": "Étude Ipsos/EPITA relayée sur le Blog du modérateur.",
+    "url": "https://www.blogdumoderateur.com/etudiants-francais-ia-usage-massif-derives-inquietantes/",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "etudes",
+    "source": "Blog du modérateur"
+  },
+  {
+    "id": 124,
+    "title": "Baromètre du numérique 2026",
+    "desc": "Baromètre annuel du CREDOC analysé par le Conseil de l'IA et du numérique.",
+    "url": "https://www.arcep.fr/uploads/tx_gspublication/barometre-du-numerique-edition-2026_RAPPORT.pdf",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "etudes",
+    "source": "CREDOC"
+  },
+  {
+    "id": 125,
+    "title": "Baromètre du numérique 2026 (infographie)",
+    "desc": "Infographie du baromètre annuel du CREDOC, partagée sur LinkedIn.",
+    "url": "https://www.linkedin.com/posts/conseil-ia-numerique_barom%C3%A8tre-du-num%C3%A9rique-2026-infographie-activity-7426697181958414336-vdFe/",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "etudes",
+    "source": "LinkedIn (Conseil de l'IA et du numérique)"
+  },
+  {
+    "id": 126,
+    "title": "CoMMA : des milliers de manuscrits médiévaux retranscrits grâce à l'IA",
+    "desc": "Projet de l'INRIA utilisant des IA génératives pour la retranscription de manuscrits.",
+    "url": "https://www.inria.fr/fr/comma-manuscrits-medievaux-retranscrits",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "etudes",
+    "source": "INRIA"
+  },
+  {
+    "id": 127,
+    "title": "Anthropic analyse le « désempowerment » humain dans 1,5 millions de conversations IA",
+    "desc": "Analyse partagée par Amélie Raoul sur LinkedIn.",
+    "url": "https://www.linkedin.com/posts/am%C3%A9lie-raoul_vous-croyez-que-lia-vous-remplace-non-activity-7427750850430836736-Y6Zw/",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "ethique",
+    "source": "LinkedIn (Amélie Raoul)"
+  },
+  {
+    "id": 128,
+    "title": "OpenAI : ce que révèle la nouvelle politique de confidentialité européenne (février 2026)",
+    "desc": "Analyse de Daria Viktorova sur l'évolution de la politique de confidentialité de ChatGPT.",
+    "url": "https://www.linkedin.com/posts/daria-viktorova_openai-europe-privacy-policy-activity-7426633991782371328-snif/",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "ethique",
+    "source": "LinkedIn (Daria Viktorova)"
+  },
+  {
+    "id": 129,
+    "title": "« Je parlais à ChatGPT 8 fois par jour » : la crise de solitude de la génération Z",
+    "desc": "Article de la BBC sur l'usage de l'IA et la solitude.",
+    "url": "https://www.bbc.com/news/articles/cg4ewrw2drpo",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "ethique",
+    "source": "BBC"
+  },
+  {
+    "id": 130,
+    "title": "Municipales 2026 : quand l'IA s'invite dans la campagne",
+    "desc": "Article sur l'utilisation de l'IA lors des municipales 2026.",
+    "url": "https://www.franceinfo.fr/elections/municipales/municipales-quand-l-intelligence-artificielle-s-invite-dans-la-campagne_7773023.html",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "ethique",
+    "source": "France Info"
+  },
+  {
+    "id": 131,
+    "title": "L'IA ne réduit pas le travail, elle l'intensifie (étude Berkeley)",
+    "desc": "Étude de Berkeley relayée par Chloé Sondervorst sur LinkedIn.",
+    "url": "https://www.linkedin.com/posts/sondervorst_lia-ne-r%C3%A9duit-pas-le-travail-elle-lintensifie-activity-7427044214099726336-n6w0",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "travail",
+    "source": "LinkedIn (Chloé Sondervorst)"
+  },
+  {
+    "id": 132,
+    "title": "L'IA ne réduit pas le travail, elle l'intensifie (relais Amélie Raoul)",
+    "desc": "Relais de l'étude de Berkeley par Amélie Raoul sur LinkedIn.",
+    "url": "https://www.linkedin.com/posts/am%C3%A9lie-raoul_lia-ne-r%C3%A9duit-pas-le-travail-elle-lintensifie-activity-7427026116760145922-mMQW/",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "travail",
+    "source": "LinkedIn (Amélie Raoul)"
+  },
+  {
+    "id": 133,
+    "title": "Strasbourg : un professeur visé par des vidéos deepfake générées par IA",
+    "desc": "Article sur un cas de deepfake visant un professeur à Strasbourg.",
+    "url": "https://france3-regions.franceinfo.fr/grand-est/bas-rhin/strasbourg-0/un-professeur-vise-par-un-montage-video-degradant-genere-par-intelligence-artificielle-des-plaintes-deposees-et-un-eleve-sanctionne-3294381.html",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "securite",
+    "source": "France 3 Grand Est"
+  },
+  {
+    "id": 134,
+    "title": "Les Ruines de Sirap — Court-métrage IA de Sophie Perron",
+    "desc": "Court-métrage en compétition au Nikon Film Festival.",
+    "url": "https://www.festivalnikon.fr/video/2025/513",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "creation",
+    "source": "Nikon film festival"
+  },
+  {
+    "id": 135,
+    "title": "Les Ruines de Sirap — Making-of (Instagram)",
+    "desc": "Making-of du court-métrage de Sophie Perron sur Instagram.",
+    "url": "https://www.instagram.com/sophieperron_/reel/DUOTKPNCEp4/",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "creation",
+    "source": "Instagram (Sophie Perron)"
+  },
+  {
+    "id": 136,
+    "title": "« That's AI » (2026) — Court-métrage de Sebastian López",
+    "desc": "Court-métrage sur la confiance dans les images vues, réalisé sans IA.",
+    "url": "https://www.instagram.com/reel/DUivya1gh6r/",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "creation",
+    "source": "Instagram"
+  },
+  {
+    "id": 137,
+    "title": "JO d'hiver 2026 : des images IA dans la cérémonie d'ouverture font polémique",
+    "desc": "Vidéo de Numerama sur l'utilisation d'images IA lors des JO d'hiver 2026.",
+    "url": "https://www.youtube.com/watch?v=M7iWeYy77y0",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "creation",
+    "source": "YouTube (Numerama)"
+  },
+  {
+    "id": 138,
+    "title": "« Petits agents, grandes questions »",
+    "desc": "Note du Conseil de l'IA et du numérique sur les agents IA.",
+    "url": "https://www.conseil-ia-numerique.fr/nos-travaux/petits-agents-grandes-questions-que-sont-les-agents-ia",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "technique",
+    "source": "Conseil de l'IA et du numérique"
+  },
+  {
+    "id": 139,
+    "title": "ChatGPT ou l'illusion du dialogue : comment l'IA modifie le rapport au savoir",
+    "desc": "Article sur le concept de « résonance » d'Hartmut Rosa, par Frédéric Bernard.",
+    "url": "https://theconversation.com/chatgpt-ou-lillusion-du-dialogue-comprendre-comment-lia-modifie-le-rapport-au-savoir-avec-la-philosophie-dhartmut-rosa-274259",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "philosophie",
+    "source": "The Conversation"
+  },
+  {
+    "id": 140,
+    "title": "Que vaut un A+ à l'ère de l'intelligence artificielle ?",
+    "desc": "Article du Devoir relayé par Alexandra Coutlée sur LinkedIn.",
+    "url": "https://www.ledevoir.com/actualites/education/950664/vaut-ere-intelligence-artificielle",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "education",
+    "source": "Le Devoir"
+  },
+  {
+    "id": 141,
+    "title": "Que vaut un A+ à l'ère de l'intelligence artificielle ? (relais LinkedIn)",
+    "desc": "Relais de l'article du Devoir par Alexandra Coutlée sur LinkedIn.",
+    "url": "https://www.linkedin.com/posts/alexandra-coutl%C3%A9e_que-vaut-un-a-%C3%A0-l%C3%A8re-de-lintelligence-activity-7425555387774513152-s9_5/",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "education",
+    "source": "LinkedIn (Alexandra Coutlée)"
+  },
+  {
+    "id": 142,
+    "title": "« Ma vie avec l'IA » : série éducative francophone en 10 épisodes sur Lumni",
+    "desc": "Série éducative sur l'IA diffusée sur Lumni.",
+    "url": "https://www.lumni.fr/programme/ma-vie-avec-l-ia",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "education",
+    "source": "Lumni"
+  },
   {
     "id": 143,
-    "title": "Le co-fondateur et PDG d’Anthropic, Dario Amodei, s’engage à céder 80 % de sa fortune pour financer la régulation de l’IA",
-    "desc": "Le co-fondateur et PDG d’Anthropic, Dario Amodei, s’engage à céder 80 % de sa fortune pour financer la régulation de l’IA",
+    "title": "Le co-fondateur et PDG d'Anthropic, Dario Amodei, s'engage à céder 80 % de sa fortune pour financer la régulation de l'IA",
+    "desc": "Le co-fondateur et PDG d'Anthropic, Dario Amodei, s'engage à céder 80 % de sa fortune pour financer la régulation de l'IA",
     "url": "https://www.lesechos.fr/tech-medias/intelligence-artificielle/video-le-createur-danthropic-veut-ceder-80-de-sa-fortune-pour-reguler-lia-2212798",
     "date": "2026-02-21",
     "letter": 25,
     "cat": "ethique",
-    "source": "Les échos"
+    "source": "Les Échos"
   },
   {
     "id": 144,
     "title": "En mettant de la publicité dans ChatGPT, OpenAI est-il en train de répéter les erreurs de Facebook ?",
-    "desc": "La chercheuse Zoë Hitzig a démissionné d’OpenAI en dénonçant l'arrivée de la publicité dans ChatGPT.",
+    "desc": "La chercheuse Zoë Hitzig a démissionné d'OpenAI en dénonçant l'arrivée de la publicité dans ChatGPT.",
     "url": "https://www.generation-nt.com/actualites/openai-demission-chatgpt-publicite-zoe-hitzig-facebook-2070707",
     "date": "2026-02-21",
     "letter": 25,
     "cat": "ethique",
-    "source": "generation-nt.com"
+    "source": "Generation-NT"
   },
   {
     "id": 145,
     "title": "HugoDécrypte interroge le chercheur Yoshua Bengio",
-    "desc": "sur les scénarios catastrophes liés à l’IA, entre sécurité globale et la nécessité d’un cadre éthique strict.",
+    "desc": "sur les scénarios catastrophes liés à l'IA, entre sécurité globale et la nécessité d'un cadre éthique strict.",
     "url": "https://youtu.be/ZSvt0NoOlDY",
     "date": "2026-02-21",
     "letter": 25,
     "cat": "ethique",
-    "source": "youtube.com"
+    "source": "YouTube (HugoDécrypte)"
   },
   {
     "id": 146,
@@ -1467,27 +1467,27 @@
     "date": "2026-02-21",
     "letter": 25,
     "cat": "securite",
-    "source": "blogdumoderateur.com"
+    "source": "Blog du modérateur"
   },
   {
     "id": 148,
     "title": "Enquête immersive dans les coulisses de Moltbook",
-    "desc": "Sur L’Écho.be",
+    "desc": "Sur L'Écho.be",
     "url": "https://multimedia.lecho.be/moltbook-infiltration/",
     "date": "2026-02-21",
     "letter": 25,
     "cat": "technique",
-    "source": "lecho.be"
+    "source": "L'Écho.be"
   },
   {
     "id": 149,
     "title": "Arthur Mensch, PDG de Mistral AI, a détaillé sa vision technique du développement des modèles de langage européens",
-    "desc": "les défis de l’IA souveraine.",
+    "desc": "les défis de l'IA souveraine.",
     "url": "https://youtu.be/boIiMLR37kA",
     "date": "2026-02-21",
     "letter": 25,
     "cat": "technique",
-    "source": "youtube.com"
+    "source": "YouTube"
   },
   {
     "id": 150,
@@ -1501,38 +1501,38 @@
   },
   {
     "id": 151,
-    "title": "Un professeur universitaire parle de l’IA dans l’enseignement - les voix de l’IA",
-    "desc": "[Bruno de Lièvre] (université de Mons) est interviewé dans la Podcasterie.",
+    "title": "Un professeur universitaire parle de l'IA dans l'enseignement - les voix de l'IA",
+    "desc": "Bruno de Lièvre (université de Mons) est interviewé dans la Podcasterie.",
     "url": "https://www.youtube.com/watch?v=BVB3phEKrOY",
     "date": "2026-02-21",
     "letter": 25,
     "cat": "education",
-    "source": "youtube.com"
+    "source": "YouTube (La Podcasterie)"
   },
   {
     "id": 152,
     "title": "Arthur Sarazin a mis à disposition sur Hugging Face 5 codes législatifs",
-    "desc": "(code civil, code de l’urbanisme, code électoral, code général des collectivités territoriales et code des communes), mis à jour chaque nuit, 22000 articles de lois sont disponibles dans un format “IA compatible”.",
+    "desc": "(code civil, code de l'urbanisme, code électoral, code général des collectivités territoriales et code des communes), mis à jour chaque nuit, 22000 articles de lois sont disponibles dans un format \"IA compatible\".",
     "url": "https://www.linkedin.com/posts/arthursarazin_legaltech-ugcPost-7428380476798574592-KcnG",
     "date": "2026-02-21",
     "letter": 25,
     "cat": "droit",
-    "source": "linkedin.com"
+    "source": "LinkedIn (Arthur Sarazin)"
   },
   {
     "id": 153,
     "title": "Une intelligence artificielle parmi les candidats aux élections législatives",
-    "desc": "en Colombie pour l’un des sièges réservés aux communautés autochtones, à lire sur La Presse",
+    "desc": "en Colombie pour l'un des sièges réservés aux communautés autochtones, à lire sur La Presse",
     "url": "https://www.lapresse.ca/international/amerique-latine/2026-02-13/colombie/une-intelligence-artificielle-parmi-les-candidats-aux-elections-legislatives.php",
     "date": "2026-02-21",
     "letter": 25,
     "cat": "geopolitique",
-    "source": "lapresse.ca"
+    "source": "La Presse"
   },
   {
     "id": 154,
     "title": "Quili.ai",
-    "desc": "pendant une journée les habitants de Quilicura au Chili, ont proposé une “intelligence analogique” en répondant directement aux instructions déposées pour sensibiliser à la consommation des ressources en eau par les data centers dans leur région.",
+    "desc": "pendant une journée les habitants de Quilicura au Chili, ont proposé une \"intelligence analogique\" en répondant directement aux instructions déposées pour sensibiliser à la consommation des ressources en eau par les data centers dans leur région.",
     "url": "https://www.quili.ai/",
     "date": "2026-02-21",
     "letter": 25,
@@ -1541,28 +1541,28 @@
   },
   {
     "id": 155,
-    "title": "Sur Linkedin et dans sa newsletter “Mute”, le magazine Chut ! présente le mouvement #QuitGPT",
+    "title": "Sur Linkedin et dans sa newsletter Mute, le magazine Chut ! présente le mouvement #QuitGPT",
     "desc": "plus de 700 000 personnes ont déjà déclaré boycotter ChatGPT après le soutien financier du président d'OpenAI à Donald Trump.",
     "url": "https://www.linkedin.com/posts/chut-magazine-quitter-chatgpt-ugcPost-7429884512400035840-DW9H",
     "date": "2026-02-21",
     "letter": 25,
     "cat": "ethique",
-    "source": "linkedin.com"
+    "source": "LinkedIn (Chut Magazine)"
   },
   {
     "id": 156,
-    "title": "Latam-GPT : l’Amérique latine se dote de son propre modèle IA pour limiter les stéréotypes",
+    "title": "Latam-GPT : l'Amérique latine se dote de son propre modèle IA pour limiter les stéréotypes",
     "desc": "sur France Info",
     "url": "https://www.franceinfo.fr/internet/intelligence-artificielle/latam-gpt-l-amerique-latine-se-dote-de-son-propre-modele-ia-pour-limiter-les-stereotypes_7796555.html",
     "date": "2026-02-21",
     "letter": 25,
     "cat": "geopolitique",
-    "source": "franceinfo.fr"
+    "source": "France Info"
   },
   {
     "id": 157,
-    "title": "Anthropic refuse de collaborer avec l’administration Trump pour la surveillance de masse",
-    "desc": "Anthropic refuse de collaborer avec l’administration Trump pour la surveillance de masse et OpenAI signe un accord avec le Pentagone pour des applications de défense.",
+    "title": "Anthropic refuse de collaborer avec l'administration Trump pour la surveillance de masse",
+    "desc": "Anthropic refuse de collaborer avec l'administration Trump pour la surveillance de masse et OpenAI signe un accord avec le Pentagone pour des applications de défense.",
     "url": "https://www.lemonde.fr/international/article/2026/02/27/anthropic-donald-trump-ordonne-a-son-administration-de-cesser-immediatement-d-utiliser-l-intelligence-artificielle-de-la-start-up_6668635_3210.html",
     "date": "2026-02-28",
     "letter": 26,
@@ -1571,8 +1571,8 @@
   },
   {
     "id": 158,
-    "title": "Livre blanc de l'Observatoire de l’Éthique Publique",
-    "desc": "Yvan Demumieux partage sur Linkedin le livre blanc de l’Observatoire de l’Éthique Publique et analyse les défis liés au déploiement des algorithmes.",
+    "title": "Livre blanc de l'Observatoire de l'Éthique Publique",
+    "desc": "Yvan Demumieux partage sur Linkedin le livre blanc de l'Observatoire de l'Éthique Publique et analyse les défis liés au déploiement des algorithmes.",
     "url": "https://www.linkedin.com/posts/yvan-demumieux_rapport-complet-%C3%A9thique-ia-2026-ugcPost-7430200766604263424-aK7r/",
     "date": "2026-02-28",
     "letter": 26,
@@ -1581,8 +1581,8 @@
   },
   {
     "id": 159,
-    "title": "4 000 artistes dénoncent le pillage de leurs œuvres par l’IA",
-    "desc": "4 000 artistes dénoncent le pillage de leurs œuvres par l’IA, un discours soutenu aux Césars par le comédien Emmanuel Curtil.",
+    "title": "4 000 artistes dénoncent le pillage de leurs œuvres par l'IA",
+    "desc": "4 000 artistes dénoncent le pillage de leurs œuvres par l'IA, un discours soutenu aux Césars par le comédien Emmanuel Curtil.",
     "url": "https://www.franceinfo.fr/culture/cinema/gerard-jugnot-franck-dubosc-lea-drucker-4-000-artistes-denoncent-le-pillage-en-regle-par-des-outils-d-ntelligence-artificielle_7824314.html",
     "date": "2026-02-28",
     "letter": 26,
@@ -1602,7 +1602,7 @@
   {
     "id": 161,
     "title": "Course à la puissance de calcul pour les futurs modèles d'IA",
-    "desc": "Sasha Luccioni et Yacine Jernite montrent la course à la puissance de calcul et l’importance de modèles plus petits.",
+    "desc": "Sasha Luccioni et Yacine Jernite montrent la course à la puissance de calcul et l'importance de modèles plus petits.",
     "url": "https://huggingface.co/blog/sasha/compute-competition",
     "date": "2026-02-28",
     "letter": 26,
@@ -1612,7 +1612,7 @@
   {
     "id": 162,
     "title": "Common Corpus : 270 milliards de tokens pour des modèles ouverts",
-    "desc": "Anastasia Stasenko annonce l’expansion de Common Corpus, un jeu de données massives favorisant le développement de modèles d’IA ouverts.",
+    "desc": "Anastasia Stasenko annonce l'expansion de Common Corpus, un jeu de données massives favorisant le développement de modèles d'IA ouverts.",
     "url": "https://www.linkedin.com/posts/anastasia-stasenko_common-corpus-goes-global-270-billion-new-activity-7430217957089325056-lCxG/",
     "date": "2026-02-28",
     "letter": 26,
@@ -1621,8 +1621,8 @@
   },
   {
     "id": 163,
-    "title": "Recherche Anthropic : l’importance des 'personas' sur le comportement des IA",
-    "desc": "Une recherche détaille l’importance des 'personas' sur le comportement des IA génératives.",
+    "title": "Recherche Anthropic : l'importance des 'personas' sur le comportement des IA",
+    "desc": "Une recherche détaille l'importance des 'personas' sur le comportement des IA génératives.",
     "url": "https://www.anthropic.com/research/persona-selection-model",
     "date": "2026-02-28",
     "letter": 26,
@@ -1631,8 +1631,8 @@
   },
   {
     "id": 164,
-    "title": "De Google Books à l’IA : l’histoire numérique repasse les plats",
-    "desc": "Réflexion d'Olivier Ertzscheid sur l’histoire numérique et l’IA, publiée sur le blog Affordance.",
+    "title": "De Google Books à l'IA : l'histoire numérique repasse les plats",
+    "desc": "Réflexion d'Olivier Ertzscheid sur l'histoire numérique et l'IA, publiée sur le blog Affordance.",
     "url": "https://affordance.framasoft.org/2026/02/de-google-books-a-lia-lhistoire-numerique-repasse-les-plats/",
     "date": "2026-02-28",
     "letter": 26,
@@ -1651,8 +1651,8 @@
   },
   {
     "id": 166,
-    "title": "La tech américaine s’unit face à Donald Trump : soutien à Anthropic",
-    "desc": "Des employés de Google et OpenAI soutiennent Anthropic, qui refuse d’aider à la surveillance de masse.",
+    "title": "La tech américaine s'unit face à Donald Trump : soutien à Anthropic",
+    "desc": "Des employés de Google et OpenAI soutiennent Anthropic, qui refuse d'aider à la surveillance de masse.",
     "url": "https://www.bfmtv.com/economie/entreprises/la-tech-americaine-s-unit-face-a-donald-trump-des-employes-de-google-et-open-ai-au-soutien-d-anthropic-qui-refuse-d-aider-a-la-surveillance-de-masse_AD-202602270764.html",
     "date": "2026-02-28",
     "letter": 26,
@@ -1661,8 +1661,8 @@
   },
   {
     "id": 167,
-    "title": "Déclaration officielle d’Anthropic sur le refus de surveillance de masse",
-    "desc": "Anthropic publie une déclaration officielle refusant de collaborer avec l’administration Trump pour la surveillance de masse.",
+    "title": "Déclaration officielle d'Anthropic sur le refus de surveillance de masse",
+    "desc": "Anthropic publie une déclaration officielle refusant de collaborer avec l'administration Trump pour la surveillance de masse.",
     "url": "https://www.anthropic.com/news/statement-department-of-war",
     "date": "2026-02-28",
     "letter": 26,
@@ -1671,8 +1671,8 @@
   },
   {
     "id": 168,
-    "title": "Vidéo d’actualité suspectée d’être générée par IA (Charente Libre)",
-    "desc": "La Charente Libre revient sur une vidéo d’actualité spectaculaire soupçonnée d’avoir été générée par IA.",
+    "title": "Vidéo d'actualité suspectée d'être générée par IA (Charente Libre)",
+    "desc": "La Charente Libre revient sur une vidéo d'actualité spectaculaire soupçonnée d'avoir été générée par IA.",
     "url": "https://www.instagram.com/p/DU5NmltCJuw",
     "date": "2026-02-28",
     "letter": 26,
@@ -1681,8 +1681,8 @@
   },
   {
     "id": 169,
-    "title": "Interview de Sam Altman pour India Express : minimiser l’impact énergétique de l’IA",
-    "desc": "Interview complète de Sam Altman (OpenAI) sur l’impact énergétique de l’IA, réalisée lors de l’India AI Summit.",
+    "title": "Interview de Sam Altman pour India Express : minimiser l'impact énergétique de l'IA",
+    "desc": "Interview complète de Sam Altman (OpenAI) sur l'impact énergétique de l'IA, réalisée lors de l'India AI Summit.",
     "url": "https://www.youtube.com/watch?v=0YQQuKiorLs",
     "date": "2026-02-28",
     "letter": 26,
@@ -1691,8 +1691,8 @@
   },
   {
     "id": 170,
-    "title": "Intervention de Sam Altman sur l’impact énergétique de l’IA (Bloom Media)",
-    "desc": "Bloom Media partage une intervention de Sam Altman sur l’impact énergétique de l’IA.",
+    "title": "Intervention de Sam Altman sur l'impact énergétique de l'IA (Bloom Media)",
+    "desc": "Bloom Media partage une intervention de Sam Altman sur l'impact énergétique de l'IA.",
     "url": "https://www.instagram.com/p/DVHARVnDHVK?img_index=2",
     "date": "2026-02-28",
     "letter": 26,
@@ -1711,8 +1711,8 @@
   },
   {
     "id": 172,
-    "title": "Discours d’Emmanuel Curtil aux Césars sur l’avenir des métiers du doublage face à l’IA",
-    "desc": "Discours d’Emmanuel Curtil aux Césars (vidéo Canal+) sur l’avenir des métiers du doublage face à l’IA (à 3'14).",
+    "title": "Discours d'Emmanuel Curtil aux Césars sur l'avenir des métiers du doublage face à l'IA",
+    "desc": "Discours d'Emmanuel Curtil aux Césars (vidéo Canal+) sur l'avenir des métiers du doublage face à l'IA (à 3'14).",
     "url": "https://youtu.be/Qb-wDzYUypc",
     "date": "2026-02-28",
     "letter": 26,
@@ -1722,7 +1722,7 @@
   {
     "id": 173,
     "title": "Étude AskVera : Fiabilité des sources et fact-checking avec les LLM",
-    "desc": "Étude complète de la Lareponse.Tech sur l’alliance entre IA, fact-checking et esprit critique, publiée sur le blog d’AskVera.",
+    "desc": "Étude complète de la Lareponse.Tech sur l'alliance entre IA, fact-checking et esprit critique, publiée sur le blog d'AskVera.",
     "url": "https://www.askvera.org/blog/llms-fact-checking-fiabilite-sources",
     "date": "2026-02-28",
     "letter": 26,
@@ -1732,8 +1732,8 @@
   {
     "id": 174,
     "title": "Trump is using AI to fight his wars – this is a dangerous turning point",
-    "desc": "Article sur l'utilisation de l'IA dans les conflits par Trump.",
-    "url": "https://www.theguardian.com/...",
+    "desc": "Article sur l'utilisation de l'IA dans les conflits par Trump, par Chris Stokel-Walker.",
+    "url": "https://www.theguardian.com/commentisfree/2026/mar/04/trump-ai-wars-dangerous-turning-point",
     "date": "2026-03-07",
     "letter": 27,
     "cat": "geopolitique",
@@ -1741,9 +1741,9 @@
   },
   {
     "id": 175,
-    "title": "Des centaines d’ingénieurs chez Google et OpenAI s’unissent pour bloquer l’utilisation militaire : une fronde historique",
+    "title": "Des centaines d'ingénieurs chez Google et OpenAI s'unissent pour bloquer l'utilisation militaire : une fronde historique",
     "desc": "Mobilisation des ingénieurs contre l'usage militaire de l'IA.",
-    "url": "https://www.clubic.com/...",
+    "url": "https://www.clubic.com/actualite-603304-des-centaines-d-ingenieurs-chez-google-et-openai-s-unissent-pour-bloquer-l-utilisation-militaire-une-fronde-historique.html",
     "date": "2026-03-07",
     "letter": 27,
     "cat": "geopolitique",
@@ -1751,9 +1751,9 @@
   },
   {
     "id": 176,
-    "title": "Scénario catastrophe : l’IA fait trembler Wall Street et les logiciels (Citrini)",
+    "title": "Scénario catastrophe : l'IA fait trembler Wall Street et les logiciels (Citrini)",
     "desc": "Impact de l'IA sur les marchés financiers et les logiciels.",
-    "url": "https://www.france24.com/...",
+    "url": "https://www.france24.com/fr/%C3%A9co-tech/20260224-sc%C3%A9nario-catastrophe-ia-fait-trembler-wall-street-logiciels-citrini",
     "date": "2026-03-07",
     "letter": 27,
     "cat": "geopolitique",
@@ -1761,9 +1761,9 @@
   },
   {
     "id": 177,
-    "title": "L’IA détruit-elle déjà des emplois ? Les économistes de la BCE y répondent dans une note",
+    "title": "L'IA détruit-elle déjà des emplois ? Les économistes de la BCE y répondent dans une note",
     "desc": "Analyse de la BCE sur l'impact de l'IA sur l'emploi.",
-    "url": "https://www.leparisien.fr/...",
+    "url": "https://www.leparisien.fr/societe/lia-detruit-elle-deja-des-emplois-les-economistes-de-la-bce-y-repondent-dans-une-note-04-03-2026-CXTIBPFDRZGSDPZQGKP7737L4Y.php",
     "date": "2026-03-07",
     "letter": 27,
     "cat": "travail",
@@ -1771,8 +1771,8 @@
   },
   {
     "id": 178,
-    "title": "En 2025, l’IA générative s’est installée durablement dans les entreprises européennes",
-    "desc": "Étude sur l’adoption de l’IA générative en Europe.",
+    "title": "En 2025, l'IA générative s'est installée durablement dans les entreprises européennes",
+    "desc": "Étude sur l'adoption de l'IA générative en Europe.",
     "url": "https://www.usine-digitale.fr/intelligence-artificielle/etude-en-2025-lia-generative-sest-installee-durablement-dans-les-entreprises-europeennes.PSJIRUOFCFHFFKO2X52BWFZL3A.html",
     "date": "2026-03-07",
     "letter": 27,
@@ -1781,8 +1781,8 @@
   },
   {
     "id": 179,
-    "title": "L’exposition des métiers et des compétences aux grands modèles de langage",
-    "desc": "Étude de l’université de Pennsylvanie sur l’impact des LLM sur les métiers.",
+    "title": "L'exposition des métiers et des compétences aux grands modèles de langage",
+    "desc": "Étude de l'université de Pennsylvanie sur l'impact des LLM sur les métiers.",
     "url": "https://www.linkedin.com/posts/une-%C3%A9tude-r%C3%A9alis%C3%A9e-par-university-of-pennsylvania-share-7434192439709433856-9p3F/",
     "date": "2026-03-07",
     "letter": 27,
@@ -1792,7 +1792,7 @@
   {
     "id": 180,
     "title": "Labor market impacts of AI: A new measure and early evidence",
-    "desc": "Étude d’Anthropic sur les impacts de l’IA sur le marché du travail.",
+    "desc": "Étude d'Anthropic sur les impacts de l'IA sur le marché du travail.",
     "url": "https://www.anthropic.com/research/labor-market-impacts",
     "date": "2026-03-07",
     "letter": 27,
@@ -1801,8 +1801,8 @@
   },
   {
     "id": 181,
-    "title": "L’IA et le travail : ce qui se joue vraiment",
-    "desc": "Analyse de Ciprian Melian sur l’impact de l’IA sur le travail.",
+    "title": "L'IA et le travail : ce qui se joue vraiment",
+    "desc": "Analyse de Ciprian Melian sur l'impact de l'IA sur le travail.",
     "url": "https://www.linkedin.com/pulse/lia-et-le-travail-ce-qui-se-joue-vraiment-ciprian-melian-imf1e/",
     "date": "2026-03-07",
     "letter": 27,
@@ -1811,9 +1811,9 @@
   },
   {
     "id": 182,
-    "title": "Chez Prisma Media, jusqu’à 40 % des articles et 50 % des journalistes sont générés par IA",
+    "title": "Chez Prisma Media, jusqu'à 40 % des articles et 50 % des journalistes sont générés par IA",
     "desc": "Utilisation de l'IA dans la production de contenu médiatique.",
-    "url": "https://www.nextink.fr/...",
+    "url": "https://next.ink/226997/chez-prisma-media-jusqua-40-des-articles-et-50-des-journalistes-sont-generes-par-ia/",
     "date": "2026-03-07",
     "letter": 27,
     "cat": "creation",
@@ -1821,9 +1821,9 @@
   },
   {
     "id": 183,
-    "title": "L’ampleur est effrayante : un podcast généré par IA produit 11 000 épisodes par jour en siphonnant des articles de presse locale",
+    "title": "L'ampleur est effrayante : un podcast généré par IA produit 11 000 épisodes par jour en siphonnant des articles de presse locale",
     "desc": "Production massive de podcasts par IA.",
-    "url": "https://www.liberation.fr/...",
+    "url": "https://www.liberation.fr/economie/economie-numerique/lampleur-est-effrayante-un-podcast-genere-par-ia-produit-11-000-episodes-par-jour-en-siphonnant-des-articles-de-presse-locale-20260305_YYLVFOYXUFASBC6DS4GK2E67Q4/",
     "date": "2026-03-07",
     "letter": 27,
     "cat": "creation",
@@ -1831,9 +1831,9 @@
   },
   {
     "id": 184,
-    "title": "Mistral AI annonce la fin imminente de 50 % des logiciels d’entreprise actuels",
+    "title": "Mistral AI annonce la fin imminente de 50 % des logiciels d'entreprise actuels",
     "desc": "Prédiction de Mistral AI sur l'impact de l'IA sur les logiciels.",
-    "url": "https://www.lebigdata.fr/...",
+    "url": "https://www.lebigdata.fr/mistral-ai-annonce-la-fin-imminente-de-50-des-logiciels-dentreprise-actuels",
     "date": "2026-03-07",
     "letter": 27,
     "cat": "technique",
@@ -1861,8 +1861,8 @@
   },
   {
     "id": 187,
-    "title": "Data.gouv facilite l’accès des IA génératives aux données publiques",
-    "desc": "Initiative pour faciliter l’accès aux données publiques.",
+    "title": "Data.gouv facilite l'accès des IA génératives aux données publiques",
+    "desc": "Initiative pour faciliter l'accès aux données publiques.",
     "url": "https://www.banquedesterritoires.fr/datagouv-facilite-lacces-des-ia-generatives-aux-donnees-publiques",
     "date": "2026-03-07",
     "letter": 27,
@@ -1871,7 +1871,7 @@
   },
   {
     "id": 188,
-    "title": "Expérimentation autour d’un serveur MCP pour datagouv",
+    "title": "Expérimentation autour d'un serveur MCP pour datagouv",
     "desc": "Expérimentation technique sur data.gouv.",
     "url": "https://www.data.gouv.fr/posts/experimentation-autour-dun-serveur-mcp-pour-datagouv",
     "date": "2026-03-07",
@@ -1882,7 +1882,7 @@
   {
     "id": 189,
     "title": "Sch(IA)zophrénie : cachez cette IA que je ne saurais voir…",
-    "desc": "Tribune collective sur l’IA en éducation.",
+    "desc": "Tribune collective sur l'IA en éducation.",
     "url": "https://education.newstank.fr/article/view/432463/sch-ia-zophrenie-cachez-ia-saurais-voir-collectif.html",
     "date": "2026-03-07",
     "letter": 27,
@@ -1891,8 +1891,8 @@
   },
   {
     "id": 190,
-    "title": "L’IA au service de la CUA (Conception Universelle des apprentissages)",
-    "desc": "Guide de Julie Higounet sur l’IA et la CUA.",
+    "title": "L'IA au service de la CUA (Conception Universelle des apprentissages)",
+    "desc": "Guide de Julie Higounet sur l'IA et la CUA.",
     "url": "https://www.linkedin.com/pulse/lia-au-service-de-la-cua-conception-universelle-des-julie-higounet--a4voe/",
     "date": "2026-03-07",
     "letter": 27,
@@ -1902,7 +1902,7 @@
   {
     "id": 191,
     "title": "Artificial Intelligence: A Maturity Test. Perspectives on Learning, Teaching, and Assessment",
-    "desc": "Perspectives sur l’IA en pédagogie.",
+    "desc": "Perspectives sur l'IA en pédagogie.",
     "url": "https://pedagogie-digitala.ro/artificial-intelligence-perspectives-on-learning-teaching-and-assessment/",
     "date": "2026-03-07",
     "letter": 27,
@@ -1913,7 +1913,7 @@
     "id": 192,
     "title": "Chardet : quand une IA réécrit un logiciel open source en cinq jours et change sa licence",
     "desc": "Réécriture d'un logiciel open source par une IA.",
-    "url": "https://korben.info/...",
+    "url": "https://korben.info/chardet-quand-une-ia-reecrit-un-logiciel-open-source-en-cinq-jours-et-change-sa-licence.html",
     "date": "2026-03-07",
     "letter": 27,
     "cat": "droit",
@@ -1921,9 +1921,9 @@
   },
   {
     "id": 193,
-    "title": "Incroyablement dangereux : ChatGPT santé rate une urgence vitale sur deux, des chercheurs sonnent l’alarme",
+    "title": "Incroyablement dangereux : ChatGPT santé rate une urgence vitale sur deux, des chercheurs sonnent l'alarme",
     "desc": "Étude sur les limites de ChatGPT en santé.",
-    "url": "https://www.lesnumeriques.com/...",
+    "url": "https://www.lesnumeriques.com/intelligence-artificielle/incroyablement-dangereux-chatgpt-sante-rate-une-urgence-vitale-sur-deux-des-chercheurs-sonnent-l-alarme-n252196.html",
     "date": "2026-03-07",
     "letter": 27,
     "cat": "ethique",
@@ -1932,7 +1932,7 @@
   {
     "id": 194,
     "title": "Le pape Léon XIV met en garde le clergé accro à ChatGPT",
-    "desc": "Article sur l’usage de l’IA par le clergé.",
+    "desc": "Article sur l'usage de l'IA par le clergé.",
     "url": "https://www.franceinfo.fr/replay-radio/l-il-de-constance/le-pape-leon-xiv-met-en-garde-le-clerge-accro-a-chatgpt_7815515.html",
     "date": "2026-03-07",
     "letter": 27,
@@ -1941,8 +1941,8 @@
   },
   {
     "id": 195,
-    "title": "L’IA est conçue pour terminer le travail, pas pour le commencer",
-    "desc": "Réflexion sur les limites de l’IA.",
+    "title": "L'IA est conçue pour terminer le travail, pas pour le commencer",
+    "desc": "Réflexion sur les limites de l'IA.",
     "url": "https://theconversation.com/lia-est-concue-pour-terminer-le-travail-pas-pour-le-commencer-272908",
     "date": "2026-03-07",
     "letter": 27,
@@ -1952,7 +1952,7 @@
   {
     "id": 196,
     "title": "Comment les IA génératives façonnent-elles nos émotions ?",
-    "desc": "Réflexion sur l’impact émotionnel des IA génératives.",
+    "desc": "Réflexion sur l'impact émotionnel des IA génératives.",
     "url": "https://www.radiofrance.fr/franceculture/podcasts/les-chantiers-de-la-recherche/comment-les-ia-generative-faconnent-elles-nos-emotions-6703937",
     "date": "2026-03-07",
     "letter": 27,
@@ -2132,7 +2132,7 @@
   {
     "id": 214,
     "title": "Étude sur l'impact de l'IA sur la diversité lexicale et la production littéraire humaine",
-    "desc": "L'étude citée (sur Arxiv en anglais) explore comment l'utilisation de l'IA réduit la diversité lexicale et homogénéise la production",
+    "desc": "L'étude (sur Arxiv en anglais) explore comment l'utilisation de l'IA réduit la diversité lexicale et homogénéise la production",
     "url": "https://arxiv.org/abs/2603.18161",
     "date": "2026-03-21",
     "letter": 29,
@@ -2247,7 +2247,7 @@
     "date": "2026-03-21",
     "letter": 29,
     "cat": "philosophie",
-    "source": "PeterGPT"
+    "source": "GitHub (Peter Gostev)"
   },
   {
     "id": 226,
