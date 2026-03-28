@@ -1593,7 +1593,7 @@
     "id": 160,
     "title": "Allier intelligence artificielle, fact-checking et esprit critique",
     "desc": "Julie Higounet revient sur une étude de la Lareponse.Tech pour mieux armer les étudiants et les citoyens face à la désinformation.",
-    "url": "https://www.askvera.org/blog/llms-fact-checking-fiabilite-sources",
+    "url": "https://www.linkedin.com/posts/higounetjulie_ia-factchecking-espritcritique-activity-7431978505833402368-SSHa/",
     "date": "2026-02-28",
     "letter": 26,
     "cat": "securite",
@@ -1686,7 +1686,7 @@
     "url": "https://www.youtube.com/watch?v=0YQQuKiorLs",
     "date": "2026-02-28",
     "letter": 26,
-    "cat": "creation",
+    "cat": "ethique",
     "source": "YouTube (India Express)"
   },
   {
@@ -1696,7 +1696,7 @@
     "url": "https://www.instagram.com/p/DVHARVnDHVK?img_index=2",
     "date": "2026-02-28",
     "letter": 26,
-    "cat": "creation",
+    "cat": "ethique",
     "source": "Instagram (Bloom Media)"
   },
   {
@@ -2258,5 +2258,195 @@
     "letter": 29,
     "cat": "education",
     "source": "LinkedIn (INRIA)"
+  },
+  {
+    "id": 227,
+    "title": "Analyse de cycle de vie de GPU (cartes graphiques) pour l'intelligence artificielle",
+    "desc": "sur la librairie de l'ADEME.",
+    "url": "https://librairie.ademe.fr/economie-circulaire-et-dechets/9103-analyse-de-cycle-de-vie-de-gpu-cartes-graphiques-pour-l-intelligence-artificielle.html",
+    "date": "2026-03-28",
+    "letter": 30,
+    "cat": "etudes",
+    "source": "ADEME"
+  },
+  {
+    "id": 228,
+    "title": "Which AI Chatbot Collects the Most Data?",
+    "desc": "sur Surfshark (en anglais).",
+    "url": "https://surfshark.com/research/chart/ai-chatbots-privacy",
+    "date": "2026-03-28",
+    "letter": 30,
+    "cat": "etudes",
+    "source": "Surfshark"
+  },
+  {
+    "id": 229,
+    "title": "Les outils d'IA faussent le jugement des utilisateurs en les approuvant trop, selon des chercheurs",
+    "desc": "sur Euronews.",
+    "url": "https://fr.euronews.com/next/2026/03/27/les-outils-dia-faussent-le-jugement-des-utilisateurs-en-les-approuvant-trop-selon-des-cher",
+    "date": "2026-03-28",
+    "letter": 30,
+    "cat": "etudes",
+    "source": "Euronews"
+  },
+  {
+    "id": 230,
+    "title": "Les véritables enjeux d'une IA démocratique",
+    "desc": "sur Esprit.",
+    "url": "https://esprit.presse.fr/actualites/adrien-tallent/les-veritables-enjeux-d-une-ia-democratique-46536",
+    "date": "2026-03-28",
+    "letter": 30,
+    "cat": "ethique",
+    "source": "Esprit"
+  },
+  {
+    "id": 231,
+    "title": "La commission sur l'IA générative servira à \"réguler, protéger et informer\" affirme son coprésident Amine Benyamina",
+    "desc": "sur France Inter.",
+    "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/la-commission-sur-l-ia-generative-servira-a-reguler-proteger-et-informer-affirme-son-copresident-amine-benyamina-7492510",
+    "date": "2026-03-28",
+    "letter": 30,
+    "cat": "ethique",
+    "source": "France Inter"
+  },
+  {
+    "id": 232,
+    "title": "L'IA fait-elle vraiment gagner du temps ?",
+    "desc": "Fleur Bouré interroge l'idée reçue selon laquelle l'IA fait systématiquement gagner du temps, en s'appuyant sur un article d'Arthur Charpentier.",
+    "url": "https://www.linkedin.com/posts/fleur-boure_lia-fait-gagner-du-temps-vous-en-%C3%AAtes-share-7440348347447758849-1aB8/",
+    "date": "2026-03-28",
+    "letter": 30,
+    "cat": "travail",
+    "source": "LinkedIn (Fleur Bouré)"
+  },
+  {
+    "id": 233,
+    "title": "Emploi des jeunes et IA : épisode 2 — la France",
+    "desc": "Axelle Arquié analyse une note de l'INSEE sur l'emploi des jeunes et l'IA en France.",
+    "url": "https://www.linkedin.com/posts/axelle-arqui%C3%A9-0818a124_emploi-des-jeunes-ia-%C3%A9pisode-2-la-france-share-7442521527096504320-0__H/",
+    "date": "2026-03-28",
+    "letter": 30,
+    "cat": "travail",
+    "source": "LinkedIn (Axelle Arquié)"
+  },
+  {
+    "id": 234,
+    "title": "Wikipedia serre la vis : l'IA n'a plus le droit d'écrire les articles",
+    "desc": "sur ActuaLitté.",
+    "url": "https://actualitte.com/article/130153/technologie/wikipedia-serre-la-vis-l-ia-n-a-plus-le-droit-d-ecrire-les-articles",
+    "date": "2026-03-28",
+    "letter": 30,
+    "cat": "securite",
+    "source": "ActuaLitté"
+  },
+  {
+    "id": 235,
+    "title": "Système de dropshipping construit sur des contenus générés par IA",
+    "desc": "Estherium__ sur Instagram décortique tout un système de dropshipping construit sur des contenus générés par IA.",
+    "url": "https://www.instagram.com/estherium__/reel/DWXIj0aiAxU/",
+    "date": "2026-03-28",
+    "letter": 30,
+    "cat": "securite",
+    "source": "Instagram (estherium__)"
+  },
+  {
+    "id": 236,
+    "title": "IA, IA pas ? Hachette retire de la vente Shy Girl, roman d'horreur",
+    "desc": "sur ActuaLitté.",
+    "url": "https://actualitte.com/article/130062/edition/ia-ia-pas-hachette-retire-de-la-vente-shy-girl-roman-d-horreur",
+    "date": "2026-03-28",
+    "letter": 30,
+    "cat": "creation",
+    "source": "ActuaLitté"
+  },
+  {
+    "id": 237,
+    "title": "Tech Publications Lost 58% of Google Traffic Since 2024",
+    "desc": "sur Growtika (en anglais).",
+    "url": "https://growtika.com/blog/tech-media-collapse",
+    "date": "2026-03-28",
+    "letter": 30,
+    "cat": "creation",
+    "source": "Growtika"
+  },
+  {
+    "id": 238,
+    "title": "OpenAI ferme son application vidéo Sora pour se recentrer sur les outils professionnels face à la concurrence d'Anthropic",
+    "desc": "sur Le Monde.",
+    "url": "https://www.lemonde.fr/pixels/article/2026/03/25/openai-ferme-son-application-video-sora-pour-se-recentrer-sur-les-outils-professionnels-face-a-la-concurrence-d-anthropic_6674140_4408996.html",
+    "date": "2026-03-28",
+    "letter": 30,
+    "cat": "technique",
+    "source": "Le Monde"
+  },
+  {
+    "id": 239,
+    "title": "\"J'affirme que nous avons atteint l'AGI\" : pour l'homme qui a inventé le terme, le basculement vient d'avoir lieu",
+    "desc": "sur Les Numériques.",
+    "url": "https://www.lesnumeriques.com/intelligence-artificielle/j-affirme-que-nous-avons-atteint-l-agi-pour-l-homme-qui-a-invente-le-terme-le-basculement-vient-d-avoir-lieu-n253483.html",
+    "date": "2026-03-28",
+    "letter": 30,
+    "cat": "technique",
+    "source": "Les Numériques"
+  },
+  {
+    "id": 240,
+    "title": "Comment reprendre le contrôle ? Se panser dans la violence du monde avec Hartmut Rosa",
+    "desc": "sur Le Grand Continent.",
+    "url": "https://legrandcontinent.eu/fr/2026/03/10/conversation-hartmut-rosa/",
+    "date": "2026-03-28",
+    "letter": 30,
+    "cat": "philosophie",
+    "source": "Le Grand Continent"
+  },
+  {
+    "id": 241,
+    "title": "The greatest risk of AI in higher education isn't cheating, it's the erosion of learning itself",
+    "desc": "Mickaël Bertrand partage un article de The Conversation alertant sur le fait que le plus grand risque de l'IA dans l'enseignement supérieur n'est pas la triche, mais l'érosion de l'apprentissage (en anglais).",
+    "url": "https://www.linkedin.com/posts/mickaelbertrand_ia-connaissance-recherche-share-7442979400297377793-RPAN/",
+    "date": "2026-03-28",
+    "letter": 30,
+    "cat": "education",
+    "source": "LinkedIn (Mickaël Bertrand)"
+  },
+  {
+    "id": 242,
+    "title": "Un début de réponse à la question qui devrait occuper tous les éducateurs",
+    "desc": "sur Pédagotic - UQAC.",
+    "url": "https://www.uqac.ca/pedagotic/un-debut-de-reponse-a-la-question-qui-devrait-occuper-tous-les-educateurs/",
+    "date": "2026-03-28",
+    "letter": 30,
+    "cat": "education",
+    "source": "Pédagotic - UQAC"
+  },
+  {
+    "id": 243,
+    "title": "\"Si vous leur donnez un devoir que ChatGPT peut faire en trois secondes, c'est votre erreur\" : comment l'Estonie déploie massivement l'IA à l'école",
+    "desc": "sur Les Échos.",
+    "url": "https://www.lesechos.fr/tech-medias/intelligence-artificielle/si-vous-leur-donnez-un-devoir-que-chatgpt-peut-faire-en-trois-secondes-cest-votre-erreur-comment-lestonie-deploie-massivement-lia-a-lecole-2223308",
+    "date": "2026-03-28",
+    "letter": 30,
+    "cat": "education",
+    "source": "Les Échos"
+  },
+  {
+    "id": 244,
+    "title": "Droits d'auteurs et IA : retour de la question via Mistral et l'agenda parlementaire",
+    "desc": "Marina Alcaraz marque dans un post le retour de la question des droits d'auteurs et de l'intelligence artificielle sur le devant de la scène.",
+    "url": "https://www.linkedin.com/posts/marina-alcaraz-0a520031_depuis-qq-semaines-il-flotte-un-petit-air-share-7442501742514049024-tU54/",
+    "date": "2026-03-28",
+    "letter": 30,
+    "cat": "droit",
+    "source": "LinkedIn (Marina Alcaraz)"
+  },
+  {
+    "id": 245,
+    "title": "Mark Zuckerberg and Jensen Huang are part of Trump's new 'tech panel'",
+    "desc": "sur The Verge (en anglais).",
+    "url": "https://www.theverge.com/policy/900340/trump-tech-panel-mark-zuckerberg-jensen-huang",
+    "date": "2026-03-28",
+    "letter": 30,
+    "cat": "geopolitique",
+    "source": "The Verge"
   }
 ]
