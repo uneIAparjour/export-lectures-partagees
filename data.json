@@ -2448,5 +2448,85 @@
     "letter": 30,
     "cat": "geopolitique",
     "source": "The Verge"
+  },
+  {
+    "id": 246,
+    "title": "La fondation Wikimedia face aux bots IA",
+    "desc": "La Wikimedia Foundation bloque des milliards de requêtes de bots IA par jour, soulevant la question de l'usage responsable des communs numériques.",
+    "url": "https://www.linkedin.com/posts/alek-tarkowski_new-traffic-data-from-the-wikimedia-foundation-share-7444714294170140672-D2K9/",
+    "date": "2026-04-04",
+    "letter": 31,
+    "cat": "ethique",
+    "source": "LinkedIn (Alek Tarkowski)"
+  },
+  {
+    "id": 247,
+    "title": "L'UE interdit les contenus générés par IA dans ses communications officielles",
+    "desc": "La Commission, le Parlement et le Conseil de l'UE interdisent à leurs équipes de presse l'utilisation de visuels entièrement générés par IA.",
+    "url": "https://next.ink/brief_article/lue-interdit-les-contenus-generes-par-ia-dans-ses-communications-officielles/",
+    "date": "2026-04-04",
+    "letter": 31,
+    "cat": "geopolitique",
+    "source": "Next.ink"
+  },
+  {
+    "id": 248,
+    "title": "Décision du Conseil de déontologie journalistique contre Ventures Media",
+    "desc": "Ventures Media publiait des articles générés par IA sous de faux profils. Le CDJ rappelle qu'on ne peut déléguer la responsabilité éditoriale à une IA.",
+    "url": "https://www.linkedin.com/posts/florian-ernotte_cdj-ventures-m%C3%A9dia-ugcPost-7445473907656052737-g4Ci/",
+    "date": "2026-04-04",
+    "letter": 31,
+    "cat": "creation",
+    "source": "LinkedIn (Florian Ernotte)"
+  },
+  {
+    "id": 249,
+    "title": "Webinaire « L'info à l'ère de l'IA chez Radio France »",
+    "desc": "Replay d'un webinaire réunissant trois experts de Radio France sur la lecture, l'écriture et la diffusion de l'info à l'ère de l'IA.",
+    "url": "https://podeduc.apps.education.fr/video/138624-linfo-a-lere-de-lia-chez-radio-france/",
+    "date": "2026-04-04",
+    "letter": 31,
+    "cat": "education",
+    "source": "Podeduc"
+  },
+  {
+    "id": 250,
+    "title": "Trop gourmands en électricité, les datacenters de Google sont exclus d'Irlande : la France fait le pari inverse",
+    "desc": "L'Irlande contraint les datacenters à produire 80 % d'électricité verte. En France, ces infrastructures sont requalifiées d'intérêt national majeur.",
+    "url": "https://www.lesnumeriques.com/societe-numerique/trop-gourmands-en-electricite-les-datacenters-de-google-sont-exclus-d-irlande-la-france-fait-le-pari-inverse-n253600.html",
+    "date": "2026-04-04",
+    "letter": 31,
+    "cat": "technique",
+    "source": "Les Numériques"
+  },
+  {
+    "id": 251,
+    "title": "Stanford study outlines dangers of asking AI chatbots for personal advice",
+    "desc": "Une étude de Stanford alerte sur la complaisance des chatbots qui valident les croyances préexistantes des utilisateurs, créant des chambres d'écho émotionnelles.",
+    "url": "https://techcrunch.com/2026/03/28/stanford-study-outlines-dangers-of-asking-ai-chatbots-for-personal-advice/",
+    "date": "2026-04-04",
+    "letter": 31,
+    "cat": "etudes",
+    "source": "TechCrunch"
+  },
+  {
+    "id": 252,
+    "title": "AMI : une startup française de l'IA annonce une levée de fonds d'un milliard de dollars",
+    "desc": "Yann LeCun annonce AMI Labs et lève un milliard de dollars pour développer des world models capables de comprendre le monde physique depuis des vidéos et capteurs.",
+    "url": "https://fr.euronews.com/2026/03/10/ami-une-startup-francaise-de-lia-annonce-une-levee-de-fonds-dun-milliard-de-dollars",
+    "date": "2026-04-04",
+    "letter": 31,
+    "cat": "technique",
+    "source": "Euronews"
+  },
+  {
+    "id": 253,
+    "title": "Quo Vadis, Crawlers? Progress and what's next on safeguarding our infrastructure",
+    "desc": "La Wikimedia Foundation détaille les mesures prises pour bloquer les bots IA qui surexploitent son infrastructure, et interroge l'usage responsable des communs numériques.",
+    "url": "https://diff.wikimedia.org/2026/03/26/quo-vadis-crawlers-progress-and-whats-next-on-safeguarding-our-infrastructure/",
+    "date": "2026-04-04",
+    "letter": 31,
+    "cat": "ethique",
+    "source": "Wikimedia Foundation"
   }
 ]
