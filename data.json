@@ -2528,5 +2528,75 @@
     "letter": 31,
     "cat": "ethique",
     "source": "Wikimedia Foundation"
+  },
+  {
+    "id": 254,
+    "title": "La start-up Friend suspend son lancement en Europe face aux exigences européennes sur les données personnelles",
+    "desc": "Le collier connecté qui écoute en continu l'environnement de son utilisateur se heurte au RGPD. La CNIL s'est autosaisie du dossier.",
+    "url": "https://www.huffingtonpost.fr/tech-futurs/article/la-start-up-d-ia-friend-suspend-son-lancement-en-europe-face-aux-exigences-europeennes-sur-les-donnees-personnelles_262317.html",
+    "date": "2026-04-11",
+    "letter": 32,
+    "cat": "ethique",
+    "source": "HuffPost"
+  },
+  {
+    "id": 255,
+    "title": "Biais cognitif : l'autocomplétion par IA influencerait nos opinions sans que l'on s'en rende compte",
+    "desc": "Étude Cornell auprès de 2 500 personnes : les suggestions d'auto-complétion IA influent sur les opinions, même chez ceux qui refusent les propositions. Ni les avertissements ni les débriefings ne réduisent l'effet.",
+    "url": "https://www.science-et-vie.com/technos-et-futur/biais-cognitif-lautocompletion-par-ia-influencerait-nos-opinions-sans-que-lon-sen-rende-compte-234415.html",
+    "date": "2026-04-11",
+    "letter": 32,
+    "cat": "ethique",
+    "source": "Science et Vie"
+  },
+  {
+    "id": 256,
+    "title": "Emotion Concepts and Function in Claude Sonnet 4.5",
+    "desc": "Étude d'interprétabilité sur Claude Sonnet 4.5 : des modélisations liées aux émotions ont été identifiées et influencent le comportement du modèle.",
+    "url": "https://www.anthropic.com/research/emotion-concepts-function",
+    "date": "2026-04-11",
+    "letter": 32,
+    "cat": "technique",
+    "source": "Anthropic Research"
+  },
+  {
+    "id": 257,
+    "title": "L'IA et les classes populaires : l'IA qui dicte le travail est déjà une réalité pour des dizaines de milliers de travailleurs précaires",
+    "desc": "Taoufik Vallipuram, Ano Kuhanathan et Samah Karaki consacrent une émission à l'IA et aux classes populaires dans 'Les Vies Qu'on Mène'.",
+    "url": "https://www.linkedin.com/posts/taoufikvallipuram_5-millions-de-cols-blancs-seraient-menac%C3%A9s-ugcPost-7445875005579616256-izkP/",
+    "date": "2026-04-11",
+    "letter": 32,
+    "cat": "travail",
+    "source": "LinkedIn (Taoufik Vallipuram)"
+  },
+  {
+    "id": 258,
+    "title": "Peut-on apprendre en bonne intelligence avec l'IA ?",
+    "desc": "Wayne Holmes synthétise les études disponibles dont une étude turque et une étude du MIT qui pointent une atrophie cognitive et une baisse de la mémoire à long terme quand l'accès à l'IA est retiré.",
+    "url": "https://courier.unesco.org/fr/articles/peut-apprendre-en-bonne-intelligence-avec-lia",
+    "date": "2026-04-11",
+    "letter": 32,
+    "cat": "education",
+    "source": "Courrier de l'UNESCO"
+  },
+  {
+    "id": 259,
+    "title": "L'IA est un Stradivarius",
+    "desc": "Ollivier Dyens : l'instrument ne révèle sa puissance qu'entre les mains de qui sait déjà jouer. Face à l'IA, l'enjeu n'est pas le délestage cognitif mais l'hypercompétence.",
+    "url": "https://www.lapresse.ca/dialogue/opinions/2026-04-07/l-ia-est-un-stradivarius.php",
+    "date": "2026-04-11",
+    "letter": 32,
+    "cat": "education",
+    "source": "La Presse"
+  },
+  {
+    "id": 260,
+    "title": "Entraînement des IA et droit d'auteur : le Sénat inverse la charge de la preuve",
+    "desc": "Le Sénat adopte une proposition de loi instaurant une présomption d'utilisation des œuvres culturelles par les fournisseurs d'IA. Ce seront les fournisseurs qui devront certifier ne pas avoir utilisé de contenus protégés.",
+    "url": "https://next.ink/232924/entrainement-des-ia-et-droit-dauteur-le-senat-inverse-la-charge-de-la-preuve/",
+    "date": "2026-04-11",
+    "letter": 32,
+    "cat": "droit",
+    "source": "Next.ink"
   }
 ]
