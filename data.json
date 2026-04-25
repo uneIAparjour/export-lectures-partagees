@@ -2599,74 +2599,84 @@
     "cat": "droit",
     "source": "Next.ink"
   },
-  {
+   {
     "id": 261,
-    "title": "Que devient la relation humaine à l'épreuve de l'IA ?",
-    "desc": "Commentaire d'un extrait de La Grande Librairie autour du livre \"Inappropriable\" de Mazarine Pingeot : l'IA allège les conditions réelles d'une relation (réciprocité, imprévisible, désaccord).",
-    "url": "https://www.linkedin.com/posts/arnaud-goulliart_que-devient-la-relation-humaine-%C3%A0-l%C3%A9preuve-ugcPost-7451235832553787392-HP8w/",
-    "date": "2026-04-25",
-    "letter": 34,
+    "title": "Décès de Séverine Erhel, chercheuse spécialiste du numérique",
+    "desc": "Spécialiste des usages des écrans, des jeux vidéo et de leurs effets cognitifs, membre du Conseil scientifique de l'éducation nationale. Co-auteure avec Anne Cordier de « Les enfants et les écrans ».",
+    "url": "https://www.lexpress.fr/sciences-sante/deces-de-severine-erhel-chercheuse-specialiste-du-numerique-et-chroniqueuse-pour-lexpress-TQAXPKL77FF5LL2SK4CY4LWSCQ/",
+    "date": "2026-04-18",
+    "letter": 33,
     "cat": "ethique",
-    "source": "LinkedIn (Arnaud Gouillart)"
+    "source": "L'Express"
   },
   {
     "id": 262,
-    "title": "72% des juristes ont adopté l'IA, dont 51% sans aucune règle du jeu",
-    "desc": "Baromètre Lefebvre Dalloz 2026 : 72% des professionnels du droit utilisent l'IA quotidiennement, dont 51% sans cadre officiel. Les usages terrain précèdent les directions.",
-    "url": "https://www.usine-digitale.fr/intelligence-artificielle/72-des-juristes-ont-adopte-lia-dont-51-sans-aucune-regle-du-jeu-quand-les-usages-terrain-devancent-les-directions.XKSGUOVK55BMTNPKM7R2XWTBUE.html",
-    "date": "2026-04-25",
-    "letter": 34,
-    "cat": "travail",
-    "source": "Usine Digitale"
+    "title": "\"Je veux retrouver mon cerveau normal\"",
+    "desc": "Chloé Sondervorst analyse une des premières études empiriques sur la dépendance des adolescents aux chatbots compagnons : besoin de soutien émotionnel, conscience du glissement, nécessité de penser la sortie autant que l'entrée.",
+    "url": "https://www.linkedin.com/posts/sondervorst_je-veux-retrouver-mon-cerveau-normal-share-7450920685369126913-XNEg/",
+    "date": "2026-04-18",
+    "letter": 33,
+    "cat": "ethique",
+    "source": "LinkedIn (Chloé Sondervorst)"
   },
   {
     "id": 263,
-    "title": "L'UNESCO balise l'usage de l'IA dans les tribunaux",
-    "desc": "Premier cadre éthique mondial sur l'IA dans les tribunaux : quinze principes, dont la règle que l'IA ne peut jamais remplacer le jugement du juge.",
-    "url": "https://moncarnet.com/2026/03/30/lunesco-balise-lusage-de-lia-dans-les-tribunaux/",
-    "date": "2026-04-25",
-    "letter": 34,
-    "cat": "droit",
-    "source": "moncarnet.com"
+    "title": "When using AI leads to brain fry",
+    "desc": "Étude BCG/Harvard Business Review : supervision intensive de l'IA génère 14 % d'effort mental supplémentaire, 12 % de fatigue en plus, 19 % de surcharge informationnelle.",
+    "url": "https://www.linkedin.com/posts/myrtillegardet_when-using-ai-leads-to-brain-fry-activity-7449362000876498944-8wsB/",
+    "date": "2026-04-18",
+    "letter": 33,
+    "cat": "travail",
+    "source": "LinkedIn (Myrtille Gardet)"
   },
   {
     "id": 264,
-    "title": "PANAME : librairie open source d'audit RGPD des modèles d'IA",
-    "desc": "Lancée par CNIL, ANSSI, Inria et PEReN, PANAME mesure ce qu'un modèle retient vraiment de ses données d'entraînement. Publication open source prévue à l'automne 2026.",
-    "url": "https://www.linkedin.com/posts/tdevergranne_rgpd-iaact-cnil-share-7450049719189262336-L76F",
-    "date": "2026-04-25",
-    "letter": 34,
-    "cat": "droit",
-    "source": "LinkedIn (Thiébaut Devergranne)"
+    "title": "Les centres de données IA : entre réquisition énergétique et éclipse environnementale",
+    "desc": "Gauthier Roussilhe enquête sur comment les acteurs de l'IA organisent une subordination des infrastructures énergétiques à leurs besoins, des États-Unis à la France.",
+    "url": "https://gauthierroussilhe.com/articles/centres-de-donnees-et-ia-entre-requisition-energetique-et-eclipse-environnementale",
+    "date": "2026-04-18",
+    "letter": 33,
+    "cat": "technique",
+    "source": "gauthierroussilhe.com"
   },
   {
     "id": 265,
-    "title": "Déconstruire les mythes de l'IA",
-    "desc": "Hubert Guillaud déconstruit les mythes de l'IA à partir des travaux d'Eryk Salvaggio : mythes du contrôle, de la productivité, de la créativité et de la boîte noire.",
-    "url": "https://chut.media/tech/deconstruire-les-mythes-de-lia/",
-    "date": "2026-04-25",
-    "letter": 34,
-    "cat": "philosophie",
-    "source": "Chut!"
+    "title": "OECD Digital Education Outlook 2026",
+    "desc": "Rapport de l'OCDE sur l'utilisation de l'IA générative dans l'éducation, avec des recommandations pour une adoption responsable, relayé par Étienne Grass.",
+    "url": "https://www.linkedin.com/posts/etienne-grass-479a7430_locde-publie-aujourdhui-un-travail-tr%C3%A8s-activity-7449127949322235904-RNMB/",
+    "date": "2026-04-18",
+    "letter": 33,
+    "cat": "education",
+    "source": "LinkedIn (Étienne Grass)"
   },
-   {
+  {
     "id": 266,
-    "title": "\"Je veux retrouver mon cerveau normal\"",
-    "desc": "Étude sur la dépendance des adolescents aux chatbots compagnons (Character AI), avec cadre de design pensé autant pour la sortie de ces interactions que pour leur entrée.",
-    "url": "https://dl.acm.org/doi/10.1145/3772318.3790597",
-    "date": "2026-04-25",
-    "letter": 34,
-    "cat": "ethique",
-    "source": "ACM Digital Library"
+    "title": "Recommandations du Conseil scientifique de l'éducation nationale sur l'IA",
+    "desc": "Recommandations issues de la conférence internationale du 25 mars coordonnée par Séverine Erhel. Les captations sont disponibles sur la chaîne YouTube du CSEN.",
+    "url": "https://www.linkedin.com/posts/conseil-scientifique-csen_le-csen-publie-ses-recommandations-sur-lusage-share-7450938934932459520-3luC/",
+    "date": "2026-04-18",
+    "letter": 33,
+    "cat": "education",
+    "source": "LinkedIn (CSEN)"
   },
   {
     "id": 267,
-    "title": "IA et cybersécurité : anticiper aujourd'hui pour maîtriser demain",
-    "desc": "Note du Conseil IA et numérique : l'IA renforce autant les défenseurs que les attaquants. Appel à des cadres de gouvernance et question de la souveraineté européenne dans l'évaluation des modèles.",
-    "url": "https://www.conseil-ia-numerique.fr/nos-travaux/ia-et-cybersecurite-anticiper-aujourdhui-pour-maitriser-demain",
-    "date": "2026-04-25",
-    "letter": 34,
-    "cat": "securite",
-    "source": "Conseil IA et numérique"
+    "title": "Hugo (SGDL) : plateforme pour exercer son droit d'opposition à l'entraînement des IA",
+    "desc": "La Société des Gens de Lettres propose aux auteurs d'exercer gratuitement leur droit d'opposition à l'utilisation de leurs œuvres dans les opérations de fouille de textes et de données.",
+    "url": "https://hugo.sgdl.org/",
+    "date": "2026-04-18",
+    "letter": 33,
+    "cat": "droit",
+    "source": "SGDL"
+  },
+  {
+    "id": 268,
+    "title": "Le tiret cadratin est mort, vive le tiret cadratin",
+    "desc": "L'IA a hérité ce signe typographique des textes littéraires sur lesquels elle a été entraînée, au point que les humains l'abandonnent pour ne pas être confondus avec une machine.",
+    "url": "https://www.blogdumoderateur.com/tiret-cadratin-mort-vive-tiret-cadratin/",
+    "date": "2026-04-18",
+    "letter": 33,
+    "cat": "philosophie",
+    "source": "Blog du modérateur"
   }
 ]
