@@ -2598,5 +2598,65 @@
     "letter": 32,
     "cat": "droit",
     "source": "Next.ink"
-  }
+  },
+  {
+    "id": 261,
+    "title": "Que devient la relation humaine à l'épreuve de l'IA ?",
+    "desc": "Commentaire d'un extrait de La Grande Librairie autour du livre \"Inappropriable\" de Mazarine Pingeot : l'IA allège les conditions réelles d'une relation (réciprocité, imprévisible, désaccord).",
+    "url": "https://www.linkedin.com/posts/arnaud-goulliart_que-devient-la-relation-humaine-%C3%A0-l%C3%A9preuve-ugcPost-7451235832553787392-HP8w/",
+    "date": "2026-04-25",
+    "letter": 34,
+    "cat": "ethique",
+    "source": "LinkedIn (Arnaud Gouillart)"
+  },
+  {
+    "id": 262,
+    "title": "72% des juristes ont adopté l'IA, dont 51% sans aucune règle du jeu",
+    "desc": "Baromètre Lefebvre Dalloz 2026 : 72% des professionnels du droit utilisent l'IA quotidiennement, dont 51% sans cadre officiel. Les usages terrain précèdent les directions.",
+    "url": "https://www.usine-digitale.fr/intelligence-artificielle/72-des-juristes-ont-adopte-lia-dont-51-sans-aucune-regle-du-jeu-quand-les-usages-terrain-devancent-les-directions.XKSGUOVK55BMTNPKM7R2XWTBUE.html",
+    "date": "2026-04-25",
+    "letter": 34,
+    "cat": "travail",
+    "source": "Usine Digitale"
+  },
+  {
+    "id": 263,
+    "title": "L'UNESCO balise l'usage de l'IA dans les tribunaux",
+    "desc": "Premier cadre éthique mondial sur l'IA dans les tribunaux : quinze principes, dont la règle que l'IA ne peut jamais remplacer le jugement du juge.",
+    "url": "https://moncarnet.com/2026/03/30/lunesco-balise-lusage-de-lia-dans-les-tribunaux/",
+    "date": "2026-04-25",
+    "letter": 34,
+    "cat": "droit",
+    "source": "moncarnet.com"
+  },
+  {
+    "id": 264,
+    "title": "PANAME : librairie open source d'audit RGPD des modèles d'IA",
+    "desc": "Lancée par CNIL, ANSSI, Inria et PEReN, PANAME mesure ce qu'un modèle retient vraiment de ses données d'entraînement. Publication open source prévue à l'automne 2026.",
+    "url": "https://www.linkedin.com/posts/tdevergranne_rgpd-iaact-cnil-share-7450049719189262336-L76F",
+    "date": "2026-04-25",
+    "letter": 34,
+    "cat": "droit",
+    "source": "LinkedIn (Thiébaut Devergranne)"
+  },
+  {
+    "id": 265,
+    "title": "Déconstruire les mythes de l'IA",
+    "desc": "Hubert Guillaud déconstruit les mythes de l'IA à partir des travaux d'Eryk Salvaggio : mythes du contrôle, de la productivité, de la créativité et de la boîte noire.",
+    "url": "https://chut.media/tech/deconstruire-les-mythes-de-lia/",
+    "date": "2026-04-25",
+    "letter": 34,
+    "cat": "philosophie",
+    "source": "Chut!"
+  },
+   {
+    "id": 270,
+    "title": "\"Je veux retrouver mon cerveau normal\"",
+    "desc": "Étude sur la dépendance des adolescents aux chatbots compagnons (Character AI), avec cadre de design pensé autant pour la sortie de ces interactions que pour leur entrée.",
+    "url": "https://dl.acm.org/doi/10.1145/3772318.3790597",
+    "date": "2026-04-25",
+    "letter": 34,
+    "cat": "ethique",
+    "source": "ACM Digital Library"
+  },
 ]
