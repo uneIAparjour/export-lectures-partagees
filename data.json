@@ -2748,5 +2748,106 @@
     "letter": 34,
     "cat": "securite",
     "source": "Conseil IA et numérique"
+  },
+  {
+    "id": 276,
+    "title": "Et si remplacer les humains par l'IA coûtait plus cher que de les garder ?",
+    "desc": "Un vice-président de Nvidia reconnaît que le coût de calcul dépasse largement celui des employés, pendant que Microsoft, Amazon et Meta licencient à grande échelle pour financer leurs investissements IA. La newsletter Mute de Chut! décortique ce paradoxe en carousel.",
+    "url": "https://www.linkedin.com/posts/chut-n20-un-monde-sans-gafam-co%C3%BBt-de-ugcPost-7458071796563574784-Rxg8",
+    "date": "2026-05-09",
+    "letter": 36,
+    "cat": "travail",
+    "source": "LinkedIn (Chut!)"
+  },
+  {
+    "id": 277,
+    "title": "The Psychological Costs of Adopting AI",
+    "desc": "Une enquête menée auprès de 1 200 salariés américains et britanniques identifie six formes de dette psychologique liée à l'adoption de l'IA en entreprise : cognitive, d'autonomie, de compétence, relationnelle, de crédibilité, d'identité professionnelle.",
+    "url": "https://hbr.org/2026/05/the-psychological-costs-of-adopting-ai",
+    "date": "2026-05-09",
+    "letter": 36,
+    "cat": "travail",
+    "source": "Harvard Business Review"
+  },
+  {
+    "id": 278,
+    "title": "L'IA au service des RH de l'Éducation nationale",
+    "desc": "Stéphane Trenel, directeur du service de modernisation des SIRH pour l'Éducation nationale, explique comment l'IA est déployée sur 1,2 million d'agents, avec une approche de prototypage progressif et un cadre négocié avec les représentants du personnel.",
+    "url": "https://www.dailymotion.com/video/xa70r4o",
+    "date": "2026-05-09",
+    "letter": 36,
+    "cat": "travail",
+    "source": "BFM Business"
+  },
+  {
+    "id": 279,
+    "title": "Rapport Obvia 2026 : De l'IA générative à l'IA agentive, quels défis pour l'école ?",
+    "desc": "Le rapport 2026 de l'Obvia tire la sonnette d'alarme sur la substitution cognitive : 73 % des étudiants déclarent n'avoir reçu aucune formation formelle à l'IA, et réussir une tâche avec l'IA ne mène pas automatiquement à un apprentissage.",
+    "url": "https://ecolebranchee.com/rapport-obvia-2026-ia-generative-defis-ecole",
+    "date": "2026-05-09",
+    "letter": 36,
+    "cat": "education",
+    "source": "École Branchée"
+  },
+  {
+    "id": 280,
+    "title": "État de la situation sur les impacts sociétaux de l'intelligence artificielle et du numérique 2026",
+    "desc": "Le rapport complet de l'Obvia 2026 : IA agentive, substitution cognitive, fracture numérique dans l'éducation et enjeux pour l'autonomie professionnelle des enseignants.",
+    "url": "https://www.obvia.ca/sites/obvia.ca/files/ressources/202604-obv-pub-etatsituation_impactssocietaux2026.pdf",
+    "date": "2026-05-09",
+    "letter": 36,
+    "cat": "education",
+    "source": "Obvia"
+  },
+  {
+    "id": 281,
+    "title": "54% des étudiants ont déjà triché lors d'un examen à l'aide de l'IA",
+    "desc": "Une étude Ipsos pour THEIA auprès de 1 000 jeunes de 18-25 ans révèle que 80 % utilisent l'IA chaque semaine, 54 % ont déjà triché avec lors d'un examen, et 63 % estiment que les examens actuels ne reflètent pas leur niveau réel.",
+    "url": "https://www.leparisien.fr/etudiant/examens/63-des-etudiants-estiment-que-les-examens-actuels-ne-refletent-pas-leur-niveau-reel-comment-lia-bouscule-les-codes-3EA6OESRJJDMBOHXKEO4IS4ZXA.php",
+    "date": "2026-05-09",
+    "letter": 36,
+    "cat": "education",
+    "source": "Le Parisien"
+  },
+  {
+    "id": 282,
+    "title": "Et si l'IA devenait le socle de la nouvelle architecture scolaire ?",
+    "desc": "La Chine a annoncé en avril 2026 un plan national d'IA pour l'éducation : enseignement dès le primaire, certification des enseignants, pilotage algorithmique du système scolaire et parcours personnalisés par les données, soulevant des questions sur la gouvernance algorithmique et la place laissée à l'esprit critique.",
+    "url": "https://www.linkedin.com/posts/mickaelbertrand_et-si-lia-devenait-le-socle-de-la-nouvelle-share-7458531870973177857-1Ge7",
+    "date": "2026-05-09",
+    "letter": 36,
+    "cat": "geopolitique",
+    "source": "LinkedIn (Mickaël Bertrand)"
+  },
+  {
+    "id": 283,
+    "title": "L'IA, elle au moins, elle me comprend",
+    "desc": "À travers les portraits de Monique, Mila et Cédric, La Croix L'Hebdo explore comment les IA conversationnelles prennent la place de confidentes et de soutien psychologique, au risque d'aggraver la solitude et d'éroder le libre arbitre. Mark Hunyadi appelle à protéger juridiquement la souveraineté de l'esprit humain.",
+    "url": "https://www.linkedin.com/posts/mark-hunyadi-b2a3282b_face-%C3%A0-lia-d%C3%A9fendre-lhumain-est-un-enjeu-ugcPost-7458092315371466752-qjE5/",
+    "date": "2026-05-09",
+    "letter": 36,
+    "cat": "ethique",
+    "source": "LinkedIn (Mark Hunyadi)"
+  },
+  {
+    "id": 284,
+    "title": "Clausier Data et IA 2026",
+    "desc": "Les Interconnectés, France Urbaine et Intercommunalités de France publient un clausier data et IA 2026 : clauses-types pour encadrer la souveraineté des données, l'hébergement, la propriété intellectuelle et l'usage de l'IA par les prestataires des collectivités territoriales.",
+    "url": "https://api.groupe-keran.com/api/upload/093d5ee14a8a027fdb9ef48a2d5ea03f.pdf",
+    "date": "2026-05-09",
+    "letter": 36,
+    "cat": "droit",
+    "source": "Les Interconnectés"
+  },
+  {
+    "id": 285,
+    "title": "How LLMs work — version française",
+    "desc": "Yash Narwal a réalisé une page interactive explorant visuellement la construction d'un grand modèle de langage, de la collecte des données jusqu'à l'assistant : tokenisation, pré-entraînement, inférence, RAG. Traduite et adaptée en français avec l'aide de Claude.ai par Bertrand Formet.",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7456941975104229376/",
+    "date": "2026-05-09",
+    "letter": 36,
+    "cat": "technique",
+    "source": "LinkedIn (Bertrand Formet)"
   }
 ]
+
