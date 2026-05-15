@@ -2848,6 +2848,105 @@
     "letter": 36,
     "cat": "technique",
     "source": "LinkedIn (Bertrand Formet)"
+  },
+  {
+    "id": 286,
+    "title": "Arthur Mensch (Mistral AI) devant la commission d'enquête sur les vulnérabilités numériques",
+    "desc": "Modèle économique des tokens, urgence d'investir avant que les ressources énergétiques et les parts de marché ne soient captées par les acteurs extra-européens, souveraineté pensée comme un levier.",
+    "url": "https://www.youtube.com/live/qQq9qC2xv_4",
+    "date": "2026-05-17",
+    "letter": 37,
+    "cat": "geopolitique",
+    "source": "YouTube"
+  },
+  {
+    "id": 287,
+    "title": "Shy Girl : le roman écrit avec l'IA qui secoue le monde de l'édition",
+    "desc": "Polémique autour du roman de Mia Ballard après des soupçons d'utilisation d'IA générative. Hachette suspend la publication. Débat sur l'authenticité d'une œuvre et la transparence dans l'édition.",
+    "url": "https://www.zdnet.fr/actualites/shy-girl-le-roman-ecrit-avec-lia-qui-secoue-le-monde-de-ledition-494824.htm",
+    "date": "2026-05-17",
+    "letter": 37,
+    "cat": "creation",
+    "source": "ZDNet"
+  },
+  {
+    "id": 288,
+    "title": "Audience générée par ChatGPT : Le Monde écrase la concurrence",
+    "desc": "Mesure de la redistribution du trafic sortant de ChatGPT et six autres chatbots vers les médias français. Le Monde capte 25,9% des clics, porté par son accord avec OpenAI. Chaque plateforme a sa propre empreinte éditoriale.",
+    "url": "https://larevuedesmedias.ina.fr/chatgpt-ia-chatbots-audiences-medias-le-monde",
+    "date": "2026-05-17",
+    "letter": 37,
+    "cat": "creation",
+    "source": "La Revue des médias (INA)"
+  },
+  {
+    "id": 289,
+    "title": "Les ouvriers de la donnée",
+    "desc": "Entretien d'Antonio Casilli à La Vie Ouvrière sur les travailleurs africains qui étiquettent des images et modèrent des contenus pour quelques centimes, alors que la France annonce 23 milliards d'investissements France-Afrique.",
+    "url": "https://www.linkedin.com/posts/acasilli_les-ouvriers-de-la-donn%C3%A9e-itw-casilli-la-ugcPost-7460629418781110272-NEc_/",
+    "date": "2026-05-17",
+    "letter": 37,
+    "cat": "travail",
+    "source": "LinkedIn (Antonio Casilli)"
+  },
+  {
+    "id": 290,
+    "title": "Et si l'IA devenait le socle de la nouvelle architecture scolaire ?",
+    "desc": "Plan national IA pour l'éducation en Chine : enseignement dès le primaire, enseignants certifiés, pilotage algorithmique, parcours personnalisés. Stratégie globale qui soulève des questions sur la gouvernance algorithmique.",
+    "url": "https://www.linkedin.com/posts/mickaelbertrand_et-si-lia-devenait-le-socle-de-la-nouvelle-share-7458531870973177857-1Ge7/",
+    "date": "2026-05-17",
+    "letter": 37,
+    "cat": "education",
+    "source": "LinkedIn (Mickaël Bertrand)"
+  },
+  {
+    "id": 291,
+    "title": "GEN(Z)AI — Rapport final sur la gouvernance de l'IA",
+    "desc": "100 jeunes Canadiens de 17 à 23 ans produisent par consensus 17 recommandations sur la gouvernance de l'IA. Six thèmes : fatigue de divulgation, fardeau individuel, délégation cognitive, données collectées dans l'enfance.",
+    "url": "https://collimateur.uqam.ca/a-la-une/genzai-rapport-final-sur-la-gouvernance-de-lia/",
+    "date": "2026-05-17",
+    "letter": 37,
+    "cat": "education",
+    "source": "Collimateur UQAM"
+  },
+  {
+    "id": 292,
+    "title": "Autopsie d'une préparation au grand oral avec l'IA",
+    "desc": "Entretiens avec des lycéens en terminale : beaucoup ne viennent plus au lycée pour apprendre mais pour réussir une épreuve, dans une logique utilitariste court-termiste.",
+    "url": "https://www.cahiers-pedagogiques.com/autopsie-dune-preparation-au-grand-oral-avec-lia/",
+    "date": "2026-05-17",
+    "letter": 37,
+    "cat": "education",
+    "source": "Cahiers pédagogiques"
+  },
+  {
+    "id": 293,
+    "title": "LLM Fallacy — infographie",
+    "desc": "Infographie sur l'illusion qui fait attribuer à soi-même ce que la machine a produit, par mécanisme cognitif. On finit par confondre ce qu'on sait faire avec ce qu'on sait lui faire faire.",
+    "url": "https://www.linkedin.com/posts/rochanekherbouche_carrousel-ugcPost-7459241170242539521--Q5Z",
+    "date": "2026-05-17",
+    "letter": 37,
+    "cat": "ethique",
+    "source": "LinkedIn (Rochane Kherbouche)"
+  },
+  {
+    "id": 294,
+    "title": "LLM Fallacy — article source",
+    "desc": "Kim, Yu & Yi (2026) : l'illusion qui fait attribuer à soi-même ce que la machine a produit. On confond ce qu'on sait faire avec ce qu'on sait lui faire faire.",
+    "url": "https://arxiv.org/abs/2604.14807",
+    "date": "2026-05-17",
+    "letter": 37,
+    "cat": "ethique",
+    "source": "arXiv"
+  },
+  {
+    "id": 295,
+    "title": "La loi sur l'IA va être « simplifiée », et ce n'est pas une bonne nouvelle pour les consommateurs européens",
+    "desc": "Accord politique à Bruxelles le 7 mai. Reports d'un an pour les IA à haut risque, nouvelles interdictions sur les deepfakes pornographiques. Règlement modifié avant d'être entièrement entré en vigueur.",
+    "url": "https://www.01net.com/actualites/la-loi-sur-lia-va-etre-simplifiee-et-ce-nest-pas-une-bonne-nouvelle-pour-les-consommateurs-europeens.html",
+    "date": "2026-05-17",
+    "letter": 37,
+    "cat": "droit",
+    "source": "01net"
   }
 ]
-
