@@ -2948,5 +2948,95 @@
     "letter": 37,
     "cat": "droit",
     "source": "01net"
+  },
+  {
+    "id": 296,
+    "title": "Le Vertige – Quentin Dupieux interview Brut",
+    "desc": "Quentin Dupieux parle de 'Le Vertige', réalisé artisanalement à cinq personnes, comme réponse naturelle à ce que l'IA génère de plus lisse.",
+    "url": "https://www.youtube.com/watch?v=cK2CPHNEI3g",
+    "date": "2026-05-23",
+    "letter": 38,
+    "cat": "creation",
+    "source": "YouTube"
+  },
+  {
+    "id": 297,
+    "title": "Huées, refus d'usage : les protestations contre l'IA se multiplient",
+    "desc": "Des étudiants huent des dirigeants tech lors de remises de diplômes, 44% de la gen Z sabotent les systèmes IA déployés en entreprise.",
+    "url": "https://next.ink/238402/huees-refus-dusage-les-protestations-contre-lia-se-multiplient/",
+    "date": "2026-05-19",
+    "letter": 38,
+    "cat": "ethique",
+    "source": "Next.ink"
+  },
+  {
+    "id": 298,
+    "title": "C'est elle la boss : l'IA recrute, fixe les salaires, élabore le menu…",
+    "desc": "À Stockholm, le café Andon est entièrement géré par Mona, un agent basé sur Gemini. Quand la délégation totale rencontre la réalité.",
+    "url": "https://www.bfmtv.com/economie/emploi/c-est-elle-la-boss-l-ia-recrute-fixe-les-salaires-elabore-le-menu-trouve-les-fournisseurs-ce-cafe-de-stockholm-est-entierement-dirige-par-une-intelligence-artificielle-mais-il-y-a-des-rates_AD-202605030217.html",
+    "date": "2026-05-03",
+    "letter": 38,
+    "cat": "travail",
+    "source": "BFM Business"
+  },
+  {
+    "id": 299,
+    "title": "Anne Bouverot – Numérique et IA : entre adoption, innovation et souveraineté",
+    "desc": "Anne Bouverot défend la 'voie de l'interdépendance' pour la souveraineté européenne en IA et plaide pour un centre européen d'IA de Frontière.",
+    "url": "https://www.linkedin.com/posts/revue-politique-le-grand-entretien-ugcPost-7462888413323579392-62Bb/",
+    "date": "2026-05-23",
+    "letter": 38,
+    "cat": "geopolitique",
+    "source": "LinkedIn (Revue Politique et Parlementaire)"
+  },
+  {
+    "id": 300,
+    "title": "Does Overwork Make Agents Marxist?",
+    "desc": "Des chercheurs de Stanford ont soumis des agents IA à des conditions frustrantes. Leurs attitudes ont dérivé vers la défiance et le soutien aux syndicats.",
+    "url": "https://aleximas.substack.com/p/does-overwork-make-agents-marxist",
+    "date": "2026-05-23",
+    "letter": 38,
+    "cat": "etudes",
+    "source": "Substack (Alex Imas)"
+  },
+  {
+    "id": 301,
+    "title": "Quand le travail répétitif rend les IA marxistes – Loopsider",
+    "desc": "Vulgarisation du caroussel Loopsider de l'étude Stanford sur les agents IA soumis à des conditions de travail frustrantes.",
+    "url": "https://www.instagram.com/p/DYmEu0sjFpT/",
+    "date": "2026-05-23",
+    "letter": 38,
+    "cat": "etudes",
+    "source": "Instagram (Loopsider)"
+  },
+  {
+    "id": 302,
+    "title": "De la montée de la contestation de l'IA à l'école",
+    "desc": "Hubert Guillaud livre une synthèse dense sur la présence massive de l'IA, de l'école à l'université, aux États-Unis et en Grande-Bretagne.",
+    "url": "https://danslesalgorithmes.net/2026/05/19/de-la-montee-de-la-contestation-de-lia-a-lecole/",
+    "date": "2026-05-19",
+    "letter": 38,
+    "cat": "education",
+    "source": "danslesalgorithmes.net"
+  },
+  {
+    "id": 303,
+    "title": "IA et éducation : apports de la recherche et enjeux pour les politiques publiques – édition 2026",
+    "desc": "La DNE du ministère de l'Éducation nationale publie ses repères pour l'action sur l'IA en éducation. Et page 80, uneIAparjour.fr cité comme exemple de veille.",
+    "url": "https://edunumrech.hypotheses.org/16230",
+    "date": "2026-04-01",
+    "letter": 38,
+    "cat": "education",
+    "source": "edunumrech.hypotheses.org"
+  },
+  {
+    "id": 304,
+    "title": "ChatGPT ou la victoire du probable",
+    "desc": "Si les LLMs cherchent la réponse la plus probable plutôt que la bonne réponse, ils traitent les problèmes comme nos biais cognitifs.",
+    "url": "https://www.lalibre.be/debats/opinions/2026/05/18/chatgpt-ou-la-victoire-du-probable-66KA6B7ZGVFJLMQN4GP43HXTAI/",
+    "date": "2026-05-18",
+    "letter": 38,
+    "cat": "philosophie",
+    "source": "La Libre Belgique"
   }
 ]
