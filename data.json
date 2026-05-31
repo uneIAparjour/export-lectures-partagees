@@ -3038,5 +3038,96 @@
     "letter": 38,
     "cat": "philosophie",
     "source": "La Libre Belgique"
+  },
+  [
+  {
+    "id": 305,
+    "title": "AI Overviews : pourquoi Google retarde en France et pourquoi l'impact sera plus violent qu'ailleurs",
+    "desc": "Baisse de trafic de 20 à 60% selon les requêtes, réduction de dix liens à trois à cinq sources par synthèse.",
+    "url": "https://www.mntd.fr/ai-overviews-pourquoi-google-retarde-en-france-et-pourquoi-limpact-sera-plus-violent-quailleurs/",
+    "date": "2026-05-30",
+    "letter": 39,
+    "cat": "creation",
+    "source": "Minted"
+  },
+  {
+    "id": 306,
+    "title": "This Cannes Film Cost $500,000 to Make. $400,000 Was AI Compute Costs.",
+    "desc": "\"Hell Grind\", 95 minutes générées par IA, projeté à Cannes hors sélection officielle. 15 personnes, 14 jours, Google Veo 3.",
+    "url": "https://www.wsj.com/cio-journal/this-cannes-film-cost-500-000-to-make-400-000-was-ai-compute-costs-a823b08d",
+    "date": "2026-05-30",
+    "letter": 39,
+    "cat": "creation",
+    "source": "Wall Street Journal"
+  },
+  {
+    "id": 307,
+    "title": "Welcome to the world of machine audiences",
+    "desc": "Shuwei Fang appelle à inventer une infrastructure de marché pour l'économie de la demande informationnelle.",
+    "url": "https://www.economist.com/by-invitation/2026/04/16/welcome-to-the-world-of-machine-audiences",
+    "date": "2026-05-30",
+    "letter": 39,
+    "cat": "creation",
+    "source": "The Economist"
+  },
+  {
+    "id": 308,
+    "title": "Bascule majeure : de l'économie de l'attention à l'économie de la demande",
+    "desc": "Avec l'IA, les requêtes sont privées et invisibles. L'historique des interactions appartient par défaut aux plateformes.",
+    "url": "https://www.linkedin.com/posts/ericscherer_ia-share-7456240895718281216-DE25/",
+    "date": "2026-05-30",
+    "letter": 39,
+    "cat": "creation",
+    "source": "LinkedIn (Eric Scherer)"
+  },
+  {
+    "id": 309,
+    "title": "Le paradoxe de productivité de l'IA",
+    "desc": "Les professionnels qui s'outillent ne gagnent pas nécessairement du temps. L'AI brain fry génère 12% de fatigue mentale.",
+    "url": "https://dariadecrypteia.substack.com/p/productivite-ia",
+    "date": "2026-05-30",
+    "letter": 39,
+    "cat": "travail",
+    "source": "Substack (Daria Viktorova)"
+  },
+  {
+    "id": 310,
+    "title": "L'IA menace-t-elle nos emplois ? L'avis du CTO de Mistral",
+    "desc": "Timothée Lacroix, cofondateur et CTO de Mistral AI, répond à cette question directe dans Tech&Co sur BFM Business.",
+    "url": "https://www.bfmtv.com/tech/actualites/video-l-ia-menace-t-elle-nos-emplois-l-avis-du-cto-de-mistral_VN-202605280773.html",
+    "date": "2026-05-30",
+    "letter": 39,
+    "cat": "travail",
+    "source": "BFM TV"
+  },
+  {
+    "id": 311,
+    "title": "Grand comme Paris, chaud comme 23 bombes atomiques par jour : le data center qui affole l'Amérique",
+    "desc": "Stratos : 16 000 hectares, 9 gigawatts dans le nord de l'Utah. Projet validé sans débat public, des centaines de recours.",
+    "url": "https://www.lesnumeriques.com/intelligence-artificielle/grand-comme-paris-chaud-comme-23-bombes-atomiques-par-jour-le-data-center-qui-affole-l-amerique-n256600.html",
+    "date": "2026-05-30",
+    "letter": 39,
+    "cat": "technique",
+    "source": "Les Numériques"
+  },
+  {
+    "id": 312,
+    "title": "Emploi, deepfakes, environnement : la ministre de l'IA répond aux lycéens",
+    "desc": "Anne Le Hénanff répond aux questions des lycéens du média l'Esprit Lycéen sur l'emploi, les deepfakes et l'environnement.",
+    "url": "https://www.instagram.com/lespritlyceen.fr/reel/DY4_hYhunYl/",
+    "date": "2026-05-30",
+    "letter": 39,
+    "cat": "education",
+    "source": "Instagram (L'Esprit Lycéen)"
+  },
+  {
+    "id": 313,
+    "title": "Léon XIV : 10 choses à retenir de l'encyclique du pape sur l'intelligence artificielle, Magnifica Humanitas",
+    "desc": "Signée 135 ans après Rerum Novarum, l'encyclique interroge : l'IA contribue-t-elle à faire grandir les personnes en humanité ?",
+    "url": "https://www.la-croix.com/religion/leon-xiv-10-choses-a-retenir-de-l-encyclique-du-pape-sur-lintelligence-artificielle-magnifica-humanitas-20260525",
+    "date": "2026-05-30",
+    "letter": 39,
+    "cat": "philosophie",
+    "source": "La Croix"
   }
 ]
