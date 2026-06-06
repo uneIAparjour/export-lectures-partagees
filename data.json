@@ -3128,5 +3128,95 @@
     "letter": 39,
     "cat": "philosophie",
     "source": "La Croix"
+  },
+  {
+    "id": 314,
+    "title": "Chine/USA, la guerre de l'IA – C dans l'air spécial",
+    "desc": "Des data centers de Virginie aux usines de robots de Hangzhou, enquête sur la bataille États-Unis/Chine pour la maîtrise de l'IA. Avec Yoshua Bengio et Stéphane Séjourné.",
+    "url": "https://www.france.tv/france-5/c-dans-l-air/8541695-chine-usa-la-guerre-de-l-ia-c-dans-l-air-special-31-05-26.html",
+    "date": "2026-05-31",
+    "letter": 40,
+    "cat": "geopolitique",
+    "source": "France TV"
+  },
+  {
+    "id": 315,
+    "title": "Nos indépendances numériques, 2026-2040",
+    "desc": "Un faux journal daté de 2040 produit par la Banque des Territoires : dix articles fictifs de 2027 à 2039 pour alerter les acteurs publics sur les dépendances numériques.",
+    "url": "https://numerique360.banquedesterritoires.fr/intelligence-artificielle/connaissances/journal-nos-independances-numeriques-2026-2040/",
+    "date": "2026-05-01",
+    "letter": 40,
+    "cat": "geopolitique",
+    "source": "Banque des Territoires"
+  },
+  {
+    "id": 316,
+    "title": "Zverev photographie la trace de balle pour dénoncer un dysfonctionnement de l'arbitrage électronique à Madrid",
+    "desc": "La balle était dehors, l'arbitre refuse de vérifier : \"When the system calls it good, I cannot go down.\" Un échange en deux minutes sur la délégation d'autorité à la machine.",
+    "url": "https://www.franceinfo.fr/sports/tennis/masters-1000/tennis-alexander-zverev-prend-en-photo-la-trace-de-la-balle-pour-denoncer-un-dysfonctionnement-de-l-arbitrage-electronique-a-madrid_7215528.html",
+    "date": "2026-04-27",
+    "letter": 40,
+    "cat": "ethique",
+    "source": "Franceinfo"
+  },
+  {
+    "id": 317,
+    "title": "Va-t-on donner notre langue à l'IA ?",
+    "desc": "Les LLM marginalisent les langues peu documentées et risquent l'\"ouroboros linguistique\" : des modèles qui s'entraînent sur leurs propres productions.",
+    "url": "https://www.radiofrance.fr/franceculture/podcasts/le-fil-pop-culture/va-t-on-donner-notre-langue-a-l-ia-3523256",
+    "date": "2026-06-01",
+    "letter": 40,
+    "cat": "philosophie",
+    "source": "France Culture"
+  },
+  {
+    "id": 318,
+    "title": "IA : l'ère du faux",
+    "desc": "Émission spéciale France Info (2h11) : deepfakes, désinformation, impact sur l'emploi et guerre augmentée par l'IA. Avec Gérald Bronner et Bertrand Rondepierre.",
+    "url": "https://www.france.tv/info/8555468-ia-l-ere-du-faux.html",
+    "date": "2026-06-03",
+    "letter": 40,
+    "cat": "securite",
+    "source": "France TV"
+  },
+  {
+    "id": 319,
+    "title": "Savoir penser sans l'IA pour se distinguer",
+    "desc": "Étude MIT 2026 : 12 % de mémorisation avec IA contre 89 % sans. La \"difficulté désirable\" disparaît quand l'IA prend en charge l'effort cognitif. Par Lacroix, Lavilléon, Latimier (Cog'X).",
+    "url": "https://www.linkedin.com/posts/marie-lacroix-93255b87_12-avec-ia-vs-89-sans-ia-cest-la-diff%C3%A9rence-share-7467126282552643584-e3eU",
+    "date": "2026-06-02",
+    "letter": 40,
+    "cat": "travail",
+    "source": "LinkedIn (Marie Lacroix)"
+  },
+  {
+    "id": 320,
+    "title": "How People Are Really Using AI in 2026",
+    "desc": "3e édition de l'étude annuelle sur les usages réels de l'IA générative. Nouveau concept : le \"thinkslop\", abandon progressif des responsabilités cognitives à l'IA.",
+    "url": "https://hbr.org/2026/06/how-people-are-really-using-ai-in-2026",
+    "date": "2026-06-01",
+    "letter": 40,
+    "cat": "etudes",
+    "source": "Harvard Business Review"
+  },
+  {
+    "id": 321,
+    "title": "ChatGPT, Deepseek, Gemini : combien d'énergie coûte vraiment une requête ?",
+    "desc": "Une requête ChatGPT-4 consomme 40 % de plus qu'une recherche Google, DeepSeek 67 fois plus. 3/4 des modèles sans information environnementale publiée.",
+    "url": "https://reporterre.net/ChatGPT-Deepseek-Gemini-combien-d-energie-coute-vraiment-une-requete",
+    "date": "2026-06-03",
+    "letter": 40,
+    "cat": "technique",
+    "source": "Reporterre"
+  },
+  {
+    "id": 322,
+    "title": "Token IA : la fin du repas gratuit",
+    "desc": "Le \"tokenmaxxing\" et la nouvelle économie du token : Meta (60 000 milliards de tokens/mois), 1 % du PIB américain en dépenses tokens en 2025, en hausse de 50 %.",
+    "url": "https://www.linkedin.com/pulse/token-ia-la-fin-du-repas-gratuit-etienne-grass-gawce/",
+    "date": "2026-06-02",
+    "letter": 40,
+    "cat": "technique",
+    "source": "LinkedIn (Etienne Grass)"
   }
 ]
