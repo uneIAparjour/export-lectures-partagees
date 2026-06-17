@@ -3218,5 +3218,95 @@
     "letter": 40,
     "cat": "technique",
     "source": "LinkedIn (Etienne Grass)"
+  },
+  {
+    "id": 323,
+    "title": "Anthropic propose une pause mondiale concertée de l'IA",
+    "desc": "Anthropic a publiquement proposé la création d'un mécanisme de coordination mondiale permettant aux laboratoires de pointe de ralentir ou suspendre...",
+    "url": "https://www.journaldemontreal.com/2026/06/04/anthropic-suggere-une-pause-concertee-du-developpement-de-lia-dans-le-monde",
+    "date": "2026-06-13",
+    "letter": 41,
+    "cat": "geopolitique",
+    "source": "Journal de Montréal"
+  },
+  {
+    "id": 324,
+    "title": "Les hymnes de supporters de la Coupe du monde générés par IA",
+    "desc": "À l'occasion de la Coupe du monde de football, des hymnes de supporters générés par IA cumulent des millions d'écoutes sur les plateformes, à côté...",
+    "url": "https://www.ouest-france.fr/sport/coupe-du-monde/coupe-du-monde-2026-le-succes-fou-des-hymnes-generees-par-ia-d1e102ee-5f4a-11f1-b0fc-ddf25559701c",
+    "date": "2026-06-13",
+    "letter": 41,
+    "cat": "creation",
+    "source": "Ouest-France"
+  },
+  {
+    "id": 325,
+    "title": "Aucun LLM pleinement conforme au RGPD et à l'AI Act (étude Aithos/LARA)",
+    "desc": "Une étude de la fondation Aithos, menée sur plus de 3000 scénarios avec son outil LARA, montre qu'aucun grand modèle de langage ne respecte...",
+    "url": "https://www.lemondeinformatique.fr/actualites/lire-la-plupart-des-modeles-ia-non-conformes-au-droit-europeen-100324.html",
+    "date": "2026-06-13",
+    "letter": 41,
+    "cat": "droit",
+    "source": "Le Monde Informatique"
+  },
+  {
+    "id": 326,
+    "title": "Doctolib réfute transmettre les données de ses utilisateurs aux acteurs de l'IA",
+    "desc": "Le Canard enchaîné affirme que Doctolib transmet la plupart de ses données à Google, Microsoft et Anthropic pour entraîner leurs modèles, via son...",
+    "url": "https://next.ink/240830/doctolib-refute-livrer-les-infos-de-ses-utilisateurs-aux-grands-acteurs-de-lia/",
+    "date": "2026-06-13",
+    "letter": 41,
+    "cat": "droit",
+    "source": "Next"
+  },
+  {
+    "id": 327,
+    "title": "Quelles sources dominent les réponses des IA au printemps 2026 ?",
+    "desc": "Une étude d'Ahrefs passe au crible les sources les plus citées par cinq IA génératives (AI Overviews, Gemini, Copilot, Grok, Perplexity) au printemps...",
+    "url": "https://www.blogdumoderateur.com/gemini-perplexity-copilot-quelles-sources-dominent-reponses-ia-printemps-2026/",
+    "date": "2026-06-13",
+    "letter": 41,
+    "cat": "etudes",
+    "source": "Blog du modérateur"
+  },
+  {
+    "id": 328,
+    "title": "Une étude teste si l'IA peut simuler les émotions humaines",
+    "desc": "Une étude de l'Université technique de Dresde montre que les grands modèles de langage peuvent reproduire, dans des conditions contrôlées, des...",
+    "url": "https://fr.euronews.com/sante/2026/06/11/sante-mentale-une-etude-teste-si-lia-peut-simuler-les-emotions-humaines",
+    "date": "2026-06-13",
+    "letter": 41,
+    "cat": "etudes",
+    "source": "Euronews"
+  },
+  {
+    "id": 329,
+    "title": "Un modèle de langage québécois contre la colonisation linguistique",
+    "desc": "Au Québec, le chercheur Richard Khoury (Université Laval) développe un modèle de langage entièrement québécois pour contrer ce qu'il appelle une...",
+    "url": "https://ici.radio-canada.ca/rci/fr/nouvelle/2246151/diversite-langue-quebecoise--ia-intelligence-artificielle",
+    "date": "2026-06-13",
+    "letter": 41,
+    "cat": "philosophie",
+    "source": "Radio-Canada"
+  },
+  {
+    "id": 330,
+    "title": "Mise en garde contre les contenus IA sur les cultures autochtones",
+    "desc": "Radio-Canada met en garde contre les contenus générés par IA sur les cultures autochtones : dictionnaires, enseignements des aînés ou récits...",
+    "url": "https://ici.radio-canada.ca/espaces-autochtones/2239396/intelligence-artificielle-catgpt-langue-culture-autochtones",
+    "date": "2026-06-13",
+    "letter": 41,
+    "cat": "philosophie",
+    "source": "Radio-Canada"
+  },
+  {
+    "id": 331,
+    "title": "When AI builds itself : l'auto-amélioration récursive selon Anthropic",
+    "desc": "Dans When AI builds itself, Anthropic documente sa progression vers l'auto-amélioration récursive : la durée des tâches que ses modèles accomplissent...",
+    "url": "https://www.anthropic.com/institute/recursive-self-improvement",
+    "date": "2026-06-13",
+    "letter": 41,
+    "cat": "ethique",
+    "source": "Anthropic"
   }
 ]
