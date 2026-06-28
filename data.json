@@ -3608,5 +3608,115 @@
     "letter": 35,
     "cat": "education",
     "source": "LinkedIn (Étienne Grass)"
+  },
+  {
+    "id": 362,
+    "title": "Large language models reflect the ideology of their creators",
+    "desc": "Dix-neuf modèles soumis à des milliers de personnalités politiques : changer de langue change les biais encodés.",
+    "url": "https://www.linkedin.com/posts/mehdi-moussaid-160ba916a_la-langue-dans-laquelle-vous-parlez-%C3%A0-votre-activity-7470731623290925056-3hhI",
+    "date": "2026-06-27",
+    "letter": 43,
+    "cat": "etudes",
+    "source": "LinkedIn (Mehdi Moussaïd)"
+  },
+  {
+    "id": 363,
+    "title": "Victime d'une baisse de 8% du trafic humain, Wikipédia fixe ses premières lignes rouges face à l'IA",
+    "desc": "Jimmy Wales pose une ligne rouge : Wikipédia ne laissera pas l'IA rédiger ses articles.",
+    "url": "https://www.latribune.fr/article/tech/56840266181959/victime-dune-baisse-de-8-du-trafic-humain-wikipedia-fixe-ses-premieres-lignes-rouges-face-a-lia",
+    "date": "2026-06-27",
+    "letter": 43,
+    "cat": "ethique",
+    "source": "La Tribune"
+  },
+  {
+    "id": 364,
+    "title": "Why an AI company cleaned my New York City apartment for free",
+    "desc": "Shift envoie des nettoyeurs équipés de caméras pour entraîner des robots qui les remplaceront.",
+    "url": "https://www.bbc.com/news/articles/cpwerjy20kyo",
+    "date": "2026-06-27",
+    "letter": 43,
+    "cat": "ethique",
+    "source": "BBC"
+  },
+  {
+    "id": 365,
+    "title": "Chez Meta, la bascule vers l'IA entraîne une «merdification» des conditions de travail",
+    "desc": "Surveillance, licenciements, réassignations et +33% de CA : quatre annonces simultanées chez Meta.",
+    "url": "https://next.ink/243453/chez-meta-la-bascule-vers-lia-entraine-une-merdification-des-conditions-de-travail/",
+    "date": "2026-06-27",
+    "letter": 43,
+    "cat": "travail",
+    "source": "Next.ink"
+  },
+  {
+    "id": 366,
+    "title": "Hangzhou's First 'My Job Was Given to an AI' Case: The Fired 35-Year-Old Won",
+    "desc": "M. Zhou, licencié car l'IA pouvait faire son travail, gagne en justice à Hangzhou.",
+    "url": "https://chinaunread.substack.com/p/hangzhous-first-my-job-was-given",
+    "date": "2026-06-27",
+    "letter": 43,
+    "cat": "travail",
+    "source": "ChinaUnread"
+  },
+  {
+    "id": 367,
+    "title": "Les médias d'information sont devenus les agriculteurs du numérique",
+    "desc": "Les rédactions publient vers des agents IA qui livrent une réponse nue, sans auteur, sans lien.",
+    "url": "https://www.linkedin.com/posts/ericscherer_les-m%C3%A9dias-dinformation-sont-devenus-share-7474017056309510144-fr5e",
+    "date": "2026-06-27",
+    "letter": 43,
+    "cat": "creation",
+    "source": "LinkedIn (Eric Scherer)"
+  },
+  {
+    "id": 368,
+    "title": "Les humaniseurs d'IA, comble du renoncement",
+    "desc": "Emmanuel Éthis : une prothèse pour réparer une prothèse, l'écriture comme acte de pensée.",
+    "url": "https://www.ouest-france.fr/reflexion/point-de-vue/point-de-vue-les-humaniseurs-dia-comble-du-renoncement-fe0e00aa-65b3-11f1-bb6e-df703f58b398",
+    "date": "2026-06-27",
+    "letter": 43,
+    "cat": "philosophie",
+    "source": "Ouest France"
+  },
+  {
+    "id": 369,
+    "title": "Sortir de la clandestinité : mettre l'IA au service d'une nouvelle ambition pour le système éducatif",
+    "desc": "Le Conseil de l'IA préconise une approche duale : des temps avec IA et des temps sans IA.",
+    "url": "https://www.conseil-ia-numerique.fr/nos-travaux/sortir-de-la-clandestinite-mettre-lia-au-service-dune-nouvelle-ambition-pour-le-systeme",
+    "date": "2026-06-27",
+    "letter": 43,
+    "cat": "education",
+    "source": "Conseil de l'IA et du numérique"
+  },
+  {
+    "id": 370,
+    "title": "Norway imposes near ban on AI in elementary school",
+    "desc": "La Norvège interdit l'IA générative aux 6-13 ans dès août 2026, fort du succès de son interdiction des smartphones.",
+    "url": "https://www.reuters.com/technology/norway-imposes-near-ban-ai-elementary-school-2026-06-19/",
+    "date": "2026-06-27",
+    "letter": 43,
+    "cat": "education",
+    "source": "Reuters"
+  },
+  {
+    "id": 371,
+    "title": "La base de données qui recense les mensonges des IA devant les juges",
+    "desc": "Damien Charlotin recense plus de 1600 cas d'hallucinations d'IA dans des procédures judiciaires.",
+    "url": "https://www.latribune.fr/article/tech/intelligence-artificielle/75702282898654/la-base-de-donnees-qui-recense-les-mensonges-des-ia-devant-les-juges",
+    "date": "2026-06-27",
+    "letter": 43,
+    "cat": "droit",
+    "source": "La Tribune"
+  },
+  {
+    "id": 372,
+    "title": "Gouvernance de l'IA responsable : Guide des bonnes pratiques des collectivités pour se lancer",
+    "desc": "15 bonnes pratiques pour aider les collectivités à cadrer leur recours à l'IA (AI Act, CRPA).",
+    "url": "https://www.interconnectes.com/documents/fbedc9ee-6270-f111-ac9a-000d3a39bd37/gouvernance-de-l-ia-responsable-guide-des-bonnes-pratiques-des-collectivites-pour-se-lancer",
+    "date": "2026-06-27",
+    "letter": 43,
+    "cat": "droit",
+    "source": "Les Interconnectés"
   }
 ]
