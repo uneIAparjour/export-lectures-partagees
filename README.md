@@ -112,4 +112,4 @@ Puis ouvrir [http://localhost:8000](http://localhost:8000).
 
 ## Licence
 
-MIT — [Une IA par jour](https://www.uneiaparjour.fr/)
+CC BY 4.0 — [Une IA par jour](https://www.uneiaparjour.fr/)
