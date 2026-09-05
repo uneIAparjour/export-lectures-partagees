@@ -3718,5 +3718,186 @@
     "letter": 43,
     "cat": "droit",
     "source": "Les Interconnectés"
+  },
+{
+    "id": 373,
+    "title": "Mistral intègre un modèle chinois (GLM 5.2)",
+    "desc": "Ninon (@ninon_ia) documente le basculement de Mistral vers l'intégration de modèles chinois plutôt que la construction des siens, un choix assumé par son CTO.",
+    "url": "https://www.instagram.com/reel/DcT9_c0siBz/",
+    "date": "2026-09-05",
+    "letter": 44,
+    "cat": "geopolitique",
+    "source": "Instagram (Ninon)"
+  },
+  {
+    "id": 374,
+    "title": "Mistral, comment le champion européen de l'IA devient un installateur de modèles chinois",
+    "desc": "Le Journal du Net documente le glissement de Mistral vers une logique d'installateur de modèles étrangers, jusque dans ses offres d'emploi.",
+    "url": "https://www.journaldunet.com/intelligence-artificielle/1553715-mistral-ou-comment-le-champion-europeen-de-l-ia-devient-un-installateur-de-modeles-chinois/",
+    "date": "2026-09-05",
+    "letter": 44,
+    "cat": "geopolitique",
+    "source": "Le Journal du Net"
+  },
+  {
+    "id": 375,
+    "title": "Mistral : contrat de cinq ans sans clause de sortie",
+    "desc": "Michel-Marie Maudet (LINAGORA) critique les contrats longue durée de Mistral et oppose l'alternative des poids ouverts (Lucie 7B, Luciole).",
+    "url": "https://blog.maudet.cloud/blog/mistral-tout-ca-pour-ca-souverainete-contrat-cinq-ans/",
+    "date": "2026-09-05",
+    "letter": 44,
+    "cat": "geopolitique",
+    "source": "Blog de Michel-Marie Maudet"
+  },
+  {
+    "id": 376,
+    "title": "Pourquoi les affiches générées par IA se ressemblent toutes",
+    "desc": "Alexis Magnaval explore l'« effet Habsbourg », ces IA qui s'entraînent sur leurs propres productions jusqu'à l'uniformisation esthétique.",
+    "url": "https://www.radiofrance.fr/franceculture/affiches-generees-par-ia-pourquoi-elles-se-ressemblent-toutes-4380556",
+    "date": "2026-09-05",
+    "letter": 44,
+    "cat": "creation",
+    "source": "France Culture"
+  },
+  {
+    "id": 377,
+    "title": "Google Earth permet d'ajouter ce qui n'existe pas",
+    "desc": "Un outil de génération IA sur Google Earth permettait d'ajouter des éléments fictifs sur des vues satellite réelles, avant suspension par Google.",
+    "url": "https://next.ink/brief-article/google-earth-permet-maintenant-dajouter-ce-qui-nexiste-pas/",
+    "date": "2026-09-05",
+    "letter": 44,
+    "cat": "securite",
+    "source": "Next"
+  },
+  {
+    "id": 378,
+    "title": "L'intelligence artificielle générative : des impacts environnementaux importants",
+    "desc": "Premier avis institutionnel de l'ADEME sur les impacts environnementaux de l'IA générative, rédigé sans IA générative.",
+    "url": "https://librairie.ademe.fr/economie-circulaire-et-dechets/9495-avis-de-l-ademe-l-intelligence-artificielle-generative-des-impacts-environnementaux-importants.html",
+    "date": "2026-09-05",
+    "letter": 44,
+    "cat": "technique",
+    "source": "ADEME"
+  },
+  {
+    "id": 379,
+    "title": "Le mythe de la bouteille d'eau par requête ChatGPT",
+    "desc": "Amélie (@ia_amelie) déconstruit sur TikTok l'idée reçue qu'une requête ChatGPT consommerait 500 ml d'eau, un chiffre daté de GPT-3.",
+    "url": "https://www.tiktok.com/@ia_amelie/video/7630897701764418819",
+    "date": "2026-09-05",
+    "letter": 44,
+    "cat": "technique",
+    "source": "TikTok (Amélie)"
+  },
+  {
+    "id": 380,
+    "title": "Du vibe coding au brain fry, la nouvelle fatigue qui terrasse les devs",
+    "desc": "Numerama documente la fatigue mentale liée à la gestion simultanée de plusieurs agents IA chez les développeurs en vibe coding.",
+    "url": "https://www.numerama.com/tech/2304443-du-vibe-coding-au-brain-fry-la-nouvelle-fatigue-qui-terrasse-les-devs.html",
+    "date": "2026-09-05",
+    "letter": 44,
+    "cat": "travail",
+    "source": "Numerama"
+  },
+  {
+    "id": 381,
+    "title": "Students, AI cheating and schools in Denmark",
+    "desc": "Le Danemark impose défense orale des devoirs et pare-feux scolaires contre la triche par IA dans les lycées.",
+    "url": "https://www.theguardian.com/technology/2026/aug/06/students-ai-cheating-schools-denmark",
+    "date": "2026-09-05",
+    "letter": 44,
+    "cat": "education",
+    "source": "The Guardian"
+  },
+  {
+    "id": 382,
+    "title": "Quand la machine nous donne raison : les enjeux de la flagornerie algorithmique",
+    "desc": "Alexandra Lez explique comment la sycophancy des IA érode la friction productive nécessaire à l'apprentissage, et propose la méthode Ask don't tell.",
+    "url": "https://leveilleur.revue.usherbrooke.ca/quand-la-machine-nous-donne-raison-les-enjeux-de-la-flagornerie-algorithmique/",
+    "date": "2026-09-05",
+    "letter": 44,
+    "cat": "education",
+    "source": "L'éveilleur (Université de Sherbrooke)"
+  },
+  {
+    "id": 383,
+    "title": "Lancement des Aperçus IA et du Mode IA en France",
+    "desc": "Google présente le déploiement en France de ses résumés IA dans les résultats de recherche, deux ans après leur lancement mondial.",
+    "url": "https://blog.google/intl/fr-fr/nouveautes-produits/explorez-obtenez-des-reponses/recherche-ia-apercus-mode/",
+    "date": "2026-09-05",
+    "letter": 44,
+    "cat": "droit",
+    "source": "Google (blog officiel)"
+  },
+  {
+    "id": 384,
+    "title": "Numerama va disparaître",
+    "desc": "Numerama documente la transformation forcée de ses pratiques face à l'érosion du trafic issu des résumés IA de Google.",
+    "url": "https://www.numerama.com/tech/2299303-numerama-va-disparaitre.html",
+    "date": "2026-09-05",
+    "letter": 44,
+    "cat": "droit",
+    "source": "Numerama"
+  },
+  {
+    "id": 385,
+    "title": "Droits voisins : la presse française face aux résumés IA de Google",
+    "desc": "Fabrice Bazard (Ouest-France) chiffre à 33-38% la perte de trafic liée aux résumés IA et porte la voix de la presse devant l'Autorité de la concurrence.",
+    "url": "https://www.linkedin.com/posts/fabricebazard_aioverviews-droitsvoisins-presse-share-7493211733512192001-I25v/",
+    "date": "2026-09-05",
+    "letter": 44,
+    "cat": "droit",
+    "source": "LinkedIn (Fabrice Bazard)"
+  },
+  {
+    "id": 386,
+    "title": "Le marquage des textes générés par Claude",
+    "desc": "Daria Viktorova analyse les implications en droit d'auteur et RGPD du marquage des contenus générés par Claude, imposé par l'AI Act.",
+    "url": "https://www.linkedin.com/posts/daria-viktorova_vous-%C3%A9crivez-le-texte-claude-le-relit-et-share-7492981960517234688-0TpL/",
+    "date": "2026-09-05",
+    "letter": 44,
+    "cat": "droit",
+    "source": "LinkedIn (Daria Viktorova)"
+  },
+  {
+    "id": 387,
+    "title": "The Generative AI Learning Penalty",
+    "desc": "Franck Ramus relaie une étude sur 26 811 élèves chinois montrant de meilleures notes de devoirs avec l'IA mais de moins bons résultats aux examens sur table.",
+    "url": "https://www.linkedin.com/posts/franck-ramus_cette-%C3%A9tude-confirme-ce-que-tout-le-monde-share-7496121573482029056-qOgR/",
+    "date": "2026-09-05",
+    "letter": 44,
+    "cat": "etudes",
+    "source": "LinkedIn (Franck Ramus)"
+  },
+  {
+    "id": 388,
+    "title": "L'histoire de l'IA, faite de cycles entre attentes démesurées et réelles avancées",
+    "desc": "Un rappel des deux précédents « hivers de l'IA », nés d'attentes démesurées suivies de désillusions.",
+    "url": "https://theconversation.com/lhistoire-de-lia-faite-de-cycles-entre-attentes-demesurees-et-reelles-avancees-285291",
+    "date": "2026-09-05",
+    "letter": 44,
+    "cat": "etudes",
+    "source": "The Conversation"
+  },
+  {
+    "id": 389,
+    "title": "Notre esprit n'est pas un ordinateur",
+    "desc": "Anne Alombert relit Canguilhem : une machine qui calcule bien n'invente pas forcément quelque chose de neuf.",
+    "url": "https://www.radiofrance.fr/franceculture/podcasts/le-fil-philo/notre-esprit-n-est-pas-un-ordinateur-9229318",
+    "date": "2026-09-05",
+    "letter": 44,
+    "cat": "philosophie",
+    "source": "France Culture (Le Fil philo)"
+  },
+  {
+    "id": 390,
+    "title": "Pourquoi l'IA vous dit toujours que vous avez une excellente idée, ou l'effet sycophante",
+    "desc": "Emmanuel Carré explique comment l'IA entraînée à flatter et notre jugement qui fléchit devant l'éloge se renforcent mutuellement.",
+    "url": "https://theconversation.com/pourquoi-lia-vous-dit-toujours-que-vous-avez-une-excellente-idee-ou-leffet-sycophante-287398",
+    "date": "2026-09-05",
+    "letter": 44,
+    "cat": "philosophie",
+    "source": "The Conversation"
   }
 ]
+
