@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shared Reads — Une IA par jour</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Montserrat',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#2D2D2D;color:#E8E8E8}
+    .container{max-width:640px;margin:0 auto;padding:0 20px}
+    .skip-link{position:absolute;top:-100%;left:50%;transform:translateX(-50%);background:#E67E22;color:#fff;padding:8px 20px;border-radius:0 0 8px 8px;z-index:100;font-weight:600;text-decoration:none}
+    .skip-link:focus{top:0}
+    header{background:linear-gradient(135deg,#1a1a1a,#2D2D2D);color:#fff;padding:28px 24px;text-align:center;border-bottom:3px solid #E67E22}
+    header h1{font-size:1.4rem;font-weight:700;margin-bottom:8px;color:#E67E22}
+    header p{font-size:.9rem;color:#D0D0D0}
+    header a{color:#E67E22;text-decoration:none}
+    .header-stats{display:inline-flex;gap:16px;margin-top:12px;font-size:.82rem;color:#A0A0A0}
+    .header-stats strong{color:#E67E22}
+    #nav-categories{background:#1a1a1a;border-bottom:1px solid #4D4D4D;padding:14px 0}
+    .nav-inner{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;max-width:640px;margin:0 auto;padding:0 16px}
+    .nav-cat{display:inline-flex;align-items:center;gap:5px;padding:5px 12px;border:1px solid #4D4D4D;border-radius:50px;background:#2D2D2D;font-size:.75rem;font-weight:500;color:#A0A0A0;cursor:pointer;transition:all .2s;font-family:inherit}
+    .nav-cat:hover{border-color:#E67E22;color:#E67E22;background:#3D3D3D}
+    .nav-cat .count{background:#3D3D3D;padding:1px 6px;border-radius:50px;font-size:.65rem;font-weight:600;color:#808080}
+    .nav-cat:hover .count{background:#E67E22;color:#fff}
+    main{padding:24px 0}
+    .category-section{margin-bottom:40px}
+    .category-header{display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid #3D3D3D}
+    .category-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+    .category-header h2{font-size:1.15rem;font-weight:700;color:#E8E8E8}
+    .category-count{margin-left:auto;font-size:.75rem;color:#808080;font-weight:500}
+    .resource-card{background:#3D3D3D;border:1px solid #4D4D4D;border-radius:10px;padding:16px 20px;margin-bottom:10px;transition:all .2s}
+    .resource-card:hover{border-color:#5D5D5D}
+    .resource-title{font-size:.95rem;font-weight:600;color:#E8E8E8;margin-bottom:5px;line-height:1.4}
+    .resource-title a{color:#E8E8E8;text-decoration:none;transition:color .2s}
+    .resource-title a:hover{color:#E67E22}
+    .resource-desc{font-size:.85rem;color:#B0B0B0;line-height:1.5;margin-bottom:8px}
+    .resource-meta{display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:.73rem;color:#808080}
+    .resource-meta a{color:#E67E22;text-decoration:none;font-weight:500}
+    .resource-meta a:hover{text-decoration:underline}
+    .meta-sep{color:#4D4D4D}
+    .source-badge{padding:2px 8px;background:#4D4D4D;border-radius:50px;font-weight:500;color:#C0C0C0}
+    .back-to-top{display:block;text-align:right;font-size:.78rem;color:#808080;margin-top:6px;padding:4px 0;transition:color .2s;cursor:pointer;background:none;border:none;font-family:inherit}
+    .back-to-top:hover{color:#E67E22}
+    .section-divider{text-align:center;padding:32px 0;position:relative}
+    .section-divider::before{content:'';position:absolute;top:50%;left:0;right:0;height:1px;background:#4D4D4D}
+    .section-divider span{position:relative;background:#2D2D2D;padding:0 20px;font-size:1rem;font-weight:600;color:#E67E22}
+    .export-section{background:#3D3D3D;border:1px solid #4D4D4D;border-radius:16px;padding:28px;margin-bottom:40px}
+    .export-section h3{font-size:1.1rem;font-weight:700;color:#E67E22;margin-bottom:6px}
+    .export-intro{font-size:.85rem;color:#A0A0A0;margin-bottom:20px}
+    .export-stats{display:flex;gap:12px;margin-bottom:16px}
+    .export-stat{background:#2D2D2D;border-radius:10px;padding:12px;text-align:center;flex:1;border:1px solid #4D4D4D}
+    .export-stat-value{font-size:1.4rem;font-weight:700;color:#E67E22}
+    .export-stat-label{font-size:.7rem;color:#C0C0C0;margin-top:2px}
+    .search-input{width:100%;padding:12px 16px;border:2px solid #4D4D4D;border-radius:12px;font-size:.95rem;margin-bottom:14px;outline:0;background:#2D2D2D;color:#E8E8E8;font-family:inherit}
+    .search-input::placeholder{color:#808080}
+    .search-input:focus{border-color:#E67E22}
+    .export-tabs{display:flex;gap:4px;margin-bottom:14px;background:#2D2D2D;padding:4px;border-radius:10px}
+    .export-tab{flex:1;padding:10px;border:0;border-radius:7px;background:0 0;color:#A0A0A0;font-weight:500;font-size:.85rem;cursor:pointer;transition:all .2s;font-family:inherit}
+    .export-tab.active{background:#E67E22;color:#fff;font-weight:600}
+    .select-box{background:#2D2D2D;border-radius:12px;padding:12px;margin-bottom:18px;max-height:260px;overflow-y:auto;border:1px solid #4D4D4D}
+    .sel-btn{display:flex;align-items:center;gap:12px;width:100%;padding:10px 14px;margin-bottom:6px;border:2px solid #4D4D4D;border-radius:8px;background:#3D3D3D;cursor:pointer;text-align:left;transition:all .15s;color:#E8E8E8;font-size:.85rem;font-family:inherit}
+    .sel-btn:hover{border-color:#5D5D5D}
+    .sel-check{width:18px;height:18px;border-radius:5px;background:#4D4D4D;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;flex-shrink:0}
+    .sel-label{font-weight:500}
+    .sel-count{margin-left:auto;font-size:.72rem;background:#4D4D4D;padding:2px 8px;border-radius:50px;color:#A0A0A0;font-weight:600}
+    .action-row{display:flex;gap:8px;margin-bottom:10px}
+    .action-btn{flex:1;padding:8px;border:1px solid #4D4D4D;border-radius:8px;background:#3D3D3D;font-size:.78rem;cursor:pointer;color:#A0A0A0;transition:all .15s;font-family:inherit}
+    .action-btn:hover{background:#4D4D4D;color:#E8E8E8}
+    h4.fmt-title{margin:0 0 10px;font-size:.9rem;color:#E67E22}
+    .formats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .fmt-btn{padding:14px 12px;border:2px solid #4D4D4D;border-radius:12px;background:#2D2D2D;cursor:pointer;text-align:left;transition:all .2s;font-family:inherit}
+    .fmt-btn:hover{border-color:#E67E22;transform:translateY(-2px);background:#3D3D3D}
+    .fmt-name{font-weight:600;font-size:.9rem;color:#E8E8E8;margin-bottom:2px}
+    .fmt-desc{font-size:.72rem;color:#A0A0A0}
+    footer{text-align:center;padding:24px;color:#808080;font-size:.78rem}
+    footer a{color:#E67E22;text-decoration:none}
+    footer a:hover{text-decoration:underline}
+    *:focus-visible{outline:2px solid #E67E22;outline-offset:2px;border-radius:4px}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+    .select-box::-webkit-scrollbar{width:8px}
+    .select-box::-webkit-scrollbar-track{background:#2D2D2D;border-radius:4px}
+    .select-box::-webkit-scrollbar-thumb{background:#4D4D4D;border-radius:4px}
+    .select-box::-webkit-scrollbar-thumb:hover{background:#5D5D5D}
+    .loading{text-align:center;padding:60px 20px;color:#808080}
+    .loading-spinner{width:28px;height:28px;border:3px solid #4D4D4D;border-top-color:#E67E22;border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 10px}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    @media(max-width:520px){
+      header h1{font-size:1.2rem}
+      .header-stats{flex-direction:column;gap:4px}
+      .formats-grid{grid-template-columns:1fr}
+      .export-section{padding:18px;border-radius:12px}
+      .nav-cat{padding:4px 8px;font-size:.7rem}
+      .resource-card{padding:14px 16px}
+    }
+  </style>
+</head>
+<body>
+<a href="#lecture" class="skip-link">Skip to content</a>
+<header role="banner">
+  <div class="container">
+    <h1>Shared Reads</h1>
+    <p>Resources from the <a href="https://uneiaparjour.substack.com/" target="_blank">Une IA par jour</a> newsletter</p>
+    <div class="header-stats" id="header-stats" aria-live="polite">
+      <span><strong id="stat-total">—</strong> resources</span>
+      <span><strong>10</strong> categories</span>
+      <span><strong>7</strong> export formats</span>
+    </div>
+  </div>
+</header>
+<nav id="nav-categories" aria-label="Categories"></nav>
+<div class="container">
+  <main id="lecture" aria-live="polite">
+    <div class="loading"><div class="loading-spinner"></div>Loading resources…</div>
+  </main>
+  <div class="section-divider"><span>Export resources</span></div>
+  <section class="export-section" id="export" aria-label="Export resources">
+    <h3>Export a selection</h3>
+    <p class="export-intro">Filter by category or select individual articles, then choose a format.</p>
+    <div id="export-app"></div>
+  </section>
+  <footer>
+    <a href="https://www.uneiaparjour.fr/" target="_blank">Une IA par jour</a> · 
+    <a href="https://github.com/uneIAparjour/export-lectures-partagees" target="_blank">GitHub</a>
+    <p style="margin-top:6px">Updated weekly</p>
+  </footer>
+</div>
+<script>
+(function(){
+
+const CATEGORIES={
+  etudes:{label:"Studies & Research",color:"#3B82F6"},
+  ethique:{label:"Ethics & Society",color:"#A855F7"},
+  travail:{label:"AI & Work",color:"#F59E0B"},
+  securite:{label:"Security & Disinformation",color:"#EF4444"},
+  creation:{label:"Creation, Art & Media",color:"#EC4899"},
+  technique:{label:"Technology & Infrastructure",color:"#10B981"},
+  philosophie:{label:"Philosophy & Reflections",color:"#6366F1"},
+  education:{label:"Education",color:"#14B8A6"},
+  droit:{label:"Law",color:"#F97316"},
+  geopolitique:{label:"Geopolitics & International Affairs",color:"#06B6D4"}
+};
+
+let RESOURCES=[];
+let selectedCats=new Set(),selectedRes=new Set(),search='',exportTab='categories';
+
+const formatDate=(d)=>new Date(d).toLocaleDateString('en-US');
+const getFiltered=()=>{let r=RESOURCES;if(selectedCats.size)r=r.filter(x=>selectedCats.has(x.cat));if(search){const q=search.toLowerCase();r=r.filter(x=>x.title.toLowerCase().includes(q)||x.desc.toLowerCase().includes(q))}return r.sort((a,b)=>new Date(b.date)-new Date(a.date))};
+const getExportable=()=>selectedRes.size?RESOURCES.filter(r=>selectedRes.has(r.id)):getFiltered();
+const groupByCategory=(res)=>{const g={};res.forEach(r=>{if(!g[r.cat])g[r.cat]=[];g[r.cat].push(r)});return g};
+
+/**
+ * Notifie le parent de la hauteur du contenu pour auto-resize de l'iframe.
+ */
+function notifyHeight(){
+  const h=document.documentElement.scrollHeight;
+  window.parent.postMessage({type:'iframeResize',height:h},'*');
+}
+
+/**
+ * Scrolle vers un élément. Fonctionne en iframe :
+ * - Calcule la position de l'élément dans l'iframe
+ * - Demande au parent de scroller la page à la bonne position
+ */
+function goTo(id){
+  const el=document.getElementById(id);
+  if(!el)return;
+  // Position de l'élément dans le document iframe
+  const offsetInIframe=el.getBoundingClientRect().top+window.scrollY;
+  // Demander au parent de scroller
+  window.parent.postMessage({type:'iframeScrollTo',offset:offsetInIframe},'*');
+}
+
+/* === SECTION LECTURE === */
+function renderLecture(){
+  const main=document.getElementById('lecture');
+  const grouped=groupByCategory(RESOURCES);
+  let html='';
+  Object.entries(CATEGORIES).forEach(([key,{label,color}])=>{
+    const items=grouped[key];
+    if(!items||!items.length)return;
+    const sorted=items.sort((a,b)=>new Date(b.date)-new Date(a.date));
+    html+=`<section class="category-section" id="cat-${key}">
+      <div class="category-header">
+        <div class="category-dot" style="background:${color}"></div>
+        <h2>${label}</h2>
+        <span class="category-count">${items.length} resource${items.length>1?'s':''}</span>
+      </div>`;
+    sorted.forEach(r=>{
+      const link=r.url?`<a href="${r.url}" target="_blank" rel="noopener">${r.title}</a>`:r.title;
+      const letterUrl=`https://uneiaparjour.substack.com/p/une-ia-par-jour-lettre-${r.letter}`;
+      html+=`<article class="resource-card">
+        <h3 class="resource-title">${link}</h3>
+        <p class="resource-desc">${r.desc}</p>
+        <div class="resource-meta">
+          <span class="source-badge">${r.source}</span>
+          <span class="meta-sep">·</span>
+          <a href="${letterUrl}" target="_blank" rel="noopener">Letter #${r.letter}</a>
+          <span class="meta-sep">·</span>
+          <span>${formatDate(r.date)}</span>
+        </div>
+      </article>`;
+    });
+    html+=`<button class="back-to-top" onclick="goTo('nav-categories')">↑ Back to menu</button></section>`;
+  });
+  main.innerHTML=html;
+}
+
+/* === NAVIGATION === */
+function renderNav(){
+  const nav=document.getElementById('nav-categories');
+  const grouped=groupByCategory(RESOURCES);
+  let html='<div class="nav-inner">';
+  Object.entries(CATEGORIES).forEach(([key,{label}])=>{
+    const count=grouped[key]?.length||0;
+    html+=`<button class="nav-cat" onclick="goTo('cat-${key}')">${label}<span class="count">${count}</span></button>`;
+  });
+  html+='<button class="nav-cat" onclick="goTo(\'export\')" style="border-color:#E67E22;color:#E67E22;font-weight:600">⬇ Export</button></div>';
+  nav.innerHTML=html;
+}
+
+/* === GÉNÉRATEURS D'EXPORT === */
+function genOPML(res){const g=groupByCategory(res);let o=`<?xml version="1.0" encoding="UTF-8"?>\n<opml version="2.0">\n<head><title>Shared Reads</title><dateCreated>${new Date().toISOString()}</dateCreated></head>\n<body>`;Object.entries(g).forEach(([k,items])=>{o+=`\n<outline text="${CATEGORIES[k]?.label}" title="${CATEGORIES[k]?.label}">`;items.forEach(r=>{o+=`\n<outline type="link" text="${r.title.replace(/"/g,'&quot;')}" url="${r.url}" created="${r.date}"/>`});o+=`\n</outline>`});return o+`\n</body>\n</opml>`}
+function genXML(res){let o=`<?xml version="1.0" encoding="UTF-8"?>\n<sharedReads>\n<metadata><title>Shared Reads</title><dateExport>${new Date().toISOString()}</dateExport><total>${res.length}</total></metadata>\n<resources>`;res.forEach(r=>{o+=`\n<resource id="${r.id}"><title><![CDATA[${r.title}]]></title><description><![CDATA[${r.desc}]]></description><url>${r.url}</url><date>${r.date}</date><letter>${r.letter}</letter><category>${CATEGORIES[r.cat]?.label}</category><source><![CDATA[${r.source}]]></source></resource>`});return o+`\n</resources>\n</sharedReads>`}
+function genMarkdown(res){const g=groupByCategory(res);let o=`# Shared Reads\n\n> Export from ${formatDate(new Date())} — ${res.length} resources\n\n---\n\n`;Object.entries(g).forEach(([k,items])=>{o+=`## ${CATEGORIES[k]?.label}\n\n`;items.sort((a,b)=>new Date(b.date)-new Date(a.date)).forEach(r=>{o+=`### ${r.title}\n\n${r.desc}\n\n- **Date**: ${formatDate(r.date)}\n- **Letter**: #${r.letter}\n- **Link**: [${r.url}](${r.url})\n\n---\n\n`})});return o}
+function genBookmarks(res){const g=groupByCategory(res);let o=`<!DOCTYPE NETSCAPE-Bookmark-file-1>\n<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">\n<TITLE>Shared Reads</TITLE>\n<H1>Shared Reads</H1>\n<DL><p>`;Object.entries(g).forEach(([k,items])=>{o+=`\n<DT><H3>${CATEGORIES[k]?.label}</H3>\n<DL><p>`;items.forEach(r=>{o+=`\n<DT><A HREF="${r.url}" ADD_DATE="${Math.floor(new Date(r.date).getTime()/1000)}">${r.title}</A>`});o+=`\n</DL><p>`});return o+`\n</DL><p>`}
+function genBibTeX(res){let o=`% Shared Reads\n% ${res.length} resources\n\n`;res.forEach(r=>{const k=r.title.toLowerCase().replace(/[^a-z0-9]/g,'').substring(0,15)+r.id;o+=`@online{${k},\n  author = {${r.source.replace(/[{}]/g,'')}},\n  title = {${r.title.replace(/[{}]/g,'')}},\n  year = {${r.date.substring(0,4)}},\n  url = {${r.url}},\n  keywords = {${r.cat}, ia}\n}\n\n`});return o}
+function genJSON(res){return JSON.stringify({metadata:{title:"Shared Reads",exportDate:new Date().toISOString(),total:res.length},resources:res.map(r=>({id:r.id,title:r.title,description:r.desc,url:r.url,date:r.date,letter:r.letter,category:r.cat,categoryLabel:CATEGORIES[r.cat]?.label,source:r.source}))},null,2)}
+function genCSV(res){const esc=(s)=>`"${String(s).replace(/"/g,'""')}"`;let o='ID;Title;Description;URL;Date;Letter;Category;Source\n';res.forEach(r=>{o+=`${r.id};${esc(r.title)};${esc(r.desc)};${esc(r.url)};${r.date};${r.letter};${esc(CATEGORIES[r.cat]?.label)};${esc(r.source)}\n`});return o}
+
+function download(c,f,m){const b=new Blob([c],{type:m+';charset=utf-8'});const u=URL.createObjectURL(b);const a=document.createElement('a');a.href=u;a.download=f;document.body.appendChild(a);a.click();document.body.removeChild(a);URL.revokeObjectURL(u)}
+function exportFormat(fmt){const d=getExportable();const f={opml:[genOPML(d),'shared-reads.opml','application/xml'],xml:[genXML(d),'shared-reads.xml','application/xml'],markdown:[genMarkdown(d),'shared-reads.md','text/markdown'],bookmarks:[genBookmarks(d),'shared-reads-bookmarks.html','text/html'],bibtex:[genBibTeX(d),'shared-reads.bib','application/x-bibtex'],json:[genJSON(d),'shared-reads.json','application/json'],csv:[genCSV(d),'shared-reads.csv','text/csv']};if(f[fmt])download(...f[fmt])}
+
+/* === SECTION EXPORT === */
+function renderExport(){
+  const app=document.getElementById('export-app');
+  const filtered=getFiltered(),exportable=getExportable();
+  let sel='';
+  if(exportTab==='categories'){
+    Object.entries(CATEGORIES).forEach(([key,{label,color}])=>{
+      const count=RESOURCES.filter(r=>r.cat===key).length;
+      const s=selectedCats.has(key);
+      sel+=`<button class="sel-btn" data-cat="${key}" aria-pressed="${s}" style="${s?`border-color:${color};background:${color}20`:''}">`
+        +`<div class="sel-check" style="${s?`background:${color}`:''}">${s?'✓':''}</div>`
+        +`<span class="sel-label" style="${s?`color:${color}`:''}">${label}</span>`
+        +`<span class="sel-count" style="${s?`background:${color};color:#fff`:''}">${count}</span></button>`;
+    });
+  } else {
+    sel+=`<div class="action-row"><button class="action-btn" id="sel-all">Select all</button><button class="action-btn" id="clr-all">Clear</button></div>`;
+    filtered.forEach(r=>{
+      const s=selectedRes.has(r.id);const color=CATEGORIES[r.cat]?.color||'#6B7280';
+      sel+=`<button class="sel-btn" data-id="${r.id}" aria-pressed="${s}" style="${s?`border-color:${color};background:${color}15`:''}">`
+        +`<div class="sel-check" style="${s?`background:${color}`:''}">${s?'✓':''}</div>`
+        +`<span class="sel-label" style="font-size:.8rem">${r.title}</span></button>`;
+    });
+  }
+  app.innerHTML=`
+    <div class="export-stats">
+      <div class="export-stat"><div class="export-stat-value">${filtered.length}</div><div class="export-stat-label">Filtered</div></div>
+      <div class="export-stat"><div class="export-stat-value">${exportable.length}</div><div class="export-stat-label">To export</div></div>
+      <div class="export-stat"><div class="export-stat-value">${selectedCats.size||10}</div><div class="export-stat-label">Categories</div></div>
+    </div>
+    <input type="text" class="search-input" id="search" placeholder="Search…" value="${search}" aria-label="Search resources">
+    <div class="export-tabs" role="tablist">
+      <button class="export-tab ${exportTab==='categories'?'active':''}" data-tab="categories" role="tab" aria-selected="${exportTab==='categories'}">By category</button>
+      <button class="export-tab ${exportTab==='resources'?'active':''}" data-tab="resources" role="tab" aria-selected="${exportTab==='resources'}">By article</button>
+    </div>
+    <div class="select-box">${sel}</div>
+    <h4 class="fmt-title">Choose a format</h4>
+    <div class="formats-grid" role="group" aria-label="Export formats">
+      <button class="fmt-btn" data-fmt="opml" aria-label="Export as OPML"><div class="fmt-name">OPML</div><div class="fmt-desc">Feedly, Inoreader…</div></button>
+      <button class="fmt-btn" data-fmt="xml" aria-label="Export as XML"><div class="fmt-name">XML</div><div class="fmt-desc">Structured format</div></button>
+      <button class="fmt-btn" data-fmt="markdown" aria-label="Export as Markdown"><div class="fmt-name">Markdown</div><div class="fmt-desc">Documentation</div></button>
+      <button class="fmt-btn" data-fmt="bookmarks" aria-label="Export as bookmarks"><div class="fmt-name">Bookmarks</div><div class="fmt-desc">Browsers</div></button>
+      <button class="fmt-btn" data-fmt="bibtex" aria-label="Export as BibTeX"><div class="fmt-name">BibTeX</div><div class="fmt-desc">Zotero, Mendeley…</div></button>
+      <button class="fmt-btn" data-fmt="json" aria-label="Export as JSON"><div class="fmt-name">JSON</div><div class="fmt-desc">Developers</div></button>
+      <button class="fmt-btn" data-fmt="csv" aria-label="Export as CSV"><div class="fmt-name">CSV</div><div class="fmt-desc">Spreadsheets</div></button>
+    </div>`;
+
+  app.querySelector('#search').addEventListener('input',(e)=>{const pos=e.target.selectionStart;search=e.target.value;renderExport();const s=app.querySelector('#search');s.focus();s.setSelectionRange(pos,pos)});
+  app.querySelectorAll('.export-tab').forEach(b=>b.addEventListener('click',()=>{exportTab=b.dataset.tab;renderExport()}));
+  app.querySelectorAll('.sel-btn[data-cat]').forEach(b=>b.addEventListener('click',()=>{const c=b.dataset.cat;selectedCats.has(c)?selectedCats.delete(c):selectedCats.add(c);renderExport()}));
+  app.querySelectorAll('.sel-btn[data-id]').forEach(b=>b.addEventListener('click',()=>{const id=parseInt(b.dataset.id);selectedRes.has(id)?selectedRes.delete(id):selectedRes.add(id);renderExport()}));
+  app.querySelector('#sel-all')?.addEventListener('click',()=>{filtered.forEach(r=>selectedRes.add(r.id));renderExport()});
+  app.querySelector('#clr-all')?.addEventListener('click',()=>{selectedRes.clear();selectedCats.clear();renderExport()});
+  app.querySelectorAll('.fmt-btn').forEach(b=>b.addEventListener('click',()=>exportFormat(b.dataset.fmt)));
+
+  requestAnimationFrame(notifyHeight);
+}
+
+/* === RENDRE goTo ACCESSIBLE DEPUIS onclick === */
+window.goTo=goTo;
+
+/* === CHARGEMENT === */
+fetch('data.json')
+  .then(r=>{if(!r.ok)throw new Error(`HTTP ${r.status}`);return r.json()})
+  .then(data=>{
+    RESOURCES=data;
+    document.getElementById('stat-total').textContent=RESOURCES.length;
+    renderNav();
+    renderLecture();
+    renderExport();
+    requestAnimationFrame(notifyHeight);
+    window.addEventListener('load',notifyHeight);
+    new ResizeObserver(notifyHeight).observe(document.documentElement);
+  })
+  .catch(err=>{
+    console.error(err);
+    document.getElementById('lecture').innerHTML='<p style="color:#EF4444;text-align:center;padding:40px">Loading error.<br>Please refresh the page.</p>';
+  });
+
+})();
+</script>
+</body>
+</html>
