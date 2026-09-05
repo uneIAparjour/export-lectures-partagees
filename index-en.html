@@ -292,7 +292,7 @@ function renderExport(){
 window.goTo=goTo;
 
 /* === CHARGEMENT === */
-fetch('data.json')
+fetch('data-en.json')
   .then(r=>{if(!r.ok)throw new Error(`HTTP ${r.status}`);return r.json()})
   .then(data=>{
     RESOURCES=data;

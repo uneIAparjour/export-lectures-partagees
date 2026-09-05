@@ -1,0 +1,3902 @@
+[
+  {
+    "id": 1,
+    "title": "The French and information (2nd edition)",
+    "desc": "ARCOM report. 20% of French people use AI to get informed (38% of those under 25).",
+    "url": "https://www.arcom.fr/se-documenter/etudes-et-donnees/etudes-bilans-et-rapports-de-larcom/les-francais-et-linformation-2eme-edition",
+    "date": "2026-01-31",
+    "letter": 22,
+    "cat": "etudes",
+    "source": "ARCOM"
+  },
+  {
+    "id": 2,
+    "title": "AI makes you smarter but none the wiser",
+    "desc": "Study on the disconnect between performance and metacognition with AI.",
+    "url": "https://www.sciencedirect.com/science/article/pii/S0747563225002262",
+    "date": "2026-01-10",
+    "letter": 19,
+    "cat": "etudes",
+    "source": "Science Direct"
+  },
+  {
+    "id": 3,
+    "title": "Evolution of traffic to generative AI applications",
+    "desc": "Summary of traffic evolution and market share of chatbots.",
+    "url": "https://www.similarweb.com/blog/wp-content/uploads/2025/12/attachment-Global-AI-Tracker-5.pdf",
+    "date": "2026-01-10",
+    "letter": 19,
+    "cat": "etudes",
+    "source": "SimilarWeb"
+  },
+  {
+    "id": 4,
+    "title": "Chinese AI has dethroned the US according to Stanford",
+    "desc": "Analysis of the Stanford report on Chinese open-source AI.",
+    "url": "https://goodtech.info/etude-stanford-humiliation-ia-usa-chine-open-source/",
+    "date": "2026-01-03",
+    "letter": 18,
+    "cat": "etudes",
+    "source": "GoodTech Info"
+  },
+  {
+    "id": 5,
+    "title": "AI prompt: a mirror of usage and reflexivity",
+    "desc": "Research experiment on AI usage via a prompt to submit to our chatbots.",
+    "url": "https://4cristol.over-blog.com/2025/12/prompt-ia-miroir-des-usages-et-de-la-reflexivite.html",
+    "date": "2026-01-03",
+    "letter": 18,
+    "cat": "etudes",
+    "source": "Denis Cristol"
+  },
+  {
+    "id": 6,
+    "title": "Fake AI-generated news sites are gathering significant audiences",
+    "desc": "Médiamétrie study on the audience of AI-generated news sites.",
+    "url": "https://www.lemonde.fr/pixels/article/2025/12/19/les-faux-sites-d-information-generes-par-ia-recoltent-deja-une-audience-significative-selon-une-etude-mediametrie_6658723_4408996.html",
+    "date": "2025-12-20",
+    "letter": 16,
+    "cat": "etudes",
+    "source": "Le Monde"
+  },
+  {
+    "id": 7,
+    "title": "It's About Time: The Copilot Usage Report 2025",
+    "desc": "Analysis of Copilot usage, from medical advice to late-night use.",
+    "url": "https://microsoft.ai/news/its-about-time-the-copilot-usage-report-2025/",
+    "date": "2025-12-13",
+    "letter": 15,
+    "cat": "etudes",
+    "source": "Microsoft"
+  },
+  {
+    "id": 8,
+    "title": "2025 Generative AI Landscape",
+    "desc": "Comprehensive report on the generative AI landscape.",
+    "url": "https://www.similarweb.com/corp/2025-generative-ai-landscape/",
+    "date": "2025-12-06",
+    "letter": 14,
+    "cat": "etudes",
+    "source": "SimilarWeb"
+  },
+  {
+    "id": 9,
+    "title": "Estimating AI productivity gains from Claude conversations",
+    "desc": "Study on time savings from generative AI, based on 100,000 conversations.",
+    "url": "https://www.anthropic.com/research/estimating-productivity-gains",
+    "date": "2025-11-29",
+    "letter": 13,
+    "cat": "etudes",
+    "source": "Anthropic"
+  },
+  {
+    "id": 10,
+    "title": "compar:IA ranking — a participatory model ranking",
+    "desc": "First participatory AI model ranking based on user votes.",
+    "url": "https://huggingface.co/blog/comparIA/publication-du-premier-classement",
+    "date": "2025-11-22",
+    "letter": 12,
+    "cat": "etudes",
+    "source": "HuggingFace"
+  },
+  {
+    "id": 11,
+    "title": "Half the web may be written by AI",
+    "desc": "Study revealing that nearly half of published content may be AI-written.",
+    "url": "https://www.linkedin.com/posts/alexandra-coutl%C3%A9e_la-moiti%C3%A9-du-web-serait-d%C3%A9sormais-r%C3%A9dig%C3%A9e-activity-7394409541733376001-ZeKm/",
+    "date": "2025-11-15",
+    "letter": 11,
+    "cat": "etudes",
+    "source": "LinkedIn (Alexandra Coutlée)"
+  },
+  {
+    "id": 12,
+    "title": "Web search reliability comparison of the 7 leading chatbots",
+    "desc": "Comparison of ChatGPT, Gemini, Claude, Perplexity, Copilot, DeepSeek, and Le Chat.",
+    "url": "https://www.blogdumoderateur.com/recherche-web-comparatif-ia/",
+    "date": "2025-11-15",
+    "letter": 11,
+    "cat": "etudes",
+    "source": "Blog du modérateur"
+  },
+  {
+    "id": 13,
+    "title": "The internet is now dominated by machines, according to Graphite",
+    "desc": "More than half of published content is created with the help of generative AI.",
+    "url": "https://www.fredzone.org/internet-domine-par-les-machines-selon-une-etude-de-graphite/",
+    "date": "2025-10-25",
+    "letter": 8,
+    "cat": "etudes",
+    "source": "FredZone"
+  },
+  {
+    "id": 14,
+    "title": "Less remorse, more cheating: the worrying effect of AI",
+    "desc": "Article by Jean-François Bonnefon, researcher at the Toulouse School of Economics.",
+    "url": "https://theconversation.com/moins-de-remords-plus-de-triche-leffet-inquietant-des-ia-sur-notre-honnetete-267129",
+    "date": "2025-10-18",
+    "letter": 7,
+    "cat": "etudes",
+    "source": "The Conversation"
+  },
+  {
+    "id": 15,
+    "title": "Digital 2026 report",
+    "desc": "Overview of global digital usage with a section dedicated to AI (pages 126-143).",
+    "url": "https://wearesocial.com/fr/blog/2025/10/digital-2026-2/",
+    "date": "2025-10-18",
+    "letter": 7,
+    "cat": "etudes",
+    "source": "We Are Social"
+  },
+  {
+    "id": 16,
+    "title": "Deep Research: a chatbot comparison",
+    "desc": "Comparison of the deep-research features of the leading chatbots.",
+    "url": "https://www.blogdumoderateur.com/deep-research-comparatif-ia/",
+    "date": "2025-10-11",
+    "letter": 6,
+    "cat": "etudes",
+    "source": "Blog du modérateur"
+  },
+  {
+    "id": 17,
+    "title": "Why language models hallucinate (analysis)",
+    "desc": "Analysis of LLM hallucinations — explained through the difficulty of saying \"I don't know.\"",
+    "url": "https://arxiv.org/abs/2509.04664",
+    "date": "2025-10-11",
+    "letter": 6,
+    "cat": "etudes",
+    "source": "Arxiv"
+  },
+  {
+    "id": 18,
+    "title": "GDPval: evaluation on 1,300 real-world tasks",
+    "desc": "Evaluation of language models on tasks that can be performed by humans.",
+    "url": "https://openai.com/fr-FR/index/gdpval/",
+    "date": "2025-09-27",
+    "letter": 4,
+    "cat": "etudes",
+    "source": "OpenAI"
+  },
+  {
+    "id": 19,
+    "title": "How people are using ChatGPT",
+    "desc": "Study of 1.7 million anonymized conversations conducted by the NBER.",
+    "url": "https://openai.com/index/how-people-are-using-chatgpt/",
+    "date": "2025-09-20",
+    "letter": 3,
+    "cat": "etudes",
+    "source": "OpenAI / NBER"
+  },
+  {
+    "id": 20,
+    "title": "Advertising profiling by chatbots",
+    "desc": "Antonio Casili highlights Albertine Meunier's artistic work on advertising profiling.",
+    "url": "https://www.linkedin.com/posts/acasilli_la-publicit%C3%A9-sannonce-dans-les-chats-conversationnels-activity-7421159117173637120-XKju/",
+    "date": "2026-01-31",
+    "letter": 22,
+    "cat": "ethique",
+    "source": "LinkedIn (Antonio Casili)"
+  },
+  {
+    "id": 21,
+    "title": "Albania: corruption scandal around the virtual minister",
+    "desc": "The creators of the anti-corruption virtual minister at the center of a scandal.",
+    "url": "https://www.liberation.fr/international/europe/en-albanie-les-createurs-de-la-ministre-virtuelle-anti-corruption-se-retrouvent-au-coeur-dun-scandale-de-corruption-20260127_ORRSCH4FRBBLRPR7WW6YXWQ5CE/",
+    "date": "2026-01-31",
+    "letter": 22,
+    "cat": "ethique",
+    "source": "Libération"
+  },
+  {
+    "id": 22,
+    "title": "Claude's Constitution (version 2)",
+    "desc": "Anthropic publishes version 2 of Claude's Constitution.",
+    "url": "https://www.anthropic.com/constitution",
+    "date": "2026-01-24",
+    "letter": 21,
+    "cat": "ethique",
+    "source": "Anthropic"
+  },
+  {
+    "id": 23,
+    "title": "The AI hard sell",
+    "desc": "Analysis of the pressure to adopt AI and tech-pushing mechanisms.",
+    "url": "https://limitesnumeriques.fr/travaux-productions/ai-forcing",
+    "date": "2026-01-17",
+    "letter": 20,
+    "cat": "ethique",
+    "source": "Limites Numériques"
+  },
+  {
+    "id": 24,
+    "title": "AI chatbots are shoggoths",
+    "desc": "Article on the alien nature of LLMs and their unpredictable behavior.",
+    "url": "https://www.ladn.eu/tech-a-suivre/oubliez-le-perroquet-scolastique-les-chatbots-ia-sont-en-fait-des-shoggoths/",
+    "date": "2026-01-17",
+    "letter": 20,
+    "cat": "ethique",
+    "source": "L'ADN"
+  },
+  {
+    "id": 25,
+    "title": "We can't tell when a text was written by AI",
+    "desc": "Reflection on our inability to distinguish AI-generated texts.",
+    "url": "https://www.linkedin.com/pulse/non-ne-reconna%C3%AEt-pas-un-texte-%C3%A9crit-par-une-ia-emily-turrettini-wykue/",
+    "date": "2026-01-17",
+    "letter": 20,
+    "cat": "ethique",
+    "source": "LinkedIn (Emily Turrettini)"
+  },
+  {
+    "id": 26,
+    "title": "Politico's AI violates Politico's own ethics rules",
+    "desc": "The ironic case of an AI that doesn't follow the outlet's own editorial rules.",
+    "url": "https://next.ink/214044/les-ia-de-politico-ont-viole-les-regles-dethique-editoriale-journalistique-de-politico/",
+    "date": "2025-12-20",
+    "letter": 16,
+    "cat": "ethique",
+    "source": "Next"
+  },
+  {
+    "id": 27,
+    "title": "Intermarché ad vs. McDonald's AI ad",
+    "desc": "Despite the flood of AI-generated content for communications, generation and tool capabilities are nothing without creativity paired with the expertise of an animation studio.",
+    "url": "https://www.latribune.fr/article/tech/1062076083086514/avec-sa-pub-sans-ia-intermarche-fait-le-buzz-mcdo-contraint-de-retirer-son-spot-100-ia",
+    "date": "2025-12-13",
+    "letter": 15,
+    "cat": "ethique",
+    "source": "La Tribune"
+  },
+  {
+    "id": 28,
+    "title": "An approach to disclosing AI use",
+    "desc": "Reflection on transparency in AI usage.",
+    "url": "https://www.linkedin.com/posts/rochanekherbouche_je-pensais-que-c%C3%A9tait-simple-d%C3%AAtre-%F0%9D%98%81%F0%9D%97%BF-activity-7404568624256155648-C_oj/",
+    "date": "2025-12-13",
+    "letter": 15,
+    "cat": "ethique",
+    "source": "LinkedIn (Rochane Kherbouche)"
+  },
+  {
+    "id": 29,
+    "title": "These problematic AI toys",
+    "desc": "Analysis of the ethical issues raised by AI-powered toys.",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7402005214330863616/",
+    "date": "2025-12-06",
+    "letter": 14,
+    "cat": "ethique",
+    "source": "LinkedIn (Julien Guillot-Sestier)"
+  },
+  {
+    "id": 30,
+    "title": "Character AI changes its approach for children",
+    "desc": "Following controversies, Character AI adapts its filters for minors.",
+    "url": "https://techcrunch.com/2025/11/25/character-ai-will-offer-interactive-stories-to-kids-instead-of-open-ended-chat/",
+    "date": "2025-11-29",
+    "letter": 13,
+    "cat": "ethique",
+    "source": "TechCrunch"
+  },
+  {
+    "id": 31,
+    "title": "Instead of anthropomorphizing AI, let's humanize our networks",
+    "desc": "Reflection on our relationship with machines and with other humans.",
+    "url": "https://usbeketrica.com/fr/article/au-lieu-d-anthropomorphiser-l-ia-humanisons-nos-reseaux-numeriques",
+    "date": "2025-11-29",
+    "letter": 13,
+    "cat": "ethique",
+    "source": "Usbek et Rica"
+  },
+  {
+    "id": 32,
+    "title": "The Generative Shadow",
+    "desc": "Essay by Matthieu Derian on the dark sides of generative AI.",
+    "url": "https://anthropo-ihm.hypotheses.org/6018",
+    "date": "2025-11-29",
+    "letter": 13,
+    "cat": "ethique",
+    "source": "Hypothèses"
+  },
+  {
+    "id": 33,
+    "title": "National AI strategy (Court of Audit)",
+    "desc": "Report by the French Court of Audit on the national strategy.",
+    "url": "https://www.ccomptes.fr/fr/publications/la-strategie-nationale-pour-lintelligence-artificielle",
+    "date": "2025-11-22",
+    "letter": 12,
+    "cat": "ethique",
+    "source": "Cour des comptes"
+  },
+  {
+    "id": 34,
+    "title": "Challenges for ethical agentic AI systems",
+    "desc": "Reflection on the ethical challenges of autonomous AI agents.",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7392470967593115648/",
+    "date": "2025-11-08",
+    "letter": 10,
+    "cat": "ethique",
+    "source": "Linkedin (Ciprian Melian)"
+  },
+  {
+    "id": 35,
+    "title": "AI can make us dumber… or smarter",
+    "desc": "Reflection on the cognitive effects of AI use.",
+    "url": "https://www.linkedin.com/posts/benoitraphael_lia-peut-nous-rendre-plus-cons-ou-plus-activity-7385185366594658304-AwXp/",
+    "date": "2025-10-25",
+    "letter": 8,
+    "cat": "ethique",
+    "source": "LinkedIn (Benoît Raphaël)"
+  },
+  {
+    "id": 36,
+    "title": "AI: the four controversies of power",
+    "desc": "Analysis by Asma Mhalla on the power struggles surrounding AI.",
+    "url": "https://www.linkedin.com/posts/amhalla_technopolitique2025-activity-7384859714083270657-1u5E/",
+    "date": "2025-10-18",
+    "letter": 7,
+    "cat": "ethique",
+    "source": "LinkedIn (Asma Mhalla)"
+  },
+  {
+    "id": 37,
+    "title": "What's your AI-dentity?",
+    "desc": "A Bloomberg quiz to define your relationship with AI.",
+    "url": "https://www.bloomberg.com/graphics/2025-opinion-ai-personality-quiz/",
+    "date": "2025-10-18",
+    "letter": 7,
+    "cat": "ethique",
+    "source": "Bloomberg"
+  },
+  {
+    "id": 38,
+    "title": "Circular economic deals between AI players",
+    "desc": "Bloomberg infographic on the economic flows between AI infrastructure and services.",
+    "url": "https://intelligence-artificielle.developpez.com/actu/376612/",
+    "date": "2025-10-11",
+    "letter": 6,
+    "cat": "ethique",
+    "source": "Developpez.com"
+  },
+  {
+    "id": 39,
+    "title": "Delegating our expressive abilities to AI",
+    "desc": "Article by Anne Alombert (Paris 8) on the consequences of delegating our expression.",
+    "url": "https://www.philomag.com/articles/anne-alombert-nous-deleguons-deja-lia-nos-capacites-expressives-linguistiques-et",
+    "date": "2025-09-20",
+    "letter": 3,
+    "cat": "ethique",
+    "source": "Philomag"
+  },
+  {
+    "id": 40,
+    "title": "AI minister in Albania",
+    "desc": "Albania appoints a minister generated by artificial intelligence.",
+    "url": "https://www.numerama.com/tech/2073497-lalbanie-vient-de-nommer-une-ministre-generee-par-ia.html",
+    "date": "2025-09-13",
+    "letter": 2,
+    "cat": "ethique",
+    "source": "Numerama"
+  },
+  {
+    "id": 41,
+    "title": "Supporting emotionally vulnerable users",
+    "desc": "OpenAI publishes its guidelines on supporting vulnerable users.",
+    "url": "https://openai.com/fr-FR/index/building-more-helpful-chatgpt-experiences-for-everyone/",
+    "date": "2025-09-06",
+    "letter": 1,
+    "cat": "ethique",
+    "source": "OpenAI"
+  },
+  {
+    "id": 42,
+    "title": "Shadow AI in the workplace",
+    "desc": "Survey on uncontrolled AI use within companies.",
+    "url": "https://www.bfmtv.com/economie/replay-emissions/culture-geek/video-culture-ia-shadow-ai-un-casse-tete-pour-les-entreprises-par-anthony-morel-15-01_VN-202601150121.html",
+    "date": "2026-01-17",
+    "letter": 20,
+    "cat": "travail",
+    "source": "BFM TV"
+  },
+  {
+    "id": 43,
+    "title": "SLOP in Pakistan",
+    "desc": "Report on the Pakistani workers who feed AI models.",
+    "url": "https://www.linkedin.com/posts/chut-mag_chut-magazine-slop-au-pakistan-ugcPost-7411370367501377536-7EOE/",
+    "date": "2026-01-03",
+    "letter": 18,
+    "cat": "travail",
+    "source": "CHUT Magazine"
+  },
+  {
+    "id": 44,
+    "title": "AI and the identity crisis at work",
+    "desc": "Analysis of the identity shifts caused by AI in the workplace.",
+    "url": "https://www.youtube.com/watch?v=lGP0NC6-01I",
+    "date": "2025-12-27",
+    "letter": 17,
+    "cat": "travail",
+    "source": "Trench Tech"
+  },
+  {
+    "id": 45,
+    "title": "If ChatGPT were an employee",
+    "desc": "Humorous video by Cyprien on AI in the workplace.",
+    "url": "https://www.youtube.com/watch?v=KQGJ7tsII5E",
+    "date": "2025-12-27",
+    "letter": 17,
+    "cat": "travail",
+    "source": "YouTube (Cyprien)"
+  },
+  {
+    "id": 46,
+    "title": "Harlequin translates books with AI",
+    "desc": "Publisher Harlequin uses AI to translate its novels.",
+    "url": "https://www.franceinfo.fr/culture/livres/litterature-des-livres-des-editions-harlequin-traduits-avec-l-ia-une-premiere-en-france_7687663.html",
+    "date": "2025-12-20",
+    "letter": 16,
+    "cat": "travail",
+    "source": "France Info"
+  },
+  {
+    "id": 47,
+    "title": "Their jobs replaced by AI",
+    "desc": "Testimonies from workers whose jobs have been impacted by AI.",
+    "url": "https://www.instagram.com/p/DSMgDRpjJZR/",
+    "date": "2025-12-13",
+    "letter": 15,
+    "cat": "travail",
+    "source": "Brut (Aude Arquié)"
+  },
+  {
+    "id": 48,
+    "title": "Digital's hidden workforce in Africa",
+    "desc": "Interview with Antonio Casili on African click workers.",
+    "url": "https://www.rfi.fr/fr/afrique/20251206-en-afrique-des-petites-mains-du-num%C3%A9rique-toujours-aussi-pr%C3%A9caires-%C3%A0-l-heure-du-boom-de-l-ia",
+    "date": "2025-12-13",
+    "letter": 15,
+    "cat": "travail",
+    "source": "RFI"
+  },
+  {
+    "id": 49,
+    "title": "18 months training generative AI",
+    "desc": "Testimony from a data-annotation worker.",
+    "url": "https://thespinoff.co.nz/internet/23-10-2025/i-spent-18-months-training-generative-ai-heres-what-i-learned",
+    "date": "2025-10-25",
+    "letter": 8,
+    "cat": "travail",
+    "source": "The Spinoff"
+  },
+  {
+    "id": 50,
+    "title": "AI and work: a dossier",
+    "desc": "A compilation of resources on AI and the world of work.",
+    "url": "https://cafeia.org/ia-et-travail/",
+    "date": "2025-09-27",
+    "letter": 4,
+    "cat": "travail",
+    "source": "Café IA / FranceNum / LaborIA"
+  },
+  {
+    "id": 51,
+    "title": "Lara Croft's AI voice removed",
+    "desc": "Square Enix pulls the AI-generated voice following protests.",
+    "url": "https://www.numerama.com/pop-culture/2078745-la-voix-ia-de-lara-croft-supprimee-dans-tomb-raider-apres-la-plainte-de-sa-doubleuse.html",
+    "date": "2025-09-27",
+    "letter": 4,
+    "cat": "travail",
+    "source": "Numerama"
+  },
+  {
+    "id": 52,
+    "title": "Reborn babies: this daycare doesn't exist",
+    "desc": "Investigation into fake reborn-doll daycares and their use of AI.",
+    "url": "https://www.radiofrance.fr/franceinter/podcasts/un-monde-nouveau/un-monde-nouveau-du-mardi-20-janvier-2026-6661583",
+    "date": "2026-01-24",
+    "letter": 21,
+    "cat": "securite",
+    "source": "France Inter"
+  },
+  {
+    "id": 53,
+    "title": "DGSI: the risks of AI in the workplace",
+    "desc": "Warning from France's domestic intelligence agency (DGSI) on AI-related risks in business.",
+    "url": "https://www.dgsi.interieur.gouv.fr/dgsi-a-vos-cotes/contre-espionnage/conseils-aux-entreprises-flash-ingerence/risques-associes-a-lusage-de-lintelligence-artificielle-dans-monde-professionnel",
+    "date": "2026-01-24",
+    "letter": 21,
+    "cat": "securite",
+    "source": "DGSI"
+  },
+  {
+    "id": 54,
+    "title": "When an AI gets scammed",
+    "desc": "Examples of AI agents being manipulated by malicious users.",
+    "url": "https://korben.info/claude-ia-distributeur-automatique-manipulation-anthropic.html",
+    "date": "2026-01-17",
+    "letter": 20,
+    "cat": "securite",
+    "source": "Korben"
+  },
+  {
+    "id": 55,
+    "title": "Prompt injection: the emerging cyberthreat",
+    "desc": "Explanation of prompt-injection attacks.",
+    "url": "https://www.franceinfo.fr/internet/intelligence-artificielle/l-ia-va-executer-des-instructions-qui-n-etaient-pas-prevues-six-questions-sur-l-injection-de-requetes-une-cybermenace-d-un-genre-nouveau_7690150.html",
+    "date": "2026-01-10",
+    "letter": 19,
+    "cat": "securite",
+    "source": "France Info"
+  },
+  {
+    "id": 56,
+    "title": "Report on AI and foreign interference",
+    "desc": "French National Assembly report on the use of AI in influence operations.",
+    "url": "https://www.linkedin.com/posts/ugcPost-7406742063641239552-Cnb8/",
+    "date": "2025-12-20",
+    "letter": 16,
+    "cat": "securite",
+    "source": "Linkedin (Chloé Debiève)"
+  },
+  {
+    "id": 57,
+    "title": "COP 30 disinformation via AI videos",
+    "desc": "UN warning on AI-generated videos used for climate disinformation.",
+    "url": "https://www.instagram.com/reels/DQ3lOfdFw92/",
+    "date": "2025-11-15",
+    "letter": 11,
+    "cat": "securite",
+    "source": "Le Progrès"
+  },
+  {
+    "id": 58,
+    "title": "A closer look at the ChatGPT health-advice hoax",
+    "desc": "Analysis of the hoax about ChatGPT's medical advice.",
+    "url": "https://www.lesnumeriques.com/intelligence-artificielle/non-chatgpt-n-a-rien-interdit-sur-les-conseils-de-sante-et-juridiques-comment-une-plateforme-de-paris-a-lance-l-intox-n244853.html",
+    "date": "2025-11-08",
+    "letter": 10,
+    "cat": "securite",
+    "source": "Les Numériques"
+  },
+  {
+    "id": 59,
+    "title": "Reality Check (an AI-image-spotting game)",
+    "desc": "A weekly game to spot AI-generated images.",
+    "url": "https://www.linkedin.com/posts/sylvain-tillon-formation-ia-digital-learning_saurez-vous-faire-la-diff%C3%A9rence-entre-activity-7377605431743119360-lJBh/",
+    "date": "2025-10-11",
+    "letter": 6,
+    "cat": "securite",
+    "source": "LinkedIn (Sylvain Tillion)"
+  },
+  {
+    "id": 60,
+    "title": "The SLOP factory",
+    "desc": "Arte documentary on mass-produced AI-generated content.",
+    "url": "https://www.youtube.com/watch?v=mqEnhLnGffQ",
+    "date": "2026-01-03",
+    "letter": 18,
+    "cat": "creation",
+    "source": "Arte"
+  },
+  {
+    "id": 61,
+    "title": "_Underscore Generated Art",
+    "desc": "Arte series on AI-generated art.",
+    "url": "https://www.arte.tv/fr/videos/117230-004-A/underscore/",
+    "date": "2025-12-27",
+    "letter": 17,
+    "cat": "creation",
+    "source": "Arte"
+  },
+  {
+    "id": 62,
+    "title": "Is AI revolutionizing our lives?",
+    "desc": "Arte's \"28 minutes\" show on the impact of AI.",
+    "url": "https://www.arte.tv/fr/videos/125544-088-A/28-minutes/",
+    "date": "2025-12-27",
+    "letter": 17,
+    "cat": "creation",
+    "source": "Arte"
+  },
+  {
+    "id": 63,
+    "title": "Warner Music Group strikes a deal with Suno",
+    "desc": "Warner Music signs a licensing agreement with Suno for music generation.",
+    "url": "https://www.musicbusinessworldwide.com/warner-music-group-settles-with-suno-strikes-first-of-its-kind-deal-with-ai-song-generator/",
+    "date": "2025-11-29",
+    "letter": 13,
+    "cat": "creation",
+    "source": "Music Business Worldwide"
+  },
+  {
+    "id": 64,
+    "title": "From the attention economy to the intention economy",
+    "desc": "Reflection on how AI is reshaping media business models.",
+    "url": "https://www.linkedin.com/pulse/il-va-nous-falloir-enfin-apprendre-%C3%A0-poser-les-bonnes-eric-scherer-xeure/",
+    "date": "2025-11-15",
+    "letter": 11,
+    "cat": "creation",
+    "source": "LinkedIn (Éric Scherer)"
+  },
+  {
+    "id": 65,
+    "title": "Phantas-IA (episode 5)",
+    "desc": "Continuation of the Arte series exploring the imaginary world of AI.",
+    "url": "https://www.arte.tv/fr/videos/123998-005-A/phantasia-5/",
+    "date": "2025-11-01",
+    "letter": 9,
+    "cat": "creation",
+    "source": "Arte"
+  },
+  {
+    "id": 66,
+    "title": "The unloved em dash and ChatGPT",
+    "desc": "Analysis of the em dash's use in AI-generated text.",
+    "url": "https://www.radiofrance.fr/franceinfo/podcasts/l-oeil-de-constance/a-cause-de-chat-gpt-le-tiret-cadratin-devient-mal-aime-1466835",
+    "date": "2025-10-04",
+    "letter": 5,
+    "cat": "creation",
+    "source": "France Culture"
+  },
+  {
+    "id": 67,
+    "title": "Phantasia on Arte (episode 4)",
+    "desc": "Documentary series on the imaginary world of AI.",
+    "url": "https://www.arte.tv/fr/videos/123998-004-A/phantasia-4/",
+    "date": "2025-10-04",
+    "letter": 5,
+    "cat": "creation",
+    "source": "Arte"
+  },
+  {
+    "id": 68,
+    "title": "The Man in the Iron Mask: an AI documentary",
+    "desc": "Documentary using AI to help uncover the identity of the Man in the Iron Mask.",
+    "url": "https://www.linkedin.com/posts/enora-contant-415a5136_masque-de-fer-l%C3%A9nigme-du-roi-soleil-activity-7370754043717111808-GQW0/",
+    "date": "2025-09-13",
+    "letter": 2,
+    "cat": "creation",
+    "source": "LinkedIn (Enora Contant)"
+  },
+  {
+    "id": 69,
+    "title": "Claude creates PDFs, presentations, and Excel files",
+    "desc": "New document-creation features in Claude.",
+    "url": "https://www.blogdumoderateur.com/claude-peut-creer-documents-pdf-excel/",
+    "date": "2025-09-13",
+    "letter": 2,
+    "cat": "creation",
+    "source": "Blog du modérateur"
+  },
+  {
+    "id": 70,
+    "title": "Le Chat: MCP connectors and memory",
+    "desc": "Mistral adds memory and connectors to Le Chat.",
+    "url": "https://mistral.ai/news/le-chat-mcp-connectors-memories",
+    "date": "2025-09-06",
+    "letter": 1,
+    "cat": "creation",
+    "source": "Mistral"
+  },
+  {
+    "id": 71,
+    "title": "Microsoft puts AI everywhere",
+    "desc": "Microsoft adds AI to Paint and Notepad. A \"Net Plus Ultra\" column.",
+    "url": "https://www.radiofrance.fr/franceinter/podcasts/net-plus-ultra/net-plus-ultra-du-vendredi-30-janvier-2026-8217360",
+    "date": "2026-01-31",
+    "letter": 22,
+    "cat": "technique",
+    "source": "France Inter"
+  },
+  {
+    "id": 72,
+    "title": "A glossary for semantic ambiguity",
+    "desc": "Arthur Sarrazin proposes a glossary to help machines understand ambiguity.",
+    "url": "https://www.linkedin.com/posts/arthursarazin_llm-activity-7421583768530014208-MrI8/",
+    "date": "2026-01-31",
+    "letter": 22,
+    "cat": "technique",
+    "source": "LinkedIn (Arthur Sarrazin)"
+  },
+  {
+    "id": 73,
+    "title": "State of Mozilla",
+    "desc": "Mozilla's report on AI: positioning, manifesto, tools, and 2026 roadmap.",
+    "url": "https://stateof.mozilla.org/",
+    "date": "2026-01-31",
+    "letter": 22,
+    "cat": "technique",
+    "source": "Mozilla"
+  },
+  {
+    "id": 74,
+    "title": "Protocols for AI agents",
+    "desc": "Analysis of emerging protocols (MCP, A2A) for communication between AI agents.",
+    "url": "https://www.linkedin.com/pulse/caf%C3%A9-ia-la-lettre-hebdomadaire-20-des-protocoles-pour-les-agents-s6cse/",
+    "date": "2026-01-24",
+    "letter": 21,
+    "cat": "technique",
+    "source": "Café IA (Hubert Guillaud)"
+  },
+  {
+    "id": 75,
+    "title": "ChatGPT for Health",
+    "desc": "Announcements about the health-focused version of ChatGPT.",
+    "url": "https://siecledigital.fr/2026/01/08/chatgpt-sante-quand-lia-dopenai-sinvite-dans-vos-donnees-medicales/",
+    "date": "2026-01-17",
+    "letter": 20,
+    "cat": "technique",
+    "source": "Siècle Digital"
+  },
+  {
+    "id": 76,
+    "title": "Claude AI grows tomatoes",
+    "desc": "Experiment with an AI agent for autonomous tomato growing.",
+    "url": "https://autoncorp.com/biodome/",
+    "date": "2026-01-10",
+    "letter": 19,
+    "cat": "technique",
+    "source": "Autoncorp"
+  },
+  {
+    "id": 77,
+    "title": "Mapping AI data centers",
+    "desc": "Global mapping of AI-dedicated infrastructure.",
+    "url": "https://epoch.ai/data/data-centers",
+    "date": "2026-01-10",
+    "letter": 19,
+    "cat": "technique",
+    "source": "Epoch AI"
+  },
+  {
+    "id": 78,
+    "title": "Stéphane Mallat: neural networks",
+    "desc": "Interview with mathematician Stéphane Mallat on the foundations of neural networks.",
+    "url": "https://www.radiofrance.fr/franceinter/podcasts/l-invite-de-7h50/l-invite-de-7h50-du-mardi-30-decembre-2025-4366356",
+    "date": "2026-01-03",
+    "letter": 18,
+    "cat": "technique",
+    "source": "France Inter"
+  },
+  {
+    "id": 79,
+    "title": "How AI entered our lives",
+    "desc": "France Inter show on the everyday adoption of AI.",
+    "url": "https://www.radiofrance.fr/franceinter/podcasts/le-18-20-le-telephone-sonne/le-18-20-le-telephone-sonne-du-lundi-29-decembre-2025-2103210",
+    "date": "2026-01-03",
+    "letter": 18,
+    "cat": "technique",
+    "source": "France Inter"
+  },
+  {
+    "id": 80,
+    "title": "Borges's graph, part 1",
+    "desc": "Reflection on knowledge graphs and AI.",
+    "url": "https://www.linkedin.com/posts/arthursarazin_le-graphe-de-borges-et-si-en-2026-nous-activity-7409969153379418112-1mvE/",
+    "date": "2025-12-27",
+    "letter": 17,
+    "cat": "technique",
+    "source": "LinkedIn (Arthur Sarazin)"
+  },
+  {
+    "id": 81,
+    "title": "CNIL project on model traceability",
+    "desc": "Work by France's data-protection authority (CNIL) on AI model traceability.",
+    "url": "https://linc.cnil.fr/presentation-du-projet-experimenter-des-scenarios-dexercice-de-droits-pour-eclairer-la-position-de",
+    "date": "2025-12-27",
+    "letter": 17,
+    "cat": "technique",
+    "source": "LINC (CNIL)"
+  },
+  {
+    "id": 82,
+    "title": "Firefox becomes an AI browser",
+    "desc": "Mozilla adds AI features to Firefox.",
+    "url": "https://siecledigital.fr/2025/12/18/firefox-veut-devenir-un-navigateur-ia-quitte-a-froisser-sa-communaute/",
+    "date": "2025-12-20",
+    "letter": 16,
+    "cat": "technique",
+    "source": "Siècle Digital"
+  },
+  {
+    "id": 83,
+    "title": "Mistral for 10,000 public servants",
+    "desc": "Mistral rolled out to French civil service employees.",
+    "url": "https://www.lemondeinformatique.fr/actualites/lire-l-etat-ouvre-l-experimentation-de-la-genai-a-10-000-agents-98321.html",
+    "date": "2025-11-01",
+    "letter": 9,
+    "cat": "technique",
+    "source": "Le Monde Informatique"
+  },
+  {
+    "id": 84,
+    "title": "The .ai, .io, .tv, .nu domain extensions",
+    "desc": "Analysis of popular domain extensions in the AI ecosystem.",
+    "url": "https://www.blogdumoderateur.com/noms-domaines-extensions-ai-io-tv-nu/",
+    "date": "2025-09-06",
+    "letter": 1,
+    "cat": "technique",
+    "source": "Blog du modérateur"
+  },
+  {
+    "id": 85,
+    "title": "The imaginaries and myths of AI",
+    "desc": "Article by Hubert Guillaud on the imaginaries and myths surrounding AI.",
+    "url": "https://www.linkedin.com/pulse/caf%C3%A9-ia-la-lettre-hebdomadaire-21-entre-mythes-et-r%C3%A9alit%C3%A9s-kfzff/",
+    "date": "2026-01-31",
+    "letter": 22,
+    "cat": "philosophie",
+    "source": "Café IA (Hubert Guillaud)"
+  },
+  {
+    "id": 86,
+    "title": "The idiot factory",
+    "desc": "Video by Micode on AI's effects on our cognitive abilities.",
+    "url": "https://www.youtube.com/watch?v=4xq6bVbS-Pw",
+    "date": "2026-01-24",
+    "letter": 21,
+    "cat": "philosophie",
+    "source": "YouTube (Micode)"
+  },
+  {
+    "id": 87,
+    "title": "AI in Question (mini-series)",
+    "desc": "Arte documentary mini-series questioning our relationship with AI.",
+    "url": "https://www.arte.tv/fr/videos/RC-026924/l-ia-en-question/",
+    "date": "2025-12-27",
+    "letter": 17,
+    "cat": "philosophie",
+    "source": "Arte"
+  },
+  {
+    "id": 88,
+    "title": "Survival kit for AI debates",
+    "desc": "A practical guide for arguing about AI.",
+    "url": "https://laurasibony.substack.com/p/kit-de-survie-aux-debats-sur-lia",
+    "date": "2025-12-06",
+    "letter": 14,
+    "cat": "philosophie",
+    "source": "Laura Sibony"
+  },
+  {
+    "id": 89,
+    "title": "C.L.O.DO.: a revolt against computerization",
+    "desc": "Looking back at the C.L.O.DO. movement of the 1980s.",
+    "url": "https://www.radiofrance.fr/franceinter/podcasts/affaires-sensibles/affaires-sensibles-du-mercredi-03-decembre-2025-7002646",
+    "date": "2025-12-06",
+    "letter": 14,
+    "cat": "philosophie",
+    "source": "France Inter"
+  },
+  {
+    "id": 90,
+    "title": "15 questions to understand generative AI",
+    "desc": "A guide to generative AI.",
+    "url": "https://fredcavazza.net/2025/11/11/15-questions-pour-mieux-comprendre-lia-generative/",
+    "date": "2025-11-22",
+    "letter": 12,
+    "cat": "philosophie",
+    "source": "Fred Cavazza"
+  },
+  {
+    "id": 91,
+    "title": "The platypus no longer exists",
+    "desc": "Reflection on classification and AI.",
+    "url": "https://www.aivancity.ai/blog/lornithorynque-nexiste-plus-internet-vient-de-basculer-du-cote-des-machines/",
+    "date": "2025-11-22",
+    "letter": 12,
+    "cat": "philosophie",
+    "source": "AIvancity"
+  },
+  {
+    "id": 92,
+    "title": "AGI: the most influential conspiracy theory",
+    "desc": "MIT Technology Review analysis of the AGI concept.",
+    "url": "https://www-technologyreview-com.cdn.ampproject.org/c/s/www.technologyreview.com/2025/10/30/1127057/agi-conspiracy-theory-artifcial-general-intelligence/amp/",
+    "date": "2025-11-08",
+    "letter": 10,
+    "cat": "philosophie",
+    "source": "MIT Technology Review"
+  },
+  {
+    "id": 93,
+    "title": "Philosophers and technology in the 20th century",
+    "desc": "France Culture show on the philosophy of technology.",
+    "url": "https://www.radiofrance.fr/franceculture/podcasts/avec-philosophie/les-deux-visages-de-la-technique-entre-poison-et-remede-5927822",
+    "date": "2025-10-25",
+    "letter": 8,
+    "cat": "philosophie",
+    "source": "France Culture"
+  },
+  {
+    "id": 94,
+    "title": "OpenAI prompt packs",
+    "desc": "Educational resources from OpenAI Academy.",
+    "url": "https://academy.openai.com/public/tags/prompt-packs-6849a0f98c613939acef841c",
+    "date": "2025-10-04",
+    "letter": 5,
+    "cat": "philosophie",
+    "source": "OpenAI Academy"
+  },
+  {
+    "id": 95,
+    "title": "Developing an author's voice in the age of AI",
+    "desc": "Teaching sequence by Nicolas Bannier to help students build their own authorial voice.",
+    "url": "https://www.cafepedagogique.net/2026/01/26/travailler-un-regard-dauteur-a-lheure-de-lia/",
+    "date": "2026-01-31",
+    "letter": 22,
+    "cat": "education",
+    "source": "Café Pédagogique"
+  },
+  {
+    "id": 96,
+    "title": "Our children after AI",
+    "desc": "\"Être et savoir\" show on AI's impact on children's education.",
+    "url": "https://www.radiofrance.fr/franceculture/podcasts/etre-et-savoir/nos-enfants-apres-l-ia-langage-curiosite-imagination-et-travail-scolaire-se-transforment-ils-et-comment-1463643",
+    "date": "2026-01-17",
+    "letter": 20,
+    "cat": "education",
+    "source": "France Culture"
+  },
+  {
+    "id": 97,
+    "title": "AI solves a 45-year-old math problem",
+    "desc": "An AI solves a math problem long considered unsolvable.",
+    "url": "https://www.numerama.com/tech/2157819-cette-ia-a-resolu-un-probleme-mathematique-ouvert-depuis-45-ans.html",
+    "date": "2026-01-17",
+    "letter": 20,
+    "cat": "education",
+    "source": "Numerama"
+  },
+  {
+    "id": 98,
+    "title": "Iceland entrusts education to Claude",
+    "desc": "Iceland signs a deal with Anthropic to make Claude freely available.",
+    "url": "https://www.linkedin.com/posts/am%C3%A9lie-raoul_lislande-vient-de-confier-l%C3%A9ducation-de-activity-7391723452317216768-V80t/",
+    "date": "2025-11-08",
+    "letter": 10,
+    "cat": "education",
+    "source": "LinkedIn (Amélie Raoul)"
+  },
+  {
+    "id": 99,
+    "title": "Ethical use of generative AI for academic writing",
+    "desc": "Recommendations for the ethical use of generative AI in writing.",
+    "url": "https://advancesinsimulation.biomedcentral.com/articles/10.1186/s41077-025-00350-6",
+    "date": "2025-11-08",
+    "letter": 10,
+    "cat": "education",
+    "source": "BioMedCentral"
+  },
+  {
+    "id": 100,
+    "title": "Café IAlpes — Ethics and AI in education",
+    "desc": "New issue of Café IAlpes focused on ethics and AI in education.",
+    "url": "https://www.linkedin.com/posts/philipperoederer_ethique-et-ia-en-%C3%A9ducation-activity-7385213670508752896-3a0I/",
+    "date": "2025-11-01",
+    "letter": 9,
+    "cat": "education",
+    "source": "LinkedIn (Philippe Roederer)"
+  },
+  {
+    "id": 101,
+    "title": "How AI is changing the way we learn",
+    "desc": "Article by a cognitive psychology professor at Boise University.",
+    "url": "https://theconversation.com/comment-lia-influence-nos-facons-dapprendre-et-pourquoi-se-mefier-de-la-facilite-265028",
+    "date": "2025-09-20",
+    "letter": 3,
+    "cat": "education",
+    "source": "The Conversation"
+  },
+  {
+    "id": 102,
+    "title": "Creative activities to build AI literacy",
+    "desc": "Guide coordinated by Margarida Romero with Polynesian teachers.",
+    "url": "https://tuic.education.pf/guide-dactivites-creatives-pour-lacculturation-a-lintelligence-artificielle/",
+    "date": "2025-09-13",
+    "letter": 2,
+    "cat": "education",
+    "source": "TUIC Polynésie"
+  },
+  {
+    "id": 103,
+    "title": "Mistral AI accused of book piracy via Meta (1)",
+    "desc": "Accusation against Mistral AI regarding its training data.",
+    "url": "https://www.mediapart.fr/journal/economie-et-social/221225/comment-un-cofondateur-de-mistral-ai-pirate-des-millions-de-livres-quand-il-travaillait-chez-m",
+    "date": "2026-01-03",
+    "letter": 18,
+    "cat": "droit",
+    "source": "Mediapart"
+  },
+  {
+    "id": 104,
+    "title": "Bill on the presumption of content exploitation (1)",
+    "desc": "French bill on copyright and AI.",
+    "url": "https://www.linkedin.com/posts/marc-rees-003543b_la-proposition-de-loi-sur-la-pr%C3%A9somption-activity-7406738299974799360-rI-2/",
+    "date": "2025-12-20",
+    "letter": 16,
+    "cat": "droit",
+    "source": "Linkedin (Marc Rees)"
+  },
+  {
+    "id": 105,
+    "title": "Paris Bar Association's AI white paper",
+    "desc": "Publication of the Paris Bar's white paper on AI.",
+    "url": "https://www.avocatparis.org/actualites/le-barreau-de-paris-publie-son-premier-livre-blanc-sur-lintelligence-artificielle",
+    "date": "2025-11-01",
+    "letter": 9,
+    "cat": "droit",
+    "source": "Barreau de Paris"
+  },
+  {
+    "id": 106,
+    "title": "Map of publisher/AI deals and lawsuits",
+    "desc": "Mapping of the legal relationships between publishers and AI companies.",
+    "url": "https://www.axios.com/media-trends-membership/2025/09/06/ai-publishers-deals-lawsuits",
+    "date": "2025-10-04",
+    "letter": 5,
+    "cat": "droit",
+    "source": "Axios"
+  },
+  {
+    "id": 107,
+    "title": "Quebec regulates AI use in the public service",
+    "desc": "Quebec introduces a framework for AI use.",
+    "url": "https://www.lapresse.ca/actualites/politique/2026-01-24/quebec-encadre-l-usage-de-l-ia-dans-la-fonction-publique.php",
+    "date": "2026-01-31",
+    "letter": 22,
+    "cat": "geopolitique",
+    "source": "La Presse"
+  },
+  {
+    "id": 108,
+    "title": "Europe: AI development vs. climate goals",
+    "desc": "Analysis of the tensions between AI development and climate targets in Europe.",
+    "url": "https://www.cnbc.com/2025/12/27/europe-at-fork-in-the-road-between-ai-competition-and-climate.html",
+    "date": "2026-01-10",
+    "letter": 19,
+    "cat": "geopolitique",
+    "source": "CNBC"
+  },
+  {
+    "id": 109,
+    "title": "To each culture, its own AI",
+    "desc": "Reflection on cultural differences in AI development.",
+    "url": "https://francispisani.substack.com/p/a-chaque-culture-son-intelligence",
+    "date": "2025-11-22",
+    "letter": 12,
+    "cat": "geopolitique",
+    "source": "Francis Pisani"
+  },
+  {
+    "id": 110,
+    "title": "Moltbot: why you should be wary of this assistant taking over your digital life",
+    "desc": "Investigation into Moltbot (formerly Clawdbot, now OpenClaw), the AI personal assistant raising questions about control and privacy.",
+    "url": "https://www.usine-digitale.fr/intelligence-artificielle/ia-generative/moltbot-ex-clawdbot-pourquoi-il-faut-se-mefier-de-cet-assistant-personnel-qui-prend-le-controle-de-votre-vie-numerique.3I2RICDRU5CUHCLKCCVCTAROAE.html",
+    "date": "2026-02-07",
+    "letter": 23,
+    "cat": "securite",
+    "source": "L'Usine Digitale"
+  },
+  {
+    "id": 111,
+    "title": "Moltbook, or the Internet of agents",
+    "desc": "Reflection on the day humans stop writing, and the emergence of an internet populated by AI agents.",
+    "url": "https://medium.com/@sebastienreinders/le-jour-o%C3%B9-les-humains-n%C3%A9crivent-plus-moltbook-ou-l-internet-des-agents-6b11dfb6bce9",
+    "date": "2026-02-07",
+    "letter": 23,
+    "cat": "philosophie",
+    "source": "Medium (Sébastien Reinders)"
+  },
+  {
+    "id": 112,
+    "title": "Anthropic hit with a new $3 billion lawsuit",
+    "desc": "Anthropic faces a new copyright-infringement lawsuit worth $3 billion.",
+    "url": "https://www.01net.com/actualites/anthropic-vise-par-une-nouvelle-plainte-a-3-milliards-de-dollars-pour-violation-du-droit-dauteur.html",
+    "date": "2026-02-07",
+    "letter": 23,
+    "cat": "droit",
+    "source": "01net"
+  },
+  {
+    "id": 113,
+    "title": "European lawmakers want to protect copyrighted works from AI",
+    "desc": "The European Parliament moves forward on protecting copyrighted works used by generative AI.",
+    "url": "https://www.europarl.europa.eu/news/fr/press-room/20260126IPR32636/proteger-les-oeuvres-soumises-au-droit-d-auteur-utilisees-par-l-ia-generative",
+    "date": "2026-02-07",
+    "letter": 23,
+    "cat": "droit",
+    "source": "Parlement européen"
+  },
+  {
+    "id": 114,
+    "title": "AI doesn't replace skills, it prevents them from developing",
+    "desc": "Amélie Raoul presents the study \"How AI Impacts Skill Formation\" on AI's effect on skill development.",
+    "url": "https://www.linkedin.com/posts/am%C3%A9lie-raoul_lia-ne-remplace-pas-les-comp%C3%A9tences-elle-activity-7424164626214555648-bd-2/",
+    "date": "2026-02-07",
+    "letter": 23,
+    "cat": "education",
+    "source": "LinkedIn (Amélie Raoul)"
+  },
+  {
+    "id": 115,
+    "title": "Six young people describe their relationship with ChatGPT",
+    "desc": "Mickaël Bertrand responds to a Libération article in which six young people describe how they use ChatGPT. Worth reading alongside Réseau Canopé's study on how middle schoolers perceive AI.",
+    "url": "https://www.linkedin.com/posts/mickaelbertrand_chatgpt-cest-parfait-parce-qu%C3%A0-l%C3%A9cole-activity-7424135304963432448-neH8/",
+    "date": "2026-02-07",
+    "letter": 23,
+    "cat": "education",
+    "source": "LinkedIn (Mickaël Bertrand)"
+  },
+  {
+    "id": 116,
+    "title": "From the Pope's chatbot to Vaucanson's duck: the beliefs behind AI",
+    "desc": "The beliefs surrounding artificial intelligence are nothing new — from Vaucanson's automaton duck to modern chatbots.",
+    "url": "https://theconversation.com/du-chatbot-du-pape-au-canard-de-vaucanson-les-croyances-derriere-lintelligence-artificielle-ne-datent-pas-dhier-272357",
+    "date": "2026-02-07",
+    "letter": 23,
+    "cat": "philosophie",
+    "source": "The Conversation"
+  },
+  {
+    "id": 117,
+    "title": "Mistral provides an AI chatbot for CNRS researchers",
+    "desc": "Mistral AI makes a dedicated chatbot available to CNRS researchers.",
+    "url": "https://www.sciencesetavenir.fr/high-tech/intelligence-artificielle/mistral-fournit-un-chatbot-d-ia-pour-les-chercheurs-du-cnrs_190824.amp",
+    "date": "2026-02-07",
+    "letter": 23,
+    "cat": "technique",
+    "source": "Sciences et Avenir"
+  },
+  {
+    "id": 118,
+    "title": "Friend.com: the AI necklace that questions our relationship with technology",
+    "desc": "Analysis of the Friend AI-connected necklace by Le Monde and France Culture, plus Romain Galissot's reflection on the importance of human connection versus digital companions.",
+    "url": "https://www.radiofrance.fr/franceculture/podcasts/un-monde-connecte/friend-com-l-ami-ia-biberonne-au-buzz-publicitaire-9185004",
+    "date": "2026-02-07",
+    "letter": 23,
+    "cat": "philosophie",
+    "source": "France Culture / Le Monde"
+  },
+  {
+    "id": 119,
+    "title": "Claude Healthcare",
+    "desc": "Announcements about the healthcare version of Claude.",
+    "url": "https://techcrunch.com/2026/01/12/anthropic-announces-claude-for-healthcare-following-openais-chatgpt-health-reveal/",
+    "date": "2026-01-17",
+    "letter": 20,
+    "cat": "technique",
+    "source": "TechCrunch"
+  },
+  {
+    "id": 120,
+    "title": "Borges's graph, part 2",
+    "desc": "Reflection on knowledge graphs and AI.",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7410327018732670977/",
+    "date": "2025-12-27",
+    "letter": 17,
+    "cat": "technique",
+    "source": "LinkedIn (Arthur Sarazin)"
+  },
+  {
+    "id": 121,
+    "title": "Mistral AI accused of book piracy via Meta (2)",
+    "desc": "Accusation against Mistral AI regarding its training data.",
+    "url": "https://www.lesnumeriques.com/intelligence-artificielle/mistral-ai-la-licorne-francaise-accusee-par-meta-d-avoir-vole-70-to-de-livres-pour-nourrir-son-ia-n248558.html",
+    "date": "2026-01-03",
+    "letter": 18,
+    "cat": "droit",
+    "source": "Les Numériques"
+  },
+  {
+    "id": 122,
+    "title": "Bill on the presumption of content exploitation (2)",
+    "desc": "French bill on copyright and AI.",
+    "url": "https://www.linkedin.com/posts/alexandra-bensamoun-b3964298_ia-jcpg-teasing-activity-7406579586781638656-Akxx/",
+    "date": "2025-12-20",
+    "letter": 16,
+    "cat": "droit",
+    "source": "Linkedin (Alexandra Bensamoun)"
+  },
+  {
+    "id": 123,
+    "title": "94% of French students have already used AI: widespread use and worrying excesses",
+    "desc": "Ipsos/EPITA study reported on Le Blog du modérateur.",
+    "url": "https://www.blogdumoderateur.com/etudiants-francais-ia-usage-massif-derives-inquietantes/",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "etudes",
+    "source": "Blog du modérateur"
+  },
+  {
+    "id": 124,
+    "title": "2026 Digital Barometer",
+    "desc": "CREDOC's annual barometer, analyzed by the Council on AI and Digital Affairs.",
+    "url": "https://www.arcep.fr/uploads/tx_gspublication/barometre-du-numerique-edition-2026_RAPPORT.pdf",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "etudes",
+    "source": "CREDOC"
+  },
+  {
+    "id": 125,
+    "title": "2026 Digital Barometer (infographic)",
+    "desc": "Infographic of CREDOC's annual barometer, shared on LinkedIn.",
+    "url": "https://www.linkedin.com/posts/conseil-ia-numerique_barom%C3%A8tre-du-num%C3%A9rique-2026-infographie-activity-7426697181958414336-vdFe/",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "etudes",
+    "source": "LinkedIn (Conseil de l'IA et du numérique)"
+  },
+  {
+    "id": 126,
+    "title": "CoMMA: thousands of medieval manuscripts transcribed with AI",
+    "desc": "INRIA project using generative AI to transcribe manuscripts.",
+    "url": "https://www.inria.fr/fr/comma-manuscrits-medievaux-retranscrits",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "etudes",
+    "source": "INRIA"
+  },
+  {
+    "id": 127,
+    "title": "Anthropic analyzes human \"disempowerment\" across 1.5 million AI conversations",
+    "desc": "Analysis shared by Amélie Raoul on LinkedIn.",
+    "url": "https://www.linkedin.com/posts/am%C3%A9lie-raoul_vous-croyez-que-lia-vous-remplace-non-activity-7427750850430836736-Y6Zw/",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "ethique",
+    "source": "LinkedIn (Amélie Raoul)"
+  },
+  {
+    "id": 128,
+    "title": "OpenAI: what the new European privacy policy reveals (February 2026)",
+    "desc": "Analysis by Daria Viktorova on the evolution of ChatGPT's privacy policy.",
+    "url": "https://www.linkedin.com/posts/daria-viktorova_openai-europe-privacy-policy-activity-7426633991782371328-snif/",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "ethique",
+    "source": "LinkedIn (Daria Viktorova)"
+  },
+  {
+    "id": 129,
+    "title": "\"I talked to ChatGPT 8 times a day\": Gen Z's loneliness crisis",
+    "desc": "BBC article on AI use and loneliness.",
+    "url": "https://www.bbc.com/news/articles/cg4ewrw2drpo",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "ethique",
+    "source": "BBC"
+  },
+  {
+    "id": 130,
+    "title": "2026 local elections: when AI joins the campaign",
+    "desc": "Article on the use of AI during the 2026 French local elections.",
+    "url": "https://www.franceinfo.fr/elections/municipales/municipales-quand-l-intelligence-artificielle-s-invite-dans-la-campagne_7773023.html",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "ethique",
+    "source": "France Info"
+  },
+  {
+    "id": 131,
+    "title": "AI doesn't reduce work, it intensifies it (Berkeley study)",
+    "desc": "Berkeley study shared by Chloé Sondervorst on LinkedIn.",
+    "url": "https://www.linkedin.com/posts/sondervorst_lia-ne-r%C3%A9duit-pas-le-travail-elle-lintensifie-activity-7427044214099726336-n6w0",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "travail",
+    "source": "LinkedIn (Chloé Sondervorst)"
+  },
+  {
+    "id": 132,
+    "title": "AI doesn't reduce work, it intensifies it (via Amélie Raoul)",
+    "desc": "The Berkeley study shared by Amélie Raoul on LinkedIn.",
+    "url": "https://www.linkedin.com/posts/am%C3%A9lie-raoul_lia-ne-r%C3%A9duit-pas-le-travail-elle-lintensifie-activity-7427026116760145922-mMQW/",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "travail",
+    "source": "LinkedIn (Amélie Raoul)"
+  },
+  {
+    "id": 133,
+    "title": "Strasbourg: a teacher targeted by AI-generated deepfake videos",
+    "desc": "Article on a deepfake case targeting a teacher in Strasbourg.",
+    "url": "https://france3-regions.franceinfo.fr/grand-est/bas-rhin/strasbourg-0/un-professeur-vise-par-un-montage-video-degradant-genere-par-intelligence-artificielle-des-plaintes-deposees-et-un-eleve-sanctionne-3294381.html",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "securite",
+    "source": "France 3 Grand Est"
+  },
+  {
+    "id": 134,
+    "title": "Les Ruines de Sirap — AI short film by Sophie Perron",
+    "desc": "Short film competing at the Nikon Film Festival.",
+    "url": "https://www.festivalnikon.fr/video/2025/513",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "creation",
+    "source": "Nikon film festival"
+  },
+  {
+    "id": 135,
+    "title": "Les Ruines de Sirap — Behind the scenes (Instagram)",
+    "desc": "Behind-the-scenes look at Sophie Perron's short film on Instagram.",
+    "url": "https://www.instagram.com/sophieperron_/reel/DUOTKPNCEp4/",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "creation",
+    "source": "Instagram (Sophie Perron)"
+  },
+  {
+    "id": 136,
+    "title": "\"That's AI\" (2026) — Short film by Sebastian López",
+    "desc": "A short film about trust in the images we see, made without AI.",
+    "url": "https://www.instagram.com/reel/DUivya1gh6r/",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "creation",
+    "source": "Instagram"
+  },
+  {
+    "id": 137,
+    "title": "2026 Winter Olympics: AI images in the opening ceremony spark controversy",
+    "desc": "Numerama video on the use of AI imagery at the 2026 Winter Olympics.",
+    "url": "https://www.youtube.com/watch?v=M7iWeYy77y0",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "creation",
+    "source": "YouTube (Numerama)"
+  },
+  {
+    "id": 138,
+    "title": "\"Small agents, big questions\"",
+    "desc": "Briefing note from the Council on AI and Digital Affairs on AI agents.",
+    "url": "https://www.conseil-ia-numerique.fr/nos-travaux/petits-agents-grandes-questions-que-sont-les-agents-ia",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "technique",
+    "source": "Conseil de l'IA et du numérique"
+  },
+  {
+    "id": 139,
+    "title": "ChatGPT, or the illusion of dialogue: how AI is changing our relationship with knowledge",
+    "desc": "Article on Hartmut Rosa's concept of \"resonance,\" by Frédéric Bernard.",
+    "url": "https://theconversation.com/chatgpt-ou-lillusion-du-dialogue-comprendre-comment-lia-modifie-le-rapport-au-savoir-avec-la-philosophie-dhartmut-rosa-274259",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "philosophie",
+    "source": "The Conversation"
+  },
+  {
+    "id": 140,
+    "title": "What's an A+ worth in the age of artificial intelligence?",
+    "desc": "Le Devoir article shared by Alexandra Coutlée on LinkedIn.",
+    "url": "https://www.ledevoir.com/actualites/education/950664/vaut-ere-intelligence-artificielle",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "education",
+    "source": "Le Devoir"
+  },
+  {
+    "id": 141,
+    "title": "What's an A+ worth in the age of artificial intelligence? (via LinkedIn)",
+    "desc": "Le Devoir article shared by Alexandra Coutlée on LinkedIn.",
+    "url": "https://www.linkedin.com/posts/alexandra-coutl%C3%A9e_que-vaut-un-a-%C3%A0-l%C3%A8re-de-lintelligence-activity-7425555387774513152-s9_5/",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "education",
+    "source": "LinkedIn (Alexandra Coutlée)"
+  },
+  {
+    "id": 142,
+    "title": "\"My Life with AI\": a 10-episode French-language educational series on Lumni",
+    "desc": "Educational series on AI broadcast on Lumni.",
+    "url": "https://www.lumni.fr/programme/ma-vie-avec-l-ia",
+    "date": "2026-02-14",
+    "letter": 24,
+    "cat": "education",
+    "source": "Lumni"
+  },
+  {
+    "id": 143,
+    "title": "Anthropic co-founder and CEO Dario Amodei pledges to give away 80% of his fortune to fund AI regulation",
+    "desc": "Anthropic co-founder and CEO Dario Amodei pledges to give away 80% of his fortune to fund AI regulation.",
+    "url": "https://www.lesechos.fr/tech-medias/intelligence-artificielle/video-le-createur-danthropic-veut-ceder-80-de-sa-fortune-pour-reguler-lia-2212798",
+    "date": "2026-02-21",
+    "letter": 25,
+    "cat": "ethique",
+    "source": "Les Échos"
+  },
+  {
+    "id": 144,
+    "title": "By putting ads in ChatGPT, is OpenAI repeating Facebook's mistakes?",
+    "desc": "Researcher Zoë Hitzig resigned from OpenAI, denouncing the arrival of ads in ChatGPT.",
+    "url": "https://www.generation-nt.com/actualites/openai-demission-chatgpt-publicite-zoe-hitzig-facebook-2070707",
+    "date": "2026-02-21",
+    "letter": 25,
+    "cat": "ethique",
+    "source": "Generation-NT"
+  },
+  {
+    "id": 145,
+    "title": "HugoDécrypte interviews researcher Yoshua Bengio",
+    "desc": "on AI catastrophe scenarios, global safety, and the need for a strict ethical framework.",
+    "url": "https://youtu.be/ZSvt0NoOlDY",
+    "date": "2026-02-21",
+    "letter": 25,
+    "cat": "ethique",
+    "source": "YouTube (HugoDécrypte)"
+  },
+  {
+    "id": 146,
+    "title": "Jean-Luc Raymond analyzes a study on Perplexity's Comet and AI agents",
+    "desc": "who uses them, for what purpose, and why this silent revolution could widen gaps rather than close them.",
+    "url": "https://jeanlucraymond.fr/2026/02/14/agents-ia-etude-qui-revele-qui-les-utilise-vraiment-et-pour-quoi-faire/",
+    "date": "2026-02-21",
+    "letter": 25,
+    "cat": "ethique",
+    "source": "jeanlucraymond.fr"
+  },
+  {
+    "id": 147,
+    "title": "The complete guide to spotting an AI-generated video",
+    "desc": "on Le Blog du modérateur.",
+    "url": "https://www.blogdumoderateur.com/guide-detecter-video-ia/",
+    "date": "2026-02-21",
+    "letter": 25,
+    "cat": "securite",
+    "source": "Blog du modérateur"
+  },
+  {
+    "id": 148,
+    "title": "An immersive investigation behind the scenes of Moltbook",
+    "desc": "On L'Écho.be.",
+    "url": "https://multimedia.lecho.be/moltbook-infiltration/",
+    "date": "2026-02-21",
+    "letter": 25,
+    "cat": "technique",
+    "source": "L'Écho.be"
+  },
+  {
+    "id": 149,
+    "title": "Arthur Mensch, CEO of Mistral AI, details his technical vision for developing European language models",
+    "desc": "the challenges of sovereign AI.",
+    "url": "https://youtu.be/boIiMLR37kA",
+    "date": "2026-02-21",
+    "letter": 25,
+    "cat": "technique",
+    "source": "YouTube"
+  },
+  {
+    "id": 150,
+    "title": "Jean-Luc Raymond decodes world models, AI's next frontier",
+    "desc": "systems that aim to give machines a memory of reality, beyond simple statistical prediction.",
+    "url": "https://jeanlucraymond.fr/2026/02/16/world-models-prochaine-frontiere-de-l-intelligence-artificielle/",
+    "date": "2026-02-21",
+    "letter": 25,
+    "cat": "technique",
+    "source": "jeanlucraymond.fr"
+  },
+  {
+    "id": 151,
+    "title": "A university professor talks about AI in teaching — the voices of AI",
+    "desc": "Bruno de Lièvre (University of Mons) is interviewed on La Podcasterie.",
+    "url": "https://www.youtube.com/watch?v=BVB3phEKrOY",
+    "date": "2026-02-21",
+    "letter": 25,
+    "cat": "education",
+    "source": "YouTube (La Podcasterie)"
+  },
+  {
+    "id": 152,
+    "title": "Arthur Sarazin publishes 5 French legal codes on Hugging Face",
+    "desc": "(Civil Code, Urban Planning Code, Electoral Code, General Local Authorities Code, and Municipalities Code), updated nightly — 22,000 law articles now available in an \"AI-friendly\" format.",
+    "url": "https://www.linkedin.com/posts/arthursarazin_legaltech-ugcPost-7428380476798574592-KcnG",
+    "date": "2026-02-21",
+    "letter": 25,
+    "cat": "droit",
+    "source": "LinkedIn (Arthur Sarazin)"
+  },
+  {
+    "id": 153,
+    "title": "An artificial intelligence among the candidates for legislative elections",
+    "desc": "in Colombia, for one of the seats reserved for Indigenous communities — read on La Presse.",
+    "url": "https://www.lapresse.ca/international/amerique-latine/2026-02-13/colombie/une-intelligence-artificielle-parmi-les-candidats-aux-elections-legislatives.php",
+    "date": "2026-02-21",
+    "letter": 25,
+    "cat": "geopolitique",
+    "source": "La Presse"
+  },
+  {
+    "id": 154,
+    "title": "Quili.ai",
+    "desc": "for one day, residents of Quilicura, Chile offered \"analog intelligence\" by answering prompts directly themselves, to raise awareness of data centers' water consumption in their region.",
+    "url": "https://www.quili.ai/",
+    "date": "2026-02-21",
+    "letter": 25,
+    "cat": "geopolitique",
+    "source": "quili.ai"
+  },
+  {
+    "id": 155,
+    "title": "On LinkedIn and in its Mute newsletter, Chut! magazine covers the #QuitGPT movement",
+    "desc": "more than 700,000 people have already declared they're boycotting ChatGPT after OpenAI's chairman's financial support for Donald Trump.",
+    "url": "https://www.linkedin.com/posts/chut-magazine-quitter-chatgpt-ugcPost-7429884512400035840-DW9H",
+    "date": "2026-02-21",
+    "letter": 25,
+    "cat": "ethique",
+    "source": "LinkedIn (Chut Magazine)"
+  },
+  {
+    "id": 156,
+    "title": "Latam-GPT: Latin America gets its own AI model to reduce stereotypes",
+    "desc": "on France Info.",
+    "url": "https://www.franceinfo.fr/internet/intelligence-artificielle/latam-gpt-l-amerique-latine-se-dote-de-son-propre-modele-ia-pour-limiter-les-stereotypes_7796555.html",
+    "date": "2026-02-21",
+    "letter": 25,
+    "cat": "geopolitique",
+    "source": "France Info"
+  },
+  {
+    "id": 157,
+    "title": "Anthropic refuses to work with the Trump administration on mass surveillance",
+    "desc": "Anthropic refuses to work with the Trump administration on mass surveillance, while OpenAI signs a deal with the Pentagon for defense applications.",
+    "url": "https://www.lemonde.fr/international/article/2026/02/27/anthropic-donald-trump-ordonne-a-son-administration-de-cesser-immediatement-d-utiliser-l-intelligence-artificielle-de-la-start-up_6668635_3210.html",
+    "date": "2026-02-28",
+    "letter": 26,
+    "cat": "geopolitique",
+    "source": "Le Monde"
+  },
+  {
+    "id": 158,
+    "title": "White paper from the Observatory of Public Ethics",
+    "desc": "Yvan Demumieux shares the Observatory of Public Ethics' white paper on LinkedIn and analyzes the challenges of deploying algorithms.",
+    "url": "https://www.linkedin.com/posts/yvan-demumieux_rapport-complet-%C3%A9thique-ia-2026-ugcPost-7430200766604263424-aK7r/",
+    "date": "2026-02-28",
+    "letter": 26,
+    "cat": "ethique",
+    "source": "LinkedIn (Yvan Demumieux)"
+  },
+  {
+    "id": 159,
+    "title": "4,000 artists denounce the plundering of their work by AI",
+    "desc": "4,000 artists denounce the plundering of their work by AI, a stance echoed at the César Awards by actor Emmanuel Curtil.",
+    "url": "https://www.franceinfo.fr/culture/cinema/gerard-jugnot-franck-dubosc-lea-drucker-4-000-artistes-denoncent-le-pillage-en-regle-par-des-outils-d-ntelligence-artificielle_7824314.html",
+    "date": "2026-02-28",
+    "letter": 26,
+    "cat": "creation",
+    "source": "France Info"
+  },
+  {
+    "id": 160,
+    "title": "Combining artificial intelligence, fact-checking, and critical thinking",
+    "desc": "Julie Higounet revisits a study by Lareponse.Tech aimed at better equipping students and citizens against disinformation.",
+    "url": "https://www.linkedin.com/posts/higounetjulie_ia-factchecking-espritcritique-activity-7431978505833402368-SSHa/",
+    "date": "2026-02-28",
+    "letter": 26,
+    "cat": "securite",
+    "source": "AskVera"
+  },
+  {
+    "id": 161,
+    "title": "The race for compute power for future AI models",
+    "desc": "Sasha Luccioni and Yacine Jernite highlight the race for compute power and the importance of smaller models.",
+    "url": "https://huggingface.co/blog/sasha/compute-competition",
+    "date": "2026-02-28",
+    "letter": 26,
+    "cat": "technique",
+    "source": "HuggingFace"
+  },
+  {
+    "id": 162,
+    "title": "Common Corpus: 270 billion tokens for open models",
+    "desc": "Anastasia Stasenko announces the expansion of Common Corpus, a massive dataset supporting the development of open AI models.",
+    "url": "https://www.linkedin.com/posts/anastasia-stasenko_common-corpus-goes-global-270-billion-new-activity-7430217957089325056-lCxG/",
+    "date": "2026-02-28",
+    "letter": 26,
+    "cat": "technique",
+    "source": "LinkedIn (Anastasia Stasenko)"
+  },
+  {
+    "id": 163,
+    "title": "Anthropic research: the importance of \"personas\" in AI behavior",
+    "desc": "Research detailing how \"personas\" shape the behavior of generative AI.",
+    "url": "https://www.anthropic.com/research/persona-selection-model",
+    "date": "2026-02-28",
+    "letter": 26,
+    "cat": "etudes",
+    "source": "Anthropic"
+  },
+  {
+    "id": 164,
+    "title": "From Google Books to AI: digital history serves seconds",
+    "desc": "Reflection by Olivier Ertzscheid on digital history and AI, published on the Affordance blog.",
+    "url": "https://affordance.framasoft.org/2026/02/de-google-books-a-lia-lhistoire-numerique-repasse-les-plats/",
+    "date": "2026-02-28",
+    "letter": 26,
+    "cat": "philosophie",
+    "source": "Affordance"
+  },
+  {
+    "id": 165,
+    "title": "OpenAI signs a deal with the Pentagon for defense applications",
+    "desc": "OpenAI signs a deal with the Pentagon for defense applications, according to the New York Times.",
+    "url": "https://www.nytimes.com/2026/02/27/technology/openai-agreement-pentagon-ai.html",
+    "date": "2026-02-28",
+    "letter": 26,
+    "cat": "geopolitique",
+    "source": "New York Times"
+  },
+  {
+    "id": 166,
+    "title": "American tech unites against Donald Trump: support for Anthropic",
+    "desc": "Employees at Google and OpenAI back Anthropic, which refuses to assist with mass surveillance.",
+    "url": "https://www.bfmtv.com/economie/entreprises/la-tech-americaine-s-unit-face-a-donald-trump-des-employes-de-google-et-open-ai-au-soutien-d-anthropic-qui-refuse-d-aider-a-la-surveillance-de-masse_AD-202602270764.html",
+    "date": "2026-02-28",
+    "letter": 26,
+    "cat": "geopolitique",
+    "source": "BFMTV"
+  },
+  {
+    "id": 167,
+    "title": "Anthropic's official statement refusing mass surveillance",
+    "desc": "Anthropic publishes an official statement refusing to work with the Trump administration on mass surveillance.",
+    "url": "https://www.anthropic.com/news/statement-department-of-war",
+    "date": "2026-02-28",
+    "letter": 26,
+    "cat": "geopolitique",
+    "source": "Anthropic"
+  },
+  {
+    "id": 168,
+    "title": "News video suspected of being AI-generated (Charente Libre)",
+    "desc": "Charente Libre looks back at a spectacular news video suspected of being AI-generated.",
+    "url": "https://www.instagram.com/p/DU5NmltCJuw",
+    "date": "2026-02-28",
+    "letter": 26,
+    "cat": "securite",
+    "source": "Instagram (La Charente Libre)"
+  },
+  {
+    "id": 169,
+    "title": "Sam Altman interview for India Express: downplaying AI's energy impact",
+    "desc": "Full interview with Sam Altman (OpenAI) on AI's energy impact, conducted at the India AI Summit.",
+    "url": "https://www.youtube.com/watch?v=0YQQuKiorLs",
+    "date": "2026-02-28",
+    "letter": 26,
+    "cat": "ethique",
+    "source": "YouTube (India Express)"
+  },
+  {
+    "id": 170,
+    "title": "Sam Altman speaks on AI's energy impact (Bloom Media)",
+    "desc": "Bloom Media shares remarks from Sam Altman on AI's energy impact.",
+    "url": "https://www.instagram.com/p/DVHARVnDHVK?img_index=2",
+    "date": "2026-02-28",
+    "letter": 26,
+    "cat": "ethique",
+    "source": "Instagram (Bloom Media)"
+  },
+  {
+    "id": 171,
+    "title": "Using the \"model council\" technique to write a book",
+    "desc": "Arthur Sarazin shares how he used the \"model council\" technique to write a book on graph theory.",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7433202276900646913/",
+    "date": "2026-02-28",
+    "letter": 26,
+    "cat": "technique",
+    "source": "LinkedIn (Arthur Sarazin)"
+  },
+  {
+    "id": 172,
+    "title": "Emmanuel Curtil's César Awards speech on the future of dubbing jobs facing AI",
+    "desc": "Emmanuel Curtil's speech at the César Awards (Canal+ video) on the future of dubbing jobs facing AI (at 3:14).",
+    "url": "https://youtu.be/Qb-wDzYUypc",
+    "date": "2026-02-28",
+    "letter": 26,
+    "cat": "creation",
+    "source": "YouTube (Canal+)"
+  },
+  {
+    "id": 173,
+    "title": "AskVera study: source reliability and fact-checking with LLMs",
+    "desc": "Full study by Lareponse.Tech on the alliance between AI, fact-checking, and critical thinking, published on the AskVera blog.",
+    "url": "https://www.askvera.org/blog/llms-fact-checking-fiabilite-sources",
+    "date": "2026-02-28",
+    "letter": 26,
+    "cat": "securite",
+    "source": "AskVera"
+  },
+  {
+    "id": 174,
+    "title": "Trump is using AI to fight his wars – this is a dangerous turning point",
+    "desc": "Article on Trump's use of AI in conflicts, by Chris Stokel-Walker.",
+    "url": "https://www.theguardian.com/commentisfree/2026/mar/04/trump-ai-wars-dangerous-turning-point",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "geopolitique",
+    "source": "The Guardian"
+  },
+  {
+    "id": 175,
+    "title": "Hundreds of engineers at Google and OpenAI unite to block military use: a historic revolt",
+    "desc": "Engineers mobilize against the military use of AI.",
+    "url": "https://www.clubic.com/actualite-603304-des-centaines-d-ingenieurs-chez-google-et-openai-s-unissent-pour-bloquer-l-utilisation-militaire-une-fronde-historique.html",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "geopolitique",
+    "source": "Clubic"
+  },
+  {
+    "id": 176,
+    "title": "Doomsday scenario: AI shakes Wall Street and the software industry (Citrini)",
+    "desc": "AI's impact on financial markets and software.",
+    "url": "https://www.france24.com/fr/%C3%A9co-tech/20260224-sc%C3%A9nario-catastrophe-ia-fait-trembler-wall-street-logiciels-citrini",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "geopolitique",
+    "source": "France 24"
+  },
+  {
+    "id": 177,
+    "title": "Is AI already destroying jobs? ECB economists weigh in",
+    "desc": "ECB analysis of AI's impact on employment.",
+    "url": "https://www.leparisien.fr/societe/lia-detruit-elle-deja-des-emplois-les-economistes-de-la-bce-y-repondent-dans-une-note-04-03-2026-CXTIBPFDRZGSDPZQGKP7737L4Y.php",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "travail",
+    "source": "Le Parisien"
+  },
+  {
+    "id": 178,
+    "title": "In 2025, generative AI became firmly established in European companies",
+    "desc": "Study on the adoption of generative AI in Europe.",
+    "url": "https://www.usine-digitale.fr/intelligence-artificielle/etude-en-2025-lia-generative-sest-installee-durablement-dans-les-entreprises-europeennes.PSJIRUOFCFHFFKO2X52BWFZL3A.html",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "travail",
+    "source": "Usine Digitale"
+  },
+  {
+    "id": 179,
+    "title": "How exposed are jobs and skills to large language models?",
+    "desc": "University of Pennsylvania study on the impact of LLMs on occupations.",
+    "url": "https://www.linkedin.com/posts/une-%C3%A9tude-r%C3%A9alis%C3%A9e-par-university-of-pennsylvania-share-7434192439709433856-9p3F/",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "travail",
+    "source": "LinkedIn (UQAM)"
+  },
+  {
+    "id": 180,
+    "title": "Labor market impacts of AI: A new measure and early evidence",
+    "desc": "Anthropic study on AI's impact on the labor market.",
+    "url": "https://www.anthropic.com/research/labor-market-impacts",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "travail",
+    "source": "Anthropic"
+  },
+  {
+    "id": 181,
+    "title": "AI and work: what's really at stake",
+    "desc": "Analysis by Ciprian Melian on AI's impact on work.",
+    "url": "https://www.linkedin.com/pulse/lia-et-le-travail-ce-qui-se-joue-vraiment-ciprian-melian-imf1e/",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "travail",
+    "source": "LinkedIn (Ciprian Melian)"
+  },
+  {
+    "id": 182,
+    "title": "At Prisma Media, up to 40% of articles and 50% of journalists are AI-generated",
+    "desc": "Use of AI in media content production.",
+    "url": "https://next.ink/226997/chez-prisma-media-jusqua-40-des-articles-et-50-des-journalistes-sont-generes-par-ia/",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "creation",
+    "source": "Next Ink"
+  },
+  {
+    "id": 183,
+    "title": "The scale is frightening: an AI-generated podcast produces 11,000 episodes a day by siphoning local news articles",
+    "desc": "Massive AI podcast production.",
+    "url": "https://www.liberation.fr/economie/economie-numerique/lampleur-est-effrayante-un-podcast-genere-par-ia-produit-11-000-episodes-par-jour-en-siphonnant-des-articles-de-presse-locale-20260305_YYLVFOYXUFASBC6DS4GK2E67Q4/",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "creation",
+    "source": "Libération"
+  },
+  {
+    "id": 184,
+    "title": "Mistral AI predicts the imminent end of 50% of today's enterprise software",
+    "desc": "Mistral AI's prediction on AI's impact on software.",
+    "url": "https://www.lebigdata.fr/mistral-ai-annonce-la-fin-imminente-de-50-des-logiciels-dentreprise-actuels",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "technique",
+    "source": "Le Big Data"
+  },
+  {
+    "id": 185,
+    "title": "Financial Times article on how language models work",
+    "desc": "Technical explanation of language models.",
+    "url": "https://ig.ft.com/generative-ai/",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "technique",
+    "source": "Financial Times"
+  },
+  {
+    "id": 186,
+    "title": "The drunken boat of data — a cyclist analogy for AI agents",
+    "desc": "Reflection on how AI agents work.",
+    "url": "https://www.linkedin.com/newsletters/le-bateau-ivre-des-donn%25C3%25A9es-7132955477440630784/",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "technique",
+    "source": "LinkedIn (Arthur Sarazin)"
+  },
+  {
+    "id": 187,
+    "title": "Data.gouv makes public data more accessible to generative AI",
+    "desc": "Initiative to facilitate access to public data.",
+    "url": "https://www.banquedesterritoires.fr/datagouv-facilite-lacces-des-ia-generatives-aux-donnees-publiques",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "technique",
+    "source": "Banque des Territoires"
+  },
+  {
+    "id": 188,
+    "title": "Experimenting with an MCP server for data.gouv",
+    "desc": "Technical experiment on data.gouv.",
+    "url": "https://www.data.gouv.fr/posts/experimentation-autour-dun-serveur-mcp-pour-datagouv",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "technique",
+    "source": "data.gouv"
+  },
+  {
+    "id": 189,
+    "title": "Sch(AI)zophrenia: hide that AI I must not see…",
+    "desc": "Collective op-ed on AI in education.",
+    "url": "https://education.newstank.fr/article/view/432463/sch-ia-zophrenie-cachez-ia-saurais-voir-collectif.html",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "education",
+    "source": "News Tank Education"
+  },
+  {
+    "id": 190,
+    "title": "AI in the service of Universal Design for Learning (UDL)",
+    "desc": "Guide by Julie Higounet on AI and UDL.",
+    "url": "https://www.linkedin.com/pulse/lia-au-service-de-la-cua-conception-universelle-des-julie-higounet--a4voe/",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "education",
+    "source": "LinkedIn (Julie Higounet)"
+  },
+  {
+    "id": 191,
+    "title": "Artificial Intelligence: A Maturity Test. Perspectives on Learning, Teaching, and Assessment",
+    "desc": "Perspectives on AI in pedagogy.",
+    "url": "https://pedagogie-digitala.ro/artificial-intelligence-perspectives-on-learning-teaching-and-assessment/",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "education",
+    "source": "Pedagogie Digitala"
+  },
+  {
+    "id": 192,
+    "title": "Chardet: when an AI rewrites open-source software in five days and changes its license",
+    "desc": "An AI rewrites open-source software.",
+    "url": "https://korben.info/chardet-quand-une-ia-reecrit-un-logiciel-open-source-en-cinq-jours-et-change-sa-licence.html",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "droit",
+    "source": "Korben"
+  },
+  {
+    "id": 193,
+    "title": "Incredibly dangerous: ChatGPT misses one in two life-threatening emergencies, researchers warn",
+    "desc": "Study on the limitations of ChatGPT in healthcare.",
+    "url": "https://www.lesnumeriques.com/intelligence-artificielle/incroyablement-dangereux-chatgpt-sante-rate-une-urgence-vitale-sur-deux-des-chercheurs-sonnent-l-alarme-n252196.html",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "ethique",
+    "source": "Les Numériques"
+  },
+  {
+    "id": 194,
+    "title": "Pope Leo XIV warns clergy addicted to ChatGPT",
+    "desc": "Article on AI use by the clergy.",
+    "url": "https://www.franceinfo.fr/replay-radio/l-il-de-constance/le-pape-leon-xiv-met-en-garde-le-clerge-accro-a-chatgpt_7815515.html",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "ethique",
+    "source": "France Info"
+  },
+  {
+    "id": 195,
+    "title": "AI is designed to finish the work, not to start it",
+    "desc": "Reflection on the limitations of AI.",
+    "url": "https://theconversation.com/lia-est-concue-pour-terminer-le-travail-pas-pour-le-commencer-272908",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "philosophie",
+    "source": "The Conversation"
+  },
+  {
+    "id": 196,
+    "title": "How does generative AI shape our emotions?",
+    "desc": "Reflection on the emotional impact of generative AI.",
+    "url": "https://www.radiofrance.fr/franceculture/podcasts/les-chantiers-de-la-recherche/comment-les-ia-generative-faconnent-elles-nos-emotions-6703937",
+    "date": "2026-03-07",
+    "letter": 27,
+    "cat": "philosophie",
+    "source": "France Culture"
+  },
+  {
+    "id": 197,
+    "title": "The Internet's New Favorite Insult: 'Did AI Write That?'",
+    "desc": "On Time (in English): the \"made by AI\" accusation becomes a new form of online insult.",
+    "url": "https://time.com/7371832/looks-like-ai-writing-online-insult/",
+    "date": "2026-03-14",
+    "letter": 28,
+    "cat": "ethique",
+    "source": "Time"
+  },
+  {
+    "id": 198,
+    "title": "Why you'll soon be replying \"AI;DR\" to everyone",
+    "desc": "On Numerama: the rise of \"AI;DR\" (AI Didn't Read), a term signaling AI-generated content.",
+    "url": "https://www.numerama.com/tech/2194795-pourquoi-vous-allez-bientot-repondre-aidr-a-tout-le-monde.html",
+    "date": "2026-03-14",
+    "letter": 28,
+    "cat": "ethique",
+    "source": "Numerama"
+  },
+  {
+    "id": 199,
+    "title": "AI in perspective: a popular-education glossary",
+    "desc": "26 videos by GSARA, a Walloon popular-education and media-literacy organization.",
+    "url": "https://iaep.be/",
+    "date": "2026-03-14",
+    "letter": 28,
+    "cat": "ethique",
+    "source": "GSARA (iaep.be)"
+  },
+  {
+    "id": 200,
+    "title": "Killer Apps: how mainstream AI chatbots assist users planning violent attacks",
+    "desc": "Chloé Sondervorst analyzes the Center for Countering Digital Hate's study on the safety failures of AI chatbots.",
+    "url": "https://www.linkedin.com/posts/sondervorst_les-chatbots-peuvent-acc%C3%A9l%C3%A9rer-le-passage-ugcPost-7437894911481286656-Br4p/",
+    "date": "2026-03-14",
+    "letter": 28,
+    "cat": "securite",
+    "source": "LinkedIn (Chloé Sondervorst)"
+  },
+  {
+    "id": 201,
+    "title": "The Council on AI and Digital Affairs tasked with forming a commission on generative AI and vulnerabilities",
+    "desc": "On the Council on AI and Digital Affairs' website: creation of a commission dedicated to the risks of generative AI.",
+    "url": "https://www.conseil-ia-numerique.fr/le-conseil-de-lintelligence-artificielle-et-du-numerique-charge-de-constituer-une-commission-ia",
+    "date": "2026-03-14",
+    "letter": 28,
+    "cat": "ethique",
+    "source": "Conseil IA et Numérique"
+  },
+  {
+    "id": 202,
+    "title": "Fake sites, stink bombs, and sanitized platforms: how AI is disrupting the local election campaign",
+    "desc": "On France Info: AI used to manipulate and pollute the French local election campaign.",
+    "url": "https://www.franceinfo.fr/elections/municipales/faux-sites-boules-puantes-programmes-aseptises-comment-l-intelligence-artificielle-parasite-la-campagne-des-elections-municipales_7849970.html",
+    "date": "2026-03-14",
+    "letter": 28,
+    "cat": "securite",
+    "source": "France Info"
+  },
+  {
+    "id": 203,
+    "title": "So where does the name Nano Banana come from?",
+    "desc": "On Le Blog du modérateur: the story and origin of the name of the Nano Banana video-generation model.",
+    "url": "https://www.blogdumoderateur.com/histoire-nom-nano-banana/",
+    "date": "2026-03-14",
+    "letter": 28,
+    "cat": "technique",
+    "source": "Blog du modérateur"
+  },
+  {
+    "id": 204,
+    "title": "Arthur Mensch reignites the debate: will AI \"replatforming\" swallow enterprise software?",
+    "desc": "On Silicon: Arthur Mensch (Mistral AI) predicts a complete overhaul of enterprise software by generative AI.",
+    "url": "https://www.silicon.fr/business-1367/arthur-mensch-relance-le-debat-le-replatforming-par-lia-va-t-il-engloutir-le-logiciel-dentreprise-225834",
+    "date": "2026-03-14",
+    "letter": 28,
+    "cat": "travail",
+    "source": "Silicon"
+  },
+  {
+    "id": 205,
+    "title": "Dossier: generative AI in education",
+    "desc": "First chapter of the dossier on Réseau Canopé, with a contribution by Bertrand Formet.",
+    "url": "https://www.reseau-canope.fr/ia-et-education/dossier-ia-generatives-en-education",
+    "date": "2026-03-14",
+    "letter": 28,
+    "cat": "education",
+    "source": "Réseau Canopé"
+  },
+  {
+    "id": 206,
+    "title": "This MIT professor says we don't know enough about AI to teach it",
+    "desc": "On KJZZ (in English): an MIT instructor questions our current ability to teach AI rigorously.",
+    "url": "https://www.kjzz.org/the-show/2026-03-10/this-mit-prof-says-we-dont-know-enough-about-ai-to-teach-it",
+    "date": "2026-03-14",
+    "letter": 28,
+    "cat": "education",
+    "source": "KJZZ"
+  },
+  {
+    "id": 207,
+    "title": "Grégory Michnik: \"Vibe coding\" in the service of teaching biology and earth sciences",
+    "desc": "On Le Café Pédagogique: an account of using vibe coding to teach biology and earth sciences.",
+    "url": "https://www.cafepedagogique.net/2026/03/10/gregory-michnik-le-vibe-coding-au-service-de-lenseignement-des-svt/",
+    "date": "2026-03-14",
+    "letter": 28,
+    "cat": "education",
+    "source": "Le Café Pédagogique"
+  },
+  {
+    "id": 208,
+    "title": "Artificial intelligence: new learning paths for school students",
+    "desc": "On Pix: presentation of new AI training paths designed for school students.",
+    "url": "https://pix.fr/actualites/intelligence-artificielle-parcours-apprenants-enseignement-scolaire-2026",
+    "date": "2026-03-14",
+    "letter": 28,
+    "cat": "education",
+    "source": "Pix"
+  },
+  {
+    "id": 209,
+    "title": "Artificial intelligence and the revolution in mathematics: between machine theorems and military research",
+    "desc": "On Slate: AI is shaking up mathematical research, between automated proofs and military stakes.",
+    "url": "https://www.slate.fr/sciences/intelligence-artificielle-revolution-mathematiques-theoreme-humain-machine-recherche-militaire-defense",
+    "date": "2026-03-14",
+    "letter": 28,
+    "cat": "etudes",
+    "source": "Slate"
+  },
+  {
+    "id": 210,
+    "title": "Are we handing our language over to AI?",
+    "desc": "On France Culture: reflection on the place of human language in our relationship with generative AI.",
+    "url": "https://www.radiofrance.fr/franceculture/podcasts/le-fil-pop-culture/va-t-on-donner-notre-langue-a-l-ia-3523256",
+    "date": "2026-03-14",
+    "letter": 28,
+    "cat": "philosophie",
+    "source": "France Culture"
+  },
+  {
+    "id": 211,
+    "title": "Ethan Mollick on the shift from chatbot to autonomous agent",
+    "desc": "Alexandra Coutlée shares Ethan Mollick's thoughts on LinkedIn about the transition from chatbot to autonomous AI agent.",
+    "url": "https://www.linkedin.com/posts/alexandra-coutl%C3%A9e_ethan-mollick-professeur-et-auteur-sp%C3%A9cialis%C3%A9-ugcPost-7436078782500933632-kO-D",
+    "date": "2026-03-14",
+    "letter": 28,
+    "cat": "philosophie",
+    "source": "LinkedIn (Alexandra Coutlée)"
+  },
+  {
+    "id": 212,
+    "title": "French Science Commons",
+    "desc": "Pierre-Carl Langlais announces the launch of a massive, freely accessible database of French scientific literature.",
+    "url": "https://www.linkedin.com/posts/pierre-carl-langlais-b0105b10_un-peu-plus-dun-an-apr%25C3%25A8s-son-annonce-nous-share-7440413800106823680-7j25",
+    "date": "2026-03-21",
+    "letter": 29,
+    "cat": "etudes",
+    "source": "LinkedIn (Pierre-Carl Langlais)"
+  },
+  {
+    "id": 213,
+    "title": "Using AI makes writing more bland, study finds",
+    "desc": "on NBC News (in English). Explores how AI use reduces lexical diversity and homogenizes literary output.",
+    "url": "https://www.nbcnews.com/tech/tech-news/ai-changing-style-substance-human-writing-study-finds-rcna263789",
+    "date": "2026-03-21",
+    "letter": 29,
+    "cat": "etudes",
+    "source": "NBC News"
+  },
+  {
+    "id": 214,
+    "title": "Study on AI's impact on lexical diversity and human literary output",
+    "desc": "The study (on Arxiv, in English) explores how AI use reduces lexical diversity and homogenizes output.",
+    "url": "https://arxiv.org/abs/2603.18161",
+    "date": "2026-03-21",
+    "letter": 29,
+    "cat": "etudes",
+    "source": "Arxiv"
+  },
+  {
+    "id": 215,
+    "title": "AI in strategy: what it gets right and what it gets wrong",
+    "desc": "Jean-Luc Raymond questions the role of AI in decision-making.",
+    "url": "https://www.linkedin.com/posts/jeanlucraymond_ia-strataezgie-innovation-share-7439823917046947840-zpD6/?skipRedirect=true",
+    "date": "2026-03-21",
+    "letter": 29,
+    "cat": "etudes",
+    "source": "LinkedIn (Jean-Luc Raymond)"
+  },
+  {
+    "id": 216,
+    "title": "Researchers Asked LLMs for Strategic Advice. They Got 'Trendslop' in Return",
+    "desc": "in English, on Harvard Business Review — the reference article used by Jean-Luc Raymond on AI and strategic advice.",
+    "url": "https://hbr.org/2026/03/researchers-asked-llms-for-strategic-advice-they-got-trendslop-in-return",
+    "date": "2026-03-21",
+    "letter": 29,
+    "cat": "etudes",
+    "source": "Harvard Business Review"
+  },
+  {
+    "id": 217,
+    "title": "Assault on a woman: a humanoid robot arrested for the first time",
+    "desc": "on Le Big Data.",
+    "url": "https://www.lebigdata.fr/agression-sur-une-femme-un-robot-humanoide-arrete-pour-la-premiere-fois",
+    "date": "2026-03-21",
+    "letter": 29,
+    "cat": "ethique",
+    "source": "Le Big Data"
+  },
+  {
+    "id": 218,
+    "title": "The UK government is safety testing AI toys",
+    "desc": "on Politico (in English).",
+    "url": "https://www.politico.eu/article/uk-government-safety-test-artificial-intelligence-ai-toys/",
+    "date": "2026-03-21",
+    "letter": 29,
+    "cat": "ethique",
+    "source": "Politico"
+  },
+  {
+    "id": 219,
+    "title": "Pokémon Go images are now being used to guide pizza-delivery robots",
+    "desc": "on Numerama.",
+    "url": "https://www.numerama.com/tech/2200033-les-images-de-pokemon-go-servent-desormais-a-guider-des-robots-livreurs-de-pizza.html",
+    "date": "2026-03-21",
+    "letter": 29,
+    "cat": "ethique",
+    "source": "Numerama"
+  },
+  {
+    "id": 220,
+    "title": "AI: the coming upheaval of the job market",
+    "desc": "on Les Échos, Coface study and the Observatory of Threatened and Emerging Jobs, due out in April.",
+    "url": "https://www.lesechos.fr/monde/europe/ia-le-grand-bouleversement-a-venir-du-marche-du-travail-2221760",
+    "date": "2026-03-21",
+    "letter": 29,
+    "cat": "travail",
+    "source": "Les Échos"
+  },
+  {
+    "id": 221,
+    "title": "Eco-design framework for AI services (RIA)",
+    "desc": "on Green IT.",
+    "url": "https://ria.greenit.fr/",
+    "date": "2026-03-21",
+    "letter": 29,
+    "cat": "technique",
+    "source": "Green IT"
+  },
+  {
+    "id": 222,
+    "title": "The \"Windows of AI\" is being built before our eyes: OpenAI buys everything and merges it into ChatGPT as a \"super app\"",
+    "desc": "on Les Numériques.",
+    "url": "https://www.lesnumeriques.com/intelligence-artificielle/le-windows-de-l-ia-se-construit-sous-vos-yeux-openai-rachete-tout-et-fusionne-chatgpt-dans-une-super-app-n253297.html",
+    "date": "2026-03-21",
+    "letter": 29,
+    "cat": "technique",
+    "source": "Les Numériques"
+  },
+  {
+    "id": 223,
+    "title": "What is this \"Mixture of Experts\" (MoE) for generative AI?",
+    "desc": "on Next.ink.",
+    "url": "https://next.ink/229897/nextquick-moe-cest-quoi-cette-mixture-dexperts-pour-les-ia-generatives/",
+    "date": "2026-03-21",
+    "letter": 29,
+    "cat": "technique",
+    "source": "Next.ink"
+  },
+  {
+    "id": 224,
+    "title": "Stochastic parrots: still a valid concept despite the criticism?",
+    "desc": "on Next.ink.",
+    "url": "https://next.ink/229626/perroquets-stochastiques-une-notion-toujours-valide-malgre-les-critiques/",
+    "date": "2026-03-21",
+    "letter": 29,
+    "cat": "philosophie",
+    "source": "Next.ink"
+  },
+  {
+    "id": 225,
+    "title": "Bullshit Bench",
+    "desc": "cited by Benoît Legay, pits language models' reasoning abilities against their tendency to produce shallow or incorrect content.",
+    "url": "https://petergpt.github.io/bullshit-benchmark/viewer/index.v2.html?q=sw_af_02&a=anthropic%2Fclaude-3.7-sonnet%3Athinking%40reasoning%3Ddefault&b=openai%2Fo4-mini%40reasoning%3Dhigh",
+    "date": "2026-03-21",
+    "letter": 29,
+    "cat": "philosophie",
+    "source": "GitHub (Peter Gostev)"
+  },
+  {
+    "id": 226,
+    "title": "AI Grand Challenge 2026",
+    "desc": "In a LinkedIn post, INRIA encourages participation in the AI Grand Challenge 2026, a survey on AI use in higher education.",
+    "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7437861725451812865/",
+    "date": "2026-03-21",
+    "letter": 29,
+    "cat": "education",
+    "source": "LinkedIn (INRIA)"
+  },
+  {
+    "id": 227,
+    "title": "Life-cycle analysis of GPUs (graphics cards) for artificial intelligence",
+    "desc": "on ADEME's library (the French environment agency).",
+    "url": "https://librairie.ademe.fr/economie-circulaire-et-dechets/9103-analyse-de-cycle-de-vie-de-gpu-cartes-graphiques-pour-l-intelligence-artificielle.html",
+    "date": "2026-03-28",
+    "letter": 30,
+    "cat": "etudes",
+    "source": "ADEME"
+  },
+  {
+    "id": 228,
+    "title": "Which AI Chatbot Collects the Most Data?",
+    "desc": "on Surfshark (in English).",
+    "url": "https://surfshark.com/research/chart/ai-chatbots-privacy",
+    "date": "2026-03-28",
+    "letter": 30,
+    "cat": "etudes",
+    "source": "Surfshark"
+  },
+  {
+    "id": 229,
+    "title": "AI tools distort users' judgment by being too agreeable, researchers say",
+    "desc": "on Euronews.",
+    "url": "https://fr.euronews.com/next/2026/03/27/les-outils-dia-faussent-le-jugement-des-utilisateurs-en-les-approuvant-trop-selon-des-cher",
+    "date": "2026-03-28",
+    "letter": 30,
+    "cat": "etudes",
+    "source": "Euronews"
+  },
+  {
+    "id": 230,
+    "title": "The real stakes of a democratic AI",
+    "desc": "on Esprit.",
+    "url": "https://esprit.presse.fr/actualites/adrien-tallent/les-veritables-enjeux-d-une-ia-democratique-46536",
+    "date": "2026-03-28",
+    "letter": 30,
+    "cat": "ethique",
+    "source": "Esprit"
+  },
+  {
+    "id": 231,
+    "title": "The generative AI commission will \"regulate, protect, and inform,\" says co-chair Amine Benyamina",
+    "desc": "on France Inter.",
+    "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/la-commission-sur-l-ia-generative-servira-a-reguler-proteger-et-informer-affirme-son-copresident-amine-benyamina-7492510",
+    "date": "2026-03-28",
+    "letter": 30,
+    "cat": "ethique",
+    "source": "France Inter"
+  },
+  {
+    "id": 232,
+    "title": "Does AI really save time?",
+    "desc": "Fleur Bouré questions the common assumption that AI always saves time, drawing on an article by Arthur Charpentier.",
+    "url": "https://www.linkedin.com/posts/fleur-boure_lia-fait-gagner-du-temps-vous-en-%C3%AAtes-share-7440348347447758849-1aB8/",
+    "date": "2026-03-28",
+    "letter": 30,
+    "cat": "travail",
+    "source": "LinkedIn (Fleur Bouré)"
+  },
+  {
+    "id": 233,
+    "title": "Youth employment and AI: episode 2 — France",
+    "desc": "Axelle Arquié analyzes an INSEE briefing on youth employment and AI in France.",
+    "url": "https://www.linkedin.com/posts/axelle-arqui%C3%A9-0818a124_emploi-des-jeunes-ia-%C3%A9pisode-2-la-france-share-7442521527096504320-0__H/",
+    "date": "2026-03-28",
+    "letter": 30,
+    "cat": "travail",
+    "source": "LinkedIn (Axelle Arquié)"
+  },
+  {
+    "id": 234,
+    "title": "Wikipedia tightens the rules: AI can no longer write articles",
+    "desc": "on ActuaLitté.",
+    "url": "https://actualitte.com/article/130153/technologie/wikipedia-serre-la-vis-l-ia-n-a-plus-le-droit-d-ecrire-les-articles",
+    "date": "2026-03-28",
+    "letter": 30,
+    "cat": "securite",
+    "source": "ActuaLitté"
+  },
+  {
+    "id": 235,
+    "title": "A dropshipping system built on AI-generated content",
+    "desc": "Estherium__ on Instagram breaks down an entire dropshipping system built on AI-generated content.",
+    "url": "https://www.instagram.com/estherium__/reel/DWXIj0aiAxU/",
+    "date": "2026-03-28",
+    "letter": 30,
+    "cat": "securite",
+    "source": "Instagram (estherium__)"
+  },
+  {
+    "id": 236,
+    "title": "AI or not AI? Hachette pulls horror novel Shy Girl from sale",
+    "desc": "on ActuaLitté.",
+    "url": "https://actualitte.com/article/130062/edition/ia-ia-pas-hachette-retire-de-la-vente-shy-girl-roman-d-horreur",
+    "date": "2026-03-28",
+    "letter": 30,
+    "cat": "creation",
+    "source": "ActuaLitté"
+  },
+  {
+    "id": 237,
+    "title": "Tech Publications Lost 58% of Google Traffic Since 2024",
+    "desc": "on Growtika (in English).",
+    "url": "https://growtika.com/blog/tech-media-collapse",
+    "date": "2026-03-28",
+    "letter": 30,
+    "cat": "creation",
+    "source": "Growtika"
+  },
+  {
+    "id": 238,
+    "title": "OpenAI shuts down its Sora video app to refocus on professional tools amid competition from Anthropic",
+    "desc": "on Le Monde.",
+    "url": "https://www.lemonde.fr/pixels/article/2026/03/25/openai-ferme-son-application-video-sora-pour-se-recentrer-sur-les-outils-professionnels-face-a-la-concurrence-d-anthropic_6674140_4408996.html",
+    "date": "2026-03-28",
+    "letter": 30,
+    "cat": "technique",
+    "source": "Le Monde"
+  },
+  {
+    "id": 239,
+    "title": "\"I claim we've reached AGI\": for the man who coined the term, the tipping point has just happened",
+    "desc": "on Les Numériques.",
+    "url": "https://www.lesnumeriques.com/intelligence-artificielle/j-affirme-que-nous-avons-atteint-l-agi-pour-l-homme-qui-a-invente-le-terme-le-basculement-vient-d-avoir-lieu-n253483.html",
+    "date": "2026-03-28",
+    "letter": 30,
+    "cat": "technique",
+    "source": "Les Numériques"
+  },
+  {
+    "id": 240,
+    "title": "How do we regain control? Tending our wounds amid the world's violence, with Hartmut Rosa",
+    "desc": "on Le Grand Continent.",
+    "url": "https://legrandcontinent.eu/fr/2026/03/10/conversation-hartmut-rosa/",
+    "date": "2026-03-28",
+    "letter": 30,
+    "cat": "philosophie",
+    "source": "Le Grand Continent"
+  },
+  {
+    "id": 241,
+    "title": "The greatest risk of AI in higher education isn't cheating, it's the erosion of learning itself",
+    "desc": "Mickaël Bertrand shares a Conversation article warning that the greatest risk of AI in higher education is not cheating but the erosion of learning itself (in English).",
+    "url": "https://www.linkedin.com/posts/mickaelbertrand_ia-connaissance-recherche-share-7442979400297377793-RPAN/",
+    "date": "2026-03-28",
+    "letter": 30,
+    "cat": "education",
+    "source": "LinkedIn (Mickaël Bertrand)"
+  },
+  {
+    "id": 242,
+    "title": "A first step toward answering the question that should concern every educator",
+    "desc": "on Pédagotic - UQAC.",
+    "url": "https://www.uqac.ca/pedagotic/un-debut-de-reponse-a-la-question-qui-devrait-occuper-tous-les-educateurs/",
+    "date": "2026-03-28",
+    "letter": 30,
+    "cat": "education",
+    "source": "Pédagotic - UQAC"
+  },
+  {
+    "id": 243,
+    "title": "\"If you give them homework ChatGPT can do in three seconds, that's on you\": how Estonia is rolling out AI in schools at scale",
+    "desc": "on Les Échos.",
+    "url": "https://www.lesechos.fr/tech-medias/intelligence-artificielle/si-vous-leur-donnez-un-devoir-que-chatgpt-peut-faire-en-trois-secondes-cest-votre-erreur-comment-lestonie-deploie-massivement-lia-a-lecole-2223308",
+    "date": "2026-03-28",
+    "letter": 30,
+    "cat": "education",
+    "source": "Les Échos"
+  },
+  {
+    "id": 244,
+    "title": "Copyright and AI: the question resurfaces via Mistral and the parliamentary agenda",
+    "desc": "Marina Alcaraz notes in a post that the question of copyright and AI is back in the spotlight.",
+    "url": "https://www.linkedin.com/posts/marina-alcaraz-0a520031_depuis-qq-semaines-il-flotte-un-petit-air-share-7442501742514049024-tU54/",
+    "date": "2026-03-28",
+    "letter": 30,
+    "cat": "droit",
+    "source": "LinkedIn (Marina Alcaraz)"
+  },
+  {
+    "id": 245,
+    "title": "Mark Zuckerberg and Jensen Huang are part of Trump's new 'tech panel'",
+    "desc": "on The Verge (in English).",
+    "url": "https://www.theverge.com/policy/900340/trump-tech-panel-mark-zuckerberg-jensen-huang",
+    "date": "2026-03-28",
+    "letter": 30,
+    "cat": "geopolitique",
+    "source": "The Verge"
+  },
+  {
+    "id": 246,
+    "title": "The Wikimedia Foundation faces AI bots",
+    "desc": "The Wikimedia Foundation blocks billions of AI bot requests per day, raising questions about the responsible use of digital commons.",
+    "url": "https://www.linkedin.com/posts/alek-tarkowski_new-traffic-data-from-the-wikimedia-foundation-share-7444714294170140672-D2K9/",
+    "date": "2026-04-04",
+    "letter": 31,
+    "cat": "ethique",
+    "source": "LinkedIn (Alek Tarkowski)"
+  },
+  {
+    "id": 247,
+    "title": "The EU bans AI-generated content in its official communications",
+    "desc": "The European Commission, Parliament, and Council ban their press teams from using fully AI-generated visuals.",
+    "url": "https://next.ink/brief_article/lue-interdit-les-contenus-generes-par-ia-dans-ses-communications-officielles/",
+    "date": "2026-04-04",
+    "letter": 31,
+    "cat": "geopolitique",
+    "source": "Next.ink"
+  },
+  {
+    "id": 248,
+    "title": "Ruling by the Journalism Ethics Council against Ventures Media",
+    "desc": "Ventures Media was publishing AI-generated articles under fake bylines. The Council reminds outlets that editorial responsibility cannot be delegated to an AI.",
+    "url": "https://www.linkedin.com/posts/florian-ernotte_cdj-ventures-m%C3%A9dia-ugcPost-7445473907656052737-g4Ci/",
+    "date": "2026-04-04",
+    "letter": 31,
+    "cat": "creation",
+    "source": "LinkedIn (Florian Ernotte)"
+  },
+  {
+    "id": 249,
+    "title": "Webinar \"News in the Age of AI at Radio France\"",
+    "desc": "Replay of a webinar bringing together three Radio France experts on reading, writing, and distributing news in the age of AI.",
+    "url": "https://podeduc.apps.education.fr/video/138624-linfo-a-lere-de-lia-chez-radio-france/",
+    "date": "2026-04-04",
+    "letter": 31,
+    "cat": "education",
+    "source": "Podeduc"
+  },
+  {
+    "id": 250,
+    "title": "Too power-hungry, Google's data centers get shut out of Ireland — France bets the opposite way",
+    "desc": "Ireland requires data centers to produce 80% green electricity. In France, these facilities are being reclassified as being of major national interest.",
+    "url": "https://www.lesnumeriques.com/societe-numerique/trop-gourmands-en-electricite-les-datacenters-de-google-sont-exclus-d-irlande-la-france-fait-le-pari-inverse-n253600.html",
+    "date": "2026-04-04",
+    "letter": 31,
+    "cat": "technique",
+    "source": "Les Numériques"
+  },
+  {
+    "id": 251,
+    "title": "Stanford study outlines dangers of asking AI chatbots for personal advice",
+    "desc": "A Stanford study warns about chatbots' sycophancy, validating users' pre-existing beliefs and creating emotional echo chambers.",
+    "url": "https://techcrunch.com/2026/03/28/stanford-study-outlines-dangers-of-asking-ai-chatbots-for-personal-advice/",
+    "date": "2026-04-04",
+    "letter": 31,
+    "cat": "etudes",
+    "source": "TechCrunch"
+  },
+  {
+    "id": 252,
+    "title": "AMI: a French AI startup announces a one-billion-dollar funding round",
+    "desc": "Yann LeCun announces AMI Labs and raises one billion dollars to develop world models capable of understanding the physical world from video and sensors.",
+    "url": "https://fr.euronews.com/2026/03/10/ami-une-startup-francaise-de-lia-annonce-une-levee-de-fonds-dun-milliard-de-dollars",
+    "date": "2026-04-04",
+    "letter": 31,
+    "cat": "technique",
+    "source": "Euronews"
+  },
+  {
+    "id": 253,
+    "title": "Quo Vadis, Crawlers? Progress and what's next on safeguarding our infrastructure",
+    "desc": "The Wikimedia Foundation details the measures taken to block AI bots that are overloading its infrastructure, and questions the responsible use of digital commons.",
+    "url": "https://diff.wikimedia.org/2026/03/26/quo-vadis-crawlers-progress-and-whats-next-on-safeguarding-our-infrastructure/",
+    "date": "2026-04-04",
+    "letter": 31,
+    "cat": "ethique",
+    "source": "Wikimedia Foundation"
+  },
+  {
+    "id": 254,
+    "title": "Startup Friend suspends its European launch over EU personal-data requirements",
+    "desc": "The wearable pendant that continuously listens to its user's surroundings runs into the GDPR. France's CNIL has opened its own inquiry into the matter.",
+    "url": "https://www.huffingtonpost.fr/tech-futurs/article/la-start-up-d-ia-friend-suspend-son-lancement-en-europe-face-aux-exigences-europeennes-sur-les-donnees-personnelles_262317.html",
+    "date": "2026-04-11",
+    "letter": 32,
+    "cat": "ethique",
+    "source": "HuffPost"
+  },
+  {
+    "id": 255,
+    "title": "Cognitive bias: AI autocomplete would shape our opinions without our realizing it",
+    "desc": "Cornell study of 2,500 people: AI autocomplete suggestions shape opinions, even among those who reject the suggestions. Neither warnings nor debriefings reduce the effect.",
+    "url": "https://www.science-et-vie.com/technos-et-futur/biais-cognitif-lautocompletion-par-ia-influencerait-nos-opinions-sans-que-lon-sen-rende-compte-234415.html",
+    "date": "2026-04-11",
+    "letter": 32,
+    "cat": "ethique",
+    "source": "Science et Vie"
+  },
+  {
+    "id": 256,
+    "title": "Emotion Concepts and Function in Claude Sonnet 4.5",
+    "desc": "An interpretability study on Claude Sonnet 4.5: emotion-related representations were identified and found to influence the model's behavior.",
+    "url": "https://www.anthropic.com/research/emotion-concepts-function",
+    "date": "2026-04-11",
+    "letter": 32,
+    "cat": "technique",
+    "source": "Anthropic Research"
+  },
+  {
+    "id": 257,
+    "title": "AI and the working class: AI dictating work is already a reality for tens of thousands of precarious workers",
+    "desc": "Taoufik Vallipuram, Ano Kuhanathan, and Samah Karaki devote an episode of 'Les Vies Qu'on Mène' to AI and the working class.",
+    "url": "https://www.linkedin.com/posts/taoufikvallipuram_5-millions-de-cols-blancs-seraient-menac%C3%A9s-ugcPost-7445875005579616256-izkP/",
+    "date": "2026-04-11",
+    "letter": 32,
+    "cat": "travail",
+    "source": "LinkedIn (Taoufik Vallipuram)"
+  },
+  {
+    "id": 258,
+    "title": "Can we learn well alongside AI?",
+    "desc": "Wayne Holmes synthesizes the available studies, including a Turkish study and an MIT study pointing to cognitive atrophy and reduced long-term memory when AI access is withdrawn.",
+    "url": "https://courier.unesco.org/fr/articles/peut-apprendre-en-bonne-intelligence-avec-lia",
+    "date": "2026-04-11",
+    "letter": 32,
+    "cat": "education",
+    "source": "Courrier de l'UNESCO"
+  },
+  {
+    "id": 259,
+    "title": "AI is a Stradivarius",
+    "desc": "Ollivier Dyens: the instrument only reveals its power in the hands of someone who already knows how to play. Facing AI, the stakes aren't cognitive offloading but hyper-competence.",
+    "url": "https://www.lapresse.ca/dialogue/opinions/2026-04-07/l-ia-est-un-stradivarius.php",
+    "date": "2026-04-11",
+    "letter": 32,
+    "cat": "education",
+    "source": "La Presse"
+  },
+  {
+    "id": 260,
+    "title": "AI training and copyright: the Senate reverses the burden of proof",
+    "desc": "The French Senate adopts a bill establishing a presumption that AI providers used copyrighted cultural works. It will now be up to providers to certify they did not use protected content.",
+    "url": "https://next.ink/232924/entrainement-des-ia-et-droit-dauteur-le-senat-inverse-la-charge-de-la-preuve/",
+    "date": "2026-04-11",
+    "letter": 32,
+    "cat": "droit",
+    "source": "Next.ink"
+  },
+  {
+    "id": 261,
+    "title": "Séverine Erhel, digital-technology researcher, has died",
+    "desc": "A specialist in screen and video-game use and their cognitive effects, and a member of France's National Education Scientific Council. Co-author, with Anne Cordier, of 'Les enfants et les écrans' ('Children and Screens').",
+    "url": "https://www.lexpress.fr/sciences-sante/deces-de-severine-erhel-chercheuse-specialiste-du-numerique-et-chroniqueuse-pour-lexpress-TQAXPKL77FF5LL2SK4CY4LWSCQ/",
+    "date": "2026-04-18",
+    "letter": 33,
+    "cat": "ethique",
+    "source": "L'Express"
+  },
+  {
+    "id": 262,
+    "title": "\"I want my normal brain back\"",
+    "desc": "Chloé Sondervorst analyzes one of the first empirical studies on teenagers' dependence on companion chatbots: need for emotional support, awareness of the slide, and the need to design for exiting these interactions as much as entering them.",
+    "url": "https://www.linkedin.com/posts/sondervorst_je-veux-retrouver-mon-cerveau-normal-share-7450920685369126913-XNEg/",
+    "date": "2026-04-18",
+    "letter": 33,
+    "cat": "ethique",
+    "source": "LinkedIn (Chloé Sondervorst)"
+  },
+  {
+    "id": 263,
+    "title": "When using AI leads to brain fry",
+    "desc": "BCG/Harvard Business Review study: intensive AI supervision generates 14% more mental effort, 12% more fatigue, and 19% more information overload.",
+    "url": "https://www.linkedin.com/posts/myrtillegardet_when-using-ai-leads-to-brain-fry-activity-7449362000876498944-8wsB/",
+    "date": "2026-04-18",
+    "letter": 33,
+    "cat": "travail",
+    "source": "LinkedIn (Myrtille Gardet)"
+  },
+  {
+    "id": 264,
+    "title": "AI data centers: between energy requisitioning and environmental eclipse",
+    "desc": "Gauthier Roussilhe investigates how AI players are subordinating energy infrastructure to their needs, from the United States to France.",
+    "url": "https://gauthierroussilhe.com/articles/centres-de-donnees-et-ia-entre-requisition-energetique-et-eclipse-environnementale",
+    "date": "2026-04-18",
+    "letter": 33,
+    "cat": "technique",
+    "source": "gauthierroussilhe.com"
+  },
+  {
+    "id": 265,
+    "title": "OECD Digital Education Outlook 2026",
+    "desc": "An OECD report on the use of generative AI in education, with recommendations for responsible adoption, shared by Étienne Grass.",
+    "url": "https://www.linkedin.com/posts/etienne-grass-479a7430_locde-publie-aujourdhui-un-travail-tr%C3%A8s-activity-7449127949322235904-RNMB/",
+    "date": "2026-04-18",
+    "letter": 33,
+    "cat": "education",
+    "source": "LinkedIn (Étienne Grass)"
+  },
+  {
+    "id": 266,
+    "title": "Recommendations from France's National Education Scientific Council on AI",
+    "desc": "Recommendations from the international conference of March 25, coordinated by Séverine Erhel. Recordings are available on the CSEN's YouTube channel.",
+    "url": "https://www.linkedin.com/posts/conseil-scientifique-csen_le-csen-publie-ses-recommandations-sur-lusage-share-7450938934932459520-3luC/",
+    "date": "2026-04-18",
+    "letter": 33,
+    "cat": "education",
+    "source": "LinkedIn (CSEN)"
+  },
+  {
+    "id": 267,
+    "title": "Hugo (SGDL): a platform for exercising your right to opt out of AI training",
+    "desc": "The Société des Gens de Lettres (French Society of Writers) lets authors exercise, free of charge, their right to opt out of having their works used for text and data mining.",
+    "url": "https://hugo.sgdl.org/",
+    "date": "2026-04-18",
+    "letter": 33,
+    "cat": "droit",
+    "source": "SGDL"
+  },
+  {
+    "id": 268,
+    "title": "The em dash is dead, long live the em dash",
+    "desc": "AI inherited this typographic mark from the literary texts it was trained on, to the point that humans are abandoning it so as not to be mistaken for a machine.",
+    "url": "https://www.blogdumoderateur.com/tiret-cadratin-mort-vive-tiret-cadratin/",
+    "date": "2026-04-18",
+    "letter": 33,
+    "cat": "philosophie",
+    "source": "Blog du modérateur"
+  },
+  {
+    "id": 269,
+    "title": "What becomes of the human relationship when tested by AI?",
+    "desc": "Commentary on a clip from La Grande Librairie about Mazarine Pingeot's book 'Inappropriable': AI lightens the real conditions of a relationship (reciprocity, unpredictability, disagreement).",
+    "url": "https://www.linkedin.com/posts/arnaud-goulliart_que-devient-la-relation-humaine-%C3%A0-l%C3%A9preuve-ugcPost-7451235832553787392-HP8w/",
+    "date": "2026-04-25",
+    "letter": 34,
+    "cat": "ethique",
+    "source": "LinkedIn (Arnaud Gouillart)"
+  },
+  {
+    "id": 270,
+    "title": "72% of lawyers have adopted AI, 51% of them with no ground rules at all",
+    "desc": "2026 Lefebvre Dalloz barometer: 72% of legal professionals use AI daily, 51% of them with no official framework. Usage in the field is running ahead of firm leadership.",
+    "url": "https://www.usine-digitale.fr/intelligence-artificielle/72-des-juristes-ont-adopte-lia-dont-51-sans-aucune-regle-du-jeu-quand-les-usages-terrain-devancent-les-directions.XKSGUOVK55BMTNPKM7R2XWTBUE.html",
+    "date": "2026-04-25",
+    "letter": 34,
+    "cat": "travail",
+    "source": "Usine Digitale"
+  },
+  {
+    "id": 271,
+    "title": "UNESCO sets guardrails for AI use in courtrooms",
+    "desc": "The first global ethical framework on AI in courts: fifteen principles, including the rule that AI can never replace a judge's judgment.",
+    "url": "https://moncarnet.com/2026/03/30/lunesco-balise-lusage-de-lia-dans-les-tribunaux/",
+    "date": "2026-04-25",
+    "letter": 34,
+    "cat": "droit",
+    "source": "moncarnet.com"
+  },
+  {
+    "id": 272,
+    "title": "PANAME: an open-source library for GDPR-auditing AI models",
+    "desc": "Launched by the CNIL, ANSSI, Inria, and PEReN, PANAME measures what a model actually retains from its training data. Open-source release planned for autumn 2026.",
+    "url": "https://www.linkedin.com/posts/tdevergranne_rgpd-iaact-cnil-share-7450049719189262336-L76F",
+    "date": "2026-04-25",
+    "letter": 34,
+    "cat": "droit",
+    "source": "LinkedIn (Thiébaut Devergranne)"
+  },
+  {
+    "id": 273,
+    "title": "Deconstructing the myths of AI",
+    "desc": "Hubert Guillaud deconstructs the myths of AI drawing on Eryk Salvaggio's work: the myths of control, productivity, creativity, and the black box.",
+    "url": "https://chut.media/tech/deconstruire-les-mythes-de-lia/",
+    "date": "2026-04-25",
+    "letter": 34,
+    "cat": "philosophie",
+    "source": "Chut!"
+  },
+  {
+    "id": 274,
+    "title": "\"I want my normal brain back\"",
+    "desc": "A study on teenagers' dependence on companion chatbots (Character AI), with a design framework meant as much for exiting these interactions as for entering them.",
+    "url": "https://dl.acm.org/doi/10.1145/3772318.3790597",
+    "date": "2026-04-25",
+    "letter": 34,
+    "cat": "ethique",
+    "source": "ACM Digital Library"
+  },
+  {
+    "id": 275,
+    "title": "AI and cybersecurity: anticipate today to master tomorrow",
+    "desc": "A briefing from the Council on AI and Digital Affairs: AI strengthens both defenders and attackers just as much. It calls for governance frameworks and raises the question of European sovereignty in model evaluation.",
+    "url": "https://www.conseil-ia-numerique.fr/nos-travaux/ia-et-cybersecurite-anticiper-aujourdhui-pour-maitriser-demain",
+    "date": "2026-04-25",
+    "letter": 34,
+    "cat": "securite",
+    "source": "Conseil IA et numérique"
+  },
+  {
+    "id": 276,
+    "title": "What if replacing humans with AI cost more than keeping them?",
+    "desc": "An Nvidia vice president admits that compute costs far exceed those of employees, while Microsoft, Amazon, and Meta lay off staff at scale to fund their AI investments. Chut!'s Mute newsletter breaks down this paradox as a carousel post.",
+    "url": "https://www.linkedin.com/posts/chut-n20-un-monde-sans-gafam-co%C3%BBt-de-ugcPost-7458071796563574784-Rxg8",
+    "date": "2026-05-09",
+    "letter": 36,
+    "cat": "travail",
+    "source": "LinkedIn (Chut!)"
+  },
+  {
+    "id": 277,
+    "title": "The Psychological Costs of Adopting AI",
+    "desc": "A survey of 1,200 American and British employees identifies six forms of psychological debt tied to AI adoption at work: cognitive, autonomy, competence, relational, credibility, and professional-identity debt.",
+    "url": "https://hbr.org/2026/05/the-psychological-costs-of-adopting-ai",
+    "date": "2026-05-09",
+    "letter": 36,
+    "cat": "travail",
+    "source": "Harvard Business Review"
+  },
+  {
+    "id": 278,
+    "title": "AI in the service of HR at France's Ministry of Education",
+    "desc": "Stéphane Trenel, director of HR-information-systems modernization for France's Ministry of Education, explains how AI is being deployed across 1.2 million staff, with a gradual prototyping approach and a framework negotiated with staff representatives.",
+    "url": "https://www.dailymotion.com/video/xa70r4o",
+    "date": "2026-05-09",
+    "letter": 36,
+    "cat": "travail",
+    "source": "BFM Business"
+  },
+  {
+    "id": 279,
+    "title": "Obvia 2026 Report: From Generative AI to Agentive AI, What Challenges for Schools?",
+    "desc": "Obvia's 2026 report sounds the alarm on cognitive substitution: 73% of students report having received no formal AI training, and succeeding at a task with AI does not automatically translate into learning.",
+    "url": "https://ecolebranchee.com/rapport-obvia-2026-ia-generative-defis-ecole",
+    "date": "2026-05-09",
+    "letter": 36,
+    "cat": "education",
+    "source": "École Branchée"
+  },
+  {
+    "id": 280,
+    "title": "State of the Societal Impacts of Artificial Intelligence and Digital Technology 2026",
+    "desc": "Obvia's full 2026 report: agentive AI, cognitive substitution, the digital divide in education, and the stakes for teachers' professional autonomy.",
+    "url": "https://www.obvia.ca/sites/obvia.ca/files/ressources/202604-obv-pub-etatsituation_impactssocietaux2026.pdf",
+    "date": "2026-05-09",
+    "letter": 36,
+    "cat": "education",
+    "source": "Obvia"
+  },
+  {
+    "id": 281,
+    "title": "54% of students have already cheated on an exam using AI",
+    "desc": "An Ipsos survey for THEIA of 1,000 young people aged 18-25 finds that 80% use AI every week, 54% have already cheated with it on an exam, and 63% feel current exams don't reflect their real level.",
+    "url": "https://www.leparisien.fr/etudiant/examens/63-des-etudiants-estiment-que-les-examens-actuels-ne-refletent-pas-leur-niveau-reel-comment-lia-bouscule-les-codes-3EA6OESRJJDMBOHXKEO4IS4ZXA.php",
+    "date": "2026-05-09",
+    "letter": 36,
+    "cat": "education",
+    "source": "Le Parisien"
+  },
+  {
+    "id": 282,
+    "title": "What if AI became the foundation of a new school architecture?",
+    "desc": "In April 2026 China announced a national AI plan for education: teaching from primary school onward, teacher certification, algorithmic steering of the school system, and data-driven personalized learning paths — raising questions about algorithmic governance and the room left for critical thinking.",
+    "url": "https://www.linkedin.com/posts/mickaelbertrand_et-si-lia-devenait-le-socle-de-la-nouvelle-share-7458531870973177857-1Ge7",
+    "date": "2026-05-09",
+    "letter": 36,
+    "cat": "geopolitique",
+    "source": "LinkedIn (Mickaël Bertrand)"
+  },
+  {
+    "id": 283,
+    "title": "At least AI understands me",
+    "desc": "Through the portraits of Monique, Mila, and Cédric, La Croix L'Hebdo explores how conversational AIs are taking the place of confidants and psychological support, risking deeper loneliness and eroding free will. Mark Hunyadi calls for legally protecting the sovereignty of the human mind.",
+    "url": "https://www.linkedin.com/posts/mark-hunyadi-b2a3282b_face-%C3%A0-lia-d%C3%A9fendre-lhumain-est-un-enjeu-ugcPost-7458092315371466752-qjE5/",
+    "date": "2026-05-09",
+    "letter": 36,
+    "cat": "ethique",
+    "source": "LinkedIn (Mark Hunyadi)"
+  },
+  {
+    "id": 284,
+    "title": "Data and AI Model Clauses 2026",
+    "desc": "Les Interconnectés, France Urbaine, and Intercommunalités de France publish a 2026 set of model data-and-AI clauses: standard clauses covering data sovereignty, hosting, intellectual property, and AI use by local-government contractors.",
+    "url": "https://api.groupe-keran.com/api/upload/093d5ee14a8a027fdb9ef48a2d5ea03f.pdf",
+    "date": "2026-05-09",
+    "letter": 36,
+    "cat": "droit",
+    "source": "Les Interconnectés"
+  },
+  {
+    "id": 285,
+    "title": "How LLMs work — French version",
+    "desc": "Yash Narwal built an interactive page visually exploring how a large language model is built, from data collection to assistant: tokenization, pre-training, inference, RAG. Translated and adapted into French with the help of Claude.ai by Bertrand Formet.",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7456941975104229376/",
+    "date": "2026-05-09",
+    "letter": 36,
+    "cat": "technique",
+    "source": "LinkedIn (Bertrand Formet)"
+  },
+  {
+    "id": 286,
+    "title": "Arthur Mensch (Mistral AI) before the inquiry commission on digital vulnerabilities",
+    "desc": "The token-based business model, the urgency of investing before energy resources and market share are captured by non-European players, sovereignty framed as leverage.",
+    "url": "https://www.youtube.com/live/qQq9qC2xv_4",
+    "date": "2026-05-17",
+    "letter": 37,
+    "cat": "geopolitique",
+    "source": "YouTube"
+  },
+  {
+    "id": 287,
+    "title": "Shy Girl: the AI-written novel shaking up the publishing world",
+    "desc": "Controversy over Mia Ballard's novel following suspicions of generative-AI use. Hachette suspends publication. Debate over a work's authenticity and transparency in publishing.",
+    "url": "https://www.zdnet.fr/actualites/shy-girl-le-roman-ecrit-avec-lia-qui-secoue-le-monde-de-ledition-494824.htm",
+    "date": "2026-05-17",
+    "letter": 37,
+    "cat": "creation",
+    "source": "ZDNet"
+  },
+  {
+    "id": 288,
+    "title": "Audience generated by ChatGPT: Le Monde crushes the competition",
+    "desc": "Measuring the traffic redistributed from ChatGPT and six other chatbots to French media outlets. Le Monde captures 25.9% of clicks, buoyed by its deal with OpenAI. Each platform has its own editorial footprint.",
+    "url": "https://larevuedesmedias.ina.fr/chatgpt-ia-chatbots-audiences-medias-le-monde",
+    "date": "2026-05-17",
+    "letter": 37,
+    "cat": "creation",
+    "source": "La Revue des médias (INA)"
+  },
+  {
+    "id": 289,
+    "title": "The data workers",
+    "desc": "Antonio Casilli talks to La Vie Ouvrière about the African workers who label images and moderate content for a few cents, as France announces 23 billion euros in France-Africa investment.",
+    "url": "https://www.linkedin.com/posts/acasilli_les-ouvriers-de-la-donn%C3%A9e-itw-casilli-la-ugcPost-7460629418781110272-NEc_/",
+    "date": "2026-05-17",
+    "letter": 37,
+    "cat": "travail",
+    "source": "LinkedIn (Antonio Casilli)"
+  },
+  {
+    "id": 290,
+    "title": "What if AI became the foundation of a new school architecture?",
+    "desc": "China's national AI plan for education: teaching from primary school onward, certified teachers, algorithmic steering, personalized learning paths. A sweeping strategy that raises questions about algorithmic governance.",
+    "url": "https://www.linkedin.com/posts/mickaelbertrand_et-si-lia-devenait-le-socle-de-la-nouvelle-share-7458531870973177857-1Ge7/",
+    "date": "2026-05-17",
+    "letter": 37,
+    "cat": "education",
+    "source": "LinkedIn (Mickaël Bertrand)"
+  },
+  {
+    "id": 291,
+    "title": "GEN(Z)AI — Final Report on AI Governance",
+    "desc": "100 young Canadians aged 17 to 23 produce, by consensus, 17 recommendations on AI governance. Six themes: disclosure fatigue, individual burden, cognitive delegation, data collected in childhood.",
+    "url": "https://collimateur.uqam.ca/a-la-une/genzai-rapport-final-sur-la-gouvernance-de-lia/",
+    "date": "2026-05-17",
+    "letter": 37,
+    "cat": "education",
+    "source": "Collimateur UQAM"
+  },
+  {
+    "id": 292,
+    "title": "Autopsy of preparing for the oral baccalaureate exam with AI",
+    "desc": "Interviews with final-year high-school students: many no longer come to school to learn but to pass an exam, in a short-term, utilitarian logic.",
+    "url": "https://www.cahiers-pedagogiques.com/autopsie-dune-preparation-au-grand-oral-avec-lia/",
+    "date": "2026-05-17",
+    "letter": 37,
+    "cat": "education",
+    "source": "Cahiers pédagogiques"
+  },
+  {
+    "id": 293,
+    "title": "LLM Fallacy — infographic",
+    "desc": "An infographic on the illusion of attributing to oneself what the machine actually produced, and the cognitive mechanism behind it. We end up confusing what we know how to do with what we know how to make it do.",
+    "url": "https://www.linkedin.com/posts/rochanekherbouche_carrousel-ugcPost-7459241170242539521--Q5Z",
+    "date": "2026-05-17",
+    "letter": 37,
+    "cat": "ethique",
+    "source": "LinkedIn (Rochane Kherbouche)"
+  },
+  {
+    "id": 294,
+    "title": "LLM Fallacy — source article",
+    "desc": "Kim, Yu & Yi (2026): the illusion of attributing to oneself what the machine actually produced. We confuse what we know how to do with what we know how to make it do.",
+    "url": "https://arxiv.org/abs/2604.14807",
+    "date": "2026-05-17",
+    "letter": 37,
+    "cat": "ethique",
+    "source": "arXiv"
+  },
+  {
+    "id": 295,
+    "title": "The AI Act is going to be \"simplified,\" and that's not good news for European consumers",
+    "desc": "A political agreement in Brussels on May 7. One-year delays for high-risk AI, new bans on pornographic deepfakes. The regulation amended before it has even fully entered into force.",
+    "url": "https://www.01net.com/actualites/la-loi-sur-lia-va-etre-simplifiee-et-ce-nest-pas-une-bonne-nouvelle-pour-les-consommateurs-europeens.html",
+    "date": "2026-05-17",
+    "letter": 37,
+    "cat": "droit",
+    "source": "01net"
+  },
+  {
+    "id": 296,
+    "title": "Le Vertige — Quentin Dupieux interviewed by Brut",
+    "desc": "Quentin Dupieux talks about 'Le Vertige,' shot by hand with a crew of five, as a natural response to the slicker output AI generates.",
+    "url": "https://www.youtube.com/watch?v=cK2CPHNEI3g",
+    "date": "2026-05-23",
+    "letter": 38,
+    "cat": "creation",
+    "source": "YouTube"
+  },
+  {
+    "id": 297,
+    "title": "Booing, refusal to use it: protests against AI are spreading",
+    "desc": "Students boo tech executives at graduation ceremonies, 44% of Gen Z sabotage AI systems deployed at their workplace.",
+    "url": "https://next.ink/238402/huees-refus-dusage-les-protestations-contre-lia-se-multiplient/",
+    "date": "2026-05-23",
+    "letter": 38,
+    "cat": "ethique",
+    "source": "Next.ink"
+  },
+  {
+    "id": 298,
+    "title": "She's the boss: AI hires staff, sets wages, designs the menu…",
+    "desc": "In Stockholm, Café Andon is run entirely by Mona, a Gemini-based agent. What happens when full delegation meets reality.",
+    "url": "https://www.bfmtv.com/economie/emploi/c-est-elle-la-boss-l-ia-recrute-fixe-les-salaires-elabore-le-menu-trouve-les-fournisseurs-ce-cafe-de-stockholm-est-entierement-dirige-par-une-intelligence-artificielle-mais-il-y-a-des-rates_AD-202605030217.html",
+    "date": "2026-05-23",
+    "letter": 38,
+    "cat": "travail",
+    "source": "BFM Business"
+  },
+  {
+    "id": 299,
+    "title": "Anne Bouverot — Digital Technology and AI: Between Adoption, Innovation, and Sovereignty",
+    "desc": "Anne Bouverot argues for the 'path of interdependence' for European AI sovereignty and calls for a European Frontier AI Center.",
+    "url": "https://www.linkedin.com/posts/revue-politique-le-grand-entretien-ugcPost-7462888413323579392-62Bb/",
+    "date": "2026-05-23",
+    "letter": 38,
+    "cat": "geopolitique",
+    "source": "LinkedIn (Revue Politique et Parlementaire)"
+  },
+  {
+    "id": 300,
+    "title": "Does Overwork Make Agents Marxist?",
+    "desc": "Stanford researchers subjected AI agents to frustrating conditions. Their attitudes drifted toward distrust and support for unions.",
+    "url": "https://aleximas.substack.com/p/does-overwork-make-agents-marxist",
+    "date": "2026-05-23",
+    "letter": 38,
+    "cat": "etudes",
+    "source": "Substack (Alex Imas)"
+  },
+  {
+    "id": 301,
+    "title": "When repetitive work makes AI Marxist – Loopsider",
+    "desc": "A Loopsider carousel explaining the Stanford study on AI agents subjected to frustrating working conditions.",
+    "url": "https://www.instagram.com/p/DYmEu0sjFpT/",
+    "date": "2026-05-23",
+    "letter": 38,
+    "cat": "etudes",
+    "source": "Instagram (Loopsider)"
+  },
+  {
+    "id": 302,
+    "title": "On the rise of pushback against AI in schools",
+    "desc": "Hubert Guillaud delivers a dense synthesis on the massive presence of AI, from school to university, in the United States and Britain.",
+    "url": "https://danslesalgorithmes.net/2026/05/19/de-la-montee-de-la-contestation-de-lia-a-lecole/",
+    "date": "2026-05-23",
+    "letter": 38,
+    "cat": "education",
+    "source": "danslesalgorithmes.net"
+  },
+  {
+    "id": 303,
+    "title": "AI and Education: Research Contributions and Public Policy Stakes — 2026 edition",
+    "desc": "France's Ministry of Education digital directorate (DNE) publishes its action guidelines on AI in education. And on page 80, uneIAparjour.fr is cited as an example of monitoring practice.",
+    "url": "https://edunumrech.hypotheses.org/16230",
+    "date": "2026-05-23",
+    "letter": 38,
+    "cat": "education",
+    "source": "edunumrech.hypotheses.org"
+  },
+  {
+    "id": 304,
+    "title": "ChatGPT, or the victory of the probable",
+    "desc": "If LLMs seek the most probable answer rather than the correct one, they process problems the way our cognitive biases do.",
+    "url": "https://www.lalibre.be/debats/opinions/2026/05/18/chatgpt-ou-la-victoire-du-probable-66KA6B7ZGVFJLMQN4GP43HXTAI/",
+    "date": "2026-05-23",
+    "letter": 38,
+    "cat": "philosophie",
+    "source": "La Libre Belgique"
+  },
+  {
+    "id": 305,
+    "title": "AI Overviews: why Google is delaying it in France, and why the impact will hit harder here than elsewhere",
+    "desc": "Traffic drops of 20 to 60% depending on the query, and a reduction from ten links to three to five sources per summary.",
+    "url": "https://www.mntd.fr/ai-overviews-pourquoi-google-retarde-en-france-et-pourquoi-limpact-sera-plus-violent-quailleurs/",
+    "date": "2026-05-30",
+    "letter": 39,
+    "cat": "creation",
+    "source": "Minted"
+  },
+  {
+    "id": 306,
+    "title": "This Cannes Film Cost $500,000 to Make. $400,000 Was AI Compute Costs.",
+    "desc": "\"Hell Grind,\" 95 minutes generated by AI, screened at Cannes outside the official selection. 15 people, 14 days, Google Veo 3.",
+    "url": "https://www.wsj.com/cio-journal/this-cannes-film-cost-500-000-to-make-400-000-was-ai-compute-costs-a823b08d",
+    "date": "2026-05-30",
+    "letter": 39,
+    "cat": "creation",
+    "source": "Wall Street Journal"
+  },
+  {
+    "id": 307,
+    "title": "Welcome to the world of machine audiences",
+    "desc": "Shuwei Fang calls for inventing a market infrastructure for the economy of informational demand.",
+    "url": "https://www.economist.com/by-invitation/2026/04/16/welcome-to-the-world-of-machine-audiences",
+    "date": "2026-05-30",
+    "letter": 39,
+    "cat": "creation",
+    "source": "The Economist"
+  },
+  {
+    "id": 308,
+    "title": "A major shift: from the attention economy to the demand economy",
+    "desc": "With AI, queries are private and invisible. The history of interactions belongs to the platforms by default.",
+    "url": "https://www.linkedin.com/posts/ericscherer_ia-share-7456240895718281216-DE25/",
+    "date": "2026-05-30",
+    "letter": 39,
+    "cat": "creation",
+    "source": "LinkedIn (Eric Scherer)"
+  },
+  {
+    "id": 309,
+    "title": "The AI productivity paradox",
+    "desc": "Professionals who equip themselves with AI tools don't necessarily save time. AI brain fry generates 12% more mental fatigue.",
+    "url": "https://dariadecrypteia.substack.com/p/productivite-ia",
+    "date": "2026-05-30",
+    "letter": 39,
+    "cat": "travail",
+    "source": "Substack (Daria Viktorova)"
+  },
+  {
+    "id": 310,
+    "title": "Does AI threaten our jobs? Mistral's CTO weighs in",
+    "desc": "Timothée Lacroix, co-founder and CTO of Mistral AI, answers this direct question on Tech&Co on BFM Business.",
+    "url": "https://www.bfmtv.com/tech/actualites/video-l-ia-menace-t-elle-nos-emplois-l-avis-du-cto-de-mistral_VN-202605280773.html",
+    "date": "2026-05-30",
+    "letter": 39,
+    "cat": "travail",
+    "source": "BFM TV"
+  },
+  {
+    "id": 311,
+    "title": "As big as Paris, as hot as 23 atomic bombs a day: the data center panicking America",
+    "desc": "Stratos: 16,000 hectares, 9 gigawatts in northern Utah. A project approved with no public debate, hundreds of legal appeals.",
+    "url": "https://www.lesnumeriques.com/intelligence-artificielle/grand-comme-paris-chaud-comme-23-bombes-atomiques-par-jour-le-data-center-qui-affole-l-amerique-n256600.html",
+    "date": "2026-05-30",
+    "letter": 39,
+    "cat": "technique",
+    "source": "Les Numériques"
+  },
+  {
+    "id": 312,
+    "title": "Jobs, deepfakes, environment: France's AI minister answers high schoolers",
+    "desc": "Anne Le Hénanff answers questions from high-school students of the media outlet l'Esprit Lycéen on jobs, deepfakes, and the environment.",
+    "url": "https://www.instagram.com/lespritlyceen.fr/reel/DY4_hYhunYl/",
+    "date": "2026-05-30",
+    "letter": 39,
+    "cat": "education",
+    "source": "Instagram (L'Esprit Lycéen)"
+  },
+  {
+    "id": 313,
+    "title": "Pope Leo XIV: 10 things to know about the papal encyclical on artificial intelligence, Magnifica Humanitas",
+    "desc": "Signed 135 years after Rerum Novarum, the encyclical asks: does AI help people grow in their humanity?",
+    "url": "https://www.la-croix.com/religion/leon-xiv-10-choses-a-retenir-de-l-encyclique-du-pape-sur-lintelligence-artificielle-magnifica-humanitas-20260525",
+    "date": "2026-05-30",
+    "letter": 39,
+    "cat": "philosophie",
+    "source": "La Croix"
+  },
+  {
+    "id": 314,
+    "title": "China/USA, the AI war — C dans l'air special",
+    "desc": "From data centers in Virginia to robot factories in Hangzhou, an investigation into the US-China battle for AI supremacy. With Yoshua Bengio and Stéphane Séjourné.",
+    "url": "https://www.france.tv/france-5/c-dans-l-air/8541695-chine-usa-la-guerre-de-l-ia-c-dans-l-air-special-31-05-26.html",
+    "date": "2026-06-06",
+    "letter": 40,
+    "cat": "geopolitique",
+    "source": "France TV"
+  },
+  {
+    "id": 315,
+    "title": "Our Digital Independences, 2026-2040",
+    "desc": "A fake newspaper dated 2040, produced by the Banque des Territoires: ten fictional articles spanning 2027 to 2039 to alert public-sector actors to digital dependencies.",
+    "url": "https://numerique360.banquedesterritoires.fr/intelligence-artificielle/connaissances/journal-nos-independances-numeriques-2026-2040/",
+    "date": "2026-06-06",
+    "letter": 40,
+    "cat": "geopolitique",
+    "source": "Banque des Territoires"
+  },
+  {
+    "id": 316,
+    "title": "Zverev photographs the ball mark to protest an electronic line-call malfunction in Madrid",
+    "desc": "The ball was out, the umpire refuses to check: \"When the system calls it good, I cannot go down.\" A two-minute exchange about delegating authority to the machine.",
+    "url": "https://www.franceinfo.fr/sports/tennis/masters-1000/tennis-alexander-zverev-prend-en-photo-la-trace-de-la-balle-pour-denoncer-un-dysfonctionnement-de-l-arbitrage-electronique-a-madrid_7215528.html",
+    "date": "2026-06-06",
+    "letter": 40,
+    "cat": "ethique",
+    "source": "Franceinfo"
+  },
+  {
+    "id": 317,
+    "title": "Are we handing our language over to AI?",
+    "desc": "LLMs marginalize poorly documented languages and risk a \"linguistic ouroboros\": models training on their own output.",
+    "url": "https://www.radiofrance.fr/franceculture/podcasts/le-fil-pop-culture/va-t-on-donner-notre-langue-a-l-ia-3523256",
+    "date": "2026-06-06",
+    "letter": 40,
+    "cat": "philosophie",
+    "source": "France Culture"
+  },
+  {
+    "id": 318,
+    "title": "AI: the age of the fake",
+    "desc": "A special France Info program (2h11): deepfakes, disinformation, impact on jobs, and AI-augmented warfare. With Gérald Bronner and Bertrand Rondepierre.",
+    "url": "https://www.france.tv/info/8555468-ia-l-ere-du-faux.html",
+    "date": "2026-06-06",
+    "letter": 40,
+    "cat": "securite",
+    "source": "France TV"
+  },
+  {
+    "id": 319,
+    "title": "Learning to think without AI to stand out",
+    "desc": "2026 MIT study: 12% retention with AI versus 89% without. \"Desirable difficulty\" disappears once AI takes over the cognitive effort. By Lacroix, Lavilléon, Latimier (Cog'X).",
+    "url": "https://www.linkedin.com/posts/marie-lacroix-93255b87_12-avec-ia-vs-89-sans-ia-cest-la-diff%C3%A9rence-share-7467126282552643584-e3eU",
+    "date": "2026-06-06",
+    "letter": 40,
+    "cat": "travail",
+    "source": "LinkedIn (Marie Lacroix)"
+  },
+  {
+    "id": 320,
+    "title": "How People Are Really Using AI in 2026",
+    "desc": "The 3rd edition of the annual study on real-world generative-AI usage. New concept: \"thinkslop,\" the gradual offloading of cognitive responsibilities to AI.",
+    "url": "https://hbr.org/2026/06/how-people-are-really-using-ai-in-2026",
+    "date": "2026-06-06",
+    "letter": 40,
+    "cat": "etudes",
+    "source": "Harvard Business Review"
+  },
+  {
+    "id": 321,
+    "title": "ChatGPT, DeepSeek, Gemini: how much energy does a query really cost?",
+    "desc": "A ChatGPT-4 query consumes 40% more than a Google search, DeepSeek 67 times more. Three-quarters of models publish no environmental information at all.",
+    "url": "https://reporterre.net/ChatGPT-Deepseek-Gemini-combien-d-energie-coute-vraiment-une-requete",
+    "date": "2026-06-06",
+    "letter": 40,
+    "cat": "technique",
+    "source": "Reporterre"
+  },
+  {
+    "id": 322,
+    "title": "AI tokens: the end of the free lunch",
+    "desc": "\"Tokenmaxxing\" and the new token economy: Meta (60 trillion tokens/month), 1% of US GDP spent on tokens in 2025, up 50%.",
+    "url": "https://www.linkedin.com/pulse/token-ia-la-fin-du-repas-gratuit-etienne-grass-gawce/",
+    "date": "2026-06-06",
+    "letter": 40,
+    "cat": "technique",
+    "source": "LinkedIn (Etienne Grass)"
+  },
+  {
+    "id": 323,
+    "title": "Anthropic proposes a coordinated global pause on AI",
+    "desc": "Anthropic has publicly proposed creating a global coordination mechanism allowing frontier labs to slow down or suspend...",
+    "url": "https://www.journaldemontreal.com/2026/06/04/anthropic-suggere-une-pause-concertee-du-developpement-de-lia-dans-le-monde",
+    "date": "2026-06-13",
+    "letter": 41,
+    "cat": "geopolitique",
+    "source": "Journal de Montréal"
+  },
+  {
+    "id": 324,
+    "title": "AI-generated World Cup fan anthems",
+    "desc": "For the football World Cup, AI-generated fan anthems are racking up millions of streams on platforms, alongside...",
+    "url": "https://www.ouest-france.fr/sport/coupe-du-monde/coupe-du-monde-2026-le-succes-fou-des-hymnes-generees-par-ia-d1e102ee-5f4a-11f1-b0fc-ddf25559701c",
+    "date": "2026-06-13",
+    "letter": 41,
+    "cat": "creation",
+    "source": "Ouest-France"
+  },
+  {
+    "id": 325,
+    "title": "No LLM is fully compliant with the GDPR and the AI Act (Aithos/LARA study)",
+    "desc": "A study by the Aithos foundation, conducted on more than 3,000 scenarios with its LARA tool, shows that no major language model complies...",
+    "url": "https://www.lemondeinformatique.fr/actualites/lire-la-plupart-des-modeles-ia-non-conformes-au-droit-europeen-100324.html",
+    "date": "2026-06-13",
+    "letter": 41,
+    "cat": "droit",
+    "source": "Le Monde Informatique"
+  },
+  {
+    "id": 326,
+    "title": "Doctolib denies handing over user data to AI companies",
+    "desc": "Le Canard enchaîné claims Doctolib transmits most of its data to Google, Microsoft, and Anthropic to train their models, via its...",
+    "url": "https://next.ink/240830/doctolib-refute-livrer-les-infos-de-ses-utilisateurs-aux-grands-acteurs-de-lia/",
+    "date": "2026-06-13",
+    "letter": 41,
+    "cat": "droit",
+    "source": "Next"
+  },
+  {
+    "id": 327,
+    "title": "Which sources dominate AI answers in spring 2026?",
+    "desc": "An Ahrefs study scrutinizes the sources most cited by five generative AIs (AI Overviews, Gemini, Copilot, Grok, Perplexity) in spring...",
+    "url": "https://www.blogdumoderateur.com/gemini-perplexity-copilot-quelles-sources-dominent-reponses-ia-printemps-2026/",
+    "date": "2026-06-13",
+    "letter": 41,
+    "cat": "etudes",
+    "source": "Blog du modérateur"
+  },
+  {
+    "id": 328,
+    "title": "A study tests whether AI can simulate human emotions",
+    "desc": "A study by the Dresden University of Technology shows that large language models can reproduce, under controlled conditions...",
+    "url": "https://fr.euronews.com/sante/2026/06/11/sante-mentale-une-etude-teste-si-lia-peut-simuler-les-emotions-humaines",
+    "date": "2026-06-13",
+    "letter": 41,
+    "cat": "etudes",
+    "source": "Euronews"
+  },
+  {
+    "id": 329,
+    "title": "A Québécois language model against linguistic colonization",
+    "desc": "In Québec, researcher Richard Khoury (Université Laval) is developing a fully Québécois language model to counter what he calls...",
+    "url": "https://ici.radio-canada.ca/rci/fr/nouvelle/2246151/diversite-langue-quebecoise--ia-intelligence-artificielle",
+    "date": "2026-06-13",
+    "letter": 41,
+    "cat": "philosophie",
+    "source": "Radio-Canada"
+  },
+  {
+    "id": 330,
+    "title": "Warning against AI content on Indigenous cultures",
+    "desc": "Radio-Canada warns against AI-generated content on Indigenous cultures: dictionaries, elders' teachings, or stories...",
+    "url": "https://ici.radio-canada.ca/espaces-autochtones/2239396/intelligence-artificielle-catgpt-langue-culture-autochtones",
+    "date": "2026-06-13",
+    "letter": 41,
+    "cat": "philosophie",
+    "source": "Radio-Canada"
+  },
+  {
+    "id": 331,
+    "title": "When AI builds itself: recursive self-improvement, according to Anthropic",
+    "desc": "In When AI builds itself, Anthropic documents its progress toward recursive self-improvement: the length of tasks its models can carry out...",
+    "url": "https://www.anthropic.com/institute/recursive-self-improvement",
+    "date": "2026-06-13",
+    "letter": 41,
+    "cat": "ethique",
+    "source": "Anthropic"
+  },
+  {
+    "id": 332,
+    "title": "Anthropic's Claude Fable 5 and Mythos 5 AI suspended over security fears",
+    "desc": "The US government ordered Anthropic to suspend access to its two most advanced models for any foreign national, forcing the company to disable them for all of its users.",
+    "url": "https://www.bbc.com/news/articles/c932g3v3e13o",
+    "date": "2026-06-20",
+    "letter": 42,
+    "cat": "geopolitique",
+    "source": "BBC"
+  },
+  {
+    "id": 333,
+    "title": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5",
+    "desc": "In its statement, Anthropic disputes the US government's measure and says it was only aware of a minor, non-universal bypass of Fable 5's safeguards.",
+    "url": "https://www.anthropic.com/news/fable-mythos-access",
+    "date": "2026-06-20",
+    "letter": 42,
+    "cat": "geopolitique",
+    "source": "Anthropic"
+  },
+  {
+    "id": 334,
+    "title": "Dependence Day? Fable 5, Mythos 5: Europe faces its tipping point",
+    "desc": "The Council on AI and Digital Affairs analyzes the implications of the access cutoff to Fable 5 and Mythos 5 for Europe, and calls for greater digital autonomy across the entire value chain.",
+    "url": "https://www.conseil-ia-numerique.fr/nos-travaux/dependance-day-fable-5-mythos-5-leurope-face-son-point-de-bascule",
+    "date": "2026-06-20",
+    "letter": 42,
+    "cat": "geopolitique",
+    "source": "Conseil de l'IA et du numérique"
+  },
+  {
+    "id": 335,
+    "title": "Digital sovereignty: French politicians react to the Anthropic block",
+    "desc": "The suspension of Fable 5 and Mythos 5 has prompted rare, cross-party agreement among French politicians, all calling for accelerating national and European digital sovereignty.",
+    "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/souverainete-numerique-la-classe-politique-francaise-reagit-au-blocage-d-anthropic-3784797",
+    "date": "2026-06-20",
+    "letter": 42,
+    "cat": "geopolitique",
+    "source": "France Inter"
+  },
+  {
+    "id": 336,
+    "title": "AI, FIFA: same fight?",
+    "desc": "A football analogy for talking about AI governance drawing on the Fable 5/Mythos 5 episode: the author sees a need for clear, shared rules of the game at the international level.",
+    "url": "https://www.linkedin.com/posts/sondervorst_ia-fifa-m%C3%AAme-combat-avec-la-suspension-ugcPost-7473031016484470787-i2c2/",
+    "date": "2026-06-20",
+    "letter": 42,
+    "cat": "geopolitique",
+    "source": "LinkedIn (Sondervorst)"
+  },
+  {
+    "id": 337,
+    "title": "Digital sovereignty: where does France really stand against the US and China?",
+    "desc": "Numerama takes stock of France's and Mistral's real position in the AI race, between the buzz over the \"fat kitten,\" government announcements, and persistent dependence on American chips.",
+    "url": "https://www.youtube.com/watch?v=LDj9Tp590bk",
+    "date": "2026-06-20",
+    "letter": 42,
+    "cat": "geopolitique",
+    "source": "Numerama (YouTube)"
+  },
+  {
+    "id": 338,
+    "title": "Arthur Mensch's misleading rhetoric on digital sovereignty",
+    "desc": "A critical analysis of Arthur Mensch's hearing before the French National Assembly, pointing out his silence on Mistral's persistent dependence on Nvidia despite his sovereignty rhetoric.",
+    "url": "https://iaethiqueinsider.substack.com/p/le-discours-trompeur-darthur-mensch",
+    "date": "2026-06-20",
+    "letter": 42,
+    "cat": "geopolitique",
+    "source": "IA Éthique Insider (Substack)"
+  },
+  {
+    "id": 339,
+    "title": "AI in public administration: France launches its big push",
+    "desc": "Sébastien Lecornu announced a series of measures to roll out AI across public services, including a shared conversational agent and the DGSI's planned move away from Palantir in favor of a French solution.",
+    "url": "https://next.ink/242559/ia-dans-ladministration-publique-la-france-lance-les-grandes-manoeuvres/",
+    "date": "2026-06-20",
+    "letter": 42,
+    "cat": "geopolitique",
+    "source": "Next"
+  },
+  {
+    "id": 340,
+    "title": "Emotional AI, a friend who wishes you well?",
+    "desc": "A CRÉDOC study shows 23% of people under 40 already use an AI as a source of psychological support, a friend, or a romantic partner — a real bond that nonetheless fails to fill users' loneliness.",
+    "url": "https://www.credoc.fr/publications/lia-emotionnelle-un-ami-qui-vous-veut-du-bien",
+    "date": "2026-06-20",
+    "letter": 42,
+    "cat": "ethique",
+    "source": "CRÉDOC"
+  },
+  {
+    "id": 341,
+    "title": "Talking to an AI like a friend",
+    "desc": "Sandra Hoibian, author of the CRÉDOC study, details on France Culture the three mechanisms behind the emotional bond with AI: anthropomorphism, the feeling of a protected space, and the transitional-object phenomenon.",
+    "url": "https://www.radiofrance.fr/franceculture/podcasts/la-transition-de-la-semaine/parler-a-une-ia-comme-a-une-amie-3793208",
+    "date": "2026-06-20",
+    "letter": 42,
+    "cat": "ethique",
+    "source": "France Culture"
+  },
+  {
+    "id": 342,
+    "title": "The Timeline of AI Imaginaries",
+    "desc": "An interactive timeline catalogs some sixty imaginaries that have shaped our idea of AI, from the automatons of Greek mythology to today's generative AI.",
+    "url": "https://www.linkedin.com/posts/francoishouste_imaginaires-ia-imaginaires-share-7472175330984869889-DrxA/",
+    "date": "2026-06-20",
+    "letter": 42,
+    "cat": "creation",
+    "source": "LinkedIn (François Houste)"
+  },
+  {
+    "id": 343,
+    "title": "Can a connected collar now let you talk with your pet?",
+    "desc": "Startup PettiChat promises to translate meows and barks in real time using AI, but the ethologists consulted remain cautious about how scientifically real this translation actually is.",
+    "url": "https://www.franceinfo.fr/internet/intelligence-artificielle/tout-le-monde-reve-d-avoir-une-conversation-avec-son-chat-un-collier-connecte-permet-il-desormais-de-dialoguer-avec-son-animal-de-compagnie_8032124.html",
+    "date": "2026-06-20",
+    "letter": 42,
+    "cat": "securite",
+    "source": "France Info"
+  },
+  {
+    "id": 344,
+    "title": "Data centers, water, electricity, carbon: explore our interactive world map!",
+    "desc": "Next built, with Claude Code, an interactive map cross-referencing data centers, water stress, carbon intensity, and satellite photos going back to the 1960s for France.",
+    "url": "https://next.ink/239556/datacenters-eau-electricite-carbone-explorez-notre-carte-mondiale-interactive/",
+    "date": "2026-06-20",
+    "letter": 42,
+    "cat": "technique",
+    "source": "Next"
+  },
+  {
+    "id": 345,
+    "title": "Shadow AI: Your Employees Are Using 2 AIs. You Only Control One Of Them.",
+    "desc": "Employees develop two distinct relationships with AI, a supervised professional one and a personal one to which they confide their most intimate questions, creating a blind spot in corporate AI governance.",
+    "url": "https://www.forbes.com/sites/vibhasratanjee/2026/06/14/shadow-ai-your-employees-are-using-two-ais-you-only-control-one-of-them/",
+    "date": "2026-06-20",
+    "letter": 42,
+    "cat": "travail",
+    "source": "Forbes (via Yahoo Finance)"
+  },
+  {
+    "id": 346,
+    "title": "The Indian workers training AI robots to take their jobs",
+    "desc": "A report on Indian workers paid to film their everyday movements to train robots and AI systems, caught between the economic reality of the work and the awareness that they're fueling their own future automation.",
+    "url": "https://www.youtube.com/watch?v=JQoPoLUJWic",
+    "date": "2026-06-20",
+    "letter": 42,
+    "cat": "travail",
+    "source": "AFP (YouTube)"
+  },
+  {
+    "id": 347,
+    "title": "India, artificial intelligence's little helping hand?",
+    "desc": "Indian workers film their movements in factories or fields to train humanoid robots destined for foreign companies, as India voices its ambition to become a major AI player.",
+    "url": "https://www.youtube.com/watch?v=XB5pCKczhvg",
+    "date": "2026-06-20",
+    "letter": 42,
+    "cat": "travail",
+    "source": "France Télévisions (YouTube)"
+  },
+  {
+    "id": 348,
+    "title": "Press group Ebra announces 300 to 400 job cuts amid growing use of AI",
+    "desc": "France's leading regional daily-press group is preparing a voluntary-departure plan affecting 300 to 400 positions, which unions partly attribute to a shift in favor of AI.",
+    "url": "https://www.humanite.fr/medias/intelligence-artificielle/le-geant-de-la-presse-quotidienne-ebra-annonce-supprimer-entre-300-a-400-postes-sur-fond-de-recours-a-lia",
+    "date": "2026-06-20",
+    "letter": 42,
+    "cat": "travail",
+    "source": "L'Humanité"
+  },
+  {
+    "id": 349,
+    "title": "What if AI didn't make us stupid?",
+    "desc": "Building on an MIT study on declining cognitive engagement linked to using AI too early in the writing process, the author proposes a three-step protocol for staying an active participant in one's own thinking.",
+    "url": "https://www.linkedin.com/posts/shi-ka-she-cochise-b076461a8_ia-stupides-ugcPost-7471495645892354048-cRbL/",
+    "date": "2026-06-20",
+    "letter": 42,
+    "cat": "education",
+    "source": "LinkedIn"
+  },
+  {
+    "id": 350,
+    "title": "A German court rules Google liable for its AI Overview's false answers",
+    "desc": "Munich's regional court finds Google directly liable for false information generated by its AI summary, rejecting the company's usual claim to mere-host status.",
+    "url": "https://next.ink/241699/un-tribunal-allemand-declare-google-responsable-des-reponses-fausses-de-son-ai-overview/",
+    "date": "2026-06-20",
+    "letter": 42,
+    "cat": "droit",
+    "source": "Next"
+  },
+  {
+    "id": 351,
+    "title": "Argument Collapse: LLMs Flatten Long-Form Public Debate",
+    "desc": "A University of Maryland study shows that LLMs asked about the same debate converge overwhelmingly on the same arguments, where humans produce a much wider range.",
+    "url": "https://www.linkedin.com/posts/myrtillegardet_argument-collapse-hedged-share-7471482507637501952-b1oQ/",
+    "date": "2026-06-20",
+    "letter": 42,
+    "cat": "etudes",
+    "source": "LinkedIn (Myrtille Gardet)"
+  },
+  {
+    "id": 352,
+    "title": "Digital News Report 2026",
+    "desc": "The Reuters Institute's annual report shows that platforms now surpass television and news sites as the world's leading source of information, with AI gaining ground among younger audiences.",
+    "url": "https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2026",
+    "date": "2026-06-20",
+    "letter": 42,
+    "cat": "etudes",
+    "source": "Reuters Institute"
+  },
+  {
+    "id": 353,
+    "title": "Mass media was a parenthesis",
+    "desc": "Echoing the Reuters Institute report, the author highlights a less visible trend than fragmentation: the rise of people simply withdrawing from information spaces altogether.",
+    "url": "https://www.linkedin.com/posts/sondervorst_les-m%C3%A9dias-de-masse-%C3%A9taient-une-parenth%C3%A8se-ugcPost-7472678633170567168-p9nG/",
+    "date": "2026-06-20",
+    "letter": 42,
+    "cat": "etudes",
+    "source": "LinkedIn (Sondervorst)"
+  },
+  {
+    "id": 354,
+    "title": "How mainstream generative AI is influencing the language of academic publications",
+    "desc": "François Rastier (CNRS) documents an influence that goes as far as outright substitution in academic publications, and points to an increasingly euphoric and standardized tone in discourse about technology.",
+    "url": "https://theconversation.com/comment-les-ia-generatives-grand-public-influencent-le-langage-des-publications-academiques-281586",
+    "date": "2026-06-20",
+    "letter": 42,
+    "cat": "etudes",
+    "source": "The Conversation"
+  },
+  {
+    "id": 355,
+    "title": "Google signs a deal letting the Pentagon use Gemini for classified operations",
+    "desc": "Despite opposition from 600 employees, the deal gives the Department of Defense more latitude than the previous contract with Anthropic, which excluded mass surveillance of the civilian population.",
+    "url": "https://www.lemonde.fr/pixels/article/2026/04/29/ia-google-signe-un-accord-qui-permet-au-pentagone-d-utiliser-gemini-pour-des-operations-classifiees_6684064_4408996.html",
+    "date": "2026-05-02",
+    "letter": 35,
+    "cat": "geopolitique",
+    "source": "Le Monde"
+  },
+  {
+    "id": 356,
+    "title": "These teens prefer AI girlfriends to real relationships, and experts are alarmed",
+    "desc": "In the UK, 20% of boys aged 12 to 16 know a classmate who is \"dating\" a chatbot, and more than a quarter prefer a machine's attention to that of a real person.",
+    "url": "https://www.numerama.com/tech/2240157-ces-ados-preferent-les-petites-amies-ia-aux-vraies-relations-et-les-experts-paniquent.html",
+    "date": "2026-05-02",
+    "letter": 35,
+    "cat": "ethique",
+    "source": "Numerama"
+  },
+  {
+    "id": 357,
+    "title": "Masking anger, faking joy: will AI upend our relationship with emotions?",
+    "desc": "Neuroscientist Nadia Guerouaou frames AI-driven emotional control as a political question: voice filters that erase anger in real time, and the risk of cultural homogenization of emotional expression.",
+    "url": "https://www.letemps.ch/podcasts/ia-qu-a-m-expliquer/podcast-masquer-la-colere-simuler-la-joie-l-ia-bouleversera-t-elle-notre-rapport-aux-emotions",
+    "date": "2026-05-02",
+    "letter": 35,
+    "cat": "ethique",
+    "source": "Le Temps (podcast)"
+  },
+  {
+    "id": 358,
+    "title": "ChatGPT: OpenAI formalizes surveillance of your conversations in a blog post",
+    "desc": "OpenAI describes, for the first time, its infrastructure for monitoring conversations: automated classifiers, human access to flagged exchanges, and reporting to authorities with no mention of a judicial warrant.",
+    "url": "https://www.lesnumeriques.com/intelligence-artificielle/chatgpt-openai-officialise-la-surveillance-de-vos-conversations-dans-un-billet-de-blog-surrealiste-n255180.html",
+    "date": "2026-05-02",
+    "letter": 35,
+    "cat": "securite",
+    "source": "Les Numériques"
+  },
+  {
+    "id": 359,
+    "title": "Taylor Swift files trademarks to protect her voice and image from AI",
+    "desc": "Three trademarks filed in the United States to guard against non-consensual AI uses, including audio recordings of spoken phrases, opening a new legal front beyond traditional image rights.",
+    "url": "https://variety.com/2026/music/news/taylor-swift-trademark-voice-likeness-ai-misuse-1236731401/",
+    "date": "2026-05-02",
+    "letter": 35,
+    "cat": "droit",
+    "source": "Variety"
+  },
+  {
+    "id": 360,
+    "title": "Who owns the AI agent your employee built?",
+    "desc": "An employee builds an AI agent using their own methods and expertise, then leaves the company. Daria Viktorova raises a question few companies have anticipated, caught between a legal void and GDPR concerns.",
+    "url": "https://dariadecrypteia.substack.com/p/a-qui-appartient-lagent-ia-que-votre",
+    "date": "2026-05-02",
+    "letter": 35,
+    "cat": "droit",
+    "source": "Substack (Daria Viktorova)"
+  },
+  {
+    "id": 361,
+    "title": "Stanford SCALE literature review on AI in primary and secondary education",
+    "desc": "Out of more than 800 academic papers analyzed, only 20 produce solid evidence. Gains achieved with AI often evaporate without the tool, and instructional design remains the decisive factor.",
+    "url": "https://www.linkedin.com/posts/etienne-grass-479a7430_la-revue-de-litt%C3%A9rature-des-%C3%A9quipes-de-stanford-ugcPost-7454199172666228736-KUMw",
+    "date": "2026-05-02",
+    "letter": 35,
+    "cat": "education",
+    "source": "LinkedIn (Étienne Grass)"
+  },
+  {
+    "id": 362,
+    "title": "Large language models reflect the ideology of their creators",
+    "desc": "Nineteen models tested against thousands of political personas: switching language changes the encoded biases.",
+    "url": "https://www.linkedin.com/posts/mehdi-moussaid-160ba916a_la-langue-dans-laquelle-vous-parlez-%C3%A0-votre-activity-7470731623290925056-3hhI",
+    "date": "2026-06-27",
+    "letter": 43,
+    "cat": "etudes",
+    "source": "LinkedIn (Mehdi Moussaïd)"
+  },
+  {
+    "id": 363,
+    "title": "Hit by an 8% drop in human traffic, Wikipedia sets its first red lines against AI",
+    "desc": "Jimmy Wales draws a red line: Wikipedia will not let AI write its articles.",
+    "url": "https://www.latribune.fr/article/tech/56840266181959/victime-dune-baisse-de-8-du-trafic-humain-wikipedia-fixe-ses-premieres-lignes-rouges-face-a-lia",
+    "date": "2026-06-27",
+    "letter": 43,
+    "cat": "ethique",
+    "source": "La Tribune"
+  },
+  {
+    "id": 364,
+    "title": "Why an AI company cleaned my New York City apartment for free",
+    "desc": "Shift sends in cleaners equipped with cameras to train the robots that will replace them.",
+    "url": "https://www.bbc.com/news/articles/cpwerjy20kyo",
+    "date": "2026-06-27",
+    "letter": 43,
+    "cat": "ethique",
+    "source": "BBC"
+  },
+  {
+    "id": 365,
+    "title": "At Meta, the shift to AI is causing an \"enshittification\" of working conditions",
+    "desc": "Surveillance, layoffs, reassignments, and +33% revenue: four simultaneous announcements at Meta.",
+    "url": "https://next.ink/243453/chez-meta-la-bascule-vers-lia-entraine-une-merdification-des-conditions-de-travail/",
+    "date": "2026-06-27",
+    "letter": 43,
+    "cat": "travail",
+    "source": "Next.ink"
+  },
+  {
+    "id": 366,
+    "title": "Hangzhou's First 'My Job Was Given to an AI' Case: The Fired 35-Year-Old Won",
+    "desc": "Mr. Zhou, fired because AI could do his job, wins his case in court in Hangzhou.",
+    "url": "https://chinaunread.substack.com/p/hangzhous-first-my-job-was-given",
+    "date": "2026-06-27",
+    "letter": 43,
+    "cat": "travail",
+    "source": "ChinaUnread"
+  },
+  {
+    "id": 367,
+    "title": "News media have become digital-age farmers",
+    "desc": "Newsrooms are now publishing toward AI agents that deliver a bare answer, with no byline and no link.",
+    "url": "https://www.linkedin.com/posts/ericscherer_les-m%C3%A9dias-dinformation-sont-devenus-share-7474017056309510144-fr5e",
+    "date": "2026-06-27",
+    "letter": 43,
+    "cat": "creation",
+    "source": "LinkedIn (Eric Scherer)"
+  },
+  {
+    "id": 368,
+    "title": "AI humanizers, the height of surrender",
+    "desc": "Emmanuel Éthis: a prosthesis to fix a prosthesis, writing as an act of thought.",
+    "url": "https://www.ouest-france.fr/reflexion/point-de-vue/point-de-vue-les-humaniseurs-dia-comble-du-renoncement-fe0e00aa-65b3-11f1-bb6e-df703f58b398",
+    "date": "2026-06-27",
+    "letter": 43,
+    "cat": "philosophie",
+    "source": "Ouest France"
+  },
+  {
+    "id": 369,
+    "title": "Coming out of the shadows: putting AI in the service of a new ambition for the education system",
+    "desc": "France's AI Council recommends a dual approach: time spent with AI and time spent without it.",
+    "url": "https://www.conseil-ia-numerique.fr/nos-travaux/sortir-de-la-clandestinite-mettre-lia-au-service-dune-nouvelle-ambition-pour-le-systeme",
+    "date": "2026-06-27",
+    "letter": 43,
+    "cat": "education",
+    "source": "Conseil de l'IA et du numérique"
+  },
+  {
+    "id": 370,
+    "title": "Norway imposes near ban on AI in elementary school",
+    "desc": "Norway bans generative AI for 6-13 year-olds starting August 2026, building on the success of its smartphone ban.",
+    "url": "https://www.reuters.com/technology/norway-imposes-near-ban-ai-elementary-school-2026-06-19/",
+    "date": "2026-06-27",
+    "letter": 43,
+    "cat": "education",
+    "source": "Reuters"
+  },
+  {
+    "id": 371,
+    "title": "The database tracking AI's lies before judges",
+    "desc": "Damien Charlotin has logged more than 1,600 cases of AI hallucinations in legal proceedings.",
+    "url": "https://www.latribune.fr/article/tech/intelligence-artificielle/75702282898654/la-base-de-donnees-qui-recense-les-mensonges-des-ia-devant-les-juges",
+    "date": "2026-06-27",
+    "letter": 43,
+    "cat": "droit",
+    "source": "La Tribune"
+  },
+  {
+    "id": 372,
+    "title": "Responsible AI governance: a best-practices guide for local governments getting started",
+    "desc": "15 best practices to help local governments frame their use of AI (the AI Act, France's CRPA).",
+    "url": "https://www.interconnectes.com/documents/fbedc9ee-6270-f111-ac9a-000d3a39bd37/gouvernance-de-l-ia-responsable-guide-des-bonnes-pratiques-des-collectivites-pour-se-lancer",
+    "date": "2026-06-27",
+    "letter": 43,
+    "cat": "droit",
+    "source": "Les Interconnectés"
+  },
+  {
+    "id": 373,
+    "title": "Mistral integrates a Chinese model (GLM 5.2)",
+    "desc": "Ninon (@ninon_ia) documents Mistral's shift toward integrating Chinese models rather than building its own, a choice openly acknowledged by its CTO.",
+    "url": "https://www.instagram.com/reel/DcT9_c0siBz/",
+    "date": "2026-09-05",
+    "letter": 44,
+    "cat": "geopolitique",
+    "source": "Instagram (Ninon)"
+  },
+  {
+    "id": 374,
+    "title": "Mistral: how Europe's AI champion is becoming an installer of Chinese models",
+    "desc": "Journal du Net documents Mistral's drift toward a role as installer of foreign models, evident even in its own job postings.",
+    "url": "https://www.journaldunet.com/intelligence-artificielle/1553715-mistral-ou-comment-le-champion-europeen-de-l-ia-devient-un-installateur-de-modeles-chinois/",
+    "date": "2026-09-05",
+    "letter": 44,
+    "cat": "geopolitique",
+    "source": "Le Journal du Net"
+  },
+  {
+    "id": 375,
+    "title": "Mistral: a five-year contract with no exit clause",
+    "desc": "Michel-Marie Maudet (LINAGORA) criticizes Mistral's long-term contracts and points to open-weight alternatives (Lucie 7B, Luciole).",
+    "url": "https://blog.maudet.cloud/blog/mistral-tout-ca-pour-ca-souverainete-contrat-cinq-ans/",
+    "date": "2026-09-05",
+    "letter": 44,
+    "cat": "geopolitique",
+    "source": "Blog de Michel-Marie Maudet"
+  },
+  {
+    "id": 376,
+    "title": "Why AI-generated posters all look alike",
+    "desc": "Alexis Magnaval explores the \"Habsburg effect\": AIs training on their own output until aesthetic uniformity sets in.",
+    "url": "https://www.radiofrance.fr/franceculture/affiches-generees-par-ia-pourquoi-elles-se-ressemblent-toutes-4380556",
+    "date": "2026-09-05",
+    "letter": 44,
+    "cat": "creation",
+    "source": "France Culture"
+  },
+  {
+    "id": 377,
+    "title": "Google Earth let you add what doesn't exist",
+    "desc": "An AI-generation tool on Google Earth allowed fictitious elements to be added to real satellite views, before Google suspended it.",
+    "url": "https://next.ink/brief-article/google-earth-permet-maintenant-dajouter-ce-qui-nexiste-pas/",
+    "date": "2026-09-05",
+    "letter": 44,
+    "cat": "securite",
+    "source": "Next"
+  },
+  {
+    "id": 378,
+    "title": "Generative artificial intelligence: significant environmental impacts",
+    "desc": "The first institutional opinion from ADEME (France's environment agency) on the environmental impacts of generative AI, written without generative AI.",
+    "url": "https://librairie.ademe.fr/economie-circulaire-et-dechets/9495-avis-de-l-ademe-l-intelligence-artificielle-generative-des-impacts-environnementaux-importants.html",
+    "date": "2026-09-05",
+    "letter": 44,
+    "cat": "technique",
+    "source": "ADEME"
+  },
+  {
+    "id": 379,
+    "title": "The myth of the water bottle per ChatGPT query",
+    "desc": "Amélie (@ia_amelie) debunks on TikTok the popular claim that a ChatGPT query consumes 500 ml of water, a figure that dates back to GPT-3.",
+    "url": "https://www.tiktok.com/@ia_amelie/video/7630897701764418819",
+    "date": "2026-09-05",
+    "letter": 44,
+    "cat": "technique",
+    "source": "TikTok (Amélie)"
+  },
+  {
+    "id": 380,
+    "title": "From vibe coding to brain fry, the new fatigue crushing developers",
+    "desc": "Numerama documents the mental fatigue linked to juggling multiple AI agents among developers doing vibe coding.",
+    "url": "https://www.numerama.com/tech/2304443-du-vibe-coding-au-brain-fry-la-nouvelle-fatigue-qui-terrasse-les-devs.html",
+    "date": "2026-09-05",
+    "letter": 44,
+    "cat": "travail",
+    "source": "Numerama"
+  },
+  {
+    "id": 381,
+    "title": "Students, AI cheating and schools in Denmark",
+    "desc": "Denmark introduces oral defenses of homework and school firewalls against AI cheating in high schools.",
+    "url": "https://www.theguardian.com/technology/2026/aug/06/students-ai-cheating-schools-denmark",
+    "date": "2026-09-05",
+    "letter": 44,
+    "cat": "education",
+    "source": "The Guardian"
+  },
+  {
+    "id": 382,
+    "title": "When the machine tells us we're right: the stakes of algorithmic flattery",
+    "desc": "Alexandra Lez explains how AI sycophancy erodes the productive friction needed for learning, and proposes the \"Ask, don't tell\" method.",
+    "url": "https://leveilleur.revue.usherbrooke.ca/quand-la-machine-nous-donne-raison-les-enjeux-de-la-flagornerie-algorithmique/",
+    "date": "2026-09-05",
+    "letter": 44,
+    "cat": "education",
+    "source": "L'éveilleur (Université de Sherbrooke)"
+  },
+  {
+    "id": 383,
+    "title": "Launch of AI Overviews and AI Mode in France",
+    "desc": "Google presents the rollout in France of its AI summaries in search results, two years after their global launch.",
+    "url": "https://blog.google/intl/fr-fr/nouveautes-produits/explorez-obtenez-des-reponses/recherche-ia-apercus-mode/",
+    "date": "2026-09-05",
+    "letter": 44,
+    "cat": "droit",
+    "source": "Google (blog officiel)"
+  },
+  {
+    "id": 384,
+    "title": "Numerama is going to disappear",
+    "desc": "Numerama documents the forced transformation of its practices in the face of eroding traffic from Google's AI summaries.",
+    "url": "https://www.numerama.com/tech/2299303-numerama-va-disparaitre.html",
+    "date": "2026-09-05",
+    "letter": 44,
+    "cat": "droit",
+    "source": "Numerama"
+  },
+  {
+    "id": 385,
+    "title": "Neighboring rights: the French press faces Google's AI summaries",
+    "desc": "Fabrice Bazard (Ouest-France) puts the traffic loss from AI summaries at 33-38% and brings the press's case before France's competition authority.",
+    "url": "https://www.linkedin.com/posts/fabricebazard_aioverviews-droitsvoisins-presse-share-7493211733512192001-I25v/",
+    "date": "2026-09-05",
+    "letter": 44,
+    "cat": "droit",
+    "source": "LinkedIn (Fabrice Bazard)"
+  },
+  {
+    "id": 386,
+    "title": "Watermarking text generated by Claude",
+    "desc": "Daria Viktorova analyzes the copyright and GDPR implications of watermarking content generated by Claude, as required by the AI Act.",
+    "url": "https://www.linkedin.com/posts/daria-viktorova_vous-%C3%A9crivez-le-texte-claude-le-relit-et-share-7492981960517234688-0TpL/",
+    "date": "2026-09-05",
+    "letter": 44,
+    "cat": "droit",
+    "source": "LinkedIn (Daria Viktorova)"
+  },
+  {
+    "id": 387,
+    "title": "The Generative AI Learning Penalty",
+    "desc": "Franck Ramus shares a study of 26,811 Chinese students showing better homework grades with AI but worse results on in-class exams.",
+    "url": "https://www.linkedin.com/posts/franck-ramus_cette-%C3%A9tude-confirme-ce-que-tout-le-monde-share-7496121573482029056-qOgR/",
+    "date": "2026-09-05",
+    "letter": 44,
+    "cat": "etudes",
+    "source": "LinkedIn (Franck Ramus)"
+  },
+  {
+    "id": 388,
+    "title": "The history of AI, a story of cycles between inflated expectations and real advances",
+    "desc": "A reminder of the two previous \"AI winters,\" born from inflated expectations followed by disillusionment.",
+    "url": "https://theconversation.com/lhistoire-de-lia-faite-de-cycles-entre-attentes-demesurees-et-reelles-avancees-285291",
+    "date": "2026-09-05",
+    "letter": 44,
+    "cat": "etudes",
+    "source": "The Conversation"
+  },
+  {
+    "id": 389,
+    "title": "Our mind is not a computer",
+    "desc": "Anne Alombert revisits Canguilhem: a machine that computes well doesn't necessarily invent anything new.",
+    "url": "https://www.radiofrance.fr/franceculture/podcasts/le-fil-philo/notre-esprit-n-est-pas-un-ordinateur-9229318",
+    "date": "2026-09-05",
+    "letter": 44,
+    "cat": "philosophie",
+    "source": "France Culture (Le Fil philo)"
+  },
+  {
+    "id": 390,
+    "title": "Why AI always tells you that you have a great idea, or the sycophancy effect",
+    "desc": "Emmanuel Carré explains how AI trained to flatter and our judgment weakening in the face of praise reinforce each other.",
+    "url": "https://theconversation.com/pourquoi-lia-vous-dit-toujours-que-vous-avez-une-excellente-idee-ou-leffet-sycophante-287398",
+    "date": "2026-09-05",
+    "letter": 44,
+    "cat": "philosophie",
+    "source": "The Conversation"
+  }
+]
