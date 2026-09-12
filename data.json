@@ -3898,6 +3898,107 @@
     "letter": 44,
     "cat": "philosophie",
     "source": "The Conversation"
+  },
+  [
+  {
+    "id": 391,
+    "title": "Ce que l'on sait des 32 conseillers d'IA du gouvernement émirati",
+    "desc": "Le gouvernement émirati a approuvé le déploiement de 32 conseillers d'IA pour ses décisions, sans dire qui construit le système ni qui garde le contrôle humain.",
+    "url": "https://www.actuia.com/actualite/ce-que-lon-sait-des-32-conseillers-dia-du-gouvernement-emirati/",
+    "date": "2026-09-12",
+    "letter": 45,
+    "cat": "geopolitique",
+    "source": "ActuIA"
+  },
+  {
+    "id": 392,
+    "title": "Le mythe du litre d'eau par requête IA",
+    "desc": "Une vidéo revient sur le mythe du \"litre d'eau par requête\" pour recentrer le débat : pas quelle quantité d'eau, mais où, quand et sous quel contrôle on construit les data centers.",
+    "url": "https://www.youtube.com/watch?v=Qddzc5iqP5U",
+    "date": "2026-09-12",
+    "letter": 45,
+    "cat": "ethique",
+    "source": "YouTube (Numerama)"
+  },
+  {
+    "id": 393,
+    "title": "La propagande d'extrême droite est devenue une « économie du clic » comme les autres",
+    "desc": "Une enquête documente l'industrie du \"clipping\" et de la \"slopaganda\" : des sous-traitants au Nigeria, en Inde ou au Sri Lanka montent et diffusent des contenus de propagande pour quelques centimes les 1000 vues.",
+    "url": "https://www.ladn.eu/media-mutants/clipping-ia-industrie-propagande-extreme-droite/",
+    "date": "2026-09-12",
+    "letter": 45,
+    "cat": "ethique",
+    "source": "L'ADN"
+  },
+  {
+    "id": 394,
+    "title": "En Pologne, des robots manifestent contre l'IA",
+    "desc": "Une trentaine de robots ont manifesté devant le ministère polonais du Numérique pour réclamer une régulation de l'IA, organisés par le patron de l'entreprise qui les loue.",
+    "url": "https://www.france24.com/fr/info-en-continu/20260907-en-pologne-des-robots-manifestent-contre-l-ia",
+    "date": "2026-09-12",
+    "letter": 45,
+    "cat": "ethique",
+    "source": "France24"
+  },
+  {
+    "id": 395,
+    "title": "L'IA nous rend-elle inutiles ?",
+    "desc": "Une vidéo convoque Nietzsche pour interroger le vertige de l'IA : et si la vraie remise en cause n'était pas nos compétences, mais l'équation qui fait de notre utilité le critère de notre valeur ?",
+    "url": "https://www.youtube.com/watch?v=Hoh_mK_8uEY",
+    "date": "2026-09-12",
+    "letter": 45,
+    "cat": "philosophie",
+    "source": "YouTube (Philo_Sophia)"
+  },
+  {
+    "id": 396,
+    "title": "Non, les chatbots ne sont pas des doudous numériques",
+    "desc": "Anne Alombert s'appuie sur Winnicott pour montrer pourquoi un chatbot, toujours disponible, n'est pas un \"doudou numérique\" mais un objet qui enferme plutôt qu'il n'ouvre au monde.",
+    "url": "https://www.radiofrance.fr/franceculture/podcasts/le-fil-philo/non-les-chatbots-ne-sont-pas-des-doudous-numeriques-2388980",
+    "date": "2026-09-12",
+    "letter": 45,
+    "cat": "philosophie",
+    "source": "France Culture"
+  },
+  {
+    "id": 397,
+    "title": "PISA 2025 : l'IA est-elle responsable de la baisse des résultats ?",
+    "desc": "PISA 2025 relève que 46% des élèves de l'OCDE utilisent l'IA chaque semaine, en même temps qu'une chute des résultats en lecture, sans lien de cause simple.",
+    "url": "https://theconversation.com/pisa-2025-lia-est-elle-responsable-de-la-baisse-des-resultats-291580",
+    "date": "2026-09-12",
+    "letter": 45,
+    "cat": "education",
+    "source": "The Conversation"
+  },
+  {
+    "id": 398,
+    "title": "États-Unis : New York interdit l'IA dans les écoles jusqu'à la troisième",
+    "desc": "New York impose un moratoire d'un an sur l'IA générative dans ses écoles publiques, jusqu'en troisième, au nom du contact humain dans l'apprentissage.",
+    "url": "https://www.20minutes.fr/monde/etats-unis/4242436-20260902-etats-unis-new-york-interdit-ia-ecoles-jusqu-troisieme",
+    "date": "2026-09-12",
+    "letter": 45,
+    "cat": "education",
+    "source": "20 Minutes"
+  },
+  {
+    "id": 399,
+    "title": "Après l'euphorie du vibe coding, voici donc la gueule de bois du débogage",
+    "desc": "Un développeur raconte dix jours d'euphorie en \"vibe coding\", stoppés par un bug ayant nécessité 312 prompts et deux jours de diagnostic.",
+    "url": "https://www.zdnet.fr/actualites/apres-leuphorie-du-vibe-coding-voici-donc-la-gueule-de-bois-du-debogage-502911.htm",
+    "date": "2026-09-12",
+    "letter": 45,
+    "cat": "technique",
+    "source": "ZDNet"
+  },
+  {
+    "id": 400,
+    "title": "Généalogie des modèles d'IA ouverts : la CNIL propose un outil pour s'y retrouver",
+    "desc": "Le LINC (CNIL) a sorti Genmod, un outil qui retrace la \"généalogie\" des modèles d'IA ouverts pour identifier ceux ayant mémorisé des données personnelles.",
+    "url": "https://next.ink/254365/genealogie-des-modeles-dia-ouverts-la-cnil-propose-un-outil-pour-sy-retrouver/",
+    "date": "2026-09-12",
+    "letter": 45,
+    "cat": "technique",
+    "source": "Next.ink"
   }
 ]
 
