@@ -3898,5 +3898,106 @@
     "letter": 44,
     "cat": "philosophie",
     "source": "The Conversation"
+  },
+  [
+  {
+    "id": 391,
+    "title": "What we know about the UAE government's 32 AI advisors",
+    "desc": "The UAE government has approved the rollout of 32 AI advisors for its decision-making, without disclosing who built the system or who retains human oversight.",
+    "url": "https://www.actuia.com/actualite/ce-que-lon-sait-des-32-conseillers-dia-du-gouvernement-emirati/",
+    "date": "2026-09-12",
+    "letter": 45,
+    "cat": "geopolitique",
+    "source": "ActuIA"
+  },
+  {
+    "id": 392,
+    "title": "The myth of a liter of water per AI query",
+    "desc": "A video revisits the myth of \"a liter of water per query\" to reframe the debate: not how much water, but where, when, and under what oversight data centers are built.",
+    "url": "https://www.youtube.com/watch?v=Qddzc5iqP5U",
+    "date": "2026-09-12",
+    "letter": 45,
+    "cat": "ethique",
+    "source": "YouTube (Numerama)"
+  },
+  {
+    "id": 393,
+    "title": "Far-right propaganda has become a \"click economy\" like any other",
+    "desc": "An investigation documents the \"clipping\" and \"slopaganda\" industry: subcontractors in Nigeria, India, or Sri Lanka assemble and post propaganda content for a few cents per 1,000 views.",
+    "url": "https://www.ladn.eu/media-mutants/clipping-ia-industrie-propagande-extreme-droite/",
+    "date": "2026-09-12",
+    "letter": 45,
+    "cat": "ethique",
+    "source": "L'ADN"
+  },
+  {
+    "id": 394,
+    "title": "In Poland, robots protest against AI",
+    "desc": "About thirty robots protested outside Poland's Ministry of Digital Affairs demanding AI regulation, organized by the head of the company that rents them out.",
+    "url": "https://www.france24.com/fr/info-en-continu/20260907-en-pologne-des-robots-manifestent-contre-l-ia",
+    "date": "2026-09-12",
+    "letter": 45,
+    "cat": "ethique",
+    "source": "France24"
+  },
+  {
+    "id": 395,
+    "title": "Does AI make us useless?",
+    "desc": "A video draws on Nietzsche to examine the unease triggered by AI: what if the real challenge isn't our skills, but the equation that makes our usefulness the measure of our worth?",
+    "url": "https://www.youtube.com/watch?v=Hoh_mK_8uEY",
+    "date": "2026-09-12",
+    "letter": 45,
+    "cat": "philosophie",
+    "source": "YouTube (Philo_Sophia)"
+  },
+  {
+    "id": 396,
+    "title": "No, chatbots are not digital comfort blankets",
+    "desc": "Anne Alombert draws on Winnicott to show why a chatbot, always available, is not a \"digital comfort blanket\" but an object that closes off rather than opens up to the world.",
+    "url": "https://www.radiofrance.fr/franceculture/podcasts/le-fil-philo/non-les-chatbots-ne-sont-pas-des-doudous-numeriques-2388980",
+    "date": "2026-09-12",
+    "letter": 45,
+    "cat": "philosophie",
+    "source": "France Culture"
+  },
+  {
+    "id": 397,
+    "title": "PISA 2025: Is AI responsible for the decline in results?",
+    "desc": "PISA 2025 finds that 46% of OECD students use AI weekly, alongside a sharp drop in reading scores, though the causal link remains far from simple.",
+    "url": "https://theconversation.com/pisa-2025-lia-est-elle-responsable-de-la-baisse-des-resultats-291580",
+    "date": "2026-09-12",
+    "letter": 45,
+    "cat": "education",
+    "source": "The Conversation"
+  },
+  {
+    "id": 398,
+    "title": "United States: New York bans AI in schools up to 8th grade",
+    "desc": "New York is imposing a one-year moratorium on generative AI in its public schools, up to 8th grade, in the name of human contact in learning.",
+    "url": "https://www.20minutes.fr/monde/etats-unis/4242436-20260902-etats-unis-new-york-interdit-ia-ecoles-jusqu-troisieme",
+    "date": "2026-09-12",
+    "letter": 45,
+    "cat": "education",
+    "source": "20 Minutes"
+  },
+  {
+    "id": 399,
+    "title": "After the vibe coding high comes the debugging hangover",
+    "desc": "A developer recounts ten days of vibe-coding euphoria, halted by a bug that took 312 prompts and two full days to diagnose.",
+    "url": "https://www.zdnet.fr/actualites/apres-leuphorie-du-vibe-coding-voici-donc-la-gueule-de-bois-du-debogage-502911.htm",
+    "date": "2026-09-12",
+    "letter": 45,
+    "cat": "technique",
+    "source": "ZDNet"
+  },
+  {
+    "id": 400,
+    "title": "Genealogy of open AI models: the CNIL offers a tool to navigate them",
+    "desc": "The LINC (CNIL) released Genmod, a tool that traces the \"genealogy\" of open AI models to identify which ones may have memorized personal data.",
+    "url": "https://next.ink/254365/genealogie-des-modeles-dia-ouverts-la-cnil-propose-un-outil-pour-sy-retrouver/",
+    "date": "2026-09-12",
+    "letter": 45,
+    "cat": "technique",
+    "source": "Next.ink"
   }
 ]
