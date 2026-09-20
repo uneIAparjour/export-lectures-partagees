@@ -3719,7 +3719,7 @@
     "cat": "droit",
     "source": "Les Interconnectés"
   },
-{
+  {
     "id": 373,
     "title": "Mistral intègre un modèle chinois (GLM 5.2)",
     "desc": "Ninon (@ninon_ia) documente le basculement de Mistral vers l'intégration de modèles chinois plutôt que la construction des siens, un choix assumé par son CTO.",
