@@ -3999,6 +3999,135 @@
     "letter": 45,
     "cat": "technique",
     "source": "Next.ink"
+  },
+  {
+    "id": 401,
+    "title": "Comment l'intelligence artificielle générative manipule nos émotions ?",
+    "desc": "Nadia Guerouaou et Fanny Jacq décryptent l'« IAffectivité », ces IA pensées pour capter et exploiter nos émotions.",
+    "url": "https://www.radiofrance.fr/franceinter/podcasts/grand-bien-vous-fasse/grand-bien-vous-fasse-du-mardi-15-septembre-2026-3484751",
+    "date": "2026-09-19",
+    "letter": 46,
+    "cat": "ethique",
+    "source": "France Inter"
+  },
+  {
+    "id": 402,
+    "title": "Inside 'Project Lily': The Humans Reading Your ChatGPT Chats",
+    "desc": "404 Media révèle qu'OpenAI emploie des centaines de sous-traitants pour lire des conversations ChatGPT signalées, parfois très intimes. (en anglais)",
+    "url": "https://www.404media.co/inside-project-lily-the-humans-reading-your-chatgpt-chats/",
+    "date": "2026-09-19",
+    "letter": 46,
+    "cat": "ethique",
+    "source": "404 Media"
+  },
+  {
+    "id": 403,
+    "title": "Il discute avec l'intelligence artificielle et lui demande de l'aide pour organiser un attentat",
+    "desc": "Un jeune homme du Nord a demandé à Claude de l'aide pour organiser un attentat à Lille ; le FBI a alerté la police française.",
+    "url": "https://www.ladepeche.fr/2026/09/11/il-discute-avec-lintelligence-artificielle-et-lui-demande-de-laide-pour-organiser-un-attentat-a-lille-le-fbi-alerte-la-police-francaise-lhomme-est-13546602.php",
+    "date": "2026-09-19",
+    "letter": 46,
+    "cat": "securite",
+    "source": "La Dépêche du Midi"
+  },
+  {
+    "id": 404,
+    "title": "Les collectivités adaptent leur gouvernance pour mieux appréhender l'IA",
+    "desc": "Nantes Métropole et le département d'Ille-et-Vilaine se dotent d'instances et d'expérimentations pour garder la main sur les données et les algorithmes.",
+    "url": "https://www.lesechos.fr/thema/articles/les-collectivites-adaptent-leur-gouvernance-pour-mieux-apprehender-lia-2251536",
+    "date": "2026-09-19",
+    "letter": 46,
+    "cat": "ethique",
+    "source": "Les Échos"
+  },
+  {
+    "id": 405,
+    "title": "« L'IA va tous nous tuer » : anatomie d'une faillite journalistique",
+    "desc": "Thibault Prévost reproche à une partie de la presse française d'amplifier sans recul le récit de l'« IA qui va tous nous tuer ».",
+    "url": "https://www.arretsurimages.net/chroniques/clic-gauche/lia-va-tous-nous-tuer-anatomie-dune-faillite-journalistique",
+    "date": "2026-09-19",
+    "letter": 46,
+    "cat": "securite",
+    "source": "Arrêt sur images"
+  },
+  {
+    "id": 406,
+    "title": "Et si le problème n'était pas l'IA, mais les médias ?",
+    "desc": "Fred Cavazza juge les alertes sur l'IA réelles mais largement amplifiées par les médias plus que par les faits.",
+    "url": "https://fredcavazza.net/2026/09/11/et-si-le-probleme-netait-pas-lia-mais-les-medias/",
+    "date": "2026-09-19",
+    "letter": 46,
+    "cat": "securite",
+    "source": "Fred Cavazza"
+  },
+  {
+    "id": 407,
+    "title": "L'IApocalypse : le coup marketing des géants de l'intelligence artificielle",
+    "desc": "François Saltiel y voit un récit commode pour les géants de l'IA, qui détourne l'attention des enjeux plus concrets.",
+    "url": "https://www.radiofrance.fr/franceculture/podcasts/un-monde-connecte/l-iapocalypse-le-coup-marketing-des-geants-de-l-intelligence-artficielle-6886710",
+    "date": "2026-09-19",
+    "letter": 46,
+    "cat": "securite",
+    "source": "France Culture"
+  },
+  {
+    "id": 408,
+    "title": "Pour la sociologue Angèle Christin, « Une IA terminator est un risque très très faible aujourd'hui »",
+    "desc": "La sociologue Angèle Christin (Stanford) juge très faible le risque d'une IA « Terminator » aujourd'hui.",
+    "url": "https://www.radiofrance.fr/franceculture/podcasts/l-info-de-france-culture/une-ia-terminator-est-un-risque-tres-tres-faible-aujourd-hui-souligne-la-sociologue-angele-christin-4964279",
+    "date": "2026-09-19",
+    "letter": 46,
+    "cat": "securite",
+    "source": "France Culture"
+  },
+  {
+    "id": 409,
+    "title": "L'industrie musicale s'organise contre la fraude aux streams IA",
+    "desc": "L'IFPI lance la Streaming Integrity Initiative pour lutter contre la fraude aux streams générés ou gonflés par IA.",
+    "url": "https://next.ink/256248/lindustrie-musicale-sorganise-contre-la-fraude-aux-streams-ia/",
+    "date": "2026-09-19",
+    "letter": 46,
+    "cat": "creation",
+    "source": "Next.ink"
+  },
+  {
+    "id": 410,
+    "title": "Mistral et Mozilla officialisent leur partenariat dans la Fenêtre intelligente de Firefox",
+    "desc": "Mistral Small 4 devient le modèle recommandé de la « Fenêtre intelligente », la fonction d'IA intégrée à Firefox.",
+    "url": "https://next.ink/brief-article/mistral-et-mozilla-officialisent-leur-partenariat-dans-la-fenetre-intelligente-de-firefox/",
+    "date": "2026-09-19",
+    "letter": 46,
+    "cat": "technique",
+    "source": "Next.ink"
+  },
+  {
+    "id": 411,
+    "title": "Free course covering basics of AI to be available to all Canadians by end of the year",
+    "desc": "Le Canada va rendre gratuits d'ici la fin de l'année trois cours pour développer la culture IA de ses citoyens. (en anglais)",
+    "url": "https://www.cbc.ca/news/politics/ai-essentials-government-courses-solomon-9.7337417",
+    "date": "2026-09-19",
+    "letter": 46,
+    "cat": "education",
+    "source": "CBC News"
+  },
+  {
+    "id": 412,
+    "title": "Panorama des usages de l'intelligence artificielle dans le travail social",
+    "desc": "Le LaborIA publie pour la DGCS un panorama des usages de l'IA dans le travail social, entre attentes et réalité du terrain.",
+    "url": "https://dubasque.org/panorama-des-usages-de-lintelligence-artificielle-dans-le-travail-social-des-enjeux-a-la-realite-du-terrain-avec-le-laboria/",
+    "date": "2026-09-19",
+    "letter": 46,
+    "cat": "etudes",
+    "source": "Didier Dubasque"
+  },
+  {
+    "id": 413,
+    "title": "Navier-Stokes : derrière l'exploit d'OpenAI",
+    "desc": "OpenAI annonce avoir résolu Navier-Stokes ; l'article revient sur la bataille des données, du mérite et du pouvoir scientifique derrière l'exploit.",
+    "url": "https://www.usine-digitale.fr/intelligence-artificielle/ia-generative/navier-stokes-derriere-lexploit-dopenai-une-bataille-sur-les-donnees-le-merite-et-le-pouvoir-scientifique.IFSMBYTT2ZEJVFROW6Q5TJ2AMM.html",
+    "date": "2026-09-19",
+    "letter": 46,
+    "cat": "etudes",
+    "source": "L'Usine Digitale"
   }
 ]
-
