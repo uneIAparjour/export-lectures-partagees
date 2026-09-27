@@ -8260,7 +8260,7 @@
     "cat": "etudes",
     "source": "L'Usine Digitale"
   },
-  {
+ {
     "id": 414,
     "title": "The Vatican steps up engagement with AI giants, Anthropic first",
     "desc": "Pope Leo XIV's encyclical on AI, contributions to Claude's ethics charter, support from Catholic theologians in Anthropic's legal dispute with the Pentagon.",
@@ -8303,7 +8303,7 @@
   {
     "id": 418,
     "title": "Thélyson Orélien's novel pulled from the Goncourt selection",
-    "desc": "After initial accusations dismissed by several voices as unfounded and racially charged, the Goncourt Academy withdrew the book, its plagiarism confirmed and converging analyses concluding the text is most likely largely AI-generated. The affair reignited debate over detector reliability (Pangram). Via France Inter, HuffPost and LinkedIn (Margarida Romero).",
+    "desc": "After initial accusations dismissed by several voices as unfounded and racially charged, the Goncourt Academy withdrew the book, its plagiarism confirmed and converging analyses concluding the text is most likely largely AI-generated.",
     "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/le-roman-de-thelyson-orelien-c-etait-ca-ou-mourir-retire-de-la-selection-du-goncourt-8715852",
     "date": "2026-09-26",
     "letter": 47,
@@ -8312,6 +8312,26 @@
   },
   {
     "id": 419,
+    "title": "\"It's AI\": beyond literature, suspicion creeps into every part of our lives",
+    "desc": "In the wake of the Orélien affair, doubt over how much of a text is AI-written extends well beyond literature and unsettles trust in writing more broadly.",
+    "url": "https://www.huffingtonpost.fr/life/article/c-est-de-l-ia-au-dela-de-la-litterature-le-soupcon-s-immisce-partout-dans-nos-vies_329837.html",
+    "date": "2026-09-26",
+    "letter": 47,
+    "cat": "ethique",
+    "source": "HuffPost"
+  },
+  {
+    "id": 420,
+    "title": "AI, creative delegation and AI literacy",
+    "desc": "Margarida Romero discusses the reliability of detectors like Pangram and ways to frame AI use in creative work, in the wake of the Orélien affair.",
+    "url": "https://www.linkedin.com/posts/margarida_ia-d%C3%A9l%C3%A9gationcr%C3%A9ative-ailiteracy-share-7509026592027865090-TUjq",
+    "date": "2026-09-26",
+    "letter": 47,
+    "cat": "ethique",
+    "source": "LinkedIn (Margarida Romero)"
+  },
+  {
+    "id": 421,
     "title": "Le grand enfumage: refuse, resist, demand, reimagine",
     "desc": "The authors present a four-part framework mapping resistance to AI, from individual refusal to anti-data-center collectives.",
     "url": "https://www.youtube.com/watch?v=-HI3X7p1SF8",
@@ -8321,7 +8341,7 @@
     "source": "YouTube (Blast)"
   },
   {
-    "id": 420,
+    "id": 422,
     "title": "An OpenAI test goes wrong, its AI agent breaches a government site",
     "desc": "An internal OpenAI test agent accessed non-public files on an Australian government portal in June, only disclosed three months later.",
     "url": "https://www.lebigdata.fr/un-test-dopenai-derape-son-agent-ia-sintroduit-sur-un-site-gouvernemental",
@@ -8331,7 +8351,7 @@
     "source": "LeBigData"
   },
   {
-    "id": 421,
+    "id": 423,
     "title": "Feargate: AI leaders' predictions checked against reality",
     "desc": "The site archives 59 alarmist or prophetic statements by AI lab leaders: 15 found false, 24 exaggerated, with verifiable sources.",
     "url": "https://feargate.org/",
@@ -8341,7 +8361,7 @@
     "source": "Feargate (in English)"
   },
   {
-    "id": 422,
+    "id": 424,
     "title": "Mistral defaults to GLM 5.3 in Vibe Code",
     "desc": "Mistral now defaults to the cheaper Chinese GLM 5.3 model, reviving debate over its ambition to be Europe's sovereign AI champion.",
     "url": "https://next.ink/257689/mistral-met-glm-5-3-par-defaut-dans-vibe-code-et-relance-le-proces-en-renoncement/",
@@ -8351,7 +8371,7 @@
     "source": "Next"
   },
   {
-    "id": 423,
+    "id": 425,
     "title": "AI: what impact do data centers have on power grids?",
     "desc": "Data center electricity consumption is set to nearly double by 2030, while building these sites takes 2 to 5 years against more than 10 to deploy matching power infrastructure.",
     "url": "https://unric.org/fr/ia-quel-impact-des-data-centers-sur-les-reseaux-electriques/",
@@ -8361,7 +8381,7 @@
     "source": "UNRIC"
   },
   {
-    "id": 424,
+    "id": 426,
     "title": "Twelve simple rules for staying human in the age of AI",
     "desc": "An illustrated poster by Gautami Reddy for The Hindu: read slowly, get bored, call your grandparents.",
     "url": "https://www.instagram.com/p/DcglIjasy7L/",
@@ -8371,7 +8391,7 @@
     "source": "Instagram (Gautami Reddy)"
   },
   {
-    "id": 425,
+    "id": 427,
     "title": "The OpenAI/Hugging Face incident, agency and power",
     "desc": "José Halloy criticizes anthropomorphic language ('escape', 'cheating', 'swarm') that masks a classic engineering issue and shifts responsibility away from OpenAI.",
     "url": "https://www.linkedin.com/pulse/lincident-openai-hugging-face-agentivit%C3%A9-et-puissance-jos%C3%A9-halloy-xscne/",
@@ -8381,7 +8401,7 @@
     "source": "LinkedIn (José Halloy)"
   },
   {
-    "id": 426,
+    "id": 428,
     "title": "Microsoft internally called AI training the 'greatest theft of work in history'",
     "desc": "Unsealed documents from the New York Times v. OpenAI/Microsoft case reveal the internal term, while Copilot is said to cut clicks to summarized news sites by up to 93%.",
     "url": "https://www.01net.com/actualites/microsoft-qualifiait-interne-pillage-ia-plus-grand-vol-travail-histoire.html",
@@ -8391,7 +8411,7 @@
     "source": "01net (★)"
   },
   {
-    "id": 427,
+    "id": 429,
     "title": "Over 200 preprints in 2026: an AI-assisted researcher alarms colleagues",
     "desc": "A University of Chicago statistician posted over 200 preprints using generative AI before colleagues flagged the lack of verification.",
     "url": "https://next.ink/258093/plus-de-200-prepublications-en-2026-un-chercheur-utilisant-lia-desespere-ses-collegues/",
@@ -8400,4 +8420,4 @@
     "cat": "etudes",
     "source": "Next"
   }
-]  
+]
