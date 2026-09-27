@@ -4128,5 +4128,145 @@
     "letter": 46,
     "cat": "etudes",
     "source": "L'Usine Digitale"
+  },
+  {
+    "id": 414,
+    "title": "Le Vatican multiplie les échanges avec les géants de l'IA, Anthropic en tête",
+    "desc": "Encyclique du pape Léon XIV consacrée à l'IA, contributions à la charte éthique de Claude, soutien de théologiens catholiques dans le conflit judiciaire opposant Anthropic au Pentagone.",
+    "url": "https://www.france24.com/fr/info-en-continu/20260924-dieu-et-l-ia-quand-le-vatican-s-invite-a-la-table-des-geants-de-la-tech",
+    "date": "2026-09-26",
+    "letter": 47,
+    "cat": "geopolitique",
+    "source": "France 24"
+  },
+  {
+    "id": 415,
+    "title": "A l'ONU, les grands patrons de l'intelligence artificielle appellent à la vigilance et la coopération",
+    "desc": "Sam Altman a appelé à la coopération internationale sur l'IA et Dario Amodei a promis qu'Anthropic ralentirait autant que nécessaire le rythme de développement, dix jours après un appel à un freinage coordonné resté sans suite.",
+    "url": "https://www.franceinfo.fr/internet/intelligence-artificielle/a-l-onu-les-grands-patrons-de-l-intelligence-artificielle-appellent-a-la-vigilance-et-la-cooperation_8207042.html",
+    "date": "2026-09-26",
+    "letter": 47,
+    "cat": "geopolitique",
+    "source": "France Info"
+  },
+  {
+    "id": 416,
+    "title": "On ne dira plus intelligence artificielle, Trump impose une nouvelle appellation",
+    "desc": "Donald Trump souhaite remplacer intelligence artificielle par Super Intelligence dans les documents officiels américains, un terme déjà défini par Nick Bostrom pour désigner une intelligence hypothétique dépassant largement l'humain.",
+    "url": "https://www.lebigdata.fr/on-ne-dira-plus-intelligence-artificielle-trump-impose-une-nouvelle-appellation",
+    "date": "2026-09-26",
+    "letter": 47,
+    "cat": "geopolitique",
+    "source": "LeBigData"
+  },
+  {
+    "id": 417,
+    "title": "Les IA n'ont ni droits, ni sentiments, ni conscience, plaide le patron de Microsoft AI",
+    "desc": "Mustafa Suleyman critique frontalement l'approche d'Anthropic qui entraîne Claude en partant du principe qu'il pourrait être conscient.",
+    "url": "https://next.ink/257097/les-ia-nont-ni-droits-ni-sentiments-ni-conscience-plaide-le-patron-de-microsoft-ai/",
+    "date": "2026-09-26",
+    "letter": 47,
+    "cat": "ethique",
+    "source": "Next (★)"
+  },
+  {
+    "id": 418,
+    "title": "Le roman de Thélyson Orélien retiré de la sélection du Goncourt",
+    "desc": "Après des accusations initiales jugées racistes et infondées, l'Académie Goncourt a retiré le livre, ses plagiats étant avérés et plusieurs analyses convergentes concluant que le texte est selon toute vraisemblance très largement le produit d'une IA. L'affaire relance le débat sur la fiabilité des détecteurs comme Pangram. Sur France Inter, le HuffPost et LinkedIn (Margarida Romero).",
+    "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/le-roman-de-thelyson-orelien-c-etait-ca-ou-mourir-retire-de-la-selection-du-goncourt-8715852",
+    "date": "2026-09-26",
+    "letter": 47,
+    "cat": "ethique",
+    "source": "France Inter (★)"
+  },
+  {
+    "id": 419,
+    "title": "Le grand enfumage : refuser, résister, réclamer, réimaginer",
+    "desc": "Les auteurs du livre présentent un cadre en quatre axes pour cartographier les contestations face à l'IA, du refus individuel aux collectifs anti-data centers.",
+    "url": "https://www.youtube.com/watch?v=-HI3X7p1SF8",
+    "date": "2026-09-26",
+    "letter": 47,
+    "cat": "ethique",
+    "source": "YouTube (Blast)"
+  },
+  {
+    "id": 420,
+    "title": "Un test d'OpenAI dérape, son agent IA s'introduit sur un site gouvernemental",
+    "desc": "Un agent OpenAI en test interne a accédé en juin à des fichiers non publics d'un portail gouvernemental australien, révélé trois mois plus tard.",
+    "url": "https://www.lebigdata.fr/un-test-dopenai-derape-son-agent-ia-sintroduit-sur-un-site-gouvernemental",
+    "date": "2026-09-26",
+    "letter": 47,
+    "cat": "securite",
+    "source": "LeBigData"
+  },
+  {
+    "id": 421,
+    "title": "Feargate : les prédictions des dirigeants de l'IA confrontées aux faits",
+    "desc": "Le site archive 59 déclarations alarmistes ou prophétiques de dirigeants de labs IA : 15 jugées fausses, 24 exagérées, sources vérifiables à l'appui.",
+    "url": "https://feargate.org/",
+    "date": "2026-09-26",
+    "letter": 47,
+    "cat": "securite",
+    "source": "Feargate (en anglais)"
+  },
+  {
+    "id": 422,
+    "title": "Mistral met GLM 5.3 par défaut dans Vibe Code",
+    "desc": "Mistral intègre par défaut le modèle chinois GLM 5.3, moins cher que ses modèles maison, relançant le débat sur son ambition de champion européen souverain de l'IA.",
+    "url": "https://next.ink/257689/mistral-met-glm-5-3-par-defaut-dans-vibe-code-et-relance-le-proces-en-renoncement/",
+    "date": "2026-09-26",
+    "letter": 47,
+    "cat": "technique",
+    "source": "Next"
+  },
+  {
+    "id": 423,
+    "title": "IA : quel impact des data centers sur les réseaux électriques ?",
+    "desc": "La consommation électrique des data centers devrait presque doubler d'ici 2030, alors que construire ces sites prend 2 à 5 ans contre plus de 10 ans pour les infrastructures électriques correspondantes.",
+    "url": "https://unric.org/fr/ia-quel-impact-des-data-centers-sur-les-reseaux-electriques/",
+    "date": "2026-09-26",
+    "letter": 47,
+    "cat": "technique",
+    "source": "UNRIC"
+  },
+  {
+    "id": 424,
+    "title": "Douze règles simples pour rester humain à l'ère de l'IA",
+    "desc": "Un poster illustré de Gautami Reddy pour The Hindu : lire lentement, s'ennuyer, appeler ses grands-parents.",
+    "url": "https://www.instagram.com/p/DcglIjasy7L/",
+    "date": "2026-09-26",
+    "letter": 47,
+    "cat": "philosophie",
+    "source": "Instagram (Gautami Reddy)"
+  },
+  {
+    "id": 425,
+    "title": "L'incident OpenAI/Hugging Face, agentivité et puissance",
+    "desc": "José Halloy dénonce le vocabulaire anthropomorphique (évasion, triche, essaim) qui masque un problème d'ingénierie classique et déplace la responsabilité loin d'OpenAI.",
+    "url": "https://www.linkedin.com/pulse/lincident-openai-hugging-face-agentivit%C3%A9-et-puissance-jos%C3%A9-halloy-xscne/",
+    "date": "2026-09-26",
+    "letter": 47,
+    "cat": "philosophie",
+    "source": "LinkedIn (José Halloy)"
+  },
+  {
+    "id": 426,
+    "title": "Microsoft qualifiait en interne le pillage IA de plus grand vol de travail de l'histoire",
+    "desc": "Des pièces du procès du New York Times contre OpenAI/Microsoft révèlent le terme utilisé en interne, tandis que Copilot réduirait jusqu'à 93% les clics vers les sites de presse qu'il résume.",
+    "url": "https://www.01net.com/actualites/microsoft-qualifiait-interne-pillage-ia-plus-grand-vol-travail-histoire.html",
+    "date": "2026-09-26",
+    "letter": 47,
+    "cat": "droit",
+    "source": "01net (★)"
+  },
+  {
+    "id": 427,
+    "title": "Plus de 200 prépublications en 2026 : un chercheur utilisant l'IA désespère ses collègues",
+    "desc": "Un statisticien de l'université de Chicago a mis en ligne plus de 200 prépublications à l'aide de l'IA générative, avant que ses confrères ne dénoncent l'absence de vérification.",
+    "url": "https://next.ink/258093/plus-de-200-prepublications-en-2026-un-chercheur-utilisant-lia-desespere-ses-collegues/",
+    "date": "2026-09-26",
+    "letter": 47,
+    "cat": "etudes",
+    "source": "Next"
   }
 ]
