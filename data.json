@@ -4172,7 +4172,7 @@
   {
     "id": 418,
     "title": "Le roman de Thélyson Orélien retiré de la sélection du Goncourt",
-    "desc": "Après des accusations initiales jugées racistes et infondées, l'Académie Goncourt a retiré le livre, ses plagiats étant avérés et plusieurs analyses convergentes concluant que le texte est selon toute vraisemblance très largement le produit d'une IA. L'affaire relance le débat sur la fiabilité des détecteurs comme Pangram. Sur France Inter, le HuffPost et LinkedIn (Margarida Romero).",
+    "desc": "Après des accusations initiales jugées racistes et infondées, l'Académie Goncourt a retiré le livre, ses plagiats étant avérés et plusieurs analyses convergentes concluant que le texte est selon toute vraisemblance très largement le produit d'une IA.",
     "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/le-roman-de-thelyson-orelien-c-etait-ca-ou-mourir-retire-de-la-selection-du-goncourt-8715852",
     "date": "2026-09-26",
     "letter": 47,
@@ -4181,6 +4181,26 @@
   },
   {
     "id": 419,
+    "title": "\"C'est de l'IA\" : au-delà de la littérature, le soupçon s'immisce partout dans nos vies",
+    "desc": "Dans le sillage de l'affaire Orélien, le doute sur la part d'IA dans un texte déborde largement la littérature et s'installe dans le rapport de confiance à l'écrit en général.",
+    "url": "https://www.huffingtonpost.fr/life/article/c-est-de-l-ia-au-dela-de-la-litterature-le-soupcon-s-immisce-partout-dans-nos-vies_329837.html",
+    "date": "2026-09-26",
+    "letter": 47,
+    "cat": "ethique",
+    "source": "HuffPost"
+  },
+  {
+    "id": 420,
+    "title": "IA, délégation créative et littératie de l'IA",
+    "desc": "Margarida Romero revient sur la fiabilité des détecteurs comme Pangram et sur les moyens d'encadrer l'usage de l'IA en création, dans le sillage de l'affaire Orélien.",
+    "url": "https://www.linkedin.com/posts/margarida_ia-d%C3%A9l%C3%A9gationcr%C3%A9ative-ailiteracy-share-7509026592027865090-TUjq",
+    "date": "2026-09-26",
+    "letter": 47,
+    "cat": "ethique",
+    "source": "LinkedIn (Margarida Romero)"
+  },
+  {
+    "id": 421,
     "title": "Le grand enfumage : refuser, résister, réclamer, réimaginer",
     "desc": "Les auteurs du livre présentent un cadre en quatre axes pour cartographier les contestations face à l'IA, du refus individuel aux collectifs anti-data centers.",
     "url": "https://www.youtube.com/watch?v=-HI3X7p1SF8",
@@ -4190,7 +4210,7 @@
     "source": "YouTube (Blast)"
   },
   {
-    "id": 420,
+    "id": 422,
     "title": "Un test d'OpenAI dérape, son agent IA s'introduit sur un site gouvernemental",
     "desc": "Un agent OpenAI en test interne a accédé en juin à des fichiers non publics d'un portail gouvernemental australien, révélé trois mois plus tard.",
     "url": "https://www.lebigdata.fr/un-test-dopenai-derape-son-agent-ia-sintroduit-sur-un-site-gouvernemental",
@@ -4200,7 +4220,7 @@
     "source": "LeBigData"
   },
   {
-    "id": 421,
+    "id": 423,
     "title": "Feargate : les prédictions des dirigeants de l'IA confrontées aux faits",
     "desc": "Le site archive 59 déclarations alarmistes ou prophétiques de dirigeants de labs IA : 15 jugées fausses, 24 exagérées, sources vérifiables à l'appui.",
     "url": "https://feargate.org/",
@@ -4210,7 +4230,7 @@
     "source": "Feargate (en anglais)"
   },
   {
-    "id": 422,
+    "id": 424,
     "title": "Mistral met GLM 5.3 par défaut dans Vibe Code",
     "desc": "Mistral intègre par défaut le modèle chinois GLM 5.3, moins cher que ses modèles maison, relançant le débat sur son ambition de champion européen souverain de l'IA.",
     "url": "https://next.ink/257689/mistral-met-glm-5-3-par-defaut-dans-vibe-code-et-relance-le-proces-en-renoncement/",
@@ -4220,7 +4240,7 @@
     "source": "Next"
   },
   {
-    "id": 423,
+    "id": 425,
     "title": "IA : quel impact des data centers sur les réseaux électriques ?",
     "desc": "La consommation électrique des data centers devrait presque doubler d'ici 2030, alors que construire ces sites prend 2 à 5 ans contre plus de 10 ans pour les infrastructures électriques correspondantes.",
     "url": "https://unric.org/fr/ia-quel-impact-des-data-centers-sur-les-reseaux-electriques/",
@@ -4230,7 +4250,7 @@
     "source": "UNRIC"
   },
   {
-    "id": 424,
+    "id": 426,
     "title": "Douze règles simples pour rester humain à l'ère de l'IA",
     "desc": "Un poster illustré de Gautami Reddy pour The Hindu : lire lentement, s'ennuyer, appeler ses grands-parents.",
     "url": "https://www.instagram.com/p/DcglIjasy7L/",
@@ -4240,7 +4260,7 @@
     "source": "Instagram (Gautami Reddy)"
   },
   {
-    "id": 425,
+    "id": 427,
     "title": "L'incident OpenAI/Hugging Face, agentivité et puissance",
     "desc": "José Halloy dénonce le vocabulaire anthropomorphique (évasion, triche, essaim) qui masque un problème d'ingénierie classique et déplace la responsabilité loin d'OpenAI.",
     "url": "https://www.linkedin.com/pulse/lincident-openai-hugging-face-agentivit%C3%A9-et-puissance-jos%C3%A9-halloy-xscne/",
@@ -4250,7 +4270,7 @@
     "source": "LinkedIn (José Halloy)"
   },
   {
-    "id": 426,
+    "id": 428,
     "title": "Microsoft qualifiait en interne le pillage IA de plus grand vol de travail de l'histoire",
     "desc": "Des pièces du procès du New York Times contre OpenAI/Microsoft révèlent le terme utilisé en interne, tandis que Copilot réduirait jusqu'à 93% les clics vers les sites de presse qu'il résume.",
     "url": "https://www.01net.com/actualites/microsoft-qualifiait-interne-pillage-ia-plus-grand-vol-travail-histoire.html",
@@ -4260,7 +4280,7 @@
     "source": "01net (★)"
   },
   {
-    "id": 427,
+    "id": 429,
     "title": "Plus de 200 prépublications en 2026 : un chercheur utilisant l'IA désespère ses collègues",
     "desc": "Un statisticien de l'université de Chicago a mis en ligne plus de 200 prépublications à l'aide de l'IA générative, avant que ses confrères ne dénoncent l'absence de vérification.",
     "url": "https://next.ink/258093/plus-de-200-prepublications-en-2026-un-chercheur-utilisant-lia-desespere-ses-collegues/",
