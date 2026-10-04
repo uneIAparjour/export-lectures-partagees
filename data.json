@@ -4288,5 +4288,195 @@
     "letter": 47,
     "cat": "etudes",
     "source": "Next"
+  },
+  {
+    "id": 430,
+    "title": "La géopolitique de l'IA : pourquoi ChatGPT, Claude, Mistral, DeepSeek (et tous les autres…) ne sont pas que des outils",
+    "desc": "Des modèles généralistes devenus infrastructure, produits par une dizaine d'acteurs : une dépendance que les pays utilisateurs ne peuvent ni auditer ni négocier.",
+    "url": "https://blogbinaire.larecherche.fr/2026/10/02/la-geopolitique-de-lia-pourquoi-chatgpt-claude-mistral-deepseek-et-tous-les-autres-ne-sont-pas-que-des-outils/",
+    "date": "2026-10-03",
+    "letter": 48,
+    "cat": "geopolitique",
+    "source": "Binaire"
+  },
+  {
+    "id": 431,
+    "title": "Décibels #7 | L'IA a-t-elle franchi le mur du son ?",
+    "desc": "Le Conseil de l'IA et du numérique : le récit du risque existentiel détourne de risques documentés (cyber, emploi, environnement).",
+    "url": "https://www.linkedin.com/pulse/d%C3%A9cibels-7-lia-a-t-elle-franchi-le-mur-du-son-conseil-ia-numerique-rjoye/",
+    "date": "2026-10-03",
+    "letter": 48,
+    "cat": "ethique",
+    "source": "LinkedIn (Conseil de l'IA et du numérique)"
+  },
+  {
+    "id": 432,
+    "title": "Et si la fin du monde était le meilleur coup marketing de la Silicon Valley ?",
+    "desc": "Chut! magazine : la peur de l'apocalypse comme coup marketing, qui détourne l'attention de dégâts bien réels (travail, surveillance, environnement).",
+    "url": "https://www.linkedin.com/posts/chut-magazine-le-marketing-de-la-peur-ugcPost-7507827600367484928-JdcQ/",
+    "date": "2026-10-03",
+    "letter": 48,
+    "cat": "ethique",
+    "source": "LinkedIn (Chut! magazine)"
+  },
+  {
+    "id": 433,
+    "title": "Raciste, sexiste et barbophobe : les préjugés cachés de la vidéosurveillance « intelligente »",
+    "desc": "Un modèle de vision d'Alibaba utilisé en vidéosurveillance juge plus dangereux les barbus et les député·es ultramarin·es, et moins compétentes les femmes.",
+    "url": "https://www.gargantia.eu/raciste-sexiste-et-barbophobe-les-prejuges-caches-de-la-videosurveillance-intelligente/",
+    "date": "2026-10-03",
+    "letter": 48,
+    "cat": "securite",
+    "source": "Gargant'IA"
+  },
+  {
+    "id": 434,
+    "title": "IA dans la littérature, le début de la fin ?",
+    "desc": "Affaire Orélien : trois invitées y lisent une question de confiance entre auteurs, éditeurs et lecteurs.",
+    "url": "https://www.radiofrance.fr/franceculture/podcasts/questions-du-soir-le-debat/affaire-thelyson-orelien-avant-de-tous-nous-tuer-l-ia-va-t-elle-d-abord-nous-diviser-7201314",
+    "date": "2026-10-03",
+    "letter": 48,
+    "cat": "creation",
+    "source": "France Culture"
+  },
+  {
+    "id": 435,
+    "title": "L'IA va t-elle transformer la notion d'auteur ?",
+    "desc": "Affaire Orélien : Bruno Patino plaide que l'enjeu est le niveau de délégation à l'outil.",
+    "url": "https://www.radiofrance.fr/franceinter/podcasts/recto-verso/recto-le-grand-entretien-du-samedi-26-septembre-2026-3584390",
+    "date": "2026-10-03",
+    "letter": 48,
+    "cat": "creation",
+    "source": "France Inter"
+  },
+  {
+    "id": 436,
+    "title": "On a soumis plus de 5 000 textes à 75 détecteurs d'IA gratuits : un constat d'échec",
+    "desc": "Next a testé 75 détecteurs IA sur plus de 5 000 textes : aucun ne dépasse 60 % de réussite.",
+    "url": "https://next.ink/258504/on-a-soumis-plus-de-5-000-textes-a-75-detecteurs-dia-gratuits-un-constat-dechec/",
+    "date": "2026-10-03",
+    "letter": 48,
+    "cat": "creation",
+    "source": "Next"
+  },
+  {
+    "id": 437,
+    "title": "Pangram : sommes-nous vraiment en train de confier à l'IA le pouvoir de juger la création humaine ?",
+    "desc": "Pangram annonce 97 % d'IA sur le roman d'Orélien quand d'autres détecteurs le certifient humain.",
+    "url": "https://www.linkedin.com/posts/chut-magazine-pangram-et-la-cr%C3%A9ation-humaine-ugcPost-7511028246310809600-6Yo1",
+    "date": "2026-10-03",
+    "letter": 48,
+    "cat": "creation",
+    "source": "LinkedIn (Chut! magazine)"
+  },
+  {
+    "id": 438,
+    "title": "Ben Affleck Used AI For “Lots Of Things” In Netflix’s ‘Animals’: “It’s A Very Human Movie”",
+    "desc": "Ben Affleck assume avoir utilisé l'IA pour « lots of things » dans Animals, surtout en post-production, sans dire lesquelles.",
+    "url": "https://deadline.com/2026/10/ben-affleck-used-ai-lots-of-things-animals-1237145166/",
+    "date": "2026-10-03",
+    "letter": 48,
+    "cat": "creation",
+    "source": "Deadline"
+  },
+  {
+    "id": 439,
+    "title": "OpenAI lance les dots, des agents IA autonomes connectés à plus de 4 000 applications",
+    "desc": "OpenAI lance les dots, agents autonomes connectés à plus de 4 000 applications, dans le sillage de Muse chez Meta.",
+    "url": "https://www.blogdumoderateur.com/openai-dots-agents-ia-autonomes/",
+    "date": "2026-10-03",
+    "letter": 48,
+    "cat": "technique",
+    "source": "Blog du modérateur"
+  },
+  {
+    "id": 440,
+    "title": "Dots contre Muse : OpenAI lance à son tour ses agents IA et entre dans une bataille contre Meta qui ne fait que commencer",
+    "desc": "OpenAI lance les dots et entre dans la bataille des agents contre Meta : plus ils sont utiles, plus ils demandent d'accès à nos données.",
+    "url": "https://www.bfmtv.com/tech/intelligence-artificielle/dots-contre-muse-open-ai-lance-a-son-tour-ses-agents-ia-et-entre-dans-une-bataille-contre-meta-qui-ne-fait-que-commencer_AV-202609300425.html",
+    "date": "2026-10-03",
+    "letter": 48,
+    "cat": "technique",
+    "source": "BFM TV"
+  },
+  {
+    "id": 441,
+    "title": "OpenAI lance Dots pour concurrencer Muse de Meta",
+    "desc": "Dots et Muse prennent l'allure de peluches : cette allure rassure-t-elle ou infantilise-t-elle l'utilisateur ?",
+    "url": "https://www.linkedin.com/pulse/openai-lance-dots-pour-concurrencer-muse-de-meta-emily-turrettini-x1eve/",
+    "date": "2026-10-03",
+    "letter": 48,
+    "cat": "technique",
+    "source": "LinkedIn (Emily Turrettini)"
+  },
+  {
+    "id": 442,
+    "title": "Next token",
+    "desc": "Vidéo YouTube punk-rock sur le fonctionnement des LLM, réalisée à la suite d'une formation.",
+    "url": "https://www.youtube.com/watch?v=awDRtR6kDzw",
+    "date": "2026-10-03",
+    "letter": 48,
+    "cat": "education",
+    "source": "YouTube"
+  },
+  {
+    "id": 443,
+    "title": "ChatGPT incapable de discerner les lettres dans un mot : un cas pour la formation",
+    "desc": "Un formateur constate que ChatGPT se trompe sur les lettres d'un mot, et un apprenant en tire une vidéo punk-rock pour l'expliquer.",
+    "url": "https://www.linkedin.com/posts/saintrapt_chatgpt-ia-formation-share-7510962861481967616-o3K4/",
+    "date": "2026-10-03",
+    "letter": 48,
+    "cat": "education",
+    "source": "LinkedIn (Saintrapt)"
+  },
+  {
+    "id": 444,
+    "title": "Balayant les discours alarmistes, le gouvernement américain confie la sécurité de l'IA à ceux qui la développent",
+    "desc": "À la Maison-Blanche, les géants de l'IA signent un accord de sécurité volontaire, sans obligation légale ni sanction.",
+    "url": "https://www.usine-digitale.fr/intelligence-artificielle/ia-generative/balayant-les-discours-alarmistes-le-gouvernement-americain-confie-la-securite-de-lia-a-ceux-qui-la-developpent.HBARNJFCAFEGZAOEGKPQFWMEX4.html",
+    "date": "2026-10-03",
+    "letter": 48,
+    "cat": "droit",
+    "source": "L'Usine Digitale"
+  },
+  {
+    "id": 445,
+    "title": "China puts guardrails on AI companions over social stability concerns",
+    "desc": "La Chine encadre les compagnons IA depuis le 15 juillet : rappel toutes les deux heures, prévention de la dépendance, interdits aux moins de 18 ans.",
+    "url": "https://www.tradingview.com/news/cryptobriefing:d1abfaf60094b:0-china-puts-guardrails-on-ai-companions-over-social-stability-concerns/",
+    "date": "2026-10-03",
+    "letter": 48,
+    "cat": "droit",
+    "source": "Crypto Briefing (TradingView)"
+  },
+  {
+    "id": 446,
+    "title": "Datacenters : de l'Europe aux États membres, personne n'impose la transparence",
+    "desc": "Seuls 36 % des centres de données transmettent leurs données environnementales à la Commission européenne ; Lighthouse Reports demande de la transparence.",
+    "url": "https://next.ink/259160/datacenters-de-leurope-aux-etats-membres-personne-nimpose-la-transparence/",
+    "date": "2026-10-03",
+    "letter": 48,
+    "cat": "droit",
+    "source": "Next"
+  },
+  {
+    "id": 447,
+    "title": "AI Optimism Globally Widespread Despite Uneven Use",
+    "desc": "Dans 34 des 37 pays étudiés, les émotions positives l'emportent face à l'IA ; l'Occident cumule usage élevé et inquiétude (74 % des Américains).",
+    "url": "https://news.gallup.com/poll/714593/optimism-globally-widespread-despite-uneven.aspx",
+    "date": "2026-10-03",
+    "letter": 48,
+    "cat": "etudes",
+    "source": "Gallup"
+  },
+  {
+    "id": 448,
+    "title": "Des chercheurs suédois créent un scientifique artificiel qui conçoit et mène ses propres expériences",
+    "desc": "Des chercheurs suédois font mener à une IA tout le cycle scientifique, de l'hypothèse à l'interprétation, sur la levure de boulanger.",
+    "url": "https://fr.euronews.com/2026/10/02/des-chercheurs-suedois-creent-un-scientifique-artificiel-qui-concoit-et-mene-ses-propres-e",
+    "date": "2026-10-03",
+    "letter": 48,
+    "cat": "etudes",
+    "source": "Euronews"
   }
 ]
