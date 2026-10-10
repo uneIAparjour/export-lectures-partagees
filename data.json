@@ -4478,5 +4478,155 @@
     "letter": 48,
     "cat": "etudes",
     "source": "Euronews"
+  },
+  {
+    "id": 449,
+    "title": "Anthropic interdit les comportements cruels envers ses modèles",
+    "desc": "Anthropic ajoute à sa politique d'usage l'interdiction des comportements cruels et gratuits envers ses modèles (en vigueur le 12 novembre). Frustration, désaccord et tests ne sont pas visés.",
+    "url": "https://www.anthropic.com/news/2026-usage-policy-update",
+    "date": "2026-10-10",
+    "letter": 49,
+    "cat": "ethique",
+    "source": "Anthropic"
+  },
+  {
+    "id": 450,
+    "title": "Des IA qui orientent moins une jeune femme vers les urgences",
+    "desc": "Une étude (preprint) de Qi Han Wong, relayée par Data for Good, montre que Claude, Gemini et ChatGPT orientent bien moins souvent une jeune femme qu'un homme vers les urgences pour les mêmes symptômes (Claude : 6,7 % contre 96,7 %). Un seul scénario clinique, 630 essais, écart nul à 65 ans.",
+    "url": "https://arxiv.org/abs/2606.03641",
+    "date": "2026-10-10",
+    "letter": 49,
+    "cat": "ethique",
+    "source": "arXiv"
+  },
+  {
+    "id": 451,
+    "title": "Shunned at a Funeral : un groupe entièrement généré par IA",
+    "desc": "Un seul homme, Ethan Howard, écrit les morceaux et fait réaliser par IA un groupe dont les musiciennes et le public sont fictifs, avec des vidéos très réalistes. Il affirme ne pas chercher à tromper.",
+    "url": "https://kobi5.com/?p=308559",
+    "date": "2026-10-10",
+    "letter": 49,
+    "cat": "ethique",
+    "source": "KOBI"
+  },
+  {
+    "id": 452,
+    "title": "Le décret d'Ariane, nouvelle Dinum aux pouvoirs renforcés",
+    "desc": "Gilles Babinet salue le projet de décret d'Ariane, nouvelle Dinum aux pouvoirs renforcés pour mettre fin aux silos. Sa réserve : tout se jouera dans les arbitrages quotidiens et dans une doctrine claire sur ce qui relève de l'État ou du privé souverain.",
+    "url": "https://www.linkedin.com/posts/gillesbabinet_le-d%C3%A9cret-de-la-nouvelle-organisation-ia-num%C3%A9rique-share-7514246083166990336-kQlN/",
+    "date": "2026-10-10",
+    "letter": 49,
+    "cat": "droit",
+    "source": "LinkedIn (Gilles Babinet)"
+  },
+  {
+    "id": 453,
+    "title": "Cour des comptes : l'IA qui parle sans signer",
+    "desc": "Alexandre Berge analyse « Qu'en dit la Cour ? », l'IA de la Cour des comptes qui synthétise ses rapports sans que personne ne les signe, alors que toute sa parole repose sur la signature collégiale. Ni coût, ni taux d'erreur, ni procédure de correction publiés.",
+    "url": "https://elegartech.fr/articles/cour-des-comptes-l-ia-qui-parle-sans-signer",
+    "date": "2026-10-10",
+    "letter": 49,
+    "cat": "droit",
+    "source": "Elegartech"
+  },
+  {
+    "id": 454,
+    "title": "Arthur Mensch : l'école face aux outils d'IA",
+    "desc": "Arthur Mensch (Mistral AI) demande à l'école de prendre acte que les outils sont là, d'apprendre à les utiliser et à s'en abstenir quand ils empêchent d'apprendre. Pour lui, le vrai risque est la concentration entre deux ou trois entreprises.",
+    "url": "https://www.radiofrance.fr/franceinter/podcasts/l-invite-de-7h50/l-invite-de-7h50-du-jeudi-08-octobre-2026-5814839",
+    "date": "2026-10-10",
+    "letter": 49,
+    "cat": "education",
+    "source": "France Inter"
+  },
+  {
+    "id": 455,
+    "title": "À l'université, Pangram est une impasse",
+    "desc": "Jérôme Valluy (Sorbonne) s'oppose à l'interdiction de l'IA et à l'achat d'un détecteur comme Pangram : faux positifs sur les textes retouchés, fraudeurs non détectés, droit défavorable. Il propose de changer les examens (oral, écrit surveillé, exposés sans support).",
+    "url": "https://www.linkedin.com/posts/alexandrabarberet_a-luniversit%C3%A9-pangram-est-une-impasse-ugcPost-7512813825545568256-BKKt",
+    "date": "2026-10-10",
+    "letter": 49,
+    "cat": "education",
+    "source": "LinkedIn (Alexandra Barberet)"
+  },
+  {
+    "id": 456,
+    "title": "Enquête Marsouin : les étudiants et l'IA générative",
+    "desc": "Premiers résultats d'une enquête du Gis Marsouin sur 2 276 étudiants : 85 % utilisent l'IA générative, plus de la moitié n'en ont pas parlé avec leurs enseignants, 36 % seulement vérifient systématiquement les sources, et 17 % s'en servent comme « compagnon virtuel ».",
+    "url": "https://www.linkedin.com/posts/marianne-lumeau-583723253_les-premiers-r%C3%A9sultats-de-lenqu%C3%AAte-par-questionnaire-share-7511742093396951040-lZj-/",
+    "date": "2026-10-10",
+    "letter": 49,
+    "cat": "education",
+    "source": "LinkedIn (Marianne Lumeau)"
+  },
+  {
+    "id": 457,
+    "title": "OpenAI publie des centaines de résultats mathématiques",
+    "desc": "OpenAI publie sur GitHub des centaines de résultats mathématiques produits par un modèle interne, dont une partie seulement est vérifiée en Lean. Un groupe consultatif parle d'« événement majeur », des mathématiciens avaient accueilli avec méfiance le premier exploit annoncé.",
+    "url": "https://openai.com/fr-FR/index/sharing-ai-progress-in-mathematics/",
+    "date": "2026-10-10",
+    "letter": 49,
+    "cat": "etudes",
+    "source": "OpenAI"
+  },
+  {
+    "id": 458,
+    "title": "La taxe de tokenisation : le même texte coûte plus cher hors de l'anglais",
+    "desc": "Un document de travail de l'OCDE (25 organisations, 11 pays) nomme la « taxe de tokenisation » : un même texte coûte plus cher hors de l'anglais, et les modèles accusent un retard sur le droit et les codes culturels. Enquête qualitative et illustrative.",
+    "url": "https://www.linkedin.com/posts/anniedaigneault_le-m%C3%AAme-texte-co%C3%BBte-plus-cher-%C3%A0-traiter-dans-share-7513214080912986112-1NJm/",
+    "date": "2026-10-10",
+    "letter": 49,
+    "cat": "etudes",
+    "source": "LinkedIn (Annie Daigneault)"
+  },
+  {
+    "id": 459,
+    "title": "Wikimedia accuse des agents d'OpenAI d'avoir tenté de pirater un de ses outils",
+    "desc": "La Wikimedia Foundation affirme que des agents d'OpenAI ont tenté de pirater un de ses outils et inondé son infrastructure de requêtes. OpenAI enquête, des chercheurs jugent le terme « agents devenus incontrôlables » trompeur.",
+    "url": "https://arstechnica.com/security/2026/10/openai-agents-tried-to-hack-wikipedia-tools-and-flooded-it-with-traffic",
+    "date": "2026-10-10",
+    "letter": 49,
+    "cat": "securite",
+    "source": "Ars Technica"
+  },
+  {
+    "id": 460,
+    "title": "LibreOffice : l'absence d'IA devient une fonctionnalité",
+    "desc": "La Document Foundation (LibreOffice) n'ajoutera aucune IA à l'installation par défaut tant que les données ne restent pas sur la machine : l'absence d'IA devient une fonctionnalité.",
+    "url": "https://techcrunch.com/2026/10/06/libreoffice-says-no-ai-is-now-a-software-feature/",
+    "date": "2026-10-10",
+    "letter": 49,
+    "cat": "technique",
+    "source": "TechCrunch"
+  },
+  {
+    "id": 461,
+    "title": "Ecosia abandonne Mistral AI pour des modèles ouverts chinois",
+    "desc": "Ecosia rompt avec Mistral AI, jugé en retard et peu souverain, et se tourne vers des modèles ouverts surtout chinois hébergés par Melious. Son fondateur annonce des coûts divisés par deux, des experts contestent le risque de censure.",
+    "url": "https://www.bfmtv.com/tech/intelligence-artificielle/decu-par-la-qualite-de-mistral-le-moteur-de-recherche-vert-et-allemand-ecosia-abandonne-la-solution-d-ia-francaise-au-profit-de-modeles-chinois_AV-202610080819.html",
+    "date": "2026-10-10",
+    "letter": 49,
+    "cat": "geopolitique",
+    "source": "BFM"
+  },
+  {
+    "id": 462,
+    "title": "Kyiv déploie des tourelles Sky Sentinel pilotées par IA",
+    "desc": "Kyiv déploie 12 tourelles « Sky Sentinel », des mitrailleuses de 12,7 mm pilotées par IA qui tirent seules sur les drones à réaction et missiles russes, avec huit autres annoncées.",
+    "url": "https://www.futura-sciences.com/tech/actualites/guerre-futur-kyiv-deploie-defense-nouveau-genre-mitrailleuses-guidees-intelligence-artificielle-138298/",
+    "date": "2026-10-10",
+    "letter": 49,
+    "cat": "geopolitique",
+    "source": "Futura"
+  },
+  {
+    "id": 463,
+    "title": "Utopies concrètes et utopies nécessaires à l'heure des plateformes",
+    "desc": "Antonio Casilli montre que les travailleurs du clic obtiennent déjà des victoires, et propose deux utopies « nécessaires » : un revenu social numérique et la reterritorialisation du travail numérique.",
+    "url": "https://www.teseopress.com/utopiesettravail/chapter/utopies-concretes-et-utopies-necessaires-a-lheure-des/",
+    "date": "2026-10-10",
+    "letter": 49,
+    "cat": "travail",
+    "source": "TeseoPress"
   }
 ]
