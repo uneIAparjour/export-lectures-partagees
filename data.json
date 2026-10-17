@@ -4628,5 +4628,145 @@
     "letter": 49,
     "cat": "travail",
     "source": "TeseoPress"
+  },
+   {
+    "id": 464,
+    "title": "Build or surrender",
+    "desc": "Arthur Mensch, PDG de Mistral, plaide pour que l'Europe construise ses propres modèles de frontière plutôt que de s'en remettre aux acteurs américains et chinois.",
+    "url": "https://www.linkedin.com/pulse/build-submit-arthur-mensch-4yt5e/",
+    "date": "2026-10-17",
+    "letter": 50,
+    "cat": "geopolitique",
+    "source": "LinkedIn (Arthur Mensch)"
+  },
+  {
+    "id": 465,
+    "title": "IA : un conflit de classe",
+    "desc": "Hubert Guillaud défend l'idée que le rapport à l'IA devient un rapport de classe, entre enthousiasme en haut et colère chez ceux qui subissent ces outils.",
+    "url": "https://danslesalgorithmes.net/2026/10/15/ia-un-conflit-de-classe/",
+    "date": "2026-10-17",
+    "letter": 50,
+    "cat": "ethique",
+    "source": "Dans les algorithmes (Hubert Guillaud)"
+  },
+  {
+    "id": 466,
+    "title": "An Open Letter on AI and Cybersecurity from the Scientific Community",
+    "desc": "489 chercheurs, dont Yoshua Bengio et Geoffrey Hinton, demandent un confinement renforcé des modèles aux capacités cyber et un organisme international de suivi des incidents.",
+    "url": "https://ai-security-letter.org/",
+    "date": "2026-10-17",
+    "letter": 50,
+    "cat": "securite",
+    "source": "ai-security-letter.org"
+  },
+  {
+    "id": 467,
+    "title": "Plus de 200 chercheurs en IA réclament des « changements immédiats »",
+    "desc": "Article du Monde sur cette lettre ouverte, publié alors qu'elle comptait 225 signataires.",
+    "url": "https://www.lemonde.fr/pixels/article/2026/10/14/ia-plus-de-200-chercheurs-reclament-des-changements-immediats-pour-prevenir-des-incidents-majeurs_6793717_4408996.html",
+    "date": "2026-10-17",
+    "letter": 50,
+    "cat": "securite",
+    "source": "Le Monde"
+  },
+  {
+    "id": 468,
+    "title": "Désinformation russe : le nombre de faux reportages se faisant passer pour des médias reconnus explose de 850 %",
+    "desc": "Selon NewsGuard, les faux reportages russes imitant des médias reconnus passent de 44 à 421 en un an, avec l'IA comme accélérateur et les chatbots comme cible.",
+    "url": "https://www.msn.com/fr-fr/actualite/other/d%C3%A9sinformation-russe-le-nombre-de-faux-reportages-se-faisant-passer-pour-des-m%C3%A9dias-reconnus-explose-de-850/ar-AA2d7EHg",
+    "date": "2026-10-17",
+    "letter": 50,
+    "cat": "securite",
+    "source": "Le Figaro (via MSN)"
+  },
+  {
+    "id": 469,
+    "title": "Le New York Times, l'AFP et plus de 80 médias et organisations s'unissent face aux géants de l'IA",
+    "desc": "Le New York Times, The Economist et l'AFP rejoignent SPUR, coalition de près de 80 médias qui veut encadrer l'usage de leurs contenus par les IA.",
+    "url": "https://siecledigital.fr/2026/10/13/le-new-york-times-lafp-et-80-medias-veulent-faire-payer-leurs-contenus-aux-geants-de-lia/",
+    "date": "2026-10-17",
+    "letter": 50,
+    "cat": "creation",
+    "source": "Siècle Digital"
+  },
+  {
+    "id": 470,
+    "title": "Du code aux graphismes, Epic Games veut confier la création de son jeu Disney à l'IA",
+    "desc": "Epic Games veut confier à l'IA le code et les graphismes de son jeu de tir avec Disney, repoussé sans nouvelle date.",
+    "url": "https://www.lebigdata.fr/du-code-aux-graphismes-epic-games-veut-confier-la-creation-de-son-jeu-disney-a-lia",
+    "date": "2026-10-17",
+    "letter": 50,
+    "cat": "creation",
+    "source": "Le Big Data"
+  },
+  {
+    "id": 471,
+    "title": "La consultation des principaux sites d'information a chuté de près de 25 % en un an",
+    "desc": "Selon l'ACPM, le trafic des 40 principaux sites d'information français recule d'environ 21 % en un an, avec les aperçus IA de Google pointés du doigt.",
+    "url": "https://next.ink/260957/la-consultation-des-principaux-sites-dinformation-a-chute-de-pres-de-25-en-un-an/",
+    "date": "2026-10-17",
+    "letter": 50,
+    "cat": "creation",
+    "source": "Next"
+  },
+  {
+    "id": 472,
+    "title": "Un dictionnaire pour l'IA générative",
+    "desc": "Fred Cavazza propose un dictionnaire pour s'y retrouver entre chatbots, agents, orchestrateurs, coéquipiers et assistants.",
+    "url": "https://fredcavazza.net/2026/10/13/un-dictionnaire-pour-lia-generative/",
+    "date": "2026-10-17",
+    "letter": 50,
+    "cat": "technique",
+    "source": "Fred Cavazza"
+  },
+  {
+    "id": 473,
+    "title": "Rapport d'information sur l'empreinte environnementale de l'intelligence artificielle",
+    "desc": "Rapport du Sénat : l'empreinte de l'IA se déplace vers les centres de données, avec 16 recommandations dont un écoscore pour les grands modèles de langage.",
+    "url": "https://www.senat.fr/rap/r25-949/r25-9491.pdf",
+    "date": "2026-10-17",
+    "letter": 50,
+    "cat": "technique",
+    "source": "Sénat"
+  },
+  {
+    "id": 474,
+    "title": "J'ai testé les 12 clones gratuits d'Adobe et de Microsoft",
+    "desc": "Korben teste les 12 Crafting Apps d'ArtCraft, des clones open source de Photoshop, Word ou AutoCAD écrits avec l'aide de l'IA, et discute les risques de droit d'auteur.",
+    "url": "https://korben.info/crafting-apps-artcraft.html",
+    "date": "2026-10-17",
+    "letter": 50,
+    "cat": "technique",
+    "source": "Korben"
+  },
+  {
+    "id": 475,
+    "title": "L'IA à l'école, tour du monde de la rentrée 2026",
+    "desc": "Veille de 33 signaux sur l'IA à l'école dans 18 pays, avec un fil rouge : distinguer ce que l'élève produit de ce qu'il apprend.",
+    "url": "https://ia.rochane.fr/veille-ia-rentree-2026",
+    "date": "2026-10-17",
+    "letter": 50,
+    "cat": "education",
+    "source": "Rochane Kherbouche"
+  },
+  {
+    "id": 476,
+    "title": "Boussole pour la gouvernance de l'IA et de la transition numérique dans l'éducation",
+    "desc": "Le Conseil de l'Europe propose une boussole pour gouverner l'IA et la transition numérique en éducation en gardant droits humains et démocratie au centre.",
+    "url": "https://www.coe.int/fr/web/education/-/compass-for-governance-of-ai-digital-transformation-in-education",
+    "date": "2026-10-17",
+    "letter": 50,
+    "cat": "education",
+    "source": "Conseil de l'Europe"
+  },
+  {
+    "id": 477,
+    "title": "Les adolescents face à l'information",
+    "desc": "Étude e-Enfance / 3018 : plus d'un adolescent sur quatre utilise une IA pour vérifier une information, et 4 sur 10 remettent rarement en question ses réponses.",
+    "url": "https://www.linkedin.com/posts/les-adolescents-face-%C3%A0-linformation-ugcPost-7515702083472216064-hFNR/",
+    "date": "2026-10-17",
+    "letter": 50,
+    "cat": "etudes",
+    "source": "LinkedIn (e-Enfance / 3018)"
   }
 ]
