@@ -4768,5 +4768,245 @@
     "letter": 50,
     "cat": "etudes",
     "source": "LinkedIn (e-Enfance / 3018)"
+  },
+  {
+    "id": 478,
+    "title": "France Travail expérimente une IA générative de contrôle",
+    "desc": "France Travail is developing a generative AI to prepare job-search checks, aiming for 1.5 million checks in 2027 with the same staff.",
+    "url": "https://www.laquadrature.net/2026/10/23/france-travail-experimente-une-ia-generative-de-controle/",
+    "date": "2026-10-24",
+    "letter": 51,
+    "cat": "ethique",
+    "source": "La Quadrature du Net"
+  },
+  {
+    "id": 479,
+    "title": "Superviser des agents IA demande des compétences de manager",
+    "desc": "Delegating, taking back control without losing situational awareness, answering for results you did not produce: supervising AI agents requires management skills.",
+    "url": "https://www.linkedin.com/posts/marie-lacroix-93255b87_superviser-des-agents-ia-demande-des-comp%C3%A9tences-share-7518626048872472576-pYHT/",
+    "date": "2026-10-24",
+    "letter": 51,
+    "cat": "travail",
+    "source": "LinkedIn (Marie Lacroix)"
+  },
+  {
+    "id": 480,
+    "title": "Les 4 mirages cognitifs de l’IA",
+    "desc": "Four cognitive mirages of AI at work: efficiency gained, agency regained, performance augmented, social ties reprioritised.",
+    "url": "https://www.linkedin.com/posts/marie-lacroix-93255b87_mirages-cognitifs-de-lia-ugcPost-7517906029863403520-IiQx/",
+    "date": "2026-10-24",
+    "letter": 51,
+    "cat": "travail",
+    "source": "LinkedIn (Marie Lacroix)"
+  },
+  {
+    "id": 481,
+    "title": "#24 - Qui dessine l’image du travail bien fait ?",
+    "desc": "Agent evaluation benchmarks reduce good work to what can be verified: those who write the evidence influence how work will be done tomorrow.",
+    "url": "https://www.linkedin.com/pulse/24-qui-dessine-limage-du-travail-bien-fait-arthur-sarazin-phd-w0hse/",
+    "date": "2026-10-24",
+    "letter": 51,
+    "cat": "travail",
+    "source": "LinkedIn (Arthur Sarazin, Le bateau ivre des données)"
+  },
+  {
+    "id": 482,
+    "title": "Pink Panther: the viral 17 October images were created by AI",
+    "desc": "The viral Pink Panther images from the 17 October protests were created or altered with AI, some from real photos taken in Greece (2010), Armenia (2015) and Kenya (2025).",
+    "url": "https://www.instagram.com/p/DetonCCDmCF/",
+    "date": "2026-10-24",
+    "letter": 51,
+    "cat": "securite",
+    "source": "Interlude (Instagram)"
+  },
+  {
+    "id": 483,
+    "title": "L’IA de Google va-t-elle tuer la presse française ?",
+    "desc": "Since July 2026, Google AI Overviews answers queries directly and traffic to French news sites is falling; two press executives call for copyright payment.",
+    "url": "https://www.radiofrance.fr/franceinter/podcasts/le-debat/le-debat-de-la-grand-matinale-du-jeudi-22-octobre-2026-8212695",
+    "date": "2026-10-24",
+    "letter": 51,
+    "cat": "creation",
+    "source": "France Inter"
+  },
+  {
+    "id": 484,
+    "title": "OpenAI, the leading private funder of US newsrooms",
+    "desc": "OpenAI is the leading private funder of US newsrooms ($25 million) while arguing in court for the right to use their content without paying; Richard Tofel advises taking the money, but with open eyes.",
+    "url": "https://www.theatlantic.com/ideas/2026/10/newsrooms-journalism-openai-funding/689043/",
+    "date": "2026-10-24",
+    "letter": 51,
+    "cat": "creation",
+    "source": "The Atlantic"
+  },
+  {
+    "id": 485,
+    "title": "Rédactions, attention avant d’accepter l’argent d’OpenAI !",
+    "desc": "Éric Scherer relays The Atlantic article: tell the public where the money comes from and investigate these giants as keenly as one adopts their tools.",
+    "url": "https://www.linkedin.com/posts/ericscherer_r%C3%A9dactions-attention-avant-daccepter-largent-share-7517152015219736576-VS-Q/",
+    "date": "2026-10-24",
+    "letter": 51,
+    "cat": "creation",
+    "source": "LinkedIn (Éric Scherer)"
+  },
+  {
+    "id": 486,
+    "title": "In Sète, the city hall refuses AI-generated posters",
+    "desc": "In Sète, the city hall, which funds the printing of 200,000 cultural and community posters a year, now refuses AI-generated ones to protect human creation.",
+    "url": "https://www.instagram.com/reel/DerGjDkkkEI/",
+    "date": "2026-10-24",
+    "letter": 51,
+    "cat": "creation",
+    "source": "France 3 Occitanie (Instagram)"
+  },
+  {
+    "id": 487,
+    "title": "Les affiches générées par IA : vers une nouvelle norme graphique ?",
+    "desc": "Julie Lairesse asks whether AI-generated posters are becoming a new graphic norm: not a chosen norm, but a risk of a de facto one through repetition.",
+    "url": "https://theconversation.com/les-affiches-generees-par-ia-vers-une-nouvelle-norme-graphique-292480",
+    "date": "2026-10-24",
+    "letter": 51,
+    "cat": "creation",
+    "source": "The Conversation"
+  },
+  {
+    "id": 488,
+    "title": "Patch the Planet : réponse mondiale aux failles critiques découvertes par les agents",
+    "desc": "OpenAI presents Patch the Planet, its coordinated response to critical flaws found by AI agents, built on its Daybreak cybersecurity programme.",
+    "url": "https://openai.com/fr-FR/index/coordinated-disclosure-of-critical-vulnerabilities/",
+    "date": "2026-10-24",
+    "letter": 51,
+    "cat": "technique",
+    "source": "OpenAI"
+  },
+  {
+    "id": 489,
+    "title": "Project Glasswing: Securing critical software for the AI era",
+    "desc": "Anthropic reserves Claude Mythos Preview for partners and maintainers to secure critical software, with up to $100 million in usage credits.",
+    "url": "https://www.anthropic.com/glasswing",
+    "date": "2026-10-24",
+    "letter": 51,
+    "cat": "technique",
+    "source": "Anthropic"
+  },
+  {
+    "id": 490,
+    "title": "Guérilla, mener la bataille culturelle de l’intelligence artificielle",
+    "desc": "Christophe Payet defends reclaiming AI through open source, local models and artists rather than boycotting it.",
+    "url": "https://www.youtube.com/watch?v=5iaPIk6hH9A",
+    "date": "2026-10-24",
+    "letter": 51,
+    "cat": "philosophie",
+    "source": "L’ADN (YouTube)"
+  },
+  {
+    "id": 491,
+    "title": "Swarm Intelligence",
+    "desc": "Kevin Kelly imagines an invisible AI in fifty years, a swarm of small intelligences with no single person responsible, to be managed like a garden.",
+    "url": "https://kevinkelly.substack.com/p/swarm-intelligence",
+    "date": "2026-10-24",
+    "letter": 51,
+    "cat": "philosophie",
+    "source": "Kevin Kelly (Substack)"
+  },
+  {
+    "id": 492,
+    "title": "L’IA va disparaître. Et personne ne sera aux commandes.",
+    "desc": "Éric Scherer relays Kevin Kelly’s text on an invisible AI with no one in charge when something goes wrong.",
+    "url": "https://www.linkedin.com/posts/ericscherer_lia-va-dispara%C3%AEtre-et-personne-ne-sera-share-7518227517586063360-M69e/",
+    "date": "2026-10-24",
+    "letter": 51,
+    "cat": "philosophie",
+    "source": "LinkedIn (Éric Scherer)"
+  },
+  {
+    "id": 493,
+    "title": "Pharmacology of computational automata: from generative AI to contributive recommendation, toward future technologies",
+    "desc": "Anne Alombert analyses generative AI as a new pharmakon, both remedy and poison, and proposes the concept of “extractive AI”.",
+    "url": "https://journals.ku.edu/aion/article/view/25528",
+    "date": "2026-10-24",
+    "letter": 51,
+    "cat": "philosophie",
+    "source": "Aion (University of Kansas)"
+  },
+  {
+    "id": 494,
+    "title": "L’IA peut-elle nous échapper ?",
+    "desc": "Victor Storchan finds control and alignment tools outpaced; Anne Alombert denounces the anthropomorphism that hides decision-makers’ power and calls for democratic governance.",
+    "url": "https://www.radiofrance.fr/franceculture/podcasts/l-invite-e-des-matins/l-ia-peut-elle-nous-echapper-3849930",
+    "date": "2026-10-24",
+    "letter": 51,
+    "cat": "philosophie",
+    "source": "France Culture"
+  },
+  {
+    "id": 495,
+    "title": "How to Design Around Cognitive Offloading",
+    "desc": "Two minutes of self-assessment before an AI responds change learning (1,176 students); Philippa Hardman draws design principles from it.",
+    "url": "https://drphilippahardman.substack.com/p/how-to-design-around-cognitive-offloading",
+    "date": "2026-10-24",
+    "letter": 51,
+    "cat": "education",
+    "source": "Dr Phil’s Newsletter"
+  },
+  {
+    "id": 496,
+    "title": "Deux minutes",
+    "desc": "Mickaël Bertrand takes from Philippa Hardman’s synthesis that two minutes of self-assessment before AI feedback change learning.",
+    "url": "https://www.linkedin.com/posts/mickaelbertrand_deux-minutes-dans-une-exp%C3%A9rimentation-share-7519067119150551040-NpgO/",
+    "date": "2026-10-24",
+    "letter": 51,
+    "cat": "education",
+    "source": "LinkedIn (Mickaël Bertrand)"
+  },
+  {
+    "id": 497,
+    "title": "L’IA rend-elle les élèves moins capables de penser ?",
+    "desc": "Two teachers, in Australia and the United States, show that a framework makes the difference: AI reveals intellectual laziness more than it creates it.",
+    "url": "https://sydologie.substack.com/p/lia-rend-elle-les-eleves-moins-capables-cd9",
+    "date": "2026-10-24",
+    "letter": 51,
+    "cat": "education",
+    "source": "Sydologie / Le Bahut (Substack)"
+  },
+  {
+    "id": 498,
+    "title": "L’IA rend-elle les élèves moins capables de penser ?",
+    "desc": "LinkedIn relay of the Sydologie newsletter on AI and students’ ability to think for themselves.",
+    "url": "https://www.linkedin.com/posts/tirotg_enseignants-ia-espritcritique-share-7518039285669957632-H_4_/",
+    "date": "2026-10-24",
+    "letter": 51,
+    "cat": "education",
+    "source": "LinkedIn (Gérarld Tirot)"
+  },
+  {
+    "id": 499,
+    "title": "Grandir avec l’IA générative",
+    "desc": "78% of 11-17-year-olds use a general-purpose AI, 92% of young users say they spend too much time on it, and 42% of parents feel unsupported.",
+    "url": "https://www.interface-eu.org/publications/adolescents-ia-generative-protection-mineurs",
+    "date": "2026-10-24",
+    "letter": 51,
+    "cat": "education",
+    "source": "interface"
+  },
+  {
+    "id": 500,
+    "title": "Résultats d’une enquête récente sur les usages de l’IA chez les jeunes",
+    "desc": "Michael Zeyringer relays the YouGov survey for interface of 970 teenagers and 1,138 parents on generative AI use.",
+    "url": "https://www.linkedin.com/posts/michael-zeyringer-822837151_r%C3%A9sultats-dune-enqu%C3%AAte-r%C3%A9cente-sur-les-usages-share-7519049491015184385-gf53/",
+    "date": "2026-10-24",
+    "letter": 51,
+    "cat": "education",
+    "source": "LinkedIn (Michael Zeyringer)"
+  },
+  {
+    "id": 501,
+    "title": "Supporting researchers to disclose AI use with confidence",
+    "desc": "74% of 2,600 researchers do not know which AI use to disclose and 44% fear that disclosing it would harm how their work is seen; OUP has updated its rules.",
+    "url": "https://corp.oup.com/news/supporting-researchers-to-disclose-ai-use-with-confidence/",
+    "date": "2026-10-24",
+    "letter": 51,
+    "cat": "etudes",
+    "source": "Oxford University Press"
   }
 ]
