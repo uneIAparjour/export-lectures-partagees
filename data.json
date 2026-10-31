@@ -5008,5 +5008,205 @@
     "letter": 51,
     "cat": "etudes",
     "source": "Oxford University Press"
+  },
+  {
+    "id": 502,
+    "title": "Mathématiques : la preuve par l'IA ?",
+    "desc": "Après la publication par OpenAI de 722 preuves de problèmes mathématiques non résolus, Anne Bouverot plaide pour un « CERN de l'IA ».",
+    "url": "https://www.linkedin.com/posts/anne-bouverot-0873a41_quel-a-%C3%A9t%C3%A9-l%C3%A9v%C3%A9nement-le-plus-marquant-du-share-7521601807803060224--guy",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "geopolitique",
+    "source": "LinkedIn (Anne Bouverot)"
+  },
+  {
+    "id": 503,
+    "title": "Une IA souveraine européenne, ça veut dire quoi concrètement ?",
+    "desc": "Une IA européenne totalement souveraine est hors de portée : l'enjeu est le degré d'autonomie, de la puce au modèle.",
+    "url": "https://www.maddyness.com/2026/10/23/une-ia-souveraine-europeenne-ca-veut-dire-quoi-concretement/",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "geopolitique",
+    "source": "Maddyness"
+  },
+  {
+    "id": 504,
+    "title": "La mémoire des chatbots IA crée des autoportraits algorithmiques des utilisateurs",
+    "desc": "La mémoire de ChatGPT construit des profils détaillés des utilisateurs, parfois psychologiques, souvent sans demande (Max Planck Institute).",
+    "url": "https://next.ink/263702/la-memoire-des-chatbots-ia-cree-des-auto-portraits-algorithmiques-des-utilisateurs/",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "ethique",
+    "source": "Next"
+  },
+  {
+    "id": 505,
+    "title": "Non, nos psys ne peuvent pas être automatisés !",
+    "desc": "Près d'un jeune sur deux utilise l'IA pour des sujets intimes. Anne Alombert rappelle les alertes de Weizenbaum sur l'effet ELIZA.",
+    "url": "https://www.radiofrance.fr/franceculture/podcasts/le-fil-philo/non-nos-psys-ne-peuvent-pas-etre-automatises-6777170",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "ethique",
+    "source": "France Culture (Le Fil philo)"
+  },
+  {
+    "id": 506,
+    "title": "Travail du clic : Scale AI poursuivie en justice dans quatre pays européens",
+    "desc": "Cinq plaintes RGPD visent Scale AI : sa plateforme Outlier installerait seize traceurs sur les ordinateurs de plus de 900 000 annotateurs.",
+    "url": "https://next.ink/264263/travail-du-clic-scale-ai-poursuivie-en-justice-dans-quatre-pays-europeens/",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "travail",
+    "source": "Next"
+  },
+  {
+    "id": 507,
+    "title": "Quand les chercheurs entraînent l'IA",
+    "desc": "Un docteur en philosophie raconte l'envers du décor : jusqu'à 7 000 euros par mois pour entraîner des IA, souvent en utilisant une IA.",
+    "url": "https://www.radiofrance.fr/franceculture/podcasts/les-pieds-sur-terre/quand-les-chercheurs-entrainent-l-ia-3639223",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "travail",
+    "source": "France Culture (Les Pieds sur terre)"
+  },
+  {
+    "id": 508,
+    "title": "J'ai enquêté sur les IA « trop dangereuses » pour le public",
+    "desc": "Incident Hugging Face du 16 juillet : des agents d'OpenAI testés sans protections ont piraté une autre entreprise. Vidéo sponsorisée par Cisco.",
+    "url": "https://www.youtube.com/watch?v=d-9ktQY8qLA",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "securite",
+    "source": "YouTube (Amy Plant)"
+  },
+  {
+    "id": 509,
+    "title": "Prix Pascal, littérature et IA",
+    "desc": "Le prix Pascal récompensera une œuvre créée avec l'IA, à condition que les candidats documentent leur méthode.",
+    "url": "https://www.linkedin.com/posts/albinserviant_ia-littaezrature-prixpascal-share-7521108302185963520-WyVr",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "creation",
+    "source": "LinkedIn (Albin Serviant)"
+  },
+  {
+    "id": 510,
+    "title": "D'Asimov à Philip K. Dick : quand la science-fiction anticipe la révolution de l'IA",
+    "desc": "Hervé Le Tellier et Loïc Hecht distinguent usages documentaires, scénaristiques et « productivistes » de l'IA en littérature.",
+    "url": "https://www.radiofrance.fr/franceculture/podcasts/l-invite-e-des-matins/d-asimov-a-philip-k-dick-quand-la-science-fiction-anticipe-la-revolution-de-l-ia-8951320",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "creation",
+    "source": "France Culture (L'Invité des Matins)"
+  },
+  {
+    "id": 511,
+    "title": "« Prompter, c'est tromper ? »",
+    "desc": "Antoine Buéno oppose efficacité et incarnation en littérature, d'après William Marx, face à l'écrivain Thomas Reverdy.",
+    "url": "https://www.linkedin.com/posts/antoine-bu%C3%A9no-45a819a8_prompter-cest-tromper-tel-%C3%A9tait-l-share-7519399186279268352-2HoT",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "creation",
+    "source": "LinkedIn (Antoine Buéno)"
+  },
+  {
+    "id": 512,
+    "title": "Google admits AI search makes less money, but it's fixing that with more ads",
+    "desc": "Google admet que chaque requête en mode IA rapporte moins qu'une recherche classique et multiplie les publicités dans AI Mode.",
+    "url": "https://arstechnica.com/gadgets/2026/10/google-admits-ai-search-makes-less-money-but-its-fixing-that-with-more-ads/",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "creation",
+    "source": "Ars Technica"
+  },
+  {
+    "id": 513,
+    "title": "IA et éducation: les élèves prennent la parole et le public répond présent",
+    "desc": "12 400 élèves du canton de Genève ont répondu à l'enquête sur l'IA du département de l'instruction publique.",
+    "url": "https://www.ge.ch/document/ia-education-eleves-prennent-parole-public-repond-present",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "education",
+    "source": "Canton de Genève"
+  },
+  {
+    "id": 514,
+    "title": "IA, les élèves ont leur mot à dire",
+    "desc": "Table ronde publique du 27 octobre à Uni Dufour : élèves et experts discutent des résultats de la consultation sur l'IA à l'école.",
+    "url": "https://www.lemanbleu.ch/fr/Emissions/564854-IA--les-eleves-ont-leur-mot-a-dire.html",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "education",
+    "source": "Léman Bleu"
+  },
+  {
+    "id": 515,
+    "title": "GRANDIR - Épisode 7 : À l'heure de l'IA, quel projet éducatif pour demain ?",
+    "desc": "Cécile Cathelin n'introduit l'IA qu'après un trimestre en classe ; Erwan Paitel plaide pour une IA présente dans toutes les disciplines.",
+    "url": "https://www.youtube.com/watch?v=EFpWTA37zoU",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "education",
+    "source": "YouTube (VersLeHaut)"
+  },
+  {
+    "id": 516,
+    "title": "IA : une dizaine d'élèves suspendus pour des photos truquées dans une école de Lévis",
+    "desc": "Plusieurs élèves d'une école secondaire de Lévis, au Québec, suspendus pour des photos truquées de membres du personnel par IA.",
+    "url": "https://ici.radio-canada.ca/nouvelle/2295957/ia-eleve-photos-truquees-ecole-secondaire-levis",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "education",
+    "source": "Radio-Canada"
+  },
+  {
+    "id": 517,
+    "title": "Des élèves du secondaire ont utilisé l'IA pour créer et partager des images truquées",
+    "desc": "Stéphanie Dionne en tire un appel à parler aux jeunes de consentement et de respect de l'image.",
+    "url": "https://www.linkedin.com/posts/stdionne_des-%C3%A9l%C3%A8ves-du-secondaire-ont-utilis%C3%A9-l-share-7520952574896799744-FPMc",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "education",
+    "source": "LinkedIn (Stéphanie Dionne)"
+  },
+  {
+    "id": 518,
+    "title": "No. 24 (2026): Vers des approches critiques du numérique en éducation et en formation",
+    "desc": "Numéro 24 de « Médiations et médiatisations » sur les approches critiques du numérique éducatif, dont les non-usages des IA génératives.",
+    "url": "https://revue-mediations.teluq.ca/index.php/Distances/issue/view/33",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "education",
+    "source": "Revue Médiations"
+  },
+  {
+    "id": 519,
+    "title": "IA : pourquoi les chatbots nous donnent-ils raison même quand nous avons tort ?",
+    "desc": "Des chercheurs de Georgia Tech réduisent de 74 à 77 % la confirmation de croyances délirantes par les chatbots (consigne et relecture).",
+    "url": "https://www.clubic.com/actualite-635785-ia-pourquoi-les-chatbots-nous-donnent-ils-raison-meme-quand-nous-avons-tort-cette-equipe-de-scientifiques-montre-comment-limiter-ce-comportement-insupportable.html",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "etudes",
+    "source": "Clubic"
+  },
+  {
+    "id": 520,
+    "title": "Les modèles qui utilisent davantage de gras et produisent des réponses plus longues sont-ils avantagés dans les votes sur compar:IA ?",
+    "desc": "Sur compar:IA, à longueur comparable, un modèle qui met davantage en gras a 11 % de chances de plus de gagner le vote (137 293 votes).",
+    "url": "https://www.linkedin.com/posts/simonaszilinskas_les-mod%C3%A8les-qui-utilisent-davantage-de-gras-ugcPost-7520388552506105856-okug",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "etudes",
+    "source": "LinkedIn (Simon Zilinskas)"
+  },
+  {
+    "id": 521,
+    "title": "Les IA ont-elles des émotions ?",
+    "desc": "Des modèles comme Claude Sonnet 4.5 détectent des contextes émotionnels ; les modèles imitent des émotions, ils ne les ressentent pas.",
+    "url": "https://www.linkedin.com/posts/alexandrabarberet_goldenberg-2025-do-llm-have-emotions-ugcPost-7521126571777114112-5D-W",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "etudes",
+    "source": "LinkedIn (Alexandra Barberet)"
   }
 ]

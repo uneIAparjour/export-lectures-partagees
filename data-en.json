@@ -5008,5 +5008,205 @@
     "letter": 51,
     "cat": "etudes",
     "source": "Oxford University Press"
+  },
+  {
+    "id": 502,
+    "title": "Mathematics: proof by AI?",
+    "desc": "After OpenAI published 722 proofs of unsolved problems, Anne Bouverot calls for an “AI CERN”.",
+    "url": "https://www.linkedin.com/posts/anne-bouverot-0873a41_quel-a-%C3%A9t%C3%A9-l%C3%A9v%C3%A9nement-le-plus-marquant-du-share-7521601807803060224--guy",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "geopolitique",
+    "source": "LinkedIn (Anne Bouverot)"
+  },
+  {
+    "id": 503,
+    "title": "A sovereign European AI: what does it concretely mean?",
+    "desc": "A fully sovereign European AI is out of reach: what matters is the degree of autonomy, from chips to models.",
+    "url": "https://www.maddyness.com/2026/10/23/une-ia-souveraine-europeenne-ca-veut-dire-quoi-concretement/",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "geopolitique",
+    "source": "Maddyness"
+  },
+  {
+    "id": 504,
+    "title": "Chatbot memory creates algorithmic self-portraits of users",
+    "desc": "ChatGPT's memory builds detailed user profiles, sometimes psychological and often unrequested, according to the Max Planck Institute.",
+    "url": "https://next.ink/263702/la-memoire-des-chatbots-ia-cree-des-auto-portraits-algorithmiques-des-utilisateurs/",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "ethique",
+    "source": "Next"
+  },
+  {
+    "id": 505,
+    "title": "No, our therapists cannot be automated!",
+    "desc": "Nearly one young person in two uses AI for intimate topics. Anne Alombert recalls Weizenbaum's warnings about the ELIZA effect.",
+    "url": "https://www.radiofrance.fr/franceculture/podcasts/le-fil-philo/non-nos-psys-ne-peuvent-pas-etre-automatises-6777170",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "ethique",
+    "source": "France Culture (Le Fil philo)"
+  },
+  {
+    "id": 506,
+    "title": "Click work: Scale AI sued in four European countries",
+    "desc": "Five GDPR complaints target Scale AI: its Outlier platform reportedly places sixteen trackers on the computers of 900,000+ annotators.",
+    "url": "https://next.ink/264263/travail-du-clic-scale-ai-poursuivie-en-justice-dans-quatre-pays-europeens/",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "travail",
+    "source": "Next"
+  },
+  {
+    "id": 507,
+    "title": "When researchers train AI",
+    "desc": "A philosophy PhD describes the other side: up to 7,000 euros a month training AIs, often using an AI to do so.",
+    "url": "https://www.radiofrance.fr/franceculture/podcasts/les-pieds-sur-terre/quand-les-chercheurs-entrainent-l-ia-3639223",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "travail",
+    "source": "France Culture (Les Pieds sur terre)"
+  },
+  {
+    "id": 508,
+    "title": "I investigated AIs “too dangerous” for the public",
+    "desc": "Hugging Face incident of July 16: OpenAI agents tested without safeguards hacked another company. Video sponsored by Cisco.",
+    "url": "https://www.youtube.com/watch?v=d-9ktQY8qLA",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "securite",
+    "source": "YouTube (Amy Plant)"
+  },
+  {
+    "id": 509,
+    "title": "Prix Pascal, literature and AI",
+    "desc": "The Pascal Prize will reward a work created with AI, provided candidates document their method.",
+    "url": "https://www.linkedin.com/posts/albinserviant_ia-littaezrature-prixpascal-share-7521108302185963520-WyVr",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "creation",
+    "source": "LinkedIn (Albin Serviant)"
+  },
+  {
+    "id": 510,
+    "title": "From Asimov to Philip K. Dick: when science fiction anticipates the AI revolution",
+    "desc": "Hervé Le Tellier and Loïc Hecht distinguish documentary, screenwriting and “productivist” uses of AI in literature.",
+    "url": "https://www.radiofrance.fr/franceculture/podcasts/l-invite-e-des-matins/d-asimov-a-philip-k-dick-quand-la-science-fiction-anticipe-la-revolution-de-l-ia-8951320",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "creation",
+    "source": "France Culture (L'Invité des Matins)"
+  },
+  {
+    "id": 511,
+    "title": "“Is prompting deceiving?”",
+    "desc": "Antoine Buéno contrasts efficiency and embodiment in literature, drawing on William Marx, facing writer Thomas Reverdy.",
+    "url": "https://www.linkedin.com/posts/antoine-bu%C3%A9no-45a819a8_prompter-cest-tromper-tel-%C3%A9tait-l-share-7519399186279268352-2HoT",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "creation",
+    "source": "LinkedIn (Antoine Buéno)"
+  },
+  {
+    "id": 512,
+    "title": "Google admits AI search makes less money, but it's fixing that with more ads",
+    "desc": "Google admits each AI Mode query earns less than a classic search and is adding more ads to AI Mode.",
+    "url": "https://arstechnica.com/gadgets/2026/10/google-admits-ai-search-makes-less-money-but-its-fixing-that-with-more-ads/",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "creation",
+    "source": "Ars Technica"
+  },
+  {
+    "id": 513,
+    "title": "AI and education: pupils speak up and the public responds",
+    "desc": "12,400 pupils in the canton of Geneva answered the education department's survey on AI.",
+    "url": "https://www.ge.ch/document/ia-education-eleves-prennent-parole-public-repond-present",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "education",
+    "source": "Canton de Genève"
+  },
+  {
+    "id": 514,
+    "title": "AI: pupils have their say",
+    "desc": "Public round table on 27 October at Uni Dufour: pupils and experts discuss the results of the consultation on AI at school.",
+    "url": "https://www.lemanbleu.ch/fr/Emissions/564854-IA--les-eleves-ont-leur-mot-a-dire.html",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "education",
+    "source": "Léman Bleu"
+  },
+  {
+    "id": 515,
+    "title": "GRANDIR - Episode 7: In the age of AI, what educational project for tomorrow?",
+    "desc": "Cécile Cathelin introduces AI only after a term in class; Erwan Paitel argues for AI across all subjects.",
+    "url": "https://www.youtube.com/watch?v=EFpWTA37zoU",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "education",
+    "source": "YouTube (VersLeHaut)"
+  },
+  {
+    "id": 516,
+    "title": "AI: about ten pupils suspended for faked photos at a school in Lévis",
+    "desc": "Several pupils at a secondary school in Lévis, Quebec, suspended for AI-faked photos of staff members.",
+    "url": "https://ici.radio-canada.ca/nouvelle/2295957/ia-eleve-photos-truquees-ecole-secondaire-levis",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "education",
+    "source": "Radio-Canada"
+  },
+  {
+    "id": 517,
+    "title": "Secondary pupils used AI to create and share faked images",
+    "desc": "Stéphanie Dionne draws a call to talk with young people about consent and respect for people's image.",
+    "url": "https://www.linkedin.com/posts/stdionne_des-%C3%A9l%C3%A8ves-du-secondaire-ont-utilis%C3%A9-l-share-7520952574896799744-FPMc",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "education",
+    "source": "LinkedIn (Stéphanie Dionne)"
+  },
+  {
+    "id": 518,
+    "title": "No. 24 (2026): Towards critical approaches to digital technology in education and training",
+    "desc": "Issue 24 of “Médiations et médiatisations” on critical approaches to educational technology, including high schoolers' non-use of generative AI.",
+    "url": "https://revue-mediations.teluq.ca/index.php/Distances/issue/view/33",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "education",
+    "source": "Revue Médiations"
+  },
+  {
+    "id": 519,
+    "title": "AI: why do chatbots agree with us even when we are wrong?",
+    "desc": "Georgia Tech researchers cut chatbots' confirmation of delusional beliefs by 74–77% with an instruction and a self-review step.",
+    "url": "https://www.clubic.com/actualite-635785-ia-pourquoi-les-chatbots-nous-donnent-ils-raison-meme-quand-nous-avons-tort-cette-equipe-de-scientifiques-montre-comment-limiter-ce-comportement-insupportable.html",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "etudes",
+    "source": "Clubic"
+  },
+  {
+    "id": 520,
+    "title": "Do models that use more bold text and longer answers win more votes on compar:IA?",
+    "desc": "On compar:IA, at comparable length, a model using more bold text has 11% higher chances of winning the vote (137,293 votes).",
+    "url": "https://www.linkedin.com/posts/simonaszilinskas_les-mod%C3%A8les-qui-utilisent-davantage-de-gras-ugcPost-7520388552506105856-okug",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "etudes",
+    "source": "LinkedIn (Simon Zilinskas)"
+  },
+  {
+    "id": 521,
+    "title": "Do LLMs have emotions?",
+    "desc": "Models like Claude Sonnet 4.5 detect emotional contexts; the authors say models imitate emotions, they do not feel them.",
+    "url": "https://www.linkedin.com/posts/alexandrabarberet_goldenberg-2025-do-llm-have-emotions-ugcPost-7521126571777114112-5D-W",
+    "date": "2026-10-31",
+    "letter": 52,
+    "cat": "etudes",
+    "source": "LinkedIn (Alexandra Barberet)"
   }
 ]
